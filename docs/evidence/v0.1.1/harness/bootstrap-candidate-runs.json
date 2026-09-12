@@ -1,0 +1,50 @@
+[
+  {
+    "args": [
+      "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+      "run",
+      "test:e2e"
+    ],
+    "started": "2026-09-12T08:31:53.224Z",
+    "finished": "2026-09-12T08:32:51.407Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/collect-validation.mjs",
+      "test-results/e2e-report.json",
+      "docs/evidence/v0.1.1/harness/bootstrap-candidate-e2e.json"
+    ],
+    "started": "2026-09-12T08:32:51.410Z",
+    "finished": "2026-09-12T08:32:51.580Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/measure-memory.mjs",
+      "--browser",
+      "chromium",
+      "--url",
+      "http://127.0.0.1:4192/StarShift/",
+      "--output",
+      "docs/evidence/v0.1.1/harness/bootstrap-candidate-memory.json"
+    ],
+    "started": "2026-09-12T08:32:51.582Z",
+    "finished": "2026-09-12T08:37:54.886Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/measure-docx.mjs",
+      "--url",
+      "http://127.0.0.1:4192/StarShift/",
+      "--label",
+      "revised-local-classic-candidate",
+      "--rounds",
+      "5"
+    ],
+    "started": "2026-09-12T08:37:54.891Z",
+    "finished": "2026-09-12T08:49:11.436Z",
+    "code": 4294967295
+  }
+]

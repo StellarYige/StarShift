@@ -1,0 +1,354 @@
+{
+  "captured": "2026-09-12T06:26:55.465Z",
+  "source": "test-results/matrix-route-recheck/report.json",
+  "stats": {
+    "startTime": "2026-09-12T06:16:59.271Z",
+    "duration": 503041.333,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 23071,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "chromium",
+              "version": "153.0.8010.12",
+              "result": "DOCX conversion passed",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "chromium",
+              "version": "153.0.8010.12",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 32021,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "firefox",
+              "version": "155.0",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "firefox",
+              "version": "155.0",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 20906,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2325,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7628,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10335,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 185127,
+          "errors": [],
+          "evidence": {
+            "lifecycle.json": {
+              "rounds": 10,
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 7,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 14,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 21,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 28,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 35,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 42,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 49,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 56,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 63,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 70,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 88573,
+          "errors": [],
+          "evidence": {
+            "lifecycle.json": {
+              "rounds": 3,
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 6,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 12,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 18,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 88188,
+          "errors": [],
+          "evidence": {
+            "lifecycle.json": {
+              "rounds": 3,
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 6,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 9,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

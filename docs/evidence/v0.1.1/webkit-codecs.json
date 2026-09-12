@@ -1,0 +1,22 @@
+{
+  "browser": "26.6",
+  "offscreen": "undefined",
+  "bitmap": "function",
+  "results": [
+    {
+      "requested": "image/png",
+      "actual": "image/png",
+      "bytes": 455
+    },
+    {
+      "requested": "image/jpeg",
+      "actual": "image/jpeg",
+      "bytes": 818
+    },
+    {
+      "requested": "image/webp",
+      "actual": "image/webp",
+      "bytes": 594
+    }
+  ]
+}

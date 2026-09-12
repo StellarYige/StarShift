@@ -1,6 +1,6 @@
 {
   "name": "starshift",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "星易 StarShift · 只是转个文件，不必开个会员。",
   "scripts": {
     "assets": "node scripts/prepare-assets.mjs",
@@ -13,8 +13,9 @@
     "test": "vitest run tests/unit",
     "fixtures": "node scripts/create-fixtures.mjs",
     "test:e2e": "playwright test",
-    "check": "npm run typecheck && npm test && npm run build && npm run test:e2e",
-    "release": "node scripts/package-release.mjs"
+    "check": "npm run typecheck && npm test && npm run build && npm run test:e2e && npm run test:matrix",
+    "test:matrix": "playwright test --config playwright.matrix.config.ts",
+    "measure:docx": "node scripts/measure-docx.mjs"
   },
   "repository": {
     "type": "git",

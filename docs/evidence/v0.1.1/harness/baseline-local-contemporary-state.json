@@ -1,0 +1,130 @@
+{
+  "time": "2026-09-12T08:00:16.993Z",
+  "label": "baseline-local-contemporary",
+  "round": 1,
+  "method": "Read-only CDP evaluation/property inspection during a stalled sample; no target pause or cache/request override. No document content or names read.",
+  "state": {
+    "outputs": 1,
+    "errors": 1,
+    "frames": 0,
+    "busy": false,
+    "frame": null
+  },
+  "events": [
+    {
+      "type": "check",
+      "ms": 57.84999996423721
+    },
+    {
+      "type": "progress",
+      "ms": 134.4749999642372,
+      "phase": "font"
+    },
+    {
+      "type": "progress",
+      "ms": 929.4399999976158,
+      "phase": "engine"
+    },
+    {
+      "type": "progress",
+      "ms": 4933.139999985695,
+      "phase": "initialize"
+    },
+    {
+      "type": "progress",
+      "ms": 5136.949999988079,
+      "phase": "initialize"
+    },
+    {
+      "type": "progress",
+      "ms": 8078.8599999547005,
+      "phase": "initialize"
+    },
+    {
+      "type": "error",
+      "id": 0,
+      "ms": 19387
+    },
+    {
+      "type": "check",
+      "ms": 19405.375
+    },
+    {
+      "type": "progress",
+      "ms": 19483.589999973774,
+      "phase": "font"
+    },
+    {
+      "type": "progress",
+      "ms": 20270.974999964237,
+      "phase": "engine"
+    },
+    {
+      "type": "progress",
+      "ms": 23329.560000002384,
+      "phase": "initialize"
+    },
+    {
+      "type": "progress",
+      "ms": 23528.259999990463,
+      "phase": "initialize"
+    },
+    {
+      "type": "progress",
+      "ms": 25393.814999997616,
+      "phase": "initialize"
+    },
+    {
+      "type": "ready",
+      "id": 0,
+      "ms": 36198.689999997616
+    },
+    {
+      "type": "convert",
+      "id": 1,
+      "ms": 36198.83499997854
+    },
+    {
+      "type": "progress",
+      "ms": 36205.59999996424,
+      "phase": "import"
+    },
+    {
+      "type": "progress",
+      "ms": 37557.469999969006,
+      "phase": "export"
+    },
+    {
+      "type": "done",
+      "id": 1,
+      "ms": 37860.58499997854
+    }
+  ],
+  "unoMainPromiseState": null,
+  "targets": [
+    {
+      "type": "page",
+      "url": "http://127.0.0.1:4188/StarShift/#docx-pdf"
+    },
+    {
+      "type": "page",
+      "url": "about:blank"
+    },
+    {
+      "type": "browser_ui",
+      "url": "chrome://webui-toolbar.top-chrome/"
+    },
+    {
+      "type": "browser_ui",
+      "url": "chrome://omnibox-popup.top-chrome/"
+    },
+    {
+      "type": "browser_ui",
+      "url": "chrome://omnibox-popup.top-chrome/omnibox_popup_aim.html"
+    },
+    {
+      "type": "service_worker",
+      "url": "http://127.0.0.1:4188/StarShift/coi-serviceworker.js"
+    }
+  ]
+}

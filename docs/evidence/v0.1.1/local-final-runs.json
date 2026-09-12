@@ -1,0 +1,118 @@
+[
+  {
+    "args": [
+      "scripts/collect-validation.mjs",
+      "test-results/matrix-final/report.json",
+      "docs/evidence/v0.1.1/matrix-local.json"
+    ],
+    "started": "2026-09-12T07:25:48.118Z",
+    "finished": "2026-09-12T07:25:48.320Z",
+    "code": 0
+  },
+  {
+    "args": [
+      ".cache/copy-mobile-evidence.mjs",
+      "test-results/matrix-final"
+    ],
+    "started": "2026-09-12T07:25:48.323Z",
+    "finished": "2026-09-12T07:25:48.472Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+      "run",
+      "test:e2e"
+    ],
+    "env": {
+      "TEST_BASE_URL": "http://127.0.0.1:4187/StarShift/"
+    },
+    "started": "2026-09-12T07:25:48.473Z",
+    "finished": "2026-09-12T07:26:41.442Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/collect-validation.mjs",
+      "test-results/e2e-report.json",
+      "docs/evidence/v0.1.1/e2e-local.json"
+    ],
+    "started": "2026-09-12T07:26:41.443Z",
+    "finished": "2026-09-12T07:26:41.587Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+      "run",
+      "build",
+      "--",
+      "--outDir",
+      ".cache/dist-root"
+    ],
+    "env": {
+      "BASE_PATH": "/"
+    },
+    "started": "2026-09-12T07:26:41.588Z",
+    "finished": "2026-09-12T07:26:50.449Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+      "run",
+      "test:e2e"
+    ],
+    "env": {
+      "TEST_BASE_URL": "http://127.0.0.1:4191/"
+    },
+    "started": "2026-09-12T07:26:50.450Z",
+    "finished": "2026-09-12T07:27:44.095Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/collect-validation.mjs",
+      "test-results/e2e-report.json",
+      "docs/evidence/v0.1.1/e2e-root.json"
+    ],
+    "started": "2026-09-12T07:27:44.097Z",
+    "finished": "2026-09-12T07:27:44.245Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/verify-site.mjs",
+      "http://127.0.0.1:4187/StarShift/",
+      "docs/evidence/v0.1.1/site-local.json"
+    ],
+    "started": "2026-09-12T07:27:44.246Z",
+    "finished": "2026-09-12T07:27:47.012Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/verify-site.mjs",
+      "http://127.0.0.1:4191/",
+      "docs/evidence/v0.1.1/site-root.json",
+      ".cache/dist-root"
+    ],
+    "started": "2026-09-12T07:27:47.013Z",
+    "finished": "2026-09-12T07:27:49.747Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/measure-docx.mjs",
+      "--url",
+      "http://127.0.0.1:4187/StarShift/",
+      "--label",
+      "revised-local-final",
+      "--rounds",
+      "5"
+    ],
+    "started": "2026-09-12T07:27:49.748Z",
+    "finished": "2026-09-12T07:42:31.724Z",
+    "code": 1
+  }
+]

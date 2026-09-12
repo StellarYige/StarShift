@@ -14,14 +14,14 @@ thrPort.onmessage = ({ data }) => {
   if (data.type !== 'convert') return;
   let model;
   try {
-    thrPort.postMessage({ type: 'progress', message: '正在解析文档并排版…' });
+    thrPort.postMessage({ type: 'progress', message: '正在解析文档并排版…', detail: { phase: 'import' } });
     model = helper.desktop.loadComponentFromURL('file:///tmp/starshift-input.docx', '_blank', 0, [
       property('Hidden', true), property('ReadOnly', true),
       property('MacroExecutionMode', new zetajs.Any(zetajs.type.short, css.document.MacroExecMode.NEVER_EXECUTE)),
       property('UpdateDocMode', new zetajs.Any(zetajs.type.short, css.document.UpdateDocMode.NO_UPDATE)),
     ]);
     if (!model) throw new Error('Document import failed');
-    thrPort.postMessage({ type: 'progress', message: '正在导出 PDF…' });
+    thrPort.postMessage({ type: 'progress', message: '正在导出 PDF…', detail: { phase: 'export' } });
     model.storeToURL('file:///tmp/starshift-output.pdf', [property('Overwrite', true), property('FilterName', 'writer_pdf_Export')]);
     thrPort.postMessage({ type: 'done' });
   } catch { thrPort.postMessage({ type: 'error' }); }

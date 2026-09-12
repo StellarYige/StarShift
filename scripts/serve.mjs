@@ -5,7 +5,7 @@ import { createReadStream } from 'node:fs';
 import { stat } from 'node:fs/promises';
 const args = process.argv.slice(2);
 const port = Number(args[args.indexOf('--port') + 1]) || 4187;
-const root = path.resolve('dist');
+const root = path.resolve(args.includes('--root') ? args[args.indexOf('--root') + 1] : 'dist');
 const base = process.env.BASE_PATH || '/StarShift/';
 const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.wasm': 'application/wasm', '.json': 'application/json', '.png': 'image/png', '.otf': 'font/otf', '.svg': 'image/svg+xml', '.txt': 'text/plain', '.xml': 'application/xml' };
 http.createServer(async (req, res) => {

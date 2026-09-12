@@ -1,0 +1,81 @@
+{
+  "captured": "2026-09-12T06:40:32.055Z",
+  "source": "test-results/matrix-preview-recheck/report.json",
+  "stats": {
+    "startTime": "2026-09-12T06:39:40.647Z",
+    "duration": 24677.601,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7470,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "android-simulation",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4155,
+          "errors": [],
+          "evidence": {
+            "simulation.json": {
+              "simulated": true,
+              "actualPhone": false,
+              "project": "android-simulation",
+              "version": "153.0.8010.12",
+              "fileChooser": "automated; no real OS picker or photo library tested",
+              "downloads": "actual saved PDF reopened with pdf-lib"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "iphone-simulation",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6936,
+          "errors": [],
+          "evidence": {
+            "simulation.json": {
+              "simulated": true,
+              "actualPhone": false,
+              "project": "iphone-simulation",
+              "version": "26.6",
+              "fileChooser": "automated; no real OS picker or photo library tested",
+              "downloads": "actual saved PDF reopened with pdf-lib"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

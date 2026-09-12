@@ -1,0 +1,2139 @@
+{
+  "captured": "2026-09-12T05:44:33.120Z",
+  "source": "test-results/matrix-final/report.json",
+  "stats": {
+    "startTime": "2026-09-12T05:21:34.178Z",
+    "duration": 1359949.5680000002,
+    "expected": 62,
+    "skipped": 16,
+    "unexpected": 15,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 22919,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "chromium",
+              "version": "153.0.8010.12",
+              "result": "DOCX conversion passed",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "chromium",
+              "version": "153.0.8010.12",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 15210,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "firefox",
+              "version": "155.0",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "firefox",
+              "version": "155.0",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 29344,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts",
+                "column": 49,
+                "line": 31
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.result-list li')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.result-list li') with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.result-list li')\u001b[22m\n\u001b[2m    43 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  29 |   await page.evaluate(() => { location.hash = 'image-convert'; });\n  30 |   await select(page, ['transparent.png']); await convert(page);\n> 31 |   await expect(page.locator('.result-list li')).toHaveCount(1);\n     |                                                 ^\n  32 |   } finally {\n  33 |     await evidence(info, 'engine-attempt.json', { browser: info.project.name, version: browser.version(), errors, isolated: page.isClosed() ? null : await page.evaluate(() => crossOriginIsolated).catch(() => null) });\n  34 |   }\n    at D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts:31:49"
+            }
+          ],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 24864,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "chrome-installed",
+              "version": "152.0.7977.84",
+              "result": "DOCX conversion passed",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "chrome-installed",
+              "version": "152.0.7977.84",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 116664,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "edge-installed",
+              "version": "152.0.4191.66",
+              "result": "DOCX conversion passed",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "edge-installed",
+              "version": "152.0.4191.66",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 27525,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "download",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "initialize failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 31436,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "initialize",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "timeout failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 29934,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "timeout",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5203,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "one damaged DOCX between good files does not restart the shared engine",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 34938,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13173,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2473,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "resource-load",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 28857,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "initialize",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 59603,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "import",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 56153,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "export",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5244,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 785,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "initialize failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 739,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "timeout failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 637,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4897,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "one damaged DOCX between good files does not restart the shared engine",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Exact engine-reuse assertion on the supported reference engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 56,
+            "column": 8
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 639,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5458,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 92,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 627,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 92,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 706,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 92,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 2286,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 92,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 636,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2420,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 690,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "initialize failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 613,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "timeout failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 562,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 22148,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+                "column": 80,
+                "line": 51
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.result-list li').first()\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.result-list li').first() with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.result-list li').first()\u001b[22m\n\n\n  49 |     await page.evaluate(id => { location.hash = id; }, tool);\n  50 |     await select(page, [tool.startsWith('image') ? 'transparent.png' : 'vector-three-pages.pdf']);\n> 51 |     await convert(page); await expect(page.locator('.result-list li').first()).toBeVisible();\n     |                                                                                ^\n  52 |   }\n  53 | });\n  54 |\n    at D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts:51:80"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "one damaged DOCX between good files does not restart the shared engine",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Exact engine-reuse assertion on the supported reference engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 56,
+            "column": 8
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 644,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 22191,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+                "column": 63,
+                "line": 77
+              },
+              "message": "TimeoutError: locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '预览', exact: true })\u001b[22m\n\n\n  75 |   await open(page, 'image-pdf'); await select(page, ['transparent.png', 'sample.webp']); await convert(page);\n  76 |   await page.evaluate(() => { (window as Window & { __failPreview?: boolean }).__failPreview = true; });\n> 77 |   await page.getByRole('button', { name: '预览', exact: true }).click();\n     |                                                               ^\n  78 |   await expect(page.locator('dialog [role=alert]')).toBeVisible();\n  79 |   await page.getByRole('button', { name: '下一页' }).click();\n  80 |   await expect(page.locator('dialog img')).toBeVisible();\n    at D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts:77:63"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 92,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 912,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 92,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 880,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 92,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 719,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 92,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 610,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 22634,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+                "column": 49,
+                "line": 132
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.result-list li')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.result-list li') with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.result-list li')\u001b[22m\n\u001b[2m    43 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  130 |   await page.evaluate(() => { location.hash = 'image-convert'; });\n  131 |   await select(page, ['transparent.png']); await convert(page);\n> 132 |   await expect(page.locator('.result-list li')).toHaveCount(1);\n      |                                                 ^\n  133 |   await expect(page.locator('.page-card')).toHaveCount(0);\n  134 | });\n  135 |\n    at D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts:132:49"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 15785,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4607,
+          "errors": [],
+          "evidence": {
+            "zip-lifecycle.json": {
+              "before": {
+                "workers": 0,
+                "urls": 2,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ],
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 3,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 292693,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\lifecycle.spec.ts",
+                "column": 36,
+                "line": 64
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"chromium\"\u001b[39m\n\n  62 |     await select(page, ['中文表格分页.docx']); await convert(page);\n  63 |     if (await page.locator('.result-list li').count()) await verifyDocx(page, info, `round-${i + 1}.pdf`);\n> 64 |     else { expect(browserName).not.toBe('chromium'); await expect(page.locator('.notice').last()).toContainText('不兼容'); }\n     |                                    ^\n  65 |     await page.getByRole('button', { name: '清空任务' }).click();\n  66 |     await expect.poll(async () => (await resources(page)).workers).toBe(0);\n  67 |     await expect.poll(async () => (await resources(page)).urls).toBe(0);\n    at D:\\software\\xingyi\\tests\\matrix\\lifecycle.spec.ts:64:36"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3947,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2555,
+          "errors": [],
+          "evidence": {
+            "zip-lifecycle.json": {
+              "before": {
+                "workers": 0,
+                "urls": 2,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ],
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 3,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 30935,
+          "errors": [],
+          "evidence": {
+            "lifecycle.json": {
+              "rounds": 3,
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 6,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 12,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 18,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3272,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 22008,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\lifecycle.spec.ts",
+                "column": 26,
+                "line": 20
+              },
+              "message": "TimeoutError: page.waitForEvent: Timeout 20000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  18 |   const samples = [];\n  19 |   for (let i = 0; i < 3; i++) {\n> 20 |     const waiting = page.waitForEvent('download'); await page.getByRole('button', { name: '全部打包下载' }).click(); await waiting;\n     |                          ^\n  21 |     samples.push(await resources(page));\n  22 |   }\n  23 |   expect(samples.map(r => r.urls)).toEqual([before.urls + 1, before.urls + 1, before.urls + 1]);\n    at D:\\software\\xingyi\\tests\\matrix\\lifecycle.spec.ts:20:26"
+            },
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\lifecycle.spec.ts",
+                "column": 103,
+                "line": 20
+              },
+              "message": "TimeoutError: locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '全部打包下载' })\u001b[22m\n\n\n  18 |   const samples = [];\n  19 |   for (let i = 0; i < 3; i++) {\n> 20 |     const waiting = page.waitForEvent('download'); await page.getByRole('button', { name: '全部打包下载' }).click(); await waiting;\n     |                                                                                                       ^\n  21 |     samples.push(await resources(page));\n  22 |   }\n  23 |   expect(samples.map(r => r.urls)).toEqual([before.urls + 1, before.urls + 1, before.urls + 1]);\n    at D:\\software\\xingyi\\tests\\matrix\\lifecycle.spec.ts:20:103"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 22719,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\helpers.ts",
+                "column": 68,
+                "line": 12
+              },
+              "message": "TimeoutError: locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /^(开始转换|重新转换|导出选中页面)$/ })\u001b[22m\n\u001b[2m    - locator resolved to <button disabled class=\"button primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n   at helpers.ts:12\n\n  10 | }\n  11 | export async function convert(page: Page) {\n> 12 |   await page.getByRole('button', { name: /^(开始转换|重新转换|导出选中页面)$/ }).click();\n     |                                                                    ^\n  13 |   await expect(page.getByRole('button', { name: '取消任务', exact: true })).toBeHidden({ timeout: 270000 });\n  14 | }\n  15 | export async function download(page: Page, info: TestInfo, filename: string) {\n    at convert (D:\\software\\xingyi\\tests\\matrix\\helpers.ts:12:68)\n    at D:\\software\\xingyi\\tests\\matrix\\lifecycle.spec.ts:50:102"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2050,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2554,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3820,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2433,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7254,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3439,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4550,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3401,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2086,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2587,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2553,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2763,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 22386,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 24,
+                "line": 21
+              },
+              "message": "TimeoutError: page.waitForEvent: Timeout 20000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  19 | }\n  20 | async function download(page: Page, info: TestInfo, filename: string, nth = 0) {\n> 21 |   const waiting = page.waitForEvent('download');\n     |                        ^\n  22 |   await page.locator('.result-list a[download]').nth(nth).click();\n  23 |   const result = await waiting;\n  24 |   await result.saveAs(info.outputPath(filename));\n    at download (D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:21:24)\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:58:23"
+            },
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 59,
+                "line": 22
+              },
+              "message": "TimeoutError: locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.result-list a[download]').first()\u001b[22m\n\n\n  20 | async function download(page: Page, info: TestInfo, filename: string, nth = 0) {\n  21 |   const waiting = page.waitForEvent('download');\n> 22 |   await page.locator('.result-list a[download]').nth(nth).click();\n     |                                                           ^\n  23 |   const result = await waiting;\n  24 |   await result.saveAs(info.outputPath(filename));\n  25 |   return readFile(info.outputPath(filename));\n    at download (D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:22:59)\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:58:23"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 23027,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 49,
+                "line": 73
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.result-list li')\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.result-list li') with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.result-list li')\u001b[22m\n\u001b[2m    43 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  71 |   await page.getByLabel('输出格式').selectOption('webp');\n  72 |   await start(page);\n> 73 |   await expect(page.locator('.result-list li')).toHaveCount(3);\n     |                                                 ^\n  74 |   const entries = await zip(page, info);\n  75 |   expect(Object.keys(entries)).toEqual(['transparent.webp', 'transparent (2).webp', 'sample.webp']);\n  76 |   for (const bytes of Object.values(entries)) {\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:73:49"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 23307,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 24,
+                "line": 21
+              },
+              "message": "TimeoutError: page.waitForEvent: Timeout 20000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  19 | }\n  20 | async function download(page: Page, info: TestInfo, filename: string, nth = 0) {\n> 21 |   const waiting = page.waitForEvent('download');\n     |                        ^\n  22 |   await page.locator('.result-list a[download]').nth(nth).click();\n  23 |   const result = await waiting;\n  24 |   await result.saveAs(info.outputPath(filename));\n    at download (D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:21:24)\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:89:23"
+            },
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 59,
+                "line": 22
+              },
+              "message": "TimeoutError: locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.result-list a[download]').first()\u001b[22m\n\n\n  20 | async function download(page: Page, info: TestInfo, filename: string, nth = 0) {\n  21 |   const waiting = page.waitForEvent('download');\n> 22 |   await page.locator('.result-list a[download]').nth(nth).click();\n     |                                                           ^\n  23 |   const result = await waiting;\n  24 |   await result.saveAs(info.outputPath(filename));\n  25 |   return readFile(info.outputPath(filename));\n    at download (D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:22:59)\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:89:23"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 23094,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 24,
+                "line": 21
+              },
+              "message": "TimeoutError: page.waitForEvent: Timeout 20000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  19 | }\n  20 | async function download(page: Page, info: TestInfo, filename: string, nth = 0) {\n> 21 |   const waiting = page.waitForEvent('download');\n     |                        ^\n  22 |   await page.locator('.result-list a[download]').nth(nth).click();\n  23 |   const result = await waiting;\n  24 |   await result.saveAs(info.outputPath(filename));\n    at download (D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:21:24)\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:109:23"
+            },
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 59,
+                "line": 22
+              },
+              "message": "TimeoutError: locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.result-list a[download]').first()\u001b[22m\n\n\n  20 | async function download(page: Page, info: TestInfo, filename: string, nth = 0) {\n  21 |   const waiting = page.waitForEvent('download');\n> 22 |   await page.locator('.result-list a[download]').nth(nth).click();\n     |                                                           ^\n  23 |   const result = await waiting;\n  24 |   await result.saveAs(info.outputPath(filename));\n  25 |   return readFile(info.outputPath(filename));\n    at download (D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:22:59)\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:109:23"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3567,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6757,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4382,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 21735,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 24,
+                "line": 28
+              },
+              "message": "TimeoutError: page.waitForEvent: Timeout 20000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  26 | }\n  27 | async function zip(page: Page, info: TestInfo) {\n> 28 |   const waiting = page.waitForEvent('download');\n     |                        ^\n  29 |   await page.getByRole('button', { name: '全部打包下载' }).click();\n  30 |   const result = await waiting;\n  31 |   await result.saveAs(info.outputPath('results.zip'));\n    at zip (D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:28:24)\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:185:28"
+            },
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 54,
+                "line": 29
+              },
+              "message": "TimeoutError: locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '全部打包下载' })\u001b[22m\n\n\n  27 | async function zip(page: Page, info: TestInfo) {\n  28 |   const waiting = page.waitForEvent('download');\n> 29 |   await page.getByRole('button', { name: '全部打包下载' }).click();\n     |                                                      ^\n  30 |   const result = await waiting;\n  31 |   await result.saveAs(info.outputPath('results.zip'));\n  32 |   return unzipSync(await readFile(info.outputPath('results.zip')));\n    at zip (D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:29:54)\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:185:28"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1987,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 21746,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 24,
+                "line": 21
+              },
+              "message": "TimeoutError: page.waitForEvent: Timeout 20000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  19 | }\n  20 | async function download(page: Page, info: TestInfo, filename: string, nth = 0) {\n> 21 |   const waiting = page.waitForEvent('download');\n     |                        ^\n  22 |   await page.locator('.result-list a[download]').nth(nth).click();\n  23 |   const result = await waiting;\n  24 |   await result.saveAs(info.outputPath(filename));\n    at download (D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:21:24)\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:211:44"
+            },
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts",
+                "column": 59,
+                "line": 22
+              },
+              "message": "TimeoutError: locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.result-list a[download]').first()\u001b[22m\n\n\n  20 | async function download(page: Page, info: TestInfo, filename: string, nth = 0) {\n  21 |   const waiting = page.waitForEvent('download');\n> 22 |   await page.locator('.result-list a[download]').nth(nth).click();\n     |                                                           ^\n  23 |   const result = await waiting;\n  24 |   await result.saveAs(info.outputPath(filename));\n  25 |   return readFile(info.outputPath(filename));\n    at download (D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:22:59)\n    at D:\\software\\xingyi\\tests\\e2e\\conversions.spec.ts:211:44"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1699,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2448,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2070,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2166,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3636,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2051,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3614,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2671,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1716,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2288,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2416,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4415,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3900,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4790,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4162,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7006,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5105,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9600,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4789,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3647,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3933,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5205,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "android-simulation",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 21599,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\mobile.spec.ts",
+                "column": 63,
+                "line": 16
+              },
+              "message": "TimeoutError: locator.tap: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '预览', exact: true })\u001b[22m\n\n\n  14 |   await convert(page); const output = await download(page, info, 'mobile.pdf');\n  15 |   expect((await PDFDocument.load(await readFile(output))).getPageCount()).toBe(2);\n> 16 |   await page.getByRole('button', { name: '预览', exact: true }).tap();\n     |                                                               ^\n  17 |   await expect(page.locator('dialog img')).toBeVisible();\n  18 |   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);\n  19 |   await page.getByRole('button', { name: '下一页' }).tap(); await expect(page.locator('dialog img')).toHaveAttribute('alt', /第 2 页/);\n    at D:\\software\\xingyi\\tests\\matrix\\mobile.spec.ts:16:63"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "iphone-simulation",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 23389,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\helpers.ts",
+                "column": 24,
+                "line": 16
+              },
+              "message": "TimeoutError: page.waitForEvent: Timeout 20000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n   at helpers.ts:16\n\n  14 | }\n  15 | export async function download(page: Page, info: TestInfo, filename: string) {\n> 16 |   const waiting = page.waitForEvent('download'); await page.locator('.result-list a[download]').first().click();\n     |                        ^\n  17 |   const result = await waiting; const file = info.outputPath(filename); await result.saveAs(file); return file;\n  18 | }\n  19 | export async function verifyDocx(page: Page, info: TestInfo, filename = 'output.pdf') {\n    at download (D:\\software\\xingyi\\tests\\matrix\\helpers.ts:16:24)\n    at D:\\software\\xingyi\\tests\\matrix\\mobile.spec.ts:14:45"
+            },
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\helpers.ts",
+                "column": 105,
+                "line": 16
+              },
+              "message": "TimeoutError: locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.result-list a[download]').first()\u001b[22m\n\n\n   at helpers.ts:16\n\n  14 | }\n  15 | export async function download(page: Page, info: TestInfo, filename: string) {\n> 16 |   const waiting = page.waitForEvent('download'); await page.locator('.result-list a[download]').first().click();\n     |                                                                                                         ^\n  17 |   const result = await waiting; const file = info.outputPath(filename); await result.saveAs(file); return file;\n  18 | }\n  19 | export async function verifyDocx(page: Page, info: TestInfo, filename = 'output.pdf') {\n    at download (D:\\software\\xingyi\\tests\\matrix\\helpers.ts:16:105)\n    at D:\\software\\xingyi\\tests\\matrix\\mobile.spec.ts:14:45"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

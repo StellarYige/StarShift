@@ -1,0 +1,219 @@
+{
+  "time": "2026-09-12T07:10:15.857Z",
+  "method": "Five additional adjacent pairs, alternating version order; same Chromium and documents. Descriptive comparison, no claim of controlled background CPU load or causal acceleration. No font/engine parallel preparation change was introduced.",
+  "groups": {
+    "cold": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": {
+            "status": "passed",
+            "batchMs": 12576,
+            "unoReadyMs": 10757.660000026226,
+            "fontWaitMs": 385.77000004053116
+          },
+          "revised": {
+            "status": "passed",
+            "batchMs": 11660,
+            "unoReadyMs": 9966.319999992847,
+            "fontWaitMs": 398.6599999666214
+          }
+        },
+        {
+          "pair": 2,
+          "baseline": {
+            "status": "passed",
+            "batchMs": 17646,
+            "unoReadyMs": 15339.5,
+            "fontWaitMs": 327.53500002622604
+          },
+          "revised": {
+            "status": "passed",
+            "batchMs": 10947,
+            "unoReadyMs": 9562.659999966621,
+            "fontWaitMs": 337.2800000309944
+          }
+        },
+        {
+          "pair": 3,
+          "baseline": {
+            "status": "passed",
+            "batchMs": 11023,
+            "unoReadyMs": 9448.620000004768,
+            "fontWaitMs": 324.27999997138977
+          },
+          "revised": {
+            "status": "passed",
+            "batchMs": 14953,
+            "unoReadyMs": 12970.245000004768,
+            "fontWaitMs": 373.19999998807907
+          }
+        },
+        {
+          "pair": 4,
+          "baseline": {
+            "status": "passed",
+            "batchMs": 11070,
+            "unoReadyMs": 9654.899999976158,
+            "fontWaitMs": 284.77000004053116
+          },
+          "revised": {
+            "status": "passed",
+            "batchMs": 15238,
+            "unoReadyMs": 13446.689999997616,
+            "fontWaitMs": 371.43000000715256
+          }
+        },
+        {
+          "pair": 5,
+          "baseline": {
+            "status": "passed",
+            "batchMs": 24577,
+            "unoReadyMs": 22094.555000007153,
+            "fontWaitMs": 843.7250000238419
+          },
+          "revised": {
+            "status": "passed",
+            "batchMs": 17223,
+            "unoReadyMs": 15480.810000002384,
+            "fontWaitMs": 427.6050000190735
+          }
+        }
+      ],
+      "failedPairs": 0,
+      "stages": {
+        "batchMs": {
+          "measuredPairs": 5,
+          "improvedPairs": 3,
+          "baselineMedian": 12576,
+          "revisedMedian": 14953,
+          "medianImprovement": -0.18901081424936383,
+          "meetsNumericalThreshold": false
+        },
+        "unoReadyMs": {
+          "measuredPairs": 5,
+          "improvedPairs": 3,
+          "baselineMedian": 10757.660000026226,
+          "revisedMedian": 12970.245000004768,
+          "medianImprovement": -0.20567530485004615,
+          "meetsNumericalThreshold": false
+        },
+        "fontWaitMs": {
+          "measuredPairs": 5,
+          "improvedPairs": 1,
+          "baselineMedian": 327.53500002622604,
+          "revisedMedian": 373.19999998807907,
+          "medianImprovement": -0.13942021450592024,
+          "meetsNumericalThreshold": false
+        }
+      }
+    },
+    "revisit": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": {
+            "status": "passed",
+            "batchMs": 16654,
+            "unoReadyMs": 14694.230000019073,
+            "fontWaitMs": 370.460000038147
+          },
+          "revised": {
+            "status": "passed",
+            "batchMs": 12078,
+            "unoReadyMs": 10466.569999992847,
+            "fontWaitMs": 296.33999997377396
+          }
+        },
+        {
+          "pair": 2,
+          "baseline": {
+            "status": "passed",
+            "batchMs": 40023,
+            "unoReadyMs": 38499.625,
+            "fontWaitMs": 1196.3650000095367
+          },
+          "revised": {
+            "status": "passed",
+            "batchMs": 10028,
+            "unoReadyMs": 8523.229999959469,
+            "fontWaitMs": 284.2150000333786
+          }
+        },
+        {
+          "pair": 3,
+          "baseline": {
+            "status": "passed",
+            "batchMs": 13229,
+            "unoReadyMs": 11745.135000050068,
+            "fontWaitMs": 397.61500000953674
+          },
+          "revised": {
+            "status": "passed",
+            "batchMs": 11147,
+            "unoReadyMs": 9627.435000002384,
+            "fontWaitMs": 329.41999995708466
+          }
+        },
+        {
+          "pair": 4,
+          "baseline": {
+            "status": "passed",
+            "batchMs": 16068,
+            "unoReadyMs": 14173.75,
+            "fontWaitMs": 337.21499997377396
+          },
+          "revised": {
+            "status": "passed",
+            "batchMs": 15497,
+            "unoReadyMs": 13696.67000001669,
+            "fontWaitMs": 324.44999998807907
+          }
+        },
+        {
+          "pair": 5,
+          "baseline": {
+            "status": "passed",
+            "batchMs": 19976,
+            "unoReadyMs": 17640.435000002384,
+            "fontWaitMs": 489.539999961853
+          },
+          "revised": {
+            "status": "passed",
+            "batchMs": 13019,
+            "unoReadyMs": 11006.744999945164,
+            "fontWaitMs": 428.79499995708466
+          }
+        }
+      ],
+      "failedPairs": 0,
+      "stages": {
+        "batchMs": {
+          "measuredPairs": 5,
+          "improvedPairs": 5,
+          "baselineMedian": 16654,
+          "revisedMedian": 12078,
+          "medianImprovement": 0.27476882430647287,
+          "meetsNumericalThreshold": true
+        },
+        "unoReadyMs": {
+          "measuredPairs": 5,
+          "improvedPairs": 5,
+          "baselineMedian": 14694.230000019073,
+          "revisedMedian": 10466.569999992847,
+          "medianImprovement": 0.28770884898499194,
+          "meetsNumericalThreshold": true
+        },
+        "fontWaitMs": {
+          "measuredPairs": 5,
+          "improvedPairs": 5,
+          "baselineMedian": 397.61500000953674,
+          "revisedMedian": 324.44999998807907,
+          "medianImprovement": 0.18400965763289312,
+          "meetsNumericalThreshold": true
+        }
+      }
+    }
+  },
+  "revisionNote": "These adjacent pairs compare v0.1.0 with the intermediate revision, before the final clear/capability fixes. They diagnose background timing variability; final version timing is reported separately."
+}

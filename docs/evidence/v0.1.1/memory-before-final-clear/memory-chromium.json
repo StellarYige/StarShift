@@ -1,0 +1,2453 @@
+{
+  "browser": "chromium",
+  "version": "153.0.8010.12",
+  "os": "win32",
+  "time": "2026-09-12T07:07:20.289Z",
+  "rounds": 10,
+  "samples": [
+    {
+      "round": 0,
+      "phase": "baseline",
+      "time": "2026-09-12T07:07:22.084Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 169775104,
+        "workingSetBytes": 374247424
+      },
+      "jsHeap": 2624860,
+      "weakReferences": {
+        "input": {
+          "observed": 0,
+          "live": 0
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 1,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:23.891Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1801441280,
+        "workingSetBytes": 854458368
+      },
+      "jsHeap": 14165832,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 1,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:25.153Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1777463296,
+        "workingSetBytes": 983314432
+      },
+      "jsHeap": 20969456,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 1,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:26.303Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1846730752,
+        "workingSetBytes": 1063145472
+      },
+      "jsHeap": 21542988,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 1,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:27.381Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1848033280,
+        "workingSetBytes": 1063903232
+      },
+      "jsHeap": 21193044,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 1,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:28.389Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1849552896,
+        "workingSetBytes": 1061789696
+      },
+      "jsHeap": 23412712,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 1,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:29.473Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1852657664,
+        "workingSetBytes": 1066254336
+      },
+      "jsHeap": 22506164,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 1,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:30.620Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1997295616,
+        "workingSetBytes": 1151025152
+      },
+      "jsHeap": 23889896,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 1,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:32.018Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2183761920,
+        "workingSetBytes": 1352400896
+      },
+      "jsHeap": 22443924,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 1,
+      "phase": "batch-finished",
+      "time": "2026-09-12T07:07:32.943Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1976885248,
+        "workingSetBytes": 1188171776
+      },
+      "jsHeap": 22593532,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 1,
+      "phase": "cleared-before-gc",
+      "time": "2026-09-12T07:07:33.951Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1906745344,
+        "workingSetBytes": 1121824768
+      },
+      "jsHeap": 22809892,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 1,
+      "phase": "cleared-after-page-gc",
+      "time": "2026-09-12T07:07:35.052Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 423714816,
+        "workingSetBytes": 584032256
+      },
+      "jsHeap": 3400692,
+      "weakReferences": {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 2,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:36.849Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1820913664,
+        "workingSetBytes": 832520192
+      },
+      "jsHeap": 14457108,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 2,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:38.348Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1931976704,
+        "workingSetBytes": 1072775168
+      },
+      "jsHeap": 21476732,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 2,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:39.665Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1967054848,
+        "workingSetBytes": 1115447296
+      },
+      "jsHeap": 18777492,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 2,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:40.832Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1968287744,
+        "workingSetBytes": 1113051136
+      },
+      "jsHeap": 20745360,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 2,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:41.964Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1969303552,
+        "workingSetBytes": 1111810048
+      },
+      "jsHeap": 22042320,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 2,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:43.115Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1970118656,
+        "workingSetBytes": 1112002560
+      },
+      "jsHeap": 24669444,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 2,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:44.349Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2020155392,
+        "workingSetBytes": 1174601728
+      },
+      "jsHeap": 23958160,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 2,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:45.989Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2257575936,
+        "workingSetBytes": 1420865536
+      },
+      "jsHeap": 22701508,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 2,
+      "phase": "batch-finished",
+      "time": "2026-09-12T07:07:46.982Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2009513984,
+        "workingSetBytes": 1219006464
+      },
+      "jsHeap": 22843276,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 2,
+      "phase": "cleared-before-gc",
+      "time": "2026-09-12T07:07:47.893Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1996550144,
+        "workingSetBytes": 1208700928
+      },
+      "jsHeap": 23057204,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 2,
+      "phase": "cleared-after-page-gc",
+      "time": "2026-09-12T07:07:48.843Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 518242304,
+        "workingSetBytes": 675467264
+      },
+      "jsHeap": 3608640,
+      "weakReferences": {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 3,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:50.473Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2035208192,
+        "workingSetBytes": 1049296896
+      },
+      "jsHeap": 14550408,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 3,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:51.709Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1915617280,
+        "workingSetBytes": 1058582528
+      },
+      "jsHeap": 21462996,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 3,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:52.747Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1955545088,
+        "workingSetBytes": 1105297408
+      },
+      "jsHeap": 21912640,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 3,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:53.748Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1956384768,
+        "workingSetBytes": 1105088512
+      },
+      "jsHeap": 21270512,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 3,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:54.749Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1957838848,
+        "workingSetBytes": 1102581760
+      },
+      "jsHeap": 23482016,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 3,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:55.767Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1960947712,
+        "workingSetBytes": 1104715776
+      },
+      "jsHeap": 22429276,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 3,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:56.942Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2089041920,
+        "workingSetBytes": 1253580800
+      },
+      "jsHeap": 23882036,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 3,
+      "phase": "processing",
+      "time": "2026-09-12T07:07:58.193Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2023731200,
+        "workingSetBytes": 1231175680
+      },
+      "jsHeap": 22602812,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 3,
+      "phase": "batch-finished",
+      "time": "2026-09-12T07:07:59.054Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1873567744,
+        "workingSetBytes": 1088102400
+      },
+      "jsHeap": 22749044,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 3,
+      "phase": "cleared-before-gc",
+      "time": "2026-09-12T07:07:59.933Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1860423680,
+        "workingSetBytes": 1077780480
+      },
+      "jsHeap": 22957156,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 3,
+      "phase": "cleared-after-page-gc",
+      "time": "2026-09-12T07:08:00.891Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 381542400,
+        "workingSetBytes": 543629312
+      },
+      "jsHeap": 3661180,
+      "weakReferences": {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 4,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:02.459Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1905246208,
+        "workingSetBytes": 918962176
+      },
+      "jsHeap": 14596728,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 4,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:03.677Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1858609152,
+        "workingSetBytes": 1002704896
+      },
+      "jsHeap": 21243568,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 4,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:04.735Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1898319872,
+        "workingSetBytes": 1048449024
+      },
+      "jsHeap": 21709048,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 4,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:05.719Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1899282432,
+        "workingSetBytes": 1048702976
+      },
+      "jsHeap": 21081392,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 4,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:06.702Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1900929024,
+        "workingSetBytes": 1046110208
+      },
+      "jsHeap": 23226252,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 4,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:07.689Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1901600768,
+        "workingSetBytes": 1046728704
+      },
+      "jsHeap": 22319456,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 4,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:08.790Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1985212416,
+        "workingSetBytes": 1136865280
+      },
+      "jsHeap": 23792452,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 4,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:10.090Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2126925824,
+        "workingSetBytes": 1299148800
+      },
+      "jsHeap": 22646420,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 4,
+      "phase": "batch-finished",
+      "time": "2026-09-12T07:08:10.938Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1931005952,
+        "workingSetBytes": 1144139776
+      },
+      "jsHeap": 22746332,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 4,
+      "phase": "cleared-before-gc",
+      "time": "2026-09-12T07:08:11.799Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1867612160,
+        "workingSetBytes": 1084182528
+      },
+      "jsHeap": 23011792,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 4,
+      "phase": "cleared-after-page-gc",
+      "time": "2026-09-12T07:08:12.725Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 391364608,
+        "workingSetBytes": 552579072
+      },
+      "jsHeap": 3714268,
+      "weakReferences": {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 5,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:14.259Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1917513728,
+        "workingSetBytes": 930291712
+      },
+      "jsHeap": 14675856,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 5,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:15.482Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1834446848,
+        "workingSetBytes": 978337792
+      },
+      "jsHeap": 21501316,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 5,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:16.550Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1871384576,
+        "workingSetBytes": 1022386176
+      },
+      "jsHeap": 22025632,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 5,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:17.534Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1872334848,
+        "workingSetBytes": 1022521344
+      },
+      "jsHeap": 21464136,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 5,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:18.497Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1873747968,
+        "workingSetBytes": 1020018688
+      },
+      "jsHeap": 23685520,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 5,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:19.461Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1875025920,
+        "workingSetBytes": 1020887040
+      },
+      "jsHeap": 22643228,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 5,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:20.616Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1974902784,
+        "workingSetBytes": 1140264960
+      },
+      "jsHeap": 24033688,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 5,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:21.900Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2092048384,
+        "workingSetBytes": 1266446336
+      },
+      "jsHeap": 22686684,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 5,
+      "phase": "batch-finished",
+      "time": "2026-09-12T07:08:22.737Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1897566208,
+        "workingSetBytes": 1113411584
+      },
+      "jsHeap": 22786592,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 5,
+      "phase": "cleared-before-gc",
+      "time": "2026-09-12T07:08:23.587Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1807245312,
+        "workingSetBytes": 1026678784
+      },
+      "jsHeap": 23034448,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 5,
+      "phase": "cleared-after-page-gc",
+      "time": "2026-09-12T07:08:24.521Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 321052672,
+        "workingSetBytes": 485289984
+      },
+      "jsHeap": 3771408,
+      "weakReferences": {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 6,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:26.089Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1849286656,
+        "workingSetBytes": 885305344
+      },
+      "jsHeap": 14688132,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 6,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:27.314Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1794031616,
+        "workingSetBytes": 939302912
+      },
+      "jsHeap": 21341376,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 6,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:28.367Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1861021696,
+        "workingSetBytes": 1013891072
+      },
+      "jsHeap": 21845192,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 6,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:29.319Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1860689920,
+        "workingSetBytes": 1013260288
+      },
+      "jsHeap": 21331716,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 6,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:30.281Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1855684608,
+        "workingSetBytes": 1004404736
+      },
+      "jsHeap": 23461740,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 6,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:31.294Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1858043904,
+        "workingSetBytes": 1006022656
+      },
+      "jsHeap": 22614720,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 6,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:32.411Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1953886208,
+        "workingSetBytes": 1123758080
+      },
+      "jsHeap": 24100904,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 6,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:33.683Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2099236864,
+        "workingSetBytes": 1272029184
+      },
+      "jsHeap": 22754384,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 6,
+      "phase": "batch-finished",
+      "time": "2026-09-12T07:08:34.539Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1900527616,
+        "workingSetBytes": 1114910720
+      },
+      "jsHeap": 22854260,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 6,
+      "phase": "cleared-before-gc",
+      "time": "2026-09-12T07:08:35.390Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1866895360,
+        "workingSetBytes": 1084551168
+      },
+      "jsHeap": 23104860,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 6,
+      "phase": "cleared-after-page-gc",
+      "time": "2026-09-12T07:08:36.343Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 317296640,
+        "workingSetBytes": 480395264
+      },
+      "jsHeap": 3789720,
+      "weakReferences": {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 7,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:37.921Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1857986560,
+        "workingSetBytes": 869294080
+      },
+      "jsHeap": 14705712,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 7,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:39.074Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1810141184,
+        "workingSetBytes": 953970688
+      },
+      "jsHeap": 21350188,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 7,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:40.130Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1882185728,
+        "workingSetBytes": 1033297920
+      },
+      "jsHeap": 21547000,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 7,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:41.107Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1883410432,
+        "workingSetBytes": 1034067968
+      },
+      "jsHeap": 21163192,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 7,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:42.093Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1877950464,
+        "workingSetBytes": 1025171456
+      },
+      "jsHeap": 23363600,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 7,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:43.073Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1880526848,
+        "workingSetBytes": 1027813376
+      },
+      "jsHeap": 22639120,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 7,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:44.181Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1947045888,
+        "workingSetBytes": 1104080896
+      },
+      "jsHeap": 24111268,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 7,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:45.472Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2132078592,
+        "workingSetBytes": 1303175168
+      },
+      "jsHeap": 22730236,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 7,
+      "phase": "batch-finished",
+      "time": "2026-09-12T07:08:46.430Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1922490368,
+        "workingSetBytes": 1136431104
+      },
+      "jsHeap": 22851968,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 7,
+      "phase": "cleared-before-gc",
+      "time": "2026-09-12T07:08:47.312Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1868910592,
+        "workingSetBytes": 1086705664
+      },
+      "jsHeap": 23099044,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 7,
+      "phase": "cleared-after-page-gc",
+      "time": "2026-09-12T07:08:48.241Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 387567616,
+        "workingSetBytes": 550010880
+      },
+      "jsHeap": 3802328,
+      "weakReferences": {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 8,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:49.843Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1839992832,
+        "workingSetBytes": 851623936
+      },
+      "jsHeap": 14715492,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 8,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:50.979Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1839771648,
+        "workingSetBytes": 983322624
+      },
+      "jsHeap": 21195400,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 8,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:52.026Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1910956032,
+        "workingSetBytes": 1061543936
+      },
+      "jsHeap": 21800440,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 8,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:53.004Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1909526528,
+        "workingSetBytes": 1060089856
+      },
+      "jsHeap": 21284820,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 8,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:53.965Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1910222848,
+        "workingSetBytes": 1056776192
+      },
+      "jsHeap": 23459052,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 8,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:54.961Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1914298368,
+        "workingSetBytes": 1060741120
+      },
+      "jsHeap": 22610676,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 8,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:56.054Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2016514048,
+        "workingSetBytes": 1183051776
+      },
+      "jsHeap": 23996776,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 8,
+      "phase": "processing",
+      "time": "2026-09-12T07:08:57.559Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2025922560,
+        "workingSetBytes": 1222664192
+      },
+      "jsHeap": 22798848,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 8,
+      "phase": "batch-finished",
+      "time": "2026-09-12T07:08:58.447Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1894047744,
+        "workingSetBytes": 1108434944
+      },
+      "jsHeap": 22946652,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 8,
+      "phase": "cleared-before-gc",
+      "time": "2026-09-12T07:08:59.347Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1880604672,
+        "workingSetBytes": 1097867264
+      },
+      "jsHeap": 23151300,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 8,
+      "phase": "cleared-after-page-gc",
+      "time": "2026-09-12T07:09:00.354Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 394973184,
+        "workingSetBytes": 557473792
+      },
+      "jsHeap": 3844352,
+      "weakReferences": {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 9,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:01.904Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1874505728,
+        "workingSetBytes": 889688064
+      },
+      "jsHeap": 14784540,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 9,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:03.129Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1865711616,
+        "workingSetBytes": 1008832512
+      },
+      "jsHeap": 21800960,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 9,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:04.126Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1923670016,
+        "workingSetBytes": 1074536448
+      },
+      "jsHeap": 19071224,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 9,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:05.085Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1915858944,
+        "workingSetBytes": 1067200512
+      },
+      "jsHeap": 21820104,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 9,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:06.055Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1917169664,
+        "workingSetBytes": 1064820736
+      },
+      "jsHeap": 24154708,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 9,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:07.051Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1928716288,
+        "workingSetBytes": 1076744192
+      },
+      "jsHeap": 23254568,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 9,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:08.285Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2170679296,
+        "workingSetBytes": 1316630528
+      },
+      "jsHeap": 24360480,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 9,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:09.427Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1961377792,
+        "workingSetBytes": 1176371200
+      },
+      "jsHeap": 22877760,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 9,
+      "phase": "batch-finished",
+      "time": "2026-09-12T07:09:10.248Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1960931328,
+        "workingSetBytes": 1175986176
+      },
+      "jsHeap": 23039124,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 9,
+      "phase": "cleared-before-gc",
+      "time": "2026-09-12T07:09:11.233Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1886994432,
+        "workingSetBytes": 1105678336
+      },
+      "jsHeap": 23245464,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 9,
+      "phase": "cleared-after-page-gc",
+      "time": "2026-09-12T07:09:12.140Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 405843968,
+        "workingSetBytes": 568598528
+      },
+      "jsHeap": 3932272,
+      "weakReferences": {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 10,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:13.686Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1878085632,
+        "workingSetBytes": 906416128
+      },
+      "jsHeap": 14849256,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 10,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:14.845Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1864134656,
+        "workingSetBytes": 1007869952
+      },
+      "jsHeap": 21491672,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 10,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:15.893Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1923076096,
+        "workingSetBytes": 1074348032
+      },
+      "jsHeap": 21630132,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 10,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:16.868Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1924325376,
+        "workingSetBytes": 1075372032
+      },
+      "jsHeap": 21363244,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 10,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:17.817Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1919483904,
+        "workingSetBytes": 1067610112
+      },
+      "jsHeap": 23386676,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 10,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:18.830Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1922605056,
+        "workingSetBytes": 1069785088
+      },
+      "jsHeap": 22772996,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 10,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:19.989Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 2034249728,
+        "workingSetBytes": 1204002816
+      },
+      "jsHeap": 24280804,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 0
+        }
+      },
+      "frames": 1
+    },
+    {
+      "round": 10,
+      "phase": "processing",
+      "time": "2026-09-12T07:09:21.193Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1996738560,
+        "workingSetBytes": 1204105216
+      },
+      "jsHeap": 22896140,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 10,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 10,
+      "phase": "batch-finished",
+      "time": "2026-09-12T07:09:22.027Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1962627072,
+        "workingSetBytes": 1176580096
+      },
+      "jsHeap": 23048272,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 10,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 10,
+      "phase": "cleared-before-gc",
+      "time": "2026-09-12T07:09:22.884Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 1888514048,
+        "workingSetBytes": 1106169856
+      },
+      "jsHeap": 23254320,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 10,
+          "live": 1
+        }
+      },
+      "frames": 0
+    },
+    {
+      "round": 10,
+      "phase": "cleared-after-page-gc",
+      "time": "2026-09-12T07:09:23.772Z",
+      "osMemory": {
+        "count": 5,
+        "privateBytes": 408178688,
+        "workingSetBytes": 570421248
+      },
+      "jsHeap": 3948156,
+      "weakReferences": {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 10,
+          "live": 1
+        }
+      },
+      "frames": 0
+    }
+  ],
+  "limitations": "OS private bytes include engine, browser and subprocesses. Working set sums can double-count shared mappings. Peak is sampled, not guaranteed absolute maximum. CDP GC covers page JS only; it does not prove complete native/WASM reclamation. WeakRef counts cover selected File objects and parent-page Blob URL inputs, without retaining them or recording names. Firefox/WebKit do not have forced page GC here, so live weak references are not by themselves proof of a leak. No instrumentation retaining frames.",
+  "docx": "converted"
+}

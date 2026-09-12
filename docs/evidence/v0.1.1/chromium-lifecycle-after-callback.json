@@ -1,0 +1,85 @@
+{
+  "rounds": 10,
+  "samples": [
+    {
+      "workers": 0,
+      "urls": 0,
+      "created": 7,
+      "ports": 2,
+      "timers": 0,
+      "frames": 0
+    },
+    {
+      "workers": 0,
+      "urls": 0,
+      "created": 14,
+      "ports": 2,
+      "timers": 0,
+      "frames": 0
+    },
+    {
+      "workers": 0,
+      "urls": 0,
+      "created": 21,
+      "ports": 2,
+      "timers": 0,
+      "frames": 0
+    },
+    {
+      "workers": 0,
+      "urls": 0,
+      "created": 28,
+      "ports": 2,
+      "timers": 0,
+      "frames": 0
+    },
+    {
+      "workers": 0,
+      "urls": 0,
+      "created": 35,
+      "ports": 2,
+      "timers": 0,
+      "frames": 0
+    },
+    {
+      "workers": 0,
+      "urls": 0,
+      "created": 42,
+      "ports": 2,
+      "timers": 0,
+      "frames": 0
+    },
+    {
+      "workers": 0,
+      "urls": 0,
+      "created": 49,
+      "ports": 2,
+      "timers": 0,
+      "frames": 0
+    },
+    {
+      "workers": 0,
+      "urls": 0,
+      "created": 56,
+      "ports": 2,
+      "timers": 0,
+      "frames": 0
+    },
+    {
+      "workers": 0,
+      "urls": 0,
+      "created": 63,
+      "ports": 2,
+      "timers": 0,
+      "frames": 0
+    },
+    {
+      "workers": 0,
+      "urls": 0,
+      "created": 70,
+      "ports": 2,
+      "timers": 0,
+      "frames": 0
+    }
+  ]
+}

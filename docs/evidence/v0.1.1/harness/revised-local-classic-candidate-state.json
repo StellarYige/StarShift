@@ -1,0 +1,101 @@
+{
+  "time": "2026-09-12T08:47:13.350Z",
+  "label": "revised-local-classic-candidate",
+  "round": 3,
+  "method": "Read-only CDP evaluation/property inspection during a stalled sample; no target pause or cache/request override. No document content or names read.",
+  "state": {
+    "outputs": 0,
+    "errors": 1,
+    "frames": 0,
+    "busy": false,
+    "frame": null
+  },
+  "events": [
+    {
+      "type": "check",
+      "ms": 44.02999997138977
+    },
+    {
+      "type": "progress",
+      "ms": 145.45999997854233,
+      "phase": "resource-load"
+    },
+    {
+      "type": "progress",
+      "ms": 422.8799999952316,
+      "phase": "resource-load"
+    },
+    {
+      "type": "progress",
+      "ms": 525.5199999809265,
+      "phase": "resource-load"
+    },
+    {
+      "type": "progress",
+      "ms": 627.2900000214577,
+      "phase": "resource-load"
+    },
+    {
+      "type": "progress",
+      "ms": 727.8449999690056,
+      "phase": "resource-load"
+    },
+    {
+      "type": "progress",
+      "ms": 829.5049999952316,
+      "phase": "resource-load"
+    },
+    {
+      "type": "progress",
+      "ms": 1067.6949999928474,
+      "phase": "resource-load"
+    },
+    {
+      "type": "progress",
+      "ms": 1172.3949999809265,
+      "phase": "resource-load"
+    },
+    {
+      "type": "progress",
+      "ms": 5518.680000007153,
+      "phase": "initialize"
+    },
+    {
+      "type": "progress",
+      "ms": 5542.560000002384,
+      "phase": "initialize"
+    },
+    {
+      "type": "progress",
+      "ms": 7775.129999995232,
+      "phase": "initialize"
+    }
+  ],
+  "unoMainPromiseState": null,
+  "targets": [
+    {
+      "type": "page",
+      "url": "http://127.0.0.1:4192/StarShift/#docx-pdf"
+    },
+    {
+      "type": "page",
+      "url": "about:blank"
+    },
+    {
+      "type": "browser_ui",
+      "url": "chrome://webui-toolbar.top-chrome/"
+    },
+    {
+      "type": "browser_ui",
+      "url": "chrome://omnibox-popup.top-chrome/"
+    },
+    {
+      "type": "browser_ui",
+      "url": "chrome://omnibox-popup.top-chrome/omnibox_popup_aim.html"
+    },
+    {
+      "type": "service_worker",
+      "url": "http://127.0.0.1:4192/StarShift/coi-serviceworker.js"
+    }
+  ]
+}

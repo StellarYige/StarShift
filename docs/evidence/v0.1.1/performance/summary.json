@@ -1,0 +1,4146 @@
+{
+  "baseline-local-contemporary": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T07:53:35.570Z",
+    "groups": {
+      "cold": {
+        "passed": 5,
+        "failed": 0,
+        "batchMs": {
+          "n": 5,
+          "median": 16613,
+          "min": 12328,
+          "max": 17188
+        },
+        "receivedBytes": {
+          "n": 5,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 5,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 5,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 5,
+          "median": 402.4249999523163,
+          "min": 316.4950000047684,
+          "max": 485.65499997138977
+        },
+        "resourceResponsesSpanMs": {
+          "n": 5,
+          "median": 14051.38999997871,
+          "min": 9940.462000027765,
+          "max": 14774.47399997618
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 5,
+          "median": 8809.209999978542,
+          "min": 7096.910000026226,
+          "max": 10184.799999952316
+        },
+        "startToUnoReadyMs": {
+          "n": 5,
+          "median": 14712.194999992847,
+          "min": 10390.820000052452,
+          "max": 15401.009999990463
+        },
+        "nextDocumentCheckMs": {
+          "n": 5,
+          "median": 48.28999996185303,
+          "min": 28.62000000476837,
+          "max": 89.9549999833107
+        },
+        "firstDocumentMs": {
+          "n": 5,
+          "median": 1164.510000050068,
+          "min": 1038.8899999856949,
+          "max": 1399.635000050068
+        },
+        "subsequentDocumentMs": {
+          "n": 5,
+          "median": 239.19999998807907,
+          "min": 211.63499999046326,
+          "max": 272.81999999284744
+        },
+        "firstImportMs": {
+          "n": 5,
+          "median": 952.2400000095367,
+          "min": 876.535000026226,
+          "max": 1176.385000050068
+        },
+        "firstExportMs": {
+          "n": 5,
+          "median": 193.28999996185303,
+          "min": 157.2249999642372,
+          "max": 254.19000005722046
+        },
+        "subsequentImportMs": {
+          "n": 5,
+          "median": 172.07499998807907,
+          "min": 165.25,
+          "max": 212.4549999833107
+        },
+        "subsequentExportMs": {
+          "n": 5,
+          "median": 39.43000000715256,
+          "min": 33.72499996423721,
+          "max": 43.839999973773956
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 5,
+        "failed": 0,
+        "batchMs": {
+          "n": 5,
+          "median": 12209,
+          "min": 10907,
+          "max": 18947
+        },
+        "receivedBytes": {
+          "n": 5,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 5,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 5,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 5,
+          "median": 351.7450000047684,
+          "min": 282.92500001192093,
+          "max": 418.70500004291534
+        },
+        "resourceResponsesSpanMs": {
+          "n": 5,
+          "median": 10229.018999962136,
+          "min": 8932.853000005707,
+          "max": 16147.708000033163
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 5,
+          "median": 7369.780000030994,
+          "min": 6027.97000002861,
+          "max": 11272.650000035763
+        },
+        "startToUnoReadyMs": {
+          "n": 5,
+          "median": 10630.450000047684,
+          "min": 9309.324999988079,
+          "max": 16717.069999992847
+        },
+        "nextDocumentCheckMs": {
+          "n": 5,
+          "median": 31.2049999833107,
+          "min": 29.52000004053116,
+          "max": 39.360000014305115
+        },
+        "firstDocumentMs": {
+          "n": 5,
+          "median": 1090.2199999690056,
+          "min": 1051.9800000190735,
+          "max": 1408.199999988079
+        },
+        "subsequentDocumentMs": {
+          "n": 5,
+          "median": 221.2950000166893,
+          "min": 202.14999997615814,
+          "max": 283.58999997377396
+        },
+        "firstImportMs": {
+          "n": 5,
+          "median": 914.5,
+          "min": 878.8899999856949,
+          "max": 1166.5900000333786
+        },
+        "firstExportMs": {
+          "n": 5,
+          "median": 175.24000000953674,
+          "min": 168.35000002384186,
+          "max": 235.45999997854233
+        },
+        "subsequentImportMs": {
+          "n": 5,
+          "median": 164.70000004768372,
+          "min": 153.56999999284744,
+          "max": 204.11500000953674
+        },
+        "subsequentExportMs": {
+          "n": 5,
+          "median": 37.514999985694885,
+          "min": 35.49000000953674,
+          "max": 44.14999997615814
+        },
+        "failures": []
+      },
+      "continuous": {
+        "passed": 23,
+        "failed": 2,
+        "batchMs": {
+          "n": 23,
+          "median": 10809,
+          "min": 9882,
+          "max": 20979
+        },
+        "receivedBytes": {
+          "n": 23,
+          "median": 280485996,
+          "min": 280485996,
+          "max": 280485996
+        },
+        "decodedNetworkBytes": {
+          "n": 23,
+          "median": 280483172,
+          "min": 280483172,
+          "max": 280483172
+        },
+        "decodedCacheBytes": {
+          "n": 23,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 23,
+          "median": 510.94499999284744,
+          "min": 396.6399999856949,
+          "max": 874.4749999642372
+        },
+        "resourceResponsesSpanMs": {
+          "n": 23,
+          "median": 9720.993000024464,
+          "min": 8843.900999985635,
+          "max": 18090.634000021964
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 23,
+          "median": 5961.909999966621,
+          "min": 5248.324999988079,
+          "max": 11597.270000040531
+        },
+        "startToUnoReadyMs": {
+          "n": 23,
+          "median": 9982.225000023842,
+          "min": 9118.884999990463,
+          "max": 18634.325000047684
+        },
+        "nextDocumentCheckMs": {
+          "n": 23,
+          "median": 14.084999978542328,
+          "min": 11.745000004768372,
+          "max": 43.644999980926514
+        },
+        "firstDocumentMs": {
+          "n": 23,
+          "median": 350.2199999690056,
+          "min": 288.60000002384186,
+          "max": 1828.6000000238419
+        },
+        "subsequentDocumentMs": {
+          "n": 23,
+          "median": 155.30500000715256,
+          "min": 137.32500004768372,
+          "max": 350.960000038147
+        },
+        "firstImportMs": {
+          "n": 23,
+          "median": 308.375,
+          "min": 253.82499998807907,
+          "max": 1555.375
+        },
+        "firstExportMs": {
+          "n": 23,
+          "median": 32.955000042915344,
+          "min": 28.160000026226044,
+          "max": 268.10999995470047
+        },
+        "subsequentImportMs": {
+          "n": 23,
+          "median": 116.73000001907349,
+          "min": 102.42499995231628,
+          "max": 238.98500001430511
+        },
+        "subsequentExportMs": {
+          "n": 23,
+          "median": 29.49500000476837,
+          "min": 22.85499995946884,
+          "max": 50.375
+        },
+        "failures": [
+          {
+            "round": 1,
+            "batch": 5,
+            "elapsedMs": 270110,
+            "failure": "expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('.result-list li')\nExpected: 2\nReceived: 1\nTimeout:  270000ms\n\nCall log:\n  - Expect \"toHaveCount\" locator('.result-list li') with timeout 270000ms\n  - waiting for locator('.result-list li')\n    69 × locator resolved to 0 elements\n       - unexpected value \"0\"\n    456 × locator resolved to 1 element\n        - unexpected value \"1\"\n"
+          },
+          {
+            "round": 2,
+            "batch": 5,
+            "elapsedMs": 270049,
+            "failure": "expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('.result-list li')\nExpected: 2\nReceived: 0\nTimeout:  270000ms\n\nCall log:\n  - Expect \"toHaveCount\" locator('.result-list li') with timeout 270000ms\n  - waiting for locator('.result-list li')\n    13 × locator resolved to 0 elements\n       - unexpected value \"0\"\n"
+          }
+        ]
+      }
+    }
+  },
+  "baseline-local-expired": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T06:57:29.347Z",
+    "groups": {
+      "expired": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 21382,
+          "min": 21382,
+          "max": 21382
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 403.86500000953674,
+          "min": 403.86500000953674,
+          "max": 403.86500000953674
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 18157.277000020258,
+          "min": 18157.277000020258,
+          "max": 18157.277000020258
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 12366.629999995232,
+          "min": 12366.629999995232,
+          "max": 12366.629999995232
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 18880.530000030994,
+          "min": 18880.530000030994,
+          "max": 18880.530000030994
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 52.625,
+          "min": 52.625,
+          "max": 52.625
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1566.0249999761581,
+          "min": 1566.0249999761581,
+          "max": 1566.0249999761581
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 297.41999995708466,
+          "min": 297.41999995708466,
+          "max": 297.41999995708466
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1272.0799999833107,
+          "min": 1272.0799999833107,
+          "max": 1272.0799999833107
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 287.5,
+          "min": 287.5,
+          "max": 287.5
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 222.54499995708466,
+          "min": 222.54499995708466,
+          "max": 222.54499995708466
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 46.37000000476837,
+          "min": 46.37000000476837,
+          "max": 46.37000000476837
+        },
+        "failures": []
+      }
+    }
+  },
+  "baseline-local-pair-1": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T06:58:24.570Z",
+    "groups": {
+      "cold": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 12576,
+          "min": 12576,
+          "max": 12576
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 385.77000004053116,
+          "min": 385.77000004053116,
+          "max": 385.77000004053116
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 10260.07399999071,
+          "min": 10260.07399999071,
+          "max": 10260.07399999071
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 6853.495000004768,
+          "min": 6853.495000004768,
+          "max": 6853.495000004768
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 10757.660000026226,
+          "min": 10757.660000026226,
+          "max": 10757.660000026226
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 26.24500000476837,
+          "min": 26.24500000476837,
+          "max": 26.24500000476837
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1134.0200000405312,
+          "min": 1134.0200000405312,
+          "max": 1134.0200000405312
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 234.875,
+          "min": 234.875,
+          "max": 234.875
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 952.6749999523163,
+          "min": 952.6749999523163,
+          "max": 952.6749999523163
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 176.83000004291534,
+          "min": 176.83000004291534,
+          "max": 176.83000004291534
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 167.25999999046326,
+          "min": 167.25999999046326,
+          "max": 167.25999999046326
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 39.405000030994415,
+          "min": 39.405000030994415,
+          "max": 39.405000030994415
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 16654,
+          "min": 16654,
+          "max": 16654
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 370.460000038147,
+          "min": 370.460000038147,
+          "max": 370.460000038147
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 14316.162000002805,
+          "min": 14316.162000002805,
+          "max": 14316.162000002805
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 10737.780000030994,
+          "min": 10737.780000030994,
+          "max": 10737.780000030994
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 14694.230000019073,
+          "min": 14694.230000019073,
+          "max": 14694.230000019073
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 52.87000000476837,
+          "min": 52.87000000476837,
+          "max": 52.87000000476837
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1312.6949999928474,
+          "min": 1312.6949999928474,
+          "max": 1312.6949999928474
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 242.88499999046326,
+          "min": 242.88499999046326,
+          "max": 242.88499999046326
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1093.4350000023842,
+          "min": 1093.4350000023842,
+          "max": 1093.4350000023842
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 212.09499996900558,
+          "min": 212.09499996900558,
+          "max": 212.09499996900558
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 187.65499997138977,
+          "min": 187.65499997138977,
+          "max": 187.65499997138977
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 40.985000014305115,
+          "min": 40.985000014305115,
+          "max": 40.985000014305115
+        },
+        "failures": []
+      }
+    }
+  },
+  "baseline-local-pair-2": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T07:01:00.588Z",
+    "groups": {
+      "cold": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 17646,
+          "min": 17646,
+          "max": 17646
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 327.53500002622604,
+          "min": 327.53500002622604,
+          "max": 327.53500002622604
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 14751.971000048798,
+          "min": 14751.971000048798,
+          "max": 14751.971000048798
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 11425.92000001669,
+          "min": 11425.92000001669,
+          "max": 11425.92000001669
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 15339.5,
+          "min": 15339.5,
+          "max": 15339.5
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 57.59500002861023,
+          "min": 57.59500002861023,
+          "max": 57.59500002861023
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1534.089999973774,
+          "min": 1534.089999973774,
+          "max": 1534.089999973774
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 265.0199999809265,
+          "min": 265.0199999809265,
+          "max": 265.0199999809265
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1244.0950000286102,
+          "min": 1244.0950000286102,
+          "max": 1244.0950000286102
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 282.52999997138977,
+          "min": 282.52999997138977,
+          "max": 282.52999997138977
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 209.37999999523163,
+          "min": 209.37999999523163,
+          "max": 209.37999999523163
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 42.68000000715256,
+          "min": 42.68000000715256,
+          "max": 42.68000000715256
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 40023,
+          "min": 40023,
+          "max": 40023
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 1196.3650000095367,
+          "min": 1196.3650000095367,
+          "max": 1196.3650000095367
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 38060.39200001396,
+          "min": 38060.39200001396,
+          "max": 38060.39200001396
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 15820.769999980927,
+          "min": 15820.769999980927,
+          "max": 15820.769999980927
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 38499.625,
+          "min": 38499.625,
+          "max": 38499.625
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 25.615000009536743,
+          "min": 25.615000009536743,
+          "max": 25.615000009536743
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 986.5950000286102,
+          "min": 986.5950000286102,
+          "max": 986.5950000286102
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 194.05500000715256,
+          "min": 194.05500000715256,
+          "max": 194.05500000715256
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 817.7249999642372,
+          "min": 817.7249999642372,
+          "max": 817.7249999642372
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 164.47000002861023,
+          "min": 164.47000002861023,
+          "max": 164.47000002861023
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 140.1050000190735,
+          "min": 140.1050000190735,
+          "max": 140.1050000190735
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 31.235000014305115,
+          "min": 31.235000014305115,
+          "max": 31.235000014305115
+        },
+        "failures": []
+      }
+    }
+  },
+  "baseline-local-pair-3": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T07:02:18.787Z",
+    "groups": {
+      "cold": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 11023,
+          "min": 11023,
+          "max": 11023
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 324.27999997138977,
+          "min": 324.27999997138977,
+          "max": 324.27999997138977
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 9012.129999988247,
+          "min": 9012.129999988247,
+          "max": 9012.129999988247
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 6373.204999983311,
+          "min": 6373.204999983311,
+          "max": 6373.204999983311
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 9448.620000004768,
+          "min": 9448.620000004768,
+          "max": 9448.620000004768
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 41.39000004529953,
+          "min": 41.39000004529953,
+          "max": 41.39000004529953
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 966.2249999642372,
+          "min": 966.2249999642372,
+          "max": 966.2249999642372
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 191.02999997138977,
+          "min": 191.02999997138977,
+          "max": 191.02999997138977
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 809.9550000429153,
+          "min": 809.9550000429153,
+          "max": 809.9550000429153
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 151.41999995708466,
+          "min": 151.41999995708466,
+          "max": 151.41999995708466
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 147.33499997854233,
+          "min": 147.33499997854233,
+          "max": 147.33499997854233
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 33.60000002384186,
+          "min": 33.60000002384186,
+          "max": 33.60000002384186
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 13229,
+          "min": 13229,
+          "max": 13229
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 397.61500000953674,
+          "min": 397.61500000953674,
+          "max": 397.61500000953674
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 11378.130999975838,
+          "min": 11378.130999975838,
+          "max": 11378.130999975838
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 6996.070000052452,
+          "min": 6996.070000052452,
+          "max": 6996.070000052452
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 11745.135000050068,
+          "min": 11745.135000050068,
+          "max": 11745.135000050068
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 31.5,
+          "min": 31.5,
+          "max": 31.5
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1178.4599999785423,
+          "min": 1178.4599999785423,
+          "max": 1178.4599999785423
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 230.3299999833107,
+          "min": 230.3299999833107,
+          "max": 230.3299999833107
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 950.375,
+          "min": 950.375,
+          "max": 950.375
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 222.0649999976158,
+          "min": 222.0649999976158,
+          "max": 222.0649999976158
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 163.7049999833107,
+          "min": 163.7049999833107,
+          "max": 163.7049999833107
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 37.91500002145767,
+          "min": 37.91500002145767,
+          "max": 37.91500002145767
+        },
+        "failures": []
+      }
+    }
+  },
+  "baseline-local-pair-4": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T07:04:35.033Z",
+    "groups": {
+      "cold": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 11070,
+          "min": 11070,
+          "max": 11070
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 284.77000004053116,
+          "min": 284.77000004053116,
+          "max": 284.77000004053116
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 9177.286999998614,
+          "min": 9177.286999998614,
+          "max": 9177.286999998614
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 6563.740000009537,
+          "min": 6563.740000009537,
+          "max": 6563.740000009537
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 9654.899999976158,
+          "min": 9654.899999976158,
+          "max": 9654.899999976158
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 27.139999985694885,
+          "min": 27.139999985694885,
+          "max": 27.139999985694885
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1007.9050000309944,
+          "min": 1007.9050000309944,
+          "max": 1007.9050000309944
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 197.9000000357628,
+          "min": 197.9000000357628,
+          "max": 197.9000000357628
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 844.4850000143051,
+          "min": 844.4850000143051,
+          "max": 844.4850000143051
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 157.94999998807907,
+          "min": 157.94999998807907,
+          "max": 157.94999998807907
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 140.70999997854233,
+          "min": 140.70999997854233,
+          "max": 140.70999997854233
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 33.72000002861023,
+          "min": 33.72000002861023,
+          "max": 33.72000002861023
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 16068,
+          "min": 16068,
+          "max": 16068
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 337.21499997377396,
+          "min": 337.21499997377396,
+          "max": 337.21499997377396
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 13426.972999994177,
+          "min": 13426.972999994177,
+          "max": 13426.972999994177
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 10119.789999961853,
+          "min": 10119.789999961853,
+          "max": 10119.789999961853
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 14173.75,
+          "min": 14173.75,
+          "max": 14173.75
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 35.875,
+          "min": 35.875,
+          "max": 35.875
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1519.8450000286102,
+          "min": 1519.8450000286102,
+          "max": 1519.8450000286102
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 278.8550000190735,
+          "min": 278.8550000190735,
+          "max": 278.8550000190735
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1316.4950000047684,
+          "min": 1316.4950000047684,
+          "max": 1316.4950000047684
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 197.0600000023842,
+          "min": 197.0600000023842,
+          "max": 197.0600000023842
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 197.10000002384186,
+          "min": 197.10000002384186,
+          "max": 197.10000002384186
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 50.564999997615814,
+          "min": 50.564999997615814,
+          "max": 50.564999997615814
+        },
+        "failures": []
+      }
+    }
+  },
+  "baseline-local-pair-5": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T07:05:20.862Z",
+    "groups": {
+      "cold": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 24577,
+          "min": 24577,
+          "max": 24577
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 843.7250000238419,
+          "min": 843.7250000238419,
+          "max": 843.7250000238419
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 21135.56000002427,
+          "min": 21135.56000002427,
+          "max": 21135.56000002427
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 14745.394999980927,
+          "min": 14745.394999980927,
+          "max": 14745.394999980927
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 22094.555000007153,
+          "min": 22094.555000007153,
+          "max": 22094.555000007153
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 48.530000030994415,
+          "min": 48.530000030994415,
+          "max": 48.530000030994415
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1862.800000011921,
+          "min": 1862.800000011921,
+          "max": 1862.800000011921
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 368.9949999451637,
+          "min": 368.9949999451637,
+          "max": 368.9949999451637
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1557.4500000476837,
+          "min": 1557.4500000476837,
+          "max": 1557.4500000476837
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 298.3499999642372,
+          "min": 298.3499999642372,
+          "max": 298.3499999642372
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 264.3550000190735,
+          "min": 264.3550000190735,
+          "max": 264.3550000190735
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 58.30499994754791,
+          "min": 58.30499994754791,
+          "max": 58.30499994754791
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 19976,
+          "min": 19976,
+          "max": 19976
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 489.539999961853,
+          "min": 489.539999961853,
+          "max": 489.539999961853
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 17040.844000002835,
+          "min": 17040.844000002835,
+          "max": 17040.844000002835
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 10027.520000040531,
+          "min": 10027.520000040531,
+          "max": 10027.520000040531
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 17640.435000002384,
+          "min": 17640.435000002384,
+          "max": 17640.435000002384
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 53.939999997615814,
+          "min": 53.939999997615814,
+          "max": 53.939999997615814
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1586.2400000095367,
+          "min": 1586.2400000095367,
+          "max": 1586.2400000095367
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 295.7450000047684,
+          "min": 295.7450000047684,
+          "max": 295.7450000047684
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1340.085000038147,
+          "min": 1340.085000038147,
+          "max": 1340.085000038147
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 241.2849999666214,
+          "min": 241.2849999666214,
+          "max": 241.2849999666214
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 229.40499997138977,
+          "min": 229.40499997138977,
+          "max": 229.40499997138977
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 46.16500002145767,
+          "min": 46.16500002145767,
+          "max": 46.16500002145767
+        },
+        "failures": []
+      }
+    }
+  },
+  "baseline-local": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T04:05:18.615Z",
+    "groups": {
+      "cold": {
+        "passed": 5,
+        "failed": 0,
+        "batchMs": {
+          "n": 5,
+          "median": 8259,
+          "min": 7792,
+          "max": 10562
+        },
+        "receivedBytes": {
+          "n": 5,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 5,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 5,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 5,
+          "median": 286.44499999284744,
+          "min": 268.3949999809265,
+          "max": 340.5150000154972
+        },
+        "resourceResponsesSpanMs": {
+          "n": 5,
+          "median": 6618.246999976691,
+          "min": 6379.253000020981,
+          "max": 8681.64299998898
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 5,
+          "median": 4232.8949999809265,
+          "min": 3905.060000002384,
+          "max": 6328.585000008345
+        },
+        "startToUnoReadyMs": {
+          "n": 5,
+          "median": 7112.530000001192,
+          "min": 6754.280000001192,
+          "max": 9167.990000009537
+        },
+        "nextDocumentCheckMs": {
+          "n": 5,
+          "median": 20.469999998807907,
+          "min": 15.685000002384186,
+          "max": 28.96500000357628
+        },
+        "firstDocumentMs": {
+          "n": 5,
+          "median": 800.3700000047684,
+          "min": 749.205000013113,
+          "max": 953.7800000011921
+        },
+        "subsequentDocumentMs": {
+          "n": 5,
+          "median": 202.0649999976158,
+          "min": 147.36500000953674,
+          "max": 231.03499999642372
+        },
+        "firstImportMs": {
+          "n": 5,
+          "median": 640.0100000202656,
+          "min": 615.8350000083447,
+          "max": 793.494999974966
+        },
+        "firstExportMs": {
+          "n": 5,
+          "median": 132.03499999642372,
+          "min": 127.2199999988079,
+          "max": 157.2699999809265
+        },
+        "subsequentImportMs": {
+          "n": 5,
+          "median": 144.77499997615814,
+          "min": 100.83499997854233,
+          "max": 165.9050000011921
+        },
+        "subsequentExportMs": {
+          "n": 5,
+          "median": 30.92500001192093,
+          "min": 25.42500001192093,
+          "max": 38.53000000119209
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 5,
+        "failed": 0,
+        "batchMs": {
+          "n": 5,
+          "median": 8142,
+          "min": 7717,
+          "max": 9201
+        },
+        "receivedBytes": {
+          "n": 5,
+          "median": 280506721,
+          "min": 280506721,
+          "max": 280506721
+        },
+        "decodedNetworkBytes": {
+          "n": 5,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "decodedCacheBytes": {
+          "n": 5,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 5,
+          "median": 275.82000002264977,
+          "min": 246.90000000596046,
+          "max": 349.9650000035763
+        },
+        "resourceResponsesSpanMs": {
+          "n": 5,
+          "median": 6544.8340000002645,
+          "min": 6089.1800000099465,
+          "max": 7604.332000017166
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 5,
+          "median": 4059.669999986887,
+          "min": 3616.0699999928474,
+          "max": 4695.42999997735
+        },
+        "startToUnoReadyMs": {
+          "n": 5,
+          "median": 6842.020000010729,
+          "min": 6310.884999990463,
+          "max": 7852.9749999940395
+        },
+        "nextDocumentCheckMs": {
+          "n": 5,
+          "median": 25.150000005960464,
+          "min": 17.00499999523163,
+          "max": 47.50499999523163
+        },
+        "firstDocumentMs": {
+          "n": 5,
+          "median": 808.8449999988079,
+          "min": 746.5900000035763,
+          "max": 988.4849999845028
+        },
+        "subsequentDocumentMs": {
+          "n": 5,
+          "median": 162.34000000357628,
+          "min": 129.3149999976158,
+          "max": 210.61500000953674
+        },
+        "firstImportMs": {
+          "n": 5,
+          "median": 665.6800000071526,
+          "min": 608.1599999964237,
+          "max": 782.7549999952316
+        },
+        "firstExportMs": {
+          "n": 5,
+          "median": 139.12999999523163,
+          "min": 120.18500000238419,
+          "max": 200.81999999284744
+        },
+        "subsequentImportMs": {
+          "n": 5,
+          "median": 117.19999998807907,
+          "min": 96.4050000011921,
+          "max": 158.83499997854233
+        },
+        "subsequentExportMs": {
+          "n": 5,
+          "median": 28.150000005960464,
+          "min": 20.53499999642372,
+          "max": 39.26000002026558
+        },
+        "failures": []
+      },
+      "continuous": {
+        "passed": 25,
+        "failed": 0,
+        "batchMs": {
+          "n": 25,
+          "median": 7047,
+          "min": 5954,
+          "max": 9157
+        },
+        "receivedBytes": {
+          "n": 25,
+          "median": 280485996,
+          "min": 280485996,
+          "max": 280485996
+        },
+        "decodedNetworkBytes": {
+          "n": 25,
+          "median": 280483172,
+          "min": 280483172,
+          "max": 280483172
+        },
+        "decodedCacheBytes": {
+          "n": 25,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 25,
+          "median": 354.55000001192093,
+          "min": 246.46500000357628,
+          "max": 503.205000013113
+        },
+        "resourceResponsesSpanMs": {
+          "n": 25,
+          "median": 6197.420999989845,
+          "min": 5423.274000000674,
+          "max": 8265.22300002398
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 25,
+          "median": 3713.4950000047684,
+          "min": 3156.344999998808,
+          "max": 5483.664999991655
+        },
+        "startToUnoReadyMs": {
+          "n": 25,
+          "median": 6383.375,
+          "min": 5574.969999998808,
+          "max": 8552.745000004768
+        },
+        "nextDocumentCheckMs": {
+          "n": 25,
+          "median": 8.159999996423721,
+          "min": 6.739999979734421,
+          "max": 16.24499997496605
+        },
+        "firstDocumentMs": {
+          "n": 25,
+          "median": 206.51000002026558,
+          "min": 167.4399999976158,
+          "max": 425.97499999403954
+        },
+        "subsequentDocumentMs": {
+          "n": 25,
+          "median": 102.5300000011921,
+          "min": 81.38499999046326,
+          "max": 139.44999998807907
+        },
+        "firstImportMs": {
+          "n": 25,
+          "median": 179.8250000178814,
+          "min": 145.7950000166893,
+          "max": 398.0750000178814
+        },
+        "firstExportMs": {
+          "n": 25,
+          "median": 21.180000007152557,
+          "min": 17.859999984502792,
+          "max": 30.935000002384186
+        },
+        "subsequentImportMs": {
+          "n": 25,
+          "median": 75.6550000011921,
+          "min": 61.525000005960464,
+          "max": 105.69499999284744
+        },
+        "subsequentExportMs": {
+          "n": 25,
+          "median": 19.854999989271164,
+          "min": 13.519999980926514,
+          "max": 29.639999985694885
+        },
+        "failures": []
+      }
+    }
+  },
+  "baseline-online-expired": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T06:56:42.665Z",
+    "groups": {
+      "expired": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 33492,
+          "min": 33492,
+          "max": 33492
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 13796840,
+          "min": 13796840,
+          "max": 13796840
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 17515573,
+          "min": 17515573,
+          "max": 17515573
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 262988109,
+          "min": 262988109,
+          "max": 262988109
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 8933.319999992847,
+          "min": 8933.319999992847,
+          "max": 8933.319999992847
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 31291.2639999995,
+          "min": 31291.2639999995,
+          "max": 31291.2639999995
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 7078.77999997139,
+          "min": 7078.77999997139,
+          "max": 7078.77999997139
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 31852.584999978542,
+          "min": 31852.584999978542,
+          "max": 31852.584999978542
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 26.5450000166893,
+          "min": 26.5450000166893,
+          "max": 26.5450000166893
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1141.1549999713898,
+          "min": 1141.1549999713898,
+          "max": 1141.1549999713898
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 237.08499997854233,
+          "min": 237.08499997854233,
+          "max": 237.08499997854233
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 958.5500000119209,
+          "min": 958.5500000119209,
+          "max": 958.5500000119209
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 181.62999999523163,
+          "min": 181.62999999523163,
+          "max": 181.62999999523163
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 170.87999999523163,
+          "min": 170.87999999523163,
+          "max": 170.87999999523163
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 39.83499997854233,
+          "min": 39.83499997854233,
+          "max": 39.83499997854233
+        },
+        "failures": []
+      }
+    }
+  },
+  "baseline-online": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T04:13:13.888Z",
+    "groups": {
+      "cold": {
+        "passed": 2,
+        "failed": 1,
+        "batchMs": {
+          "n": 2,
+          "median": 36119,
+          "min": 34560,
+          "max": 37678
+        },
+        "receivedBytes": {
+          "n": 2,
+          "median": 97071790,
+          "min": 97071707,
+          "max": 97071873
+        },
+        "decodedNetworkBytes": {
+          "n": 2,
+          "median": 278778227,
+          "min": 278778227,
+          "max": 278778227
+        },
+        "decodedCacheBytes": {
+          "n": 2,
+          "median": 1725455,
+          "min": 1725455,
+          "max": 1725455
+        },
+        "fontWaitMs": {
+          "n": 2,
+          "median": 5263.722499996424,
+          "min": 4754.9000000059605,
+          "max": 5772.544999986887
+        },
+        "resourceResponsesSpanMs": {
+          "n": 2,
+          "median": 34223.76349999104,
+          "min": 32805.61999999918,
+          "max": 35641.90699998289
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 2,
+          "median": 5442.297499999404,
+          "min": 4643.395000010729,
+          "max": 6241.199999988079
+        },
+        "startToUnoReadyMs": {
+          "n": 2,
+          "median": 34676.964999988675,
+          "min": 33378.15500000119,
+          "max": 35975.77499997616
+        },
+        "nextDocumentCheckMs": {
+          "n": 2,
+          "median": 25.080000013113022,
+          "min": 23.950000017881393,
+          "max": 26.21000000834465
+        },
+        "firstDocumentMs": {
+          "n": 2,
+          "median": 944.7750000059605,
+          "min": 889.8250000178814,
+          "max": 999.7249999940395
+        },
+        "subsequentDocumentMs": {
+          "n": 2,
+          "median": 180.73249998688698,
+          "min": 168.7999999821186,
+          "max": 192.66499999165535
+        },
+        "firstImportMs": {
+          "n": 2,
+          "median": 784.8699999898672,
+          "min": 740.3700000047684,
+          "max": 829.369999974966
+        },
+        "firstExportMs": {
+          "n": 2,
+          "median": 158.98499999940395,
+          "min": 148.4699999988079,
+          "max": 169.5
+        },
+        "subsequentImportMs": {
+          "n": 2,
+          "median": 129.1799999922514,
+          "min": 117.5499999821186,
+          "max": 140.8100000023842
+        },
+        "subsequentExportMs": {
+          "n": 2,
+          "median": 32.689999997615814,
+          "min": 32.5,
+          "max": 32.87999999523163
+        },
+        "failures": [
+          {
+            "round": 1,
+            "batch": 1,
+            "elapsedMs": 270181,
+            "failure": "expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('.result-list li')\nExpected: 2\nReceived: 1\nTimeout:  270000ms\n\nCall log:\n  - Expect \"toHaveCount\" locator('.result-list li') with timeout 270000ms\n  - waiting for locator('.result-list li')\n    529 × locator resolved to 0 elements\n        - unexpected value \"0\"\n    3 × locator resolved to 1 element\n      - unexpected value \"1\"\n"
+          }
+        ]
+      },
+      "revisit": {
+        "passed": 3,
+        "failed": 0,
+        "batchMs": {
+          "n": 3,
+          "median": 9508,
+          "min": 8411,
+          "max": 10629
+        },
+        "receivedBytes": {
+          "n": 3,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "decodedNetworkBytes": {
+          "n": 3,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "decodedCacheBytes": {
+          "n": 3,
+          "median": 280503682,
+          "min": 280503682,
+          "max": 280503682
+        },
+        "fontWaitMs": {
+          "n": 3,
+          "median": 318.8100000023842,
+          "min": 307.2450000047684,
+          "max": 352.17500001192093
+        },
+        "resourceResponsesSpanMs": {
+          "n": 3,
+          "median": 7617.715000000317,
+          "min": 6970.753000001423,
+          "max": 8862.887999974191
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 3,
+          "median": 5324.479999989271,
+          "min": 4543.545000016689,
+          "max": 6234.305000007153
+        },
+        "startToUnoReadyMs": {
+          "n": 3,
+          "median": 7946.569999992847,
+          "min": 7233.015000015497,
+          "max": 9201.42000001669
+        },
+        "nextDocumentCheckMs": {
+          "n": 3,
+          "median": 43.145000010728836,
+          "min": 24.884999990463257,
+          "max": 43.894999980926514
+        },
+        "firstDocumentMs": {
+          "n": 3,
+          "median": 953.2249999940395,
+          "min": 892.9899999797344,
+          "max": 992.294999986887
+        },
+        "subsequentDocumentMs": {
+          "n": 3,
+          "median": 200.22499999403954,
+          "min": 183.2199999988079,
+          "max": 221.36000001430511
+        },
+        "firstImportMs": {
+          "n": 3,
+          "median": 778.1399999856949,
+          "min": 731.3400000035763,
+          "max": 796.3600000143051
+        },
+        "firstExportMs": {
+          "n": 3,
+          "median": 170.78499999642372,
+          "min": 152.83499997854233,
+          "max": 191.13999998569489
+        },
+        "subsequentImportMs": {
+          "n": 3,
+          "median": 144.4350000023842,
+          "min": 136.69499999284744,
+          "max": 148.9399999976158
+        },
+        "subsequentExportMs": {
+          "n": 3,
+          "median": 36.69499999284744,
+          "min": 32.75,
+          "max": 36.86500000953674
+        },
+        "failures": []
+      },
+      "continuous": {
+        "passed": 15,
+        "failed": 0,
+        "batchMs": {
+          "n": 15,
+          "median": 8046,
+          "min": 6618,
+          "max": 11356
+        },
+        "receivedBytes": {
+          "n": 15,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "decodedNetworkBytes": {
+          "n": 15,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "decodedCacheBytes": {
+          "n": 15,
+          "median": 279611707,
+          "min": 279611707,
+          "max": 279611707
+        },
+        "fontWaitMs": {
+          "n": 15,
+          "median": 323.8349999785423,
+          "min": 294.3550000190735,
+          "max": 385.5450000166893
+        },
+        "resourceResponsesSpanMs": {
+          "n": 15,
+          "median": 7167.09499998251,
+          "min": 5818.6790000181645,
+          "max": 10145.828999986406
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 15,
+          "median": 4808.280000001192,
+          "min": 3711.9749999940395,
+          "max": 8046.2699999809265
+        },
+        "startToUnoReadyMs": {
+          "n": 15,
+          "median": 7408.604999989271,
+          "min": 6008.634999990463,
+          "max": 10497.389999985695
+        },
+        "nextDocumentCheckMs": {
+          "n": 15,
+          "median": 11.58500000834465,
+          "min": 7.609999984502792,
+          "max": 22.330000013113022
+        },
+        "firstDocumentMs": {
+          "n": 15,
+          "median": 284.5199999809265,
+          "min": 204.12000000476837,
+          "max": 518.1299999952316
+        },
+        "subsequentDocumentMs": {
+          "n": 15,
+          "median": 131.5,
+          "min": 98.7199999988079,
+          "max": 173.22499999403954
+        },
+        "firstImportMs": {
+          "n": 15,
+          "median": 249.53500002622604,
+          "min": 179.50999999046326,
+          "max": 469.84999999403954
+        },
+        "firstExportMs": {
+          "n": 15,
+          "median": 31.23999997973442,
+          "min": 21.280000001192093,
+          "max": 42.70500001311302
+        },
+        "subsequentImportMs": {
+          "n": 15,
+          "median": 92.62999999523163,
+          "min": 71.33000001311302,
+          "max": 127.28499999642372
+        },
+        "subsequentExportMs": {
+          "n": 15,
+          "median": 27.640000015497208,
+          "min": 17.599999994039536,
+          "max": 35.939999997615814
+        },
+        "failures": []
+      }
+    }
+  },
+  "revised-local-classic-candidate": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T08:37:55.598Z",
+    "groups": {
+      "cold": {
+        "passed": 4,
+        "failed": 0,
+        "batchMs": {
+          "n": 4,
+          "median": 15179,
+          "min": 14752,
+          "max": 18412
+        },
+        "receivedBytes": {
+          "n": 4,
+          "median": 280504534,
+          "min": 280504534,
+          "max": 280504534
+        },
+        "decodedNetworkBytes": {
+          "n": 4,
+          "median": 280501708,
+          "min": 280501708,
+          "max": 280501708
+        },
+        "decodedCacheBytes": {
+          "n": 4,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 4,
+          "median": 399.96250000596046,
+          "min": 366.78500002622604,
+          "max": 462.72999995946884
+        },
+        "resourceResponsesSpanMs": {
+          "n": 4,
+          "median": 6462.525999988429,
+          "min": 6348.593000031542,
+          "max": 7814.964000019245
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 4,
+          "median": 9140.61749997735,
+          "min": 8809.534999966621,
+          "max": 10823.090000033379
+        },
+        "startToUnoReadyMs": {
+          "n": 4,
+          "median": 13274.447499960661,
+          "min": 13081.294999957085,
+          "max": 16217.97000002861
+        },
+        "nextDocumentCheckMs": {
+          "n": 4,
+          "median": 32.737499952316284,
+          "min": 29.59500002861023,
+          "max": 48.44499999284744
+        },
+        "firstDocumentMs": {
+          "n": 4,
+          "median": 1264.1700000166893,
+          "min": 1233.6299999952316,
+          "max": 1516.0600000023842
+        },
+        "subsequentDocumentMs": {
+          "n": 4,
+          "median": 282.6724999845028,
+          "min": 216.125,
+          "max": 308.6200000047684
+        },
+        "firstImportMs": {
+          "n": 4,
+          "median": 1040.3949999809265,
+          "min": 982.1149999499321,
+          "max": 1274.0499999523163
+        },
+        "firstExportMs": {
+          "n": 4,
+          "median": 192.5474999845028,
+          "min": 174.8200000524521,
+          "max": 232.50500005483627
+        },
+        "subsequentImportMs": {
+          "n": 4,
+          "median": 191.92500001192093,
+          "min": 176.7300000190735,
+          "max": 220.83499997854233
+        },
+        "subsequentExportMs": {
+          "n": 4,
+          "median": 39.5625,
+          "min": 35.04000002145767,
+          "max": 61.344999969005585
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 3,
+        "failed": 0,
+        "batchMs": {
+          "n": 3,
+          "median": 15963,
+          "min": 15237,
+          "max": 16457
+        },
+        "receivedBytes": {
+          "n": 3,
+          "median": 280504534,
+          "min": 280504534,
+          "max": 280504534
+        },
+        "decodedNetworkBytes": {
+          "n": 3,
+          "median": 280501708,
+          "min": 280501708,
+          "max": 280501708
+        },
+        "decodedCacheBytes": {
+          "n": 3,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 3,
+          "median": 408.09500002861023,
+          "min": 381.3899999856949,
+          "max": 462.57499998807907
+        },
+        "resourceResponsesSpanMs": {
+          "n": 3,
+          "median": 7057.410999957938,
+          "min": 6690.319999994244,
+          "max": 7183.041000040248
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 3,
+          "median": 9375.555000007153,
+          "min": 8591.160000026226,
+          "max": 9510.25
+        },
+        "startToUnoReadyMs": {
+          "n": 3,
+          "median": 14044.814999997616,
+          "min": 13266.620000004768,
+          "max": 14575.800000011921
+        },
+        "nextDocumentCheckMs": {
+          "n": 3,
+          "median": 33.6149999499321,
+          "min": 28.225000023841858,
+          "max": 50.40000003576279
+        },
+        "firstDocumentMs": {
+          "n": 3,
+          "median": 1285.2599999904633,
+          "min": 1255.6499999761581,
+          "max": 1418.25
+        },
+        "subsequentDocumentMs": {
+          "n": 3,
+          "median": 275.2199999690056,
+          "min": 212.5349999666214,
+          "max": 297.2800000309944
+        },
+        "firstImportMs": {
+          "n": 3,
+          "median": 1058.125,
+          "min": 1052.1700000166893,
+          "max": 1095.6399999856949
+        },
+        "firstExportMs": {
+          "n": 3,
+          "median": 191.72500002384186,
+          "min": 190.43000000715256,
+          "max": 225.48500001430511
+        },
+        "subsequentImportMs": {
+          "n": 3,
+          "median": 182.29000002145767,
+          "min": 166.85000002384186,
+          "max": 212.59499996900558
+        },
+        "subsequentExportMs": {
+          "n": 3,
+          "median": 45.22000002861023,
+          "min": 36.89999997615814,
+          "max": 45.23499995470047
+        },
+        "failures": []
+      },
+      "continuous": {
+        "passed": 14,
+        "failed": 1,
+        "batchMs": {
+          "n": 14,
+          "median": 14299,
+          "min": 12849,
+          "max": 15695
+        },
+        "receivedBytes": {
+          "n": 14,
+          "median": 280482787,
+          "min": 280482787,
+          "max": 280482787
+        },
+        "decodedNetworkBytes": {
+          "n": 14,
+          "median": 280480176,
+          "min": 280480176,
+          "max": 280480176
+        },
+        "decodedCacheBytes": {
+          "n": 14,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 14,
+          "median": 652.3749999701977,
+          "min": 601.3000000119209,
+          "max": 726.8299999833107
+        },
+        "resourceResponsesSpanMs": {
+          "n": 14,
+          "median": 6728.328500001226,
+          "min": 5973.054000001866,
+          "max": 7489.341000036802
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 14,
+          "median": 8044.817499995232,
+          "min": 7448.844999969006,
+          "max": 9137.230000019073
+        },
+        "startToUnoReadyMs": {
+          "n": 14,
+          "median": 12884.477500021458,
+          "min": 11745.245000004768,
+          "max": 13889.319999992847
+        },
+        "nextDocumentCheckMs": {
+          "n": 14,
+          "median": 20.46500000357628,
+          "min": 12.839999973773956,
+          "max": 27.99500000476837
+        },
+        "firstDocumentMs": {
+          "n": 14,
+          "median": 837.285000026226,
+          "min": 390.63499999046326,
+          "max": 1254.5149999856949
+        },
+        "subsequentDocumentMs": {
+          "n": 14,
+          "median": 202.40000000596046,
+          "min": 168.54499995708466,
+          "max": 266.7249999642372
+        },
+        "firstImportMs": {
+          "n": 14,
+          "median": 708.8849999904633,
+          "min": 341.9950000047684,
+          "max": 1048.7150000333786
+        },
+        "firstExportMs": {
+          "n": 14,
+          "median": 120.87750002741814,
+          "min": 36.49500000476837,
+          "max": 201.07499998807907
+        },
+        "subsequentImportMs": {
+          "n": 14,
+          "median": 157.50750002264977,
+          "min": 130.74000000953674,
+          "max": 184.28500002622604
+        },
+        "subsequentExportMs": {
+          "n": 14,
+          "median": 36.98750001192093,
+          "min": 29,
+          "max": 40.74000000953674
+        },
+        "failures": [
+          {
+            "round": 3,
+            "batch": 1,
+            "elapsedMs": 270083,
+            "failure": "expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('.result-list li')\nExpected: 2\nReceived: 0\nTimeout:  270000ms\n\nCall log:\n  - Expect \"toHaveCount\" locator('.result-list li') with timeout 270000ms\n  - waiting for locator('.result-list li')\n    527 × locator resolved to 0 elements\n        - unexpected value \"0\"\n"
+          }
+        ]
+      }
+    }
+  },
+  "revised-local-expired": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T06:58:01.782Z",
+    "groups": {
+      "expired": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 12566,
+          "min": 12566,
+          "max": 12566
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 551.9750000238419,
+          "min": 551.9750000238419,
+          "max": 551.9750000238419
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 10427.471999952104,
+          "min": 10427.471999952104,
+          "max": 10427.471999952104
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 6211.590000033379,
+          "min": 6211.590000033379,
+          "max": 6211.590000033379
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 10913.010000050068,
+          "min": 10913.010000050068,
+          "max": 10913.010000050068
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 32.14999997615814,
+          "min": 32.14999997615814,
+          "max": 32.14999997615814
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1239.2350000143051,
+          "min": 1239.2350000143051,
+          "max": 1239.2350000143051
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 266.89500004053116,
+          "min": 266.89500004053116,
+          "max": 266.89500004053116
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1001.789999961853,
+          "min": 1001.789999961853,
+          "max": 1001.789999961853
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 232.5900000333786,
+          "min": 232.5900000333786,
+          "max": 232.5900000333786
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 190.7750000357628,
+          "min": 190.7750000357628,
+          "max": 190.7750000357628
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 44.125,
+          "min": 44.125,
+          "max": 44.125
+        },
+        "failures": []
+      }
+    }
+  },
+  "revised-local-final-expired": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T08:15:35.702Z",
+    "groups": {
+      "expired": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 16780,
+          "min": 16780,
+          "max": 16780
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280513153,
+          "min": 280513153,
+          "max": 280513153
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280510114,
+          "min": 280510114,
+          "max": 280510114
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 424.64999997615814,
+          "min": 424.64999997615814,
+          "max": 424.64999997615814
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 14434.264999988955,
+          "min": 14434.264999988955,
+          "max": 14434.264999988955
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 8960.879999995232,
+          "min": 8960.879999995232,
+          "max": 8960.879999995232
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 14996.65499997139,
+          "min": 14996.65499997139,
+          "max": 14996.65499997139
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 33.02500003576279,
+          "min": 33.02500003576279,
+          "max": 33.02500003576279
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1294.9399999976158,
+          "min": 1294.9399999976158,
+          "max": 1294.9399999976158
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 292.8799999952316,
+          "min": 292.8799999952316,
+          "max": 292.8799999952316
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1092.2750000357628,
+          "min": 1092.2750000357628,
+          "max": 1092.2750000357628
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 195.41999995708466,
+          "min": 195.41999995708466,
+          "max": 195.41999995708466
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 190.69999998807907,
+          "min": 190.69999998807907,
+          "max": 190.69999998807907
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 36.905000030994415,
+          "min": 36.905000030994415,
+          "max": 36.905000030994415
+        },
+        "failures": []
+      }
+    }
+  },
+  "revised-local-final": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T07:27:50.405Z",
+    "groups": {
+      "cold": {
+        "passed": 5,
+        "failed": 0,
+        "batchMs": {
+          "n": 5,
+          "median": 15479,
+          "min": 14006,
+          "max": 20581
+        },
+        "receivedBytes": {
+          "n": 5,
+          "median": 280513153,
+          "min": 280513153,
+          "max": 280513153
+        },
+        "decodedNetworkBytes": {
+          "n": 5,
+          "median": 280510114,
+          "min": 280510114,
+          "max": 280510114
+        },
+        "decodedCacheBytes": {
+          "n": 5,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 5,
+          "median": 442.61500000953674,
+          "min": 403.3600000143051,
+          "max": 508.8149999976158
+        },
+        "resourceResponsesSpanMs": {
+          "n": 5,
+          "median": 12656.262999982573,
+          "min": 11507.217000005767,
+          "max": 17509.805000037886
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 5,
+          "median": 9146.709999978542,
+          "min": 7950.3550000190735,
+          "max": 12224.17000001669
+        },
+        "startToUnoReadyMs": {
+          "n": 5,
+          "median": 13396.540000021458,
+          "min": 12124.375,
+          "max": 18335.310000002384
+        },
+        "nextDocumentCheckMs": {
+          "n": 5,
+          "median": 45.7849999666214,
+          "min": 24.685000002384186,
+          "max": 52.105000019073486
+        },
+        "firstDocumentMs": {
+          "n": 5,
+          "median": 1303.0900000333786,
+          "min": 1165.3650000095367,
+          "max": 1641.75
+        },
+        "subsequentDocumentMs": {
+          "n": 5,
+          "median": 267.9099999666214,
+          "min": 219.5649999976158,
+          "max": 281.1350000500679
+        },
+        "firstImportMs": {
+          "n": 5,
+          "median": 1085.074999988079,
+          "min": 970.7799999713898,
+          "max": 1332.625
+        },
+        "firstExportMs": {
+          "n": 5,
+          "median": 213.61000001430511,
+          "min": 189.35000002384186,
+          "max": 302.52499997615814
+        },
+        "subsequentImportMs": {
+          "n": 5,
+          "median": 180.64500004053116,
+          "min": 163.00499999523163,
+          "max": 213.69999998807907
+        },
+        "subsequentExportMs": {
+          "n": 5,
+          "median": 40.52000004053116,
+          "min": 36.62000000476837,
+          "max": 49.24000000953674
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 4,
+        "failed": 1,
+        "batchMs": {
+          "n": 4,
+          "median": 13718.5,
+          "min": 12363,
+          "max": 14619
+        },
+        "receivedBytes": {
+          "n": 4,
+          "median": 280513153,
+          "min": 280513153,
+          "max": 280513153
+        },
+        "decodedNetworkBytes": {
+          "n": 4,
+          "median": 280510114,
+          "min": 280510114,
+          "max": 280510114
+        },
+        "decodedCacheBytes": {
+          "n": 4,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 4,
+          "median": 428.5900000333786,
+          "min": 373.1599999666214,
+          "max": 459.07499998807907
+        },
+        "resourceResponsesSpanMs": {
+          "n": 4,
+          "median": 11277.215000009164,
+          "min": 10141.04800001951,
+          "max": 11971.458000014536
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 4,
+          "median": 7221.905000001192,
+          "min": 6554.069999992847,
+          "max": 7840.214999973774
+        },
+        "startToUnoReadyMs": {
+          "n": 4,
+          "median": 11661.192499995232,
+          "min": 10488.72000002861,
+          "max": 12463.879999995232
+        },
+        "nextDocumentCheckMs": {
+          "n": 4,
+          "median": 44.97749999165535,
+          "min": 32.11500000953674,
+          "max": 70.81999999284744
+        },
+        "firstDocumentMs": {
+          "n": 4,
+          "median": 1302.9750000238419,
+          "min": 1167.300000011921,
+          "max": 1416.699999988079
+        },
+        "subsequentDocumentMs": {
+          "n": 4,
+          "median": 266.82000002264977,
+          "min": 230.39999997615814,
+          "max": 297.52999997138977
+        },
+        "firstImportMs": {
+          "n": 4,
+          "median": 1074.0250000059605,
+          "min": 949.4150000214577,
+          "max": 1145.7650000452995
+        },
+        "firstExportMs": {
+          "n": 4,
+          "median": 224.9175000190735,
+          "min": 212.86500000953674,
+          "max": 265.3449999690056
+        },
+        "subsequentImportMs": {
+          "n": 4,
+          "median": 210.12000000476837,
+          "min": 185.75,
+          "max": 219.73499995470047
+        },
+        "subsequentExportMs": {
+          "n": 4,
+          "median": 42.047500014305115,
+          "min": 35.95999997854233,
+          "max": 47.2049999833107
+        },
+        "failures": [
+          {
+            "round": 5,
+            "batch": 1,
+            "elapsedMs": 270103,
+            "failure": "expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('.result-list li')\nExpected: 2\nReceived: 0\nTimeout:  270000ms\n\nCall log:\n  - Expect \"toHaveCount\" locator('.result-list li') with timeout 270000ms\n  - waiting for locator('.result-list li')\n    530 × locator resolved to 0 elements\n        - unexpected value \"0\"\n"
+          }
+        ]
+      },
+      "continuous": {
+        "passed": 25,
+        "failed": 0,
+        "batchMs": {
+          "n": 25,
+          "median": 13341,
+          "min": 10534,
+          "max": 25977
+        },
+        "receivedBytes": {
+          "n": 25,
+          "median": 280491406,
+          "min": 280491406,
+          "max": 280491406
+        },
+        "decodedNetworkBytes": {
+          "n": 25,
+          "median": 280488582,
+          "min": 280488582,
+          "max": 280488582
+        },
+        "decodedCacheBytes": {
+          "n": 25,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 25,
+          "median": 586.7049999833107,
+          "min": 364.8349999785423,
+          "max": 1159.7049999833107
+        },
+        "resourceResponsesSpanMs": {
+          "n": 25,
+          "median": 12013.031999988016,
+          "min": 9183.774000033736,
+          "max": 23170.105000026524
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 25,
+          "median": 7633.200000047684,
+          "min": 5615.125,
+          "max": 15879.719999969006
+        },
+        "startToUnoReadyMs": {
+          "n": 25,
+          "median": 12372.415000021458,
+          "min": 9489.075000047684,
+          "max": 23762.444999992847
+        },
+        "nextDocumentCheckMs": {
+          "n": 25,
+          "median": 16.615000009536743,
+          "min": 11.139999985694885,
+          "max": 59.49000000953674
+        },
+        "firstDocumentMs": {
+          "n": 25,
+          "median": 405.52499997615814,
+          "min": 288.625,
+          "max": 1734.5199999809265
+        },
+        "subsequentDocumentMs": {
+          "n": 25,
+          "median": 184.70999997854233,
+          "min": 140.01499998569489,
+          "max": 329.47999995946884
+        },
+        "firstImportMs": {
+          "n": 25,
+          "median": 354.0949999690056,
+          "min": 247.5,
+          "max": 1386.960000038147
+        },
+        "firstExportMs": {
+          "n": 25,
+          "median": 39.594999969005585,
+          "min": 32.1599999666214,
+          "max": 339.8949999809265
+        },
+        "subsequentImportMs": {
+          "n": 25,
+          "median": 137.87000000476837,
+          "min": 101.93999999761581,
+          "max": 233.8499999642372
+        },
+        "subsequentExportMs": {
+          "n": 25,
+          "median": 37.08499997854233,
+          "min": 26.92500001192093,
+          "max": 56.7399999499321
+        },
+        "failures": []
+      }
+    }
+  },
+  "revised-local-pair-1": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T06:59:40.985Z",
+    "groups": {
+      "cold": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 11660,
+          "min": 11660,
+          "max": 11660
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 398.6599999666214,
+          "min": 398.6599999666214,
+          "max": 398.6599999666214
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 9477.34899999341,
+          "min": 9477.34899999341,
+          "max": 9477.34899999341
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 6497.535000026226,
+          "min": 6497.535000026226,
+          "max": 6497.535000026226
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 9966.319999992847,
+          "min": 9966.319999992847,
+          "max": 9966.319999992847
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 40.6700000166893,
+          "min": 40.6700000166893,
+          "max": 40.6700000166893
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1023.5450000166893,
+          "min": 1023.5450000166893,
+          "max": 1023.5450000166893
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 198.92500001192093,
+          "min": 198.92500001192093,
+          "max": 198.92500001192093
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 861.839999973774,
+          "min": 861.839999973774,
+          "max": 861.839999973774
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 157.1700000166893,
+          "min": 157.1700000166893,
+          "max": 157.1700000166893
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 151.0450000166893,
+          "min": 151.0450000166893,
+          "max": 151.0450000166893
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 37.32499998807907,
+          "min": 37.32499998807907,
+          "max": 37.32499998807907
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 12078,
+          "min": 12078,
+          "max": 12078
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 296.33999997377396,
+          "min": 296.33999997377396,
+          "max": 296.33999997377396
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 10159.17899995111,
+          "min": 10159.17899995111,
+          "max": 10159.17899995111
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 7144.129999995232,
+          "min": 7144.129999995232,
+          "max": 7144.129999995232
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 10466.569999992847,
+          "min": 10466.569999992847,
+          "max": 10466.569999992847
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 25.264999985694885,
+          "min": 25.264999985694885,
+          "max": 25.264999985694885
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1093.0150000452995,
+          "min": 1093.0150000452995,
+          "max": 1093.0150000452995
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 230.4650000333786,
+          "min": 230.4650000333786,
+          "max": 230.4650000333786
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 932.0400000214577,
+          "min": 932.0400000214577,
+          "max": 932.0400000214577
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 155.74500000476837,
+          "min": 155.74500000476837,
+          "max": 155.74500000476837
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 165.22999995946884,
+          "min": 165.22999995946884,
+          "max": 165.22999995946884
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 39.51500004529953,
+          "min": 39.51500004529953,
+          "max": 39.51500004529953
+        },
+        "failures": []
+      }
+    }
+  },
+  "revised-local-pair-2": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T07:00:22.521Z",
+    "groups": {
+      "cold": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 10947,
+          "min": 10947,
+          "max": 10947
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 337.2800000309944,
+          "min": 337.2800000309944,
+          "max": 337.2800000309944
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 9162.009000021499,
+          "min": 9162.009000021499,
+          "max": 9162.009000021499
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 6411.319999992847,
+          "min": 6411.319999992847,
+          "max": 6411.319999992847
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 9562.659999966621,
+          "min": 9562.659999966621,
+          "max": 9562.659999966621
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 23.360000014305115,
+          "min": 23.360000014305115,
+          "max": 23.360000014305115
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1001.5450000166893,
+          "min": 1001.5450000166893,
+          "max": 1001.5450000166893
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 215.77999997138977,
+          "min": 215.77999997138977,
+          "max": 215.77999997138977
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 835.6200000047684,
+          "min": 835.6200000047684,
+          "max": 835.6200000047684
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 161.81999999284744,
+          "min": 161.81999999284744,
+          "max": 161.81999999284744
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 151.5600000023842,
+          "min": 151.5600000023842,
+          "max": 151.5600000023842
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 35.34999996423721,
+          "min": 35.34999996423721,
+          "max": 35.34999996423721
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 10028,
+          "min": 10028,
+          "max": 10028
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 284.2150000333786,
+          "min": 284.2150000333786,
+          "max": 284.2150000333786
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 8147.815999982413,
+          "min": 8147.815999982413,
+          "max": 8147.815999982413
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 5154.674999952316,
+          "min": 5154.674999952316,
+          "max": 5154.674999952316
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 8523.229999959469,
+          "min": 8523.229999959469,
+          "max": 8523.229999959469
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 23.27000004053116,
+          "min": 23.27000004053116,
+          "max": 23.27000004053116
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 986.6750000119209,
+          "min": 986.6750000119209,
+          "max": 986.6750000119209
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 225.53999996185303,
+          "min": 225.53999996185303,
+          "max": 225.53999996185303
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 825.875,
+          "min": 825.875,
+          "max": 825.875
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 156.7849999666214,
+          "min": 156.7849999666214,
+          "max": 156.7849999666214
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 162.71999996900558,
+          "min": 162.71999996900558,
+          "max": 162.71999996900558
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 37.389999985694885,
+          "min": 37.389999985694885,
+          "max": 37.389999985694885
+        },
+        "failures": []
+      }
+    }
+  },
+  "revised-local-pair-3": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T07:03:01.306Z",
+    "groups": {
+      "cold": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 14953,
+          "min": 14953,
+          "max": 14953
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 373.19999998807907,
+          "min": 373.19999998807907,
+          "max": 373.19999998807907
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 12393.029000028037,
+          "min": 12393.029000028037,
+          "max": 12393.029000028037
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 8873.550000011921,
+          "min": 8873.550000011921,
+          "max": 8873.550000011921
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 12970.245000004768,
+          "min": 12970.245000004768,
+          "max": 12970.245000004768
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 38.9650000333786,
+          "min": 38.9650000333786,
+          "max": 38.9650000333786
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1270.1399999856949,
+          "min": 1270.1399999856949,
+          "max": 1270.1399999856949
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 216.125,
+          "min": 216.125,
+          "max": 216.125
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1076.5099999904633,
+          "min": 1076.5099999904633,
+          "max": 1076.5099999904633
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 188.83499997854233,
+          "min": 188.83499997854233,
+          "max": 188.83499997854233
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 170.86500000953674,
+          "min": 170.86500000953674,
+          "max": 170.86500000953674
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 33.71000003814697,
+          "min": 33.71000003814697,
+          "max": 33.71000003814697
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 11147,
+          "min": 11147,
+          "max": 11147
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 329.41999995708466,
+          "min": 329.41999995708466,
+          "max": 329.41999995708466
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 9264.257000002544,
+          "min": 9264.257000002544,
+          "max": 9264.257000002544
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 5385.454999983311,
+          "min": 5385.454999983311,
+          "max": 5385.454999983311
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 9627.435000002384,
+          "min": 9627.435000002384,
+          "max": 9627.435000002384
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 22.974999964237213,
+          "min": 22.974999964237213,
+          "max": 22.974999964237213
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 936.9750000238419,
+          "min": 936.9750000238419,
+          "max": 936.9750000238419
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 213.38999998569489,
+          "min": 213.38999998569489,
+          "max": 213.38999998569489
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 788.2350000143051,
+          "min": 788.2350000143051,
+          "max": 788.2350000143051
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 145,
+          "min": 145,
+          "max": 145
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 155.875,
+          "min": 155.875,
+          "max": 155.875
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 32.50499999523163,
+          "min": 32.50499999523163,
+          "max": 32.50499999523163
+        },
+        "failures": []
+      }
+    }
+  },
+  "revised-local-pair-4": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T07:03:45.319Z",
+    "groups": {
+      "cold": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 15238,
+          "min": 15238,
+          "max": 15238
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 371.43000000715256,
+          "min": 371.43000000715256,
+          "max": 371.43000000715256
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 12962.135999987368,
+          "min": 12962.135999987368,
+          "max": 12962.135999987368
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 9052,
+          "min": 9052,
+          "max": 9052
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 13446.689999997616,
+          "min": 13446.689999997616,
+          "max": 13446.689999997616
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 31.695000052452087,
+          "min": 31.695000052452087,
+          "max": 31.695000052452087
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1205.5099999904633,
+          "min": 1205.5099999904633,
+          "max": 1205.5099999904633
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 238.9749999642372,
+          "min": 238.9749999642372,
+          "max": 238.9749999642372
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 986.4750000238419,
+          "min": 986.4750000238419,
+          "max": 986.4750000238419
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 213.25999999046326,
+          "min": 213.25999999046326,
+          "max": 213.25999999046326
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 165.8299999833107,
+          "min": 165.8299999833107,
+          "max": 165.8299999833107
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 37.55000001192093,
+          "min": 37.55000001192093,
+          "max": 37.55000001192093
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 15497,
+          "min": 15497,
+          "max": 15497
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 324.44999998807907,
+          "min": 324.44999998807907,
+          "max": 324.44999998807907
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 13335.474999970756,
+          "min": 13335.474999970756,
+          "max": 13335.474999970756
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 7700.225000023842,
+          "min": 7700.225000023842,
+          "max": 7700.225000023842
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 13696.67000001669,
+          "min": 13696.67000001669,
+          "max": 13696.67000001669
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 29.15499997138977,
+          "min": 29.15499997138977,
+          "max": 29.15499997138977
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1009.4150000214577,
+          "min": 1009.4150000214577,
+          "max": 1009.4150000214577
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 241.18000000715256,
+          "min": 241.18000000715256,
+          "max": 241.18000000715256
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 834.1349999904633,
+          "min": 834.1349999904633,
+          "max": 834.1349999904633
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 170.03500002622604,
+          "min": 170.03500002622604,
+          "max": 170.03500002622604
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 167.08499997854233,
+          "min": 167.08499997854233,
+          "max": 167.08499997854233
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 42.17500001192093,
+          "min": 42.17500001192093,
+          "max": 42.17500001192093
+        },
+        "failures": []
+      }
+    }
+  },
+  "revised-local-pair-5": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T07:06:28.799Z",
+    "groups": {
+      "cold": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 17223,
+          "min": 17223,
+          "max": 17223
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 427.6050000190735,
+          "min": 427.6050000190735,
+          "max": 427.6050000190735
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 14769.029999966733,
+          "min": 14769.029999966733,
+          "max": 14769.029999966733
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 10630.269999980927,
+          "min": 10630.269999980927,
+          "max": 10630.269999980927
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 15480.810000002384,
+          "min": 15480.810000002384,
+          "max": 15480.810000002384
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 36.09999996423721,
+          "min": 36.09999996423721,
+          "max": 36.09999996423721
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1308.3100000023842,
+          "min": 1308.3100000023842,
+          "max": 1308.3100000023842
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 233.99000000953674,
+          "min": 233.99000000953674,
+          "max": 233.99000000953674
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1080.8500000238419,
+          "min": 1080.8500000238419,
+          "max": 1080.8500000238419
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 222.08499997854233,
+          "min": 222.08499997854233,
+          "max": 222.08499997854233
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 178.05000001192093,
+          "min": 178.05000001192093,
+          "max": 178.05000001192093
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 41.27499997615814,
+          "min": 41.27499997615814,
+          "max": 41.27499997615814
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 1,
+        "failed": 0,
+        "batchMs": {
+          "n": 1,
+          "median": 13019,
+          "min": 13019,
+          "max": 13019
+        },
+        "receivedBytes": {
+          "n": 1,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 1,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 1,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 1,
+          "median": 428.79499995708466,
+          "min": 428.79499995708466,
+          "max": 428.79499995708466
+        },
+        "resourceResponsesSpanMs": {
+          "n": 1,
+          "median": 10663.997999974526,
+          "min": 10663.997999974526,
+          "max": 10663.997999974526
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 1,
+          "median": 6683.554999947548,
+          "min": 6683.554999947548,
+          "max": 6683.554999947548
+        },
+        "startToUnoReadyMs": {
+          "n": 1,
+          "median": 11006.744999945164,
+          "min": 11006.744999945164,
+          "max": 11006.744999945164
+        },
+        "nextDocumentCheckMs": {
+          "n": 1,
+          "median": 59.610000014305115,
+          "min": 59.610000014305115,
+          "max": 59.610000014305115
+        },
+        "firstDocumentMs": {
+          "n": 1,
+          "median": 1387.4399999976158,
+          "min": 1387.4399999976158,
+          "max": 1387.4399999976158
+        },
+        "subsequentDocumentMs": {
+          "n": 1,
+          "median": 266.77499997615814,
+          "min": 266.77499997615814,
+          "max": 266.77499997615814
+        },
+        "firstImportMs": {
+          "n": 1,
+          "median": 1137.4249999523163,
+          "min": 1137.4249999523163,
+          "max": 1137.4249999523163
+        },
+        "firstExportMs": {
+          "n": 1,
+          "median": 243.2950000166893,
+          "min": 243.2950000166893,
+          "max": 243.2950000166893
+        },
+        "subsequentImportMs": {
+          "n": 1,
+          "median": 209.5250000357628,
+          "min": 209.5250000357628,
+          "max": 209.5250000357628
+        },
+        "subsequentExportMs": {
+          "n": 1,
+          "median": 41.63499999046326,
+          "min": 41.63499999046326,
+          "max": 41.63499999046326
+        },
+        "failures": []
+      }
+    }
+  },
+  "revised-local": {
+    "browser": "153.0.8010.12",
+    "time": "2026-09-12T06:43:35.440Z",
+    "groups": {
+      "cold": {
+        "passed": 5,
+        "failed": 0,
+        "batchMs": {
+          "n": 5,
+          "median": 17975,
+          "min": 15346,
+          "max": 23557
+        },
+        "receivedBytes": {
+          "n": 5,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 5,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 5,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 5,
+          "median": 446.68000000715256,
+          "min": 404.2099999785423,
+          "max": 588.5049999952316
+        },
+        "resourceResponsesSpanMs": {
+          "n": 5,
+          "median": 15296.322999987751,
+          "min": 12796.64200003026,
+          "max": 20425.021999981254
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 5,
+          "median": 11270.90499997139,
+          "min": 9431.125,
+          "max": 12214.540000021458
+        },
+        "startToUnoReadyMs": {
+          "n": 5,
+          "median": 15933.875,
+          "min": 13421.365000009537,
+          "max": 21250.189999997616
+        },
+        "nextDocumentCheckMs": {
+          "n": 5,
+          "median": 33.62999999523163,
+          "min": 30.070000052452087,
+          "max": 58.985000014305115
+        },
+        "firstDocumentMs": {
+          "n": 5,
+          "median": 1453.710000038147,
+          "min": 1281.6299999952316,
+          "max": 1800.7199999690056
+        },
+        "subsequentDocumentMs": {
+          "n": 5,
+          "median": 276.1700000166893,
+          "min": 265.0300000309944,
+          "max": 361.9549999833107
+        },
+        "firstImportMs": {
+          "n": 5,
+          "median": 1122.785000026226,
+          "min": 1047.2450000047684,
+          "max": 1218.449999988079
+        },
+        "firstExportMs": {
+          "n": 5,
+          "median": 229.125,
+          "min": 225.6599999666214,
+          "max": 670.6999999880791
+        },
+        "subsequentImportMs": {
+          "n": 5,
+          "median": 193.875,
+          "min": 178.2399999499321,
+          "max": 240.80000001192093
+        },
+        "subsequentExportMs": {
+          "n": 5,
+          "median": 40.2150000333786,
+          "min": 39.30000001192093,
+          "max": 53.85000002384186
+        },
+        "failures": []
+      },
+      "revisit": {
+        "passed": 5,
+        "failed": 0,
+        "batchMs": {
+          "n": 5,
+          "median": 19415,
+          "min": 18058,
+          "max": 24145
+        },
+        "receivedBytes": {
+          "n": 5,
+          "median": 280512921,
+          "min": 280512921,
+          "max": 280512921
+        },
+        "decodedNetworkBytes": {
+          "n": 5,
+          "median": 280509882,
+          "min": 280509882,
+          "max": 280509882
+        },
+        "decodedCacheBytes": {
+          "n": 5,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 5,
+          "median": 464.65499997138977,
+          "min": 331,
+          "max": 706.8149999976158
+        },
+        "resourceResponsesSpanMs": {
+          "n": 5,
+          "median": 16779.337999993004,
+          "min": 15051.192999992054,
+          "max": 20754.10700001521
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 5,
+          "median": 10636.745000004768,
+          "min": 9402.644999980927,
+          "max": 12652.174999952316
+        },
+        "startToUnoReadyMs": {
+          "n": 5,
+          "median": 17282.485000014305,
+          "min": 15551.865000009537,
+          "max": 21511.35499995947
+        },
+        "nextDocumentCheckMs": {
+          "n": 5,
+          "median": 51.97000002861023,
+          "min": 42.019999980926514,
+          "max": 81.13999998569489
+        },
+        "firstDocumentMs": {
+          "n": 5,
+          "median": 1619.5299999713898,
+          "min": 1396.0950000286102,
+          "max": 1831.660000026226
+        },
+        "subsequentDocumentMs": {
+          "n": 5,
+          "median": 288.58999997377396,
+          "min": 277.2649999856949,
+          "max": 396.835000038147
+        },
+        "firstImportMs": {
+          "n": 5,
+          "median": 1349.0200000405312,
+          "min": 1146.5049999952316,
+          "max": 1490.9950000047684
+        },
+        "firstExportMs": {
+          "n": 5,
+          "median": 243.4800000190735,
+          "min": 219.57499998807907,
+          "max": 403.07499998807907
+        },
+        "subsequentImportMs": {
+          "n": 5,
+          "median": 208.19499999284744,
+          "min": 176.74500000476837,
+          "max": 297.8649999499321
+        },
+        "subsequentExportMs": {
+          "n": 5,
+          "median": 52.77499997615814,
+          "min": 41.22499996423721,
+          "max": 57.14000004529953
+        },
+        "failures": []
+      },
+      "continuous": {
+        "passed": 25,
+        "failed": 0,
+        "batchMs": {
+          "n": 25,
+          "median": 18894,
+          "min": 9897,
+          "max": 22733
+        },
+        "receivedBytes": {
+          "n": 25,
+          "median": 280491406,
+          "min": 280491406,
+          "max": 280491406
+        },
+        "decodedNetworkBytes": {
+          "n": 25,
+          "median": 280488582,
+          "min": 280488582,
+          "max": 280488582
+        },
+        "decodedCacheBytes": {
+          "n": 25,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fontWaitMs": {
+          "n": 25,
+          "median": 745.1750000119209,
+          "min": 502.75999999046326,
+          "max": 1187.7049999833107
+        },
+        "resourceResponsesSpanMs": {
+          "n": 25,
+          "median": 16649.959000002127,
+          "min": 9130.288999993354,
+          "max": 20160.60900001321
+        },
+        "lastInitializationToUnoReadyMs": {
+          "n": 25,
+          "median": 9937.770000040531,
+          "min": 5374.509999990463,
+          "max": 11829.225000023842
+        },
+        "startToUnoReadyMs": {
+          "n": 25,
+          "median": 17224.185000002384,
+          "min": 9411.430000007153,
+          "max": 20753.094999969006
+        },
+        "nextDocumentCheckMs": {
+          "n": 25,
+          "median": 22.48499995470047,
+          "min": 11.4549999833107,
+          "max": 37.394999980926514
+        },
+        "firstDocumentMs": {
+          "n": 25,
+          "median": 1394.2350000143051,
+          "min": 273.81999999284744,
+          "max": 2050.435000002384
+        },
+        "subsequentDocumentMs": {
+          "n": 25,
+          "median": 287.33000004291534,
+          "min": 146.50999999046326,
+          "max": 445.9000000357628
+        },
+        "firstImportMs": {
+          "n": 25,
+          "median": 1145.3299999833107,
+          "min": 237.87000000476837,
+          "max": 1715.7749999761581
+        },
+        "firstExportMs": {
+          "n": 25,
+          "median": 225.58500003814697,
+          "min": 30.889999985694885,
+          "max": 327.35000002384186
+        },
+        "subsequentImportMs": {
+          "n": 25,
+          "median": 198.62000000476837,
+          "min": 112.80500000715256,
+          "max": 282.3550000190735
+        },
+        "subsequentExportMs": {
+          "n": 25,
+          "median": 42.314999997615814,
+          "min": 24.67500001192093,
+          "max": 58.764999985694885
+        },
+        "failures": []
+      }
+    }
+  }
+}

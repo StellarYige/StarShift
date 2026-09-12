@@ -1,0 +1,2480 @@
+{
+  "captured": "2026-09-12T07:25:48.275Z",
+  "source": "test-results/matrix-final/report.json",
+  "stats": {
+    "startTime": "2026-09-12T07:16:31.463Z",
+    "duration": 525710.791,
+    "expected": 84,
+    "skipped": 18,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "DOCX conversion attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 14674,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "chromium",
+              "version": "153.0.8010.12",
+              "result": "DOCX conversion passed",
+              "simulated": false,
+              "engineRequests": [
+                "/StarShift/engine/soffice.js",
+                "/StarShift/engine/soffice.wasm",
+                "/StarShift/engine/soffice.data",
+                "/StarShift/engine/soffice.js",
+                "/StarShift/engine/soffice.js"
+              ],
+              "rejectedBeforeEngineAllocation": false
+            },
+            "engine-attempt.json": {
+              "browser": "chromium",
+              "version": "153.0.8010.12",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX conversion attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6336,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "firefox",
+              "version": "155.0",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false,
+              "engineRequests": [],
+              "rejectedBeforeEngineAllocation": true
+            },
+            "engine-attempt.json": {
+              "browser": "firefox",
+              "version": "155.0",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX conversion attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2263,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false,
+              "engineRequests": [],
+              "rejectedBeforeEngineAllocation": true
+            },
+            "engine-attempt.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX conversion attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 12079,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "chrome-installed",
+              "version": "152.0.7977.84",
+              "result": "DOCX conversion passed",
+              "simulated": false,
+              "engineRequests": [
+                "/StarShift/engine/soffice.js",
+                "/StarShift/engine/soffice.wasm",
+                "/StarShift/engine/soffice.data",
+                "/StarShift/engine/soffice.js",
+                "/StarShift/engine/soffice.js"
+              ],
+              "rejectedBeforeEngineAllocation": false
+            },
+            "engine-attempt.json": {
+              "browser": "chrome-installed",
+              "version": "152.0.7977.84",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX conversion attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 12845,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "edge-installed",
+              "version": "152.0.4191.66",
+              "result": "DOCX conversion passed",
+              "simulated": false,
+              "engineRequests": [
+                "/StarShift/engine/soffice.js",
+                "/StarShift/engine/soffice.wasm",
+                "/StarShift/engine/soffice.data",
+                "/StarShift/engine/soffice.js",
+                "/StarShift/engine/soffice.js"
+              ],
+              "rejectedBeforeEngineAllocation": false
+            },
+            "engine-attempt.json": {
+              "browser": "edge-installed",
+              "version": "152.0.4191.66",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13751,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "download",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "script-download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13880,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "script-download",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "initialize failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 15313,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "initialize",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "timeout failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 12855,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "timeout",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2162,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "one damaged DOCX between good files does not restart the shared engine",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 11338,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2565,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1162,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "resource-load",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2918,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "initialize",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9710,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "import",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10742,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "export",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1188,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel DOM canvas encoding then ignore the late result in another tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1320,
+          "errors": [],
+          "evidence": {
+            "canvas-cancellation.json": {
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 626,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "script-download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 735,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "initialize failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 608,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "timeout failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 633,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10714,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "one damaged DOCX between good files does not restart the shared engine",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Exact engine-reuse assertion on the supported reference engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 61,
+            "column": 8
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 754,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5752,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 515,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 1594,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 586,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 494,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2855,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel DOM canvas encoding then ignore the late result in another tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2237,
+          "errors": [],
+          "evidence": {
+            "canvas-cancellation.json": {
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 416,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "script-download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 413,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "initialize failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 398,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "timeout failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 404,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4146,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "one damaged DOCX between good files does not restart the shared engine",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Exact engine-reuse assertion on the supported reference engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 61,
+            "column": 8
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 379,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4358,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 435,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 390,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 386,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 392,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2068,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel DOM canvas encoding then ignore the late result in another tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2424,
+          "errors": [],
+          "evidence": {
+            "canvas-cancellation.json": {
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "clear preserves settings and releases selected File and output Blob references",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2476,
+          "errors": [],
+          "evidence": {
+            "clear-references.json": {
+              "samples": [
+                {
+                  "tool": "image-convert",
+                  "forcedPageGc": true,
+                  "references": {
+                    "observed": 3,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "image-pdf",
+                  "forcedPageGc": true,
+                  "references": {
+                    "observed": 6,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "pdf-image",
+                  "forcedPageGc": true,
+                  "references": {
+                    "observed": 10,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "pdf-organize",
+                  "forcedPageGc": true,
+                  "references": {
+                    "observed": 15,
+                    "live": 0
+                  }
+                }
+              ],
+              "limitation": "Firefox/WebKit have no forced GC in this test; live weak references there are not a leak assertion."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1353,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1252,
+          "errors": [],
+          "evidence": {
+            "zip-lifecycle.json": {
+              "before": {
+                "workers": 0,
+                "urls": 2,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ],
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 3,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 159663,
+          "errors": [],
+          "evidence": {
+            "lifecycle.json": {
+              "rounds": 10,
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 7,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 14,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 21,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 28,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 35,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 42,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 49,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 56,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 63,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 70,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "clear preserves settings and releases selected File and output Blob references",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4394,
+          "errors": [],
+          "evidence": {
+            "clear-references.json": {
+              "samples": [
+                {
+                  "tool": "image-convert",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 3,
+                    "live": 3
+                  }
+                },
+                {
+                  "tool": "image-pdf",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 6,
+                    "live": 6
+                  }
+                },
+                {
+                  "tool": "pdf-image",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 10,
+                    "live": 10
+                  }
+                },
+                {
+                  "tool": "pdf-organize",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 15,
+                    "live": 15
+                  }
+                }
+              ],
+              "limitation": "Firefox/WebKit have no forced GC in this test; live weak references there are not a leak assertion."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2188,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2668,
+          "errors": [],
+          "evidence": {
+            "zip-lifecycle.json": {
+              "before": {
+                "workers": 0,
+                "urls": 2,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ],
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 3,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8242,
+          "errors": [],
+          "evidence": {
+            "lifecycle.json": {
+              "rounds": 3,
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 5,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 10,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 15,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "clear preserves settings and releases selected File and output Blob references",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5343,
+          "errors": [],
+          "evidence": {
+            "clear-references.json": {
+              "samples": [
+                {
+                  "tool": "image-convert",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 3,
+                    "live": 2
+                  }
+                },
+                {
+                  "tool": "image-pdf",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 6,
+                    "live": 5
+                  }
+                },
+                {
+                  "tool": "pdf-image",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 10,
+                    "live": 6
+                  }
+                },
+                {
+                  "tool": "pdf-organize",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 15,
+                    "live": 11
+                  }
+                }
+              ],
+              "limitation": "Firefox/WebKit have no forced GC in this test; live weak references there are not a leak assertion."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2657,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2637,
+          "errors": [],
+          "evidence": {
+            "zip-lifecycle.json": {
+              "before": {
+                "workers": 0,
+                "urls": 2,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 1,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 1,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 1,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ],
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10680,
+          "errors": [],
+          "evidence": {
+            "lifecycle.json": {
+              "rounds": 3,
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 6,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 9,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1542,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3177,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2178,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2528,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3907,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2447,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4616,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3322,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1852,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2254,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2021,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1504,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2428,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1934,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2040,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3431,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2716,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4861,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3407,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1835,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1815,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2106,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1147,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1633,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1525,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1441,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2661,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1429,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2791,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1567,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1185,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1213,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1457,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1115,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1804,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1809,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1854,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3533,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2059,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3779,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2780,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1969,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1426,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2252,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "android-simulation",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3693,
+          "errors": [],
+          "evidence": {
+            "simulation.json": {
+              "simulated": true,
+              "actualPhone": false,
+              "project": "android-simulation",
+              "version": "153.0.8010.12",
+              "fileChooser": "automated; no real OS picker or photo library tested",
+              "downloads": "actual saved PDF reopened with pdf-lib"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "iphone-simulation",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8418,
+          "errors": [],
+          "evidence": {
+            "simulation.json": {
+              "simulated": true,
+              "actualPhone": false,
+              "project": "iphone-simulation",
+              "version": "26.6",
+              "fileChooser": "automated; no real OS picker or photo library tested",
+              "downloads": "actual saved PDF reopened with pdf-lib"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

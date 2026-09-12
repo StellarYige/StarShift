@@ -7,6 +7,7 @@ import type { PageItem, Settings } from '../types';
 export type WorkerJob =
   | { type: 'image'; file: Blob; settings: Settings; rotation: number }
   | { type: 'image-pdf'; images: { file: Blob; rotation: number }[]; settings: Settings }
+  | { type: 'image-pdf-ready'; images: { blob: Blob; width: number; height: number }[]; settings: Settings }
   | { type: 'organize'; sources: { id: string; bytes: Uint8Array }[]; pages: PageItem[]; split: boolean }
   | { type: 'zip'; outputs: { name: string; blob: Blob }[] };
 export interface WorkerResult { blob: Blob; name?: string }
@@ -24,6 +25,7 @@ self.onmessage = async ({ data: job }: MessageEvent<WorkerJob>) => {
       }
       results = [{ blob: await imagesToPdf(images, job.settings, progress) }];
     }
+    if (job.type === 'image-pdf-ready') results = [{ blob: await imagesToPdf(job.images, job.settings, progress) }];
     if (job.type === 'organize') {
       const groups = job.split ? job.pages.map(p => [p]) : [job.pages];
       for (let i = 0; i < groups.length; i++) {

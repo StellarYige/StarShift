@@ -1,0 +1,66 @@
+{
+  "time": "2026-09-12T07:07:18.142Z",
+  "method": "Additional contemporaneous alternating-order pairs after the planned five-round runs; unchanged timing and browser method; no intentional engine performance optimization.",
+  "runs": [
+    {
+      "pair": 1,
+      "version": "baseline",
+      "label": "baseline-local-pair-1",
+      "code": 0
+    },
+    {
+      "pair": 1,
+      "version": "revised",
+      "label": "revised-local-pair-1",
+      "code": 0
+    },
+    {
+      "pair": 2,
+      "version": "revised",
+      "label": "revised-local-pair-2",
+      "code": 0
+    },
+    {
+      "pair": 2,
+      "version": "baseline",
+      "label": "baseline-local-pair-2",
+      "code": 0
+    },
+    {
+      "pair": 3,
+      "version": "baseline",
+      "label": "baseline-local-pair-3",
+      "code": 0
+    },
+    {
+      "pair": 3,
+      "version": "revised",
+      "label": "revised-local-pair-3",
+      "code": 0
+    },
+    {
+      "pair": 4,
+      "version": "revised",
+      "label": "revised-local-pair-4",
+      "code": 0
+    },
+    {
+      "pair": 4,
+      "version": "baseline",
+      "label": "baseline-local-pair-4",
+      "code": 0
+    },
+    {
+      "pair": 5,
+      "version": "baseline",
+      "label": "baseline-local-pair-5",
+      "code": 0
+    },
+    {
+      "pair": 5,
+      "version": "revised",
+      "label": "revised-local-pair-5",
+      "code": 0
+    }
+  ]
+}

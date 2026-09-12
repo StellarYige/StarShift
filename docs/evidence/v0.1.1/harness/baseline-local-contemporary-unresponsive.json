@@ -1,0 +1,43 @@
+{
+  "time": "2026-09-12T08:07:58.031Z",
+  "label": "baseline-local-contemporary",
+  "round": 2,
+  "scenario": "continuous",
+  "batch": 5,
+  "profile": ".cache\\performance\\baseline-local-contemporary-1789199615568\\2",
+  "reason": "The 270-second sample assertion and subsequent read-only renderer CDP probe did not produce state; the probe timed out. End only this owned browser to let the harness record failure and continue. Root cause unknown.",
+  "targets": [
+    {
+      "type": "page",
+      "url": "http://127.0.0.1:4188/StarShift/#docx-pdf"
+    },
+    {
+      "type": "page",
+      "url": "about:blank"
+    },
+    {
+      "type": "browser_ui",
+      "url": "chrome://webui-toolbar.top-chrome/"
+    },
+    {
+      "type": "browser_ui",
+      "url": "chrome://omnibox-popup.top-chrome/"
+    },
+    {
+      "type": "browser_ui",
+      "url": "chrome://omnibox-popup.top-chrome/omnibox_popup_aim.html"
+    },
+    {
+      "type": "service_worker",
+      "url": "http://127.0.0.1:4188/StarShift/coi-serviceworker.js"
+    },
+    {
+      "type": "worker",
+      "url": "blob:http://127.0.0.1:4188/7dad219f-27c8-4165-8151-7f984e6e9f51"
+    },
+    {
+      "type": "worker",
+      "url": "blob:http://127.0.0.1:4188/13c80271-52b9-4ed6-8421-c32804884aa3"
+    }
+  ]
+}

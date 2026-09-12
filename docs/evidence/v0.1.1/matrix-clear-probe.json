@@ -1,0 +1,594 @@
+{
+  "captured": "2026-09-12T07:16:28.676Z",
+  "source": "test-results/matrix-clear-probe/report.json",
+  "stats": {
+    "startTime": "2026-09-12T07:14:30.685Z",
+    "duration": 88474.01299999999,
+    "expected": 10,
+    "skipped": 8,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 18282,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "chromium",
+              "version": "153.0.8010.12",
+              "result": "DOCX conversion passed",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "chromium",
+              "version": "153.0.8010.12",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7700,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "firefox",
+              "version": "155.0",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "firefox",
+              "version": "155.0",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2461,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1577,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "resource-load",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3852,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "initialize",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13130,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "import",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13734,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "export",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 804,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 748,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 798,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 761,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 459,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 426,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 440,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 427,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "clear preserves settings and releases selected File and output Blob references",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3157,
+          "errors": [],
+          "evidence": {
+            "clear-references.json": {
+              "samples": [
+                {
+                  "tool": "image-convert",
+                  "forcedPageGc": true,
+                  "references": {
+                    "observed": 3,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "image-pdf",
+                  "forcedPageGc": true,
+                  "references": {
+                    "observed": 6,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "pdf-image",
+                  "forcedPageGc": true,
+                  "references": {
+                    "observed": 10,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "pdf-organize",
+                  "forcedPageGc": true,
+                  "references": {
+                    "observed": 15,
+                    "live": 0
+                  }
+                }
+              ],
+              "limitation": "Firefox/WebKit have no forced GC in this test; live weak references there are not a leak assertion."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "clear preserves settings and releases selected File and output Blob references",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5932,
+          "errors": [],
+          "evidence": {
+            "clear-references.json": {
+              "samples": [
+                {
+                  "tool": "image-convert",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 3,
+                    "live": 3
+                  }
+                },
+                {
+                  "tool": "image-pdf",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 6,
+                    "live": 6
+                  }
+                },
+                {
+                  "tool": "pdf-image",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 10,
+                    "live": 10
+                  }
+                },
+                {
+                  "tool": "pdf-organize",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 15,
+                    "live": 15
+                  }
+                }
+              ],
+              "limitation": "Firefox/WebKit have no forced GC in this test; live weak references there are not a leak assertion."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "clear preserves settings and releases selected File and output Blob references",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5594,
+          "errors": [],
+          "evidence": {
+            "clear-references.json": {
+              "samples": [
+                {
+                  "tool": "image-convert",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 3,
+                    "live": 2
+                  }
+                },
+                {
+                  "tool": "image-pdf",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 6,
+                    "live": 5
+                  }
+                },
+                {
+                  "tool": "pdf-image",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 10,
+                    "live": 6
+                  }
+                },
+                {
+                  "tool": "pdf-organize",
+                  "forcedPageGc": false,
+                  "references": {
+                    "observed": 15,
+                    "live": 8
+                  }
+                }
+              ],
+              "limitation": "Firefox/WebKit have no forced GC in this test; live weak references there are not a leak assertion."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

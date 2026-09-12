@@ -1,0 +1,86 @@
+[
+  {
+    "args": [
+      "scripts/measure-docx.mjs",
+      "--url",
+      "http://127.0.0.1:4188/StarShift/",
+      "--label",
+      "baseline-local-contemporary",
+      "--rounds",
+      "5"
+    ],
+    "started": "2026-09-12T07:53:34.935Z",
+    "finished": "2026-09-12T08:15:34.930Z",
+    "code": 1
+  },
+  {
+    "args": [
+      "scripts/measure-docx.mjs",
+      "--url",
+      "http://127.0.0.1:4187/StarShift/",
+      "--label",
+      "revised-local-final-expired",
+      "--profile",
+      ".cache\\performance\\revised-local-final-1789198070404\\1"
+    ],
+    "started": "2026-09-12T08:15:34.936Z",
+    "finished": "2026-09-12T08:16:02.271Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/compare-layout.mjs",
+      ".cache/performance/baseline-local-1789185918613/verify",
+      ".cache\\performance\\revised-local-final-1789198070404\\verify"
+    ],
+    "started": "2026-09-12T08:16:02.272Z",
+    "finished": "2026-09-12T08:16:02.494Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/measure-memory.mjs",
+      "--browser",
+      "chromium"
+    ],
+    "started": "2026-09-12T08:16:02.496Z",
+    "finished": "2026-09-12T08:20:27.215Z",
+    "code": 1
+  },
+  {
+    "args": [
+      "scripts/measure-memory.mjs",
+      "--browser",
+      "firefox"
+    ],
+    "started": "2026-09-12T08:20:27.217Z",
+    "finished": "2026-09-12T08:20:46.870Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/measure-memory.mjs",
+      "--browser",
+      "webkit"
+    ],
+    "started": "2026-09-12T08:20:46.871Z",
+    "finished": "2026-09-12T08:21:03.096Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/summarize-measurements.mjs"
+    ],
+    "started": "2026-09-12T08:21:03.098Z",
+    "finished": "2026-09-12T08:21:03.528Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/summarize-memory.mjs"
+    ],
+    "started": "2026-09-12T08:21:03.530Z",
+    "finished": "2026-09-12T08:21:03.694Z",
+    "code": 0
+  }
+]

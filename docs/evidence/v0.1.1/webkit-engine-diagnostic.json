@@ -1,0 +1,593 @@
+{
+  "browser": "webkit",
+  "version": "26.6",
+  "logs": [
+    {
+      "phase": "正在加载文档引擎资源…",
+      "outputs": 0,
+      "diagnostic": [],
+      "engine": {
+        "runtime": false,
+        "dependencies": 1,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在初始化文档排版引擎…",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "printErr",
+          "message": "pthread_create: cannot transfer control of canvas \"#qtcanvas\" to pthread, because current browser does not support OffscreenCanvas!"
+        },
+        {
+          "source": "printErr",
+          "message": "pthread_create: Build with -sOFFSCREEN_FRAMEBUFFER to enable fallback proxying of GL commands from pthread to main thread."
+        }
+      ],
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "called": true,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          },
+          {
+            "name": "/StarShift/engine/soffice.data.js.metadata",
+            "duration": 29.44000000000051
+          },
+          {
+            "name": "/StarShift/engine/soffice.data",
+            "duration": 893.7600000000002
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在初始化文档排版引擎…",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "printErr",
+          "message": "pthread_create: cannot transfer control of canvas \"#qtcanvas\" to pthread, because current browser does not support OffscreenCanvas!"
+        },
+        {
+          "source": "printErr",
+          "message": "pthread_create: Build with -sOFFSCREEN_FRAMEBUFFER to enable fallback proxying of GL commands from pthread to main thread."
+        }
+      ],
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "called": true,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          },
+          {
+            "name": "/StarShift/engine/soffice.data.js.metadata",
+            "duration": 29.44000000000051
+          },
+          {
+            "name": "/StarShift/engine/soffice.data",
+            "duration": 893.7600000000002
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在初始化文档排版引擎…",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "printErr",
+          "message": "pthread_create: cannot transfer control of canvas \"#qtcanvas\" to pthread, because current browser does not support OffscreenCanvas!"
+        },
+        {
+          "source": "printErr",
+          "message": "pthread_create: Build with -sOFFSCREEN_FRAMEBUFFER to enable fallback proxying of GL commands from pthread to main thread."
+        }
+      ],
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "called": true,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          },
+          {
+            "name": "/StarShift/engine/soffice.data.js.metadata",
+            "duration": 29.44000000000051
+          },
+          {
+            "name": "/StarShift/engine/soffice.data",
+            "duration": 893.7600000000002
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在初始化文档排版引擎…",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "printErr",
+          "message": "pthread_create: cannot transfer control of canvas \"#qtcanvas\" to pthread, because current browser does not support OffscreenCanvas!"
+        },
+        {
+          "source": "printErr",
+          "message": "pthread_create: Build with -sOFFSCREEN_FRAMEBUFFER to enable fallback proxying of GL commands from pthread to main thread."
+        }
+      ],
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "called": true,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          },
+          {
+            "name": "/StarShift/engine/soffice.data.js.metadata",
+            "duration": 29.44000000000051
+          },
+          {
+            "name": "/StarShift/engine/soffice.data",
+            "duration": 893.7600000000002
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在初始化文档排版引擎…",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "printErr",
+          "message": "pthread_create: cannot transfer control of canvas \"#qtcanvas\" to pthread, because current browser does not support OffscreenCanvas!"
+        },
+        {
+          "source": "printErr",
+          "message": "pthread_create: Build with -sOFFSCREEN_FRAMEBUFFER to enable fallback proxying of GL commands from pthread to main thread."
+        }
+      ],
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "called": true,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          },
+          {
+            "name": "/StarShift/engine/soffice.data.js.metadata",
+            "duration": 29.44000000000051
+          },
+          {
+            "name": "/StarShift/engine/soffice.data",
+            "duration": 893.7600000000002
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在初始化文档排版引擎…",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "printErr",
+          "message": "pthread_create: cannot transfer control of canvas \"#qtcanvas\" to pthread, because current browser does not support OffscreenCanvas!"
+        },
+        {
+          "source": "printErr",
+          "message": "pthread_create: Build with -sOFFSCREEN_FRAMEBUFFER to enable fallback proxying of GL commands from pthread to main thread."
+        }
+      ],
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "called": true,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          },
+          {
+            "name": "/StarShift/engine/soffice.data.js.metadata",
+            "duration": 29.44000000000051
+          },
+          {
+            "name": "/StarShift/engine/soffice.data",
+            "duration": 893.7600000000002
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在初始化文档排版引擎…",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "printErr",
+          "message": "pthread_create: cannot transfer control of canvas \"#qtcanvas\" to pthread, because current browser does not support OffscreenCanvas!"
+        },
+        {
+          "source": "printErr",
+          "message": "pthread_create: Build with -sOFFSCREEN_FRAMEBUFFER to enable fallback proxying of GL commands from pthread to main thread."
+        }
+      ],
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "called": true,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          },
+          {
+            "name": "/StarShift/engine/soffice.data.js.metadata",
+            "duration": 29.44000000000051
+          },
+          {
+            "name": "/StarShift/engine/soffice.data",
+            "duration": 893.7600000000002
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在初始化文档排版引擎…",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "printErr",
+          "message": "pthread_create: cannot transfer control of canvas \"#qtcanvas\" to pthread, because current browser does not support OffscreenCanvas!"
+        },
+        {
+          "source": "printErr",
+          "message": "pthread_create: Build with -sOFFSCREEN_FRAMEBUFFER to enable fallback proxying of GL commands from pthread to main thread."
+        }
+      ],
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "called": true,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          },
+          {
+            "name": "/StarShift/engine/soffice.data.js.metadata",
+            "duration": 29.44000000000051
+          },
+          {
+            "name": "/StarShift/engine/soffice.data",
+            "duration": 893.7600000000002
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在初始化文档排版引擎…",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "printErr",
+          "message": "pthread_create: cannot transfer control of canvas \"#qtcanvas\" to pthread, because current browser does not support OffscreenCanvas!"
+        },
+        {
+          "source": "printErr",
+          "message": "pthread_create: Build with -sOFFSCREEN_FRAMEBUFFER to enable fallback proxying of GL commands from pthread to main thread."
+        }
+      ],
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "called": true,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          },
+          {
+            "name": "/StarShift/engine/soffice.data.js.metadata",
+            "duration": 29.44000000000051
+          },
+          {
+            "name": "/StarShift/engine/soffice.data",
+            "duration": 893.7600000000002
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在初始化文档排版引擎…",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "printErr",
+          "message": "pthread_create: cannot transfer control of canvas \"#qtcanvas\" to pthread, because current browser does not support OffscreenCanvas!"
+        },
+        {
+          "source": "printErr",
+          "message": "pthread_create: Build with -sOFFSCREEN_FRAMEBUFFER to enable fallback proxying of GL commands from pthread to main thread."
+        }
+      ],
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "called": true,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 15.540000000000003
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 7.980000000000004
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 222.52
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 30.379999999999995
+          },
+          {
+            "name": "/StarShift/engine/soffice.wasm",
+            "duration": 5264.74
+          },
+          {
+            "name": "/StarShift/engine/soffice.data.js.metadata",
+            "duration": 29.44000000000051
+          },
+          {
+            "name": "/StarShift/engine/soffice.data",
+            "duration": 893.7600000000002
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    }
+  ]
+}

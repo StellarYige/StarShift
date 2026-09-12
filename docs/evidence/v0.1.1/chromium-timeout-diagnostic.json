@@ -1,0 +1,2193 @@
+[
+  {
+    "time": "2026-09-12T05:50:27.160Z",
+    "round": 1,
+    "phase": "resource-load",
+    "outputs": 0,
+    "engine": {
+      "runtime": false,
+      "dependencies": 1,
+      "aborted": false,
+      "workers": 0,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 6.465000033378601
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.540000021457672
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 206.48500001430511
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 31.05000001192093
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:50:32.167Z",
+    "round": 1,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 6.465000033378601
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.540000021457672
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 206.48500001430511
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 31.05000001192093
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1972.9399999976158
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 13.439999997615814
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1037.6499999761581
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:50:37.171Z",
+    "round": 1,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 6.465000033378601
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.540000021457672
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 206.48500001430511
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 31.05000001192093
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1972.9399999976158
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 13.439999997615814
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1037.6499999761581
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:50:42.170Z",
+    "round": 2,
+    "phase": null,
+    "outputs": 0,
+    "engine": null
+  },
+  {
+    "time": "2026-09-12T05:50:47.173Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": false,
+      "dependencies": 1904,
+      "aborted": false,
+      "workers": 0,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:50:52.176Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:50:57.192Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:02.198Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:07.216Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:12.231Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:17.228Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:22.231Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:27.246Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:32.260Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:37.268Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:42.276Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:47.288Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:52.296Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:51:57.304Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:02.318Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:07.329Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:12.342Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:17.353Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:22.363Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:27.368Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:32.379Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:37.389Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:42.398Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:47.403Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:52.408Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:52:57.409Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:02.422Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:07.425Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:12.431Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:17.443Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:22.445Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:27.456Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:32.460Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:37.463Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:42.471Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:47.483Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:52.485Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:53:57.490Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:54:02.503Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:54:07.519Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:54:12.531Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:54:17.543Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:54:22.557Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:54:27.561Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:54:32.561Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:54:37.572Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "time": "2026-09-12T05:54:42.585Z",
+    "round": 2,
+    "phase": "initialize",
+    "outputs": 0,
+    "engine": {
+      "runtime": true,
+      "dependencies": 0,
+      "aborted": false,
+      "workers": 2,
+      "unusedWorkers": 0,
+      "resources": [
+        {
+          "path": "/StarShift/office/frame.js",
+          "duration": 7.409999966621399
+        },
+        {
+          "path": "/StarShift/engine/zetaHelper.js",
+          "duration": 7.339999973773956
+        },
+        {
+          "path": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "duration": 250.35000002384186
+        },
+        {
+          "path": "/StarShift/engine/soffice.js",
+          "duration": 33.94499999284744
+        },
+        {
+          "path": "/StarShift/engine/soffice.wasm",
+          "duration": 1974.25
+        },
+        {
+          "path": "/StarShift/engine/soffice.data.js.metadata",
+          "duration": 18.2150000333786
+        },
+        {
+          "path": "/StarShift/engine/soffice.data",
+          "duration": 1454.2799999713898
+        }
+      ]
+    }
+  },
+  {
+    "type": "failure",
+    "message": "expect(received).not.toBe(expected) // Object.is equality\n\nExpected: not \"chromium\"",
+    "notice": [
+      "文档处理超时，请减少文档大小后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。"
+    ]
+  }
+]

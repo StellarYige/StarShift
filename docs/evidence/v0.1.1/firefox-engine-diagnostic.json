@@ -1,0 +1,94 @@
+{
+  "browser": "firefox",
+  "version": "155.0",
+  "logs": [
+    {
+      "phase": "正在加载文档引擎资源…",
+      "outputs": 0,
+      "diagnostic": [],
+      "engine": {
+        "runtime": false,
+        "dependencies": 1,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 0
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 0
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 0
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 0
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "phase": "正在加载文档引擎资源…",
+      "outputs": 0,
+      "diagnostic": [],
+      "engine": {
+        "runtime": false,
+        "dependencies": 1,
+        "aborted": false,
+        "workerCount": 0,
+        "resources": [
+          {
+            "name": "/StarShift/office/frame.js",
+            "duration": 0
+          },
+          {
+            "name": "/StarShift/engine/zetaHelper.js",
+            "duration": 0
+          },
+          {
+            "name": "/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+            "duration": 0
+          },
+          {
+            "name": "/StarShift/engine/soffice.js",
+            "duration": 0
+          }
+        ],
+        "scripts": [
+          "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1",
+          "http://127.0.0.1:4187/StarShift/engine/soffice.js"
+        ]
+      }
+    },
+    {
+      "notice": "文档引擎初始化失败，请关闭其他大文件后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。",
+      "outputs": 0,
+      "diagnostic": [
+        {
+          "source": "rejection-direct",
+          "message": "TypeError: 'clipboard-read' (value of 'name' member of PermissionDescriptor) is not a valid value for enumeration PermissionName.",
+          "stack": "anonymous/<@http://127.0.0.1:4187/StarShift/engine/soffice.js line 1 > Function:5:17\n__emval_call_method@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:194862\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[219384]:0x60c2a71\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[221927]:0x61ff290\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[222173]:0x620c611\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[222149]:0x620b355\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[222154]:0x620b547\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[222149]:0x620b355\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[222347]:0x6219f38\ncreateExportWrapper/<@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:32586\ncallUserCallback@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191511\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191973\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\n"
+        },
+        {
+          "source": "fail",
+          "message": "initialize",
+          "stack": "fail@http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1:12:68\n@http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1:73:166\nEventListener.handleEvent*@http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1:73:17\n"
+        },
+        {
+          "source": "rejection-direct",
+          "message": "TypeError: 'clipboard-write' (value of 'name' member of PermissionDescriptor) is not a valid value for enumeration PermissionName.",
+          "stack": "anonymous/<@http://127.0.0.1:4187/StarShift/engine/soffice.js line 1 > Function:5:17\n__emval_call_method@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:194862\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[219384]:0x60c2a71\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[221927]:0x61ff318\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[222173]:0x620c611\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[222149]:0x620b355\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[222154]:0x620b547\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[222149]:0x620b355\n@http://127.0.0.1:4187/StarShift/engine/soffice.wasm:wasm-function[222347]:0x6219f38\ncreateExportWrapper/<@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:32586\ncallUserCallback@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191511\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191973\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\npromise callback*__emscripten_thread_mailbox_await@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191746\ncheckMailbox@http://127.0.0.1:4187/StarShift/engine/soffice.js:1:191943\n"
+        }
+      ],
+      "engine": null
+    }
+  ]
+}

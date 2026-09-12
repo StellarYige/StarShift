@@ -38,7 +38,16 @@ export interface Settings {
   dpi: number;
   split: boolean;
 }
-export type Progress = (message: string, completed?: number, total?: number) => void;
+export type ProgressPhase = 'document-check' | 'resource-load' | 'initialize' | 'import' | 'export';
+export interface ProgressDetail {
+  phase: ProgressPhase;
+  resource?: 'font' | 'engine';
+  loadedBytes?: number;
+  totalBytes?: number;
+  byteKind?: 'decoded';
+}
+// The first three arguments retain the existing file/page progress semantics.
+export type Progress = (message: string, completed?: number, total?: number, detail?: ProgressDetail) => void;
 export const DEFAULT_SETTINGS: Settings = {
   format: 'png', quality: 0.9, width: 0, height: 0,
   background: '#ffffff', transparent: true,

@@ -1,0 +1,300 @@
+{
+  "chromium": {
+    "version": "153.0.8010.12",
+    "docx": "converted",
+    "rounds": 10,
+    "failure": null,
+    "privateBytes": {
+      "baseline": 169775104,
+      "sampledPeak": 2257575936,
+      "clearedByRound": [
+        423714816,
+        518242304,
+        381542400,
+        391364608,
+        321052672,
+        317296640,
+        387567616,
+        394973184,
+        405843968,
+        408178688
+      ],
+      "last": 408178688,
+      "lastMinusFirstCleared": -15536128
+    },
+    "workingSetBytes": {
+      "baseline": 374247424,
+      "sampledPeak": 1420865536,
+      "clearedByRound": [
+        584032256,
+        675467264,
+        543629312,
+        552579072,
+        485289984,
+        480395264,
+        550010880,
+        557473792,
+        568598528,
+        570421248
+      ],
+      "last": 570421248,
+      "lastMinusFirstCleared": -13611008
+    },
+    "pageJsHeap": {
+      "baseline": 2624860,
+      "clearedByRound": [
+        3400692,
+        3608640,
+        3661180,
+        3714268,
+        3771408,
+        3789720,
+        3802328,
+        3844352,
+        3932272,
+        3948156
+      ]
+    },
+    "clearedWeakReferences": [
+      {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 1,
+          "live": 1
+        }
+      },
+      {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 2,
+          "live": 1
+        }
+      },
+      {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 3,
+          "live": 1
+        }
+      },
+      {
+        "input": {
+          "observed": 4,
+          "live": 1
+        },
+        "blob": {
+          "observed": 4,
+          "live": 1
+        }
+      },
+      {
+        "input": {
+          "observed": 5,
+          "live": 1
+        },
+        "blob": {
+          "observed": 5,
+          "live": 1
+        }
+      },
+      {
+        "input": {
+          "observed": 6,
+          "live": 1
+        },
+        "blob": {
+          "observed": 6,
+          "live": 1
+        }
+      },
+      {
+        "input": {
+          "observed": 7,
+          "live": 1
+        },
+        "blob": {
+          "observed": 7,
+          "live": 1
+        }
+      },
+      {
+        "input": {
+          "observed": 8,
+          "live": 1
+        },
+        "blob": {
+          "observed": 8,
+          "live": 1
+        }
+      },
+      {
+        "input": {
+          "observed": 9,
+          "live": 1
+        },
+        "blob": {
+          "observed": 9,
+          "live": 1
+        }
+      },
+      {
+        "input": {
+          "observed": 10,
+          "live": 1
+        },
+        "blob": {
+          "observed": 10,
+          "live": 1
+        }
+      }
+    ],
+    "limitations": "OS private bytes include engine, browser and subprocesses. Working set sums can double-count shared mappings. Peak is sampled, not guaranteed absolute maximum. CDP GC covers page JS only; it does not prove complete native/WASM reclamation. WeakRef counts cover selected File objects and parent-page Blob URL inputs, without retaining them or recording names. Firefox/WebKit do not have forced page GC here, so live weak references are not by themselves proof of a leak. No instrumentation retaining frames."
+  },
+  "firefox": {
+    "version": "155.0",
+    "docx": "incompatible",
+    "rounds": 3,
+    "failure": null,
+    "privateBytes": {
+      "baseline": 532328448,
+      "sampledPeak": 7357423616,
+      "clearedByRound": [
+        2585825280,
+        4625686528,
+        6692712448
+      ],
+      "last": 6692712448,
+      "lastMinusFirstCleared": 4106887168
+    },
+    "workingSetBytes": {
+      "baseline": 673632256,
+      "sampledPeak": 4293459968,
+      "clearedByRound": [
+        1669005312,
+        2645340160,
+        3635961856
+      ],
+      "last": 3635961856,
+      "lastMinusFirstCleared": 1966956544
+    },
+    "pageJsHeap": {
+      "baseline": null,
+      "clearedByRound": [
+        null,
+        null,
+        null
+      ]
+    },
+    "clearedWeakReferences": [
+      {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      {
+        "input": {
+          "observed": 2,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      {
+        "input": {
+          "observed": 3,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      }
+    ],
+    "limitations": "OS private bytes include engine, browser and subprocesses. Working set sums can double-count shared mappings. Peak is sampled, not guaranteed absolute maximum. CDP GC covers page JS only; it does not prove complete native/WASM reclamation. WeakRef counts cover selected File objects and parent-page Blob URL inputs, without retaining them or recording names. Firefox/WebKit do not have forced page GC here, so live weak references are not by themselves proof of a leak. No instrumentation retaining frames."
+  },
+  "webkit": {
+    "version": "26.6",
+    "docx": "incompatible",
+    "rounds": 3,
+    "failure": null,
+    "privateBytes": {
+      "baseline": 1418649600,
+      "sampledPeak": 7389745152,
+      "clearedByRound": [
+        3506257920,
+        5321572352,
+        7064268800
+      ],
+      "last": 7064268800,
+      "lastMinusFirstCleared": 3558010880
+    },
+    "workingSetBytes": {
+      "baseline": 311758848,
+      "sampledPeak": 3100635136,
+      "clearedByRound": [
+        1327144960,
+        2100502528,
+        2812465152
+      ],
+      "last": 2812465152,
+      "lastMinusFirstCleared": 1485320192
+    },
+    "pageJsHeap": {
+      "baseline": null,
+      "clearedByRound": [
+        null,
+        null,
+        null
+      ]
+    },
+    "clearedWeakReferences": [
+      {
+        "input": {
+          "observed": 1,
+          "live": 1
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      {
+        "input": {
+          "observed": 2,
+          "live": 2
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      },
+      {
+        "input": {
+          "observed": 3,
+          "live": 2
+        },
+        "blob": {
+          "observed": 0,
+          "live": 0
+        }
+      }
+    ],
+    "limitations": "OS private bytes include engine, browser and subprocesses. Working set sums can double-count shared mappings. Peak is sampled, not guaranteed absolute maximum. CDP GC covers page JS only; it does not prove complete native/WASM reclamation. WeakRef counts cover selected File objects and parent-page Blob URL inputs, without retaining them or recording names. Firefox/WebKit do not have forced page GC here, so live weak references are not by themselves proof of a leak. No instrumentation retaining frames."
+  }
+}

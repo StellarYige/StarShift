@@ -1,0 +1,11 @@
+{
+  "date": "2026-09-12",
+  "exactCleanupTime": "not recorded",
+  "label": "baseline-local-contemporary",
+  "profile": ".cache/performance/baseline-local-contemporary-1789199615568/2",
+  "observation": "After Browser.close ended the unresponsive profile's browser parent, one renderer and one crashpad process remained. The measurement child Node process stayed alive after all 35 samples had been recorded. Both remaining processes were matched by the exact resolved harness-owned profile directory before termination.",
+  "processIds": [18460, 19612],
+  "parentProcessId": 38072,
+  "impact": "Subsequent contemporary baseline rounds may have been affected by the remaining renderer; its CPU and memory were not measured. This supplementary control is diagnostic and cannot isolate code performance or establish equal failure causes. The original baseline, final revision, and all failed samples remain separate.",
+  "followup": "Failure diagnostics and browser close are now bounded. The Windows harness checks for processes belonging to its exact .cache/performance profile after close and ends only those and their descendants, outside sample timing. No request/cache override was added."
+}

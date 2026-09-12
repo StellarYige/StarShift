@@ -1,6 +1,6 @@
 # 第三方软件、字体与来源
 
-StarShift 自有代码为 MIT；这不改变下面组件的许可证。发布包中保留 `licenses/`，源码仓库保留 `vendor/licenses/` 与 `vendor/fonts/OFL.txt`。不要用项目 MIT 许可证替换第三方声明。
+StarShift 自有代码为 MIT；这不改变下面组件的许可证。构建输出与部署站点中保留 `licenses/`，源码仓库保留 `vendor/licenses/` 与 `vendor/fonts/OFL.txt`。不要用项目 MIT 许可证替换第三方声明。
 
 ## 浏览器运行依赖
 

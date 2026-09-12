@@ -16,7 +16,7 @@ export default function Preview({ output, onClose }: { output: OutputItem; onClo
     if (!isPdf) return;
     const controller = new AbortController();
     let url = '';
-    setLoading(true);
+    setLoading(true); setImage(''); setError('');
     void (async () => {
       const { openPdf, renderPdfPage } = await import('../core/pdf-render');
       const doc = await openPdf(output.blob, controller.signal);
@@ -38,7 +38,7 @@ export default function Preview({ output, onClose }: { output: OutputItem; onClo
     <div className="preview-body checker">
       {loading && <p role="status">正在生成预览…</p>}
       {error && <p role="alert">{error}</p>}
-      {!loading && !error && <img src={isPdf ? image : output.url} alt={`${output.name}${isPdf ? ` 第 ${page} 页` : ''}`} />}
+      {!loading && !error && (!isPdf || image) && <img src={isPdf ? image : output.url} alt={`${output.name}${isPdf ? ` 第 ${page} 页` : ''}`} />}
     </div>
     <div className="preview-footer">{isPdf && <div className="pager"><button className="icon-button" aria-label="上一页" disabled={page === 1 || loading} onClick={() => setPage(n => n - 1)}><ChevronLeft size={18} /></button><span>第 {page} / {count} 页</span><button className="icon-button" aria-label="下一页" disabled={page === count || loading} onClick={() => setPage(n => n + 1)}><ChevronRight size={18} /></button></div>}<a className="button primary" href={output.url} download={output.name}><Download size={16} />下载文件</a></div>
   </dialog>;

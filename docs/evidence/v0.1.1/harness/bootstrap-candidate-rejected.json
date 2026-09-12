@@ -1,0 +1,31 @@
+{
+  "time": "2026-09-12T08:49:16.890Z",
+  "decision": "rejected; original adapter retained",
+  "reason": "A real 270.083-second initializer timeout occurred in round 3 continuous batch 1 after 14 original regressions and 10 memory cycles passed. The change did not establish a fix, so it was not adopted. Historical initializer root cause remains unresolved.",
+  "source": {
+    "recorded": "2026-09-12T08:40:36.032Z",
+    "files": [
+      {
+        "path": "public/office/frame.js",
+        "candidatePath": ".cache/bootstrap-candidate/office/frame.js",
+        "originalSha256": "eedbb291eaf1f4a6057322af85cb23033636a2fcafdff8a2a31fe99ad7b3837b",
+        "candidateSha256": "ad1579a21f92717a53dd9ccf454981da158147fbfe097b4121d726200afdbc86"
+      },
+      {
+        "path": "public/office/thread.js",
+        "candidatePath": ".cache/bootstrap-candidate/office/thread.js",
+        "originalSha256": "3f4e87df564d0386665cb9d494a129459b615abc464a323c99c506b74bc218a0",
+        "candidateSha256": "093da2226942cf0be6913d7a9138b5bd161e1ee3dd18e0637adffd53d421e0be"
+      }
+    ]
+  },
+  "completedSamples": 22,
+  "failures": [
+    {
+      "round": 3,
+      "scenario": "continuous",
+      "batch": 1,
+      "elapsedMs": 270083
+    }
+  ]
+}

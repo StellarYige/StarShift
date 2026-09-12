@@ -7,30 +7,42 @@ import type { PageItem, Progress, Settings } from '../types';
 GlobalWorkerOptions.workerSrc = workerUrl;
 export async function openPdf(file: Blob, signal: AbortSignal): Promise<PDFDocumentProxy> {
   checkAbort(signal);
+  const data = new Uint8Array(await file.arrayBuffer());
+  checkAbort(signal);
   const task = getDocument({
-    data: new Uint8Array(await file.arrayBuffer()),
+    data,
     cMapUrl: `${import.meta.env.BASE_URL}pdfjs/cmaps/`, cMapPacked: true,
     standardFontDataUrl: `${import.meta.env.BASE_URL}pdfjs/standard_fonts/`,
     wasmUrl: `${import.meta.env.BASE_URL}pdfjs/wasm/`,
     enableXfa: false, stopAtErrors: true,
     maxImageSize: MAX_PIXELS, useSystemFonts: false,
   });
-  const abort = () => { void task.destroy(); };
+  let encrypted = false;
+  const destroy = task.destroy.bind(task);
+  let destruction: Promise<void> | undefined;
+  task.destroy = () => {
+    signal.removeEventListener('abort', abort);
+    return destruction ??= destroy();
+  };
+  const abort = () => { void task.destroy().catch(() => {}); };
   signal.addEventListener('abort', abort, { once: true });
-  task.onPassword = (_update: unknown, reason: number) => { if (reason === PasswordResponses.NEED_PASSWORD || reason === PasswordResponses.INCORRECT_PASSWORD) void task.destroy(); };
+  task.onPassword = (_update: unknown, reason: number) => { if (reason === PasswordResponses.NEED_PASSWORD || reason === PasswordResponses.INCORRECT_PASSWORD) { encrypted = true; abort(); } };
   try {
     const doc = await task.promise;
+    checkAbort(signal);
     if (doc.numPages > MAX_PAGES) { await doc.loadingTask.destroy(); throw new Error(`文件超过 ${MAX_PAGES} 页，请先在本地拆分为较小文件。`); }
     return doc;
   } catch (error) {
+    await task.destroy().catch(() => {});
     checkAbort(signal);
-    if (String(error).includes('Worker was destroyed')) throw new Error('PDF 已加密，请先在本地解除密码保护。');
+    if (encrypted) throw new Error('PDF 已加密，请先在本地解除密码保护。');
     throw error;
-  } finally { signal.removeEventListener('abort', abort); }
+  }
 }
 export async function renderPdfPage(doc: PDFDocumentProxy, pageNumber: number, scale: number, format: 'png' | 'jpg', quality: number, signal: AbortSignal) {
   checkAbort(signal);
   const page = await doc.getPage(pageNumber);
+  checkAbort(signal);
   const viewport = page.getViewport({ scale });
   if (viewport.width * viewport.height > MAX_PIXELS || Math.max(viewport.width, viewport.height) > 16384) throw new Error('当前页渲染尺寸过大，请降低清晰度。');
   const canvas = document.createElement('canvas');
@@ -45,7 +57,9 @@ export async function renderPdfPage(doc: PDFDocumentProxy, pageNumber: number, s
     await task.promise;
     checkAbort(signal);
     const mime = format === 'jpg' ? 'image/jpeg' : 'image/png';
-    return await new Promise<Blob>((resolve, reject) => canvas.toBlob(blob => blob && blob.type === mime ? resolve(blob) : reject(new Error('图片编码失败。')), mime, quality));
+    const blob = await new Promise<Blob>((resolve, reject) => canvas.toBlob(blob => blob && blob.type === mime ? resolve(blob) : reject(new Error('图片编码失败。')), mime, quality));
+    checkAbort(signal);
+    return blob;
   } finally { signal.removeEventListener('abort', abort); canvas.width = canvas.height = 1; page.cleanup(); }
 }
 export async function pdfThumbnails(file: File, id: string, signal: AbortSignal, progress: Progress) {

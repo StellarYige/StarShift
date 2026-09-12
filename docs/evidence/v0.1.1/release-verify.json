@@ -1,0 +1,11 @@
+{
+  "time": "2026-09-12T08:24:29.715Z",
+  "repository": "StellarYige/StarShift",
+  "release": {
+    "id": 387410280,
+    "tag": "v0.1.0",
+    "body": "只是转个文件，不必开个会员。\n\n[在线使用星易 StarShift](https://stellaryige.github.io/StarShift/) · [实际测试记录](https://github.com/StellarYige/StarShift/blob/main/docs/TEST_REPORT.md)\n\n免费、无需登录、无水印，文件、文件名和转换结果均留在浏览器内。支持 DOCX 转 PDF、图片转 PDF、PDF 转图片、PDF 页面整理，以及 JPG / PNG / WebP 批量互转。DOCX 使用真实 LibreOffice / ZetaOffice WASM 排版；PDF 整理保留文字与矢量内容。\n\n从源码构建、自行部署：克隆仓库后运行 npm ci 和 npm run build，将 dist 的完整内容部署到 HTTPS 或 localhost 静态服务器的 /StarShift/ 路径。详见 README 自行部署说明。项目静态发布包及校验附件已于 v0.1.1 修订时停止提供并删除；Git 标签、版本记录和历史测试证据保留。GitHub 自动生成的源码归档不受影响。\n\n验证：类型检查、构建、7 项单元测试和 14 项浏览器转换测试通过；GitHub Actions 检查与 Pages 部署成功；真实 Pages 网址再次通过全部 14 项测试。独立解压静态包后另测透明图片和双文件中文 DOCX 转换通过。验证涉及中文、表格几何、图片、分页、EXIF 方向、透明像素、矢量页序、毫米边距和 ZIP 内容，并审计请求没有外发文件数据。\n\n限制：文档引擎与中文字体解压后约 266 MiB，首次加载取决于网络；建议使用桌面 Chrome / Edge。复杂 Word 排版不保证像素一致，缺失字体会替代，外链图片不加载。真实移动设备、Safari / Firefox 尚未验证。内存保护上限和其他格式限制详见 README。\n",
+    "assets": []
+  },
+  "artifacts": []
+}

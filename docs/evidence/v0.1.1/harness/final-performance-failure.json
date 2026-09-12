@@ -1,0 +1,486 @@
+[
+  {
+    "round": 5,
+    "scenario": "revisit",
+    "started": "2026-09-12T07:36:34.099Z",
+    "elapsedMs": 270103,
+    "events": [
+      {
+        "ms": 54.60000002384186,
+        "type": "check"
+      },
+      {
+        "ms": 156.86500000953674,
+        "type": "progress",
+        "phase": "resource-load",
+        "message": "正在加载中文字体…"
+      },
+      {
+        "ms": 205.75499999523163,
+        "type": "progress",
+        "phase": "resource-load",
+        "message": "正在加载中文字体…"
+      },
+      {
+        "ms": 306.125,
+        "type": "progress",
+        "phase": "resource-load",
+        "message": "正在加载中文字体…"
+      },
+      {
+        "ms": 512.6850000023842,
+        "type": "progress",
+        "phase": "resource-load",
+        "message": "正在加载中文字体…"
+      },
+      {
+        "ms": 608.2300000190735,
+        "type": "progress",
+        "phase": "resource-load",
+        "message": "正在加载文档引擎资源…"
+      },
+      {
+        "ms": 3487.25,
+        "type": "progress",
+        "phase": "initialize",
+        "message": "正在初始化文档排版引擎…"
+      },
+      {
+        "ms": 3872.9050000309944,
+        "type": "progress",
+        "phase": "initialize",
+        "message": "正在初始化文档排版引擎…"
+      },
+      {
+        "ms": 6148.930000007153,
+        "type": "progress",
+        "phase": "initialize",
+        "message": "正在初始化文档排版引擎…"
+      }
+    ],
+    "network": {
+      "requests": [
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/assets/docx-ve9hAQ8R.js",
+          "start": 278002.954979,
+          "end": 278002.958044,
+          "response": 278002.958805,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 21747,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/assets/docx-ve9hAQ8R.js",
+          "start": 278002.954979,
+          "end": 278002.958044,
+          "response": 278002.95884,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 21747,
+          "serviceWorker": false
+        },
+        {
+          "target": "page",
+          "url": "http://127.0.0.1:4187/StarShift/assets/docx-ve9hAQ8R.js",
+          "start": 278002.954194,
+          "end": 278002.959965,
+          "response": 278002.964568,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "page",
+          "url": "http://127.0.0.1:4187/StarShift/office/frame.html",
+          "start": 278003.029086,
+          "end": 278003.045111,
+          "response": 278003.041576,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/office/frame.html",
+          "start": 278003.032102,
+          "end": 278003.037857,
+          "response": 278003.038652,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 1001,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/office/frame.html",
+          "start": 278003.032102,
+          "end": 278003.037857,
+          "response": 278003.038713,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 1001,
+          "serviceWorker": false
+        },
+        {
+          "target": "page",
+          "url": "http://127.0.0.1:4187/StarShift/office/frame.js",
+          "start": 278003.055353,
+          "end": 278003.062833,
+          "response": 278003.063864,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/office/frame.js",
+          "start": 278003.056363,
+          "end": 278003.06016,
+          "response": 278003.060887,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 9692,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/office/frame.js",
+          "start": 278003.056363,
+          "end": 278003.06016,
+          "response": 278003.060953,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 9692,
+          "serviceWorker": false
+        },
+        {
+          "target": "page",
+          "url": "http://127.0.0.1:4187/StarShift/engine/zetaHelper.js",
+          "start": 278003.064715,
+          "end": 278003.071459,
+          "response": 278003.072313,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/zetaHelper.js",
+          "start": 278003.065581,
+          "end": 278003.069553,
+          "response": 278003.070143,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 9421,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/zetaHelper.js",
+          "start": 278003.065581,
+          "end": 278003.069553,
+          "response": 278003.070181,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 9421,
+          "serviceWorker": false
+        },
+        {
+          "target": "page",
+          "url": "http://127.0.0.1:4187/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "start": 278003.076102,
+          "end": 278003.432642,
+          "response": 278003.087891,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "start": 278003.077155,
+          "end": 278003.30622,
+          "response": 278003.086737,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 16437575,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/fonts/NotoSansCJKsc-Regular.otf",
+          "start": 278003.077155,
+          "end": 278003.30622,
+          "response": 278003.086776,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 16437575,
+          "serviceWorker": false
+        },
+        {
+          "target": "page",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.js",
+          "start": 278003.525088,
+          "end": 278003.559091,
+          "response": 278003.567125,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.js",
+          "start": 278003.526284,
+          "end": 278003.537103,
+          "response": 278003.531895,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 858340,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.js",
+          "start": 278003.526284,
+          "end": 278003.537103,
+          "response": 278003.531973,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 858340,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.wasm",
+          "start": 278003.599602,
+          "end": 278006.068765,
+          "response": 278003.668282,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 161667719,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.wasm",
+          "start": 278003.599602,
+          "end": 278006.068765,
+          "response": 278003.668347,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 161667719,
+          "serviceWorker": false
+        },
+        {
+          "target": "page",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.wasm",
+          "start": 278003.598306,
+          "end": 278006.092993,
+          "response": 278003.6712,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.data.js.metadata",
+          "start": 278006.395796,
+          "end": 278006.769383,
+          "response": 278006.768161,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 215405,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.data.js.metadata",
+          "start": 278006.395796,
+          "end": 278006.769383,
+          "response": 278006.768335,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 215405,
+          "serviceWorker": false
+        },
+        {
+          "target": "page",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.data.js.metadata",
+          "start": 278006.39398,
+          "end": 278006.775121,
+          "response": 278006.770012,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.data",
+          "start": 278006.779086,
+          "end": 278008.693492,
+          "response": 278006.793031,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 99520831,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.data",
+          "start": 278006.779086,
+          "end": 278008.693492,
+          "response": 278006.793096,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 99520831,
+          "serviceWorker": false
+        },
+        {
+          "target": "page",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.data",
+          "start": 278006.777275,
+          "end": 278008.696076,
+          "response": 278006.794406,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.js",
+          "start": 278009.091427,
+          "end": 278009.115938,
+          "response": 278009.109647,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 858340,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.js",
+          "start": 278009.091427,
+          "end": 278009.115938,
+          "response": 278009.109717,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 858340,
+          "serviceWorker": false
+        },
+        {
+          "target": "worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/zeta.js",
+          "start": 278010.409329,
+          "end": 278010.420546,
+          "response": 278010.420259,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/zeta.js",
+          "start": 278010.411186,
+          "end": 278010.416171,
+          "response": 278010.416994,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 43161,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/zeta.js",
+          "start": 278010.411186,
+          "end": 278010.416171,
+          "response": 278010.417051,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 43161,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/zetaHelper.js",
+          "start": 278010.425134,
+          "end": 278010.651797,
+          "response": 278010.653242,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 9421,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/zetaHelper.js",
+          "start": 278010.425134,
+          "end": 278010.651797,
+          "response": 278010.653304,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 9421,
+          "serviceWorker": false
+        },
+        {
+          "target": "worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.js",
+          "start": 278010.739099,
+          "end": 278010.785721,
+          "response": 278010.78311,
+          "status": 200,
+          "received": 0,
+          "serviceWorker": true
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.js",
+          "start": 278010.740905,
+          "end": 278010.770012,
+          "response": 278010.759818,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 858340,
+          "serviceWorker": false
+        },
+        {
+          "target": "service_worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/soffice.js",
+          "start": 278010.740905,
+          "end": 278010.770012,
+          "response": 278010.759882,
+          "status": 200,
+          "networkStatus": 200,
+          "received": 858340,
+          "serviceWorker": false
+        },
+        {
+          "target": "worker",
+          "url": "http://127.0.0.1:4187/StarShift/engine/zetaHelper.js",
+          "start": 278010.42414
+        }
+      ],
+      "duplicateObservations": 13,
+      "receivedBytes": null,
+      "knownReceivedBytes": 280510993,
+      "unmeasuredReceivedRequests": 1,
+      "decodedBytes": null,
+      "decodedNetworkBytes": null,
+      "decodedCacheBytes": 0,
+      "unmeasuredDecodedRequests": 1,
+      "payloadBytes": 280508168,
+      "cacheResponses": 0,
+      "serviceWorkerWrappers": 11,
+      "incomplete": 1,
+      "targetTypes": [
+        "browser_ui",
+        "page",
+        "service_worker",
+        "worker"
+      ],
+      "errors": []
+    }
+  }
+]

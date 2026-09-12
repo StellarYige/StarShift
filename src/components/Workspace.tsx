@@ -1,9 +1,10 @@
-import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState, type Dispatch, type SetStateAction } from 'react';
 import { Upload, Plus, X, ArrowUp, ArrowDown, RotateCw, Download, Eye, Check, LoaderCircle, File, Trash2, ArrowRight, Square, RotateCcw, ShieldCheck, FolderDown } from 'lucide-react';
-import type { InputItem, OutputItem, PageItem, Progress, Settings, ToolId } from '../types';
+import type { InputItem, OutputItem, PageItem, Progress, ProgressDetail, Settings, ToolId } from '../types';
 import { DEFAULT_SETTINGS } from '../types';
 import { bytesLabel, checkAbort, errorMessage, MAX_FILE_BYTES, MAX_PAGES, MAX_TOTAL_BYTES, stem, uniqueName } from '../core/common';
 import { runWorker } from '../core/worker-client';
+import { OfficeError } from '../core/office-error';
 import ToolSettings from './ToolSettings';
 
 const Preview = lazy(() => import('./Preview'));
@@ -11,16 +12,26 @@ const labels = { ready: '等待转换', working: '正在处理', done: '已完�
 const acceptMap: Record<ToolId, string> = { 'docx-pdf': '.docx', 'image-pdf': '.jpg,.jpeg,.png,.webp', 'image-convert': '.jpg,.jpeg,.png,.webp', 'pdf-image': '.pdf', 'pdf-organize': '.pdf' };
 
 export default function Workspace({ tool }: { tool: ToolId }) {
+  const [settings, setSettings] = useState<Settings>({ ...DEFAULT_SETTINGS });
+  const [batch, setBatch] = useState(0);
+  // Unmount file-owning state on clear. Updating its arrays alone lets React's
+  // previous render retain the last File/Blob until another update occurs.
+  return <WorkspaceBatch key={batch} tool={tool} settings={settings} setSettings={setSettings} onClear={() => setBatch(n => n + 1)} />;
+}
+
+function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId; settings: Settings; setSettings: Dispatch<SetStateAction<Settings>>; onClear: () => void }) {
   const [items, setItems] = useState<InputItem[]>([]);
   const [pages, setPages] = useState<PageItem[]>([]);
   const [outputs, setOutputs] = useState<OutputItem[]>([]);
-  const [settings, setSettings] = useState<Settings>({ ...DEFAULT_SETTINGS });
   const [busy, setBusy] = useState(false);
   const [drag, setDrag] = useState(false);
   const [phase, setPhase] = useState('');
-  const [progress, setProgress] = useState<{ completed?: number; total?: number }>({});
+  const [progress, setProgress] = useState<{ completed?: number; total?: number; detail?: ProgressDetail }>({});
   const [notice, setNotice] = useState('');
   const [preview, setPreview] = useState<OutputItem>();
+  const [zipUrl, setZipUrl] = useState('');
+  const zipRef = useRef('');
+  const generation = useRef(0);
   const controller = useRef<AbortController | null>(null);
   const running = useRef(false);
   const input = useRef<HTMLInputElement>(null);
@@ -32,18 +43,24 @@ export default function Workspace({ tool }: { tool: ToolId }) {
   const organize = tool === 'pdf-organize';
   const selected = pages.filter(p => p.selected);
   const usable = items.filter(i => i.status !== 'working' && (!organize || pages.some(p => p.sourceId === i.id)));
-  const progressHandler: Progress = (message, completed, total) => { setPhase(message); setProgress({ completed, total }); };
+  const taskProgress = (abort: AbortController): Progress => (message, completed, total, detail) => {
+    if (controller.current !== abort || abort.signal.aborted) return;
+    setPhase(message); setProgress({ completed, total, detail });
+  };
   const register = (blob: Blob) => { const url = URL.createObjectURL(blob); urls.current.add(url); return url; };
   const revoke = (url?: string) => { if (url) { URL.revokeObjectURL(url); urls.current.delete(url); } };
-  useEffect(() => () => { controller.current?.abort(); urls.current.forEach(url => URL.revokeObjectURL(url)); urls.current.clear(); }, []);
+  useEffect(() => () => { generation.current++; controller.current?.abort(); controller.current = null; running.current = false; itemsRef.current = []; urls.current.forEach(url => URL.revokeObjectURL(url)); urls.current.clear(); zipRef.current = ''; }, []);
   function updateItem(id: string, change: Partial<InputItem>) { setItems(current => current.map(item => item.id === id ? { ...item, ...change } : item)); }
-  function clearOutputs() { outputs.forEach(o => revoke(o.url)); setOutputs([]); usedNames.current.clear(); outputBytes.current = 0; setPreview(undefined); }
+  function clearZip() { revoke(zipRef.current); zipRef.current = ''; setZipUrl(''); }
+  function clearOutputs() { clearZip(); outputs.forEach(o => revoke(o.url)); setOutputs([]); usedNames.current.clear(); outputBytes.current = 0; setPreview(undefined); }
   function clear() {
-    controller.current?.abort(); urls.current.forEach(url => URL.revokeObjectURL(url)); urls.current.clear();
-    setItems([]); setPages([]); setOutputs([]); setNotice(''); setPhase(''); setProgress({}); setPreview(undefined); outputBytes.current = 0; usedNames.current.clear();
+    generation.current++; controller.current?.abort(); controller.current = null; running.current = false; itemsRef.current = [];
+    urls.current.forEach(url => URL.revokeObjectURL(url)); urls.current.clear(); zipRef.current = ''; outputBytes.current = 0; usedNames.current.clear();
+    onClear();
   }
   function addOutput(name: string, blob: Blob, signal: AbortSignal) {
     checkAbort(signal);
+    clearZip();
     if (outputBytes.current + blob.size > MAX_TOTAL_BYTES) throw new Error('本批输出已接近 300 MB，请下载已有结果后，减少页数或清晰度重试。');
     outputBytes.current += blob.size;
     const output = { id: crypto.randomUUID(), name: uniqueName(name, usedNames.current), blob, url: register(blob) };
@@ -53,6 +70,7 @@ export default function Workspace({ tool }: { tool: ToolId }) {
     if (running.current || !files.length) return;
     running.current = true; setBusy(true); setNotice('');
     const abort = new AbortController(); controller.current = abort;
+    const task = ++generation.current, progressHandler = taskProgress(abort);
     let total = itemsRef.current.reduce((n, i) => n + i.file.size, 0);
     let pageTotal = pages.length;
     const accepted: InputItem[] = [];
@@ -88,14 +106,15 @@ export default function Workspace({ tool }: { tool: ToolId }) {
           updateItem(item.id, { status: 'error', message: errorMessage(error) });
         }
       }
-    } catch (error) { setNotice(errorMessage(error)); setItems(current => current.map(i => i.status === 'working' ? { ...i, status: 'cancelled' } : i)); }
-    finally { running.current = false; setBusy(false); setPhase(''); }
+    } catch (error) { if (generation.current === task) { setNotice(errorMessage(error)); setItems(current => current.map(i => i.status === 'working' ? { ...i, status: 'cancelled' } : i)); } }
+    finally { if (generation.current === task) { controller.current = null; running.current = false; setBusy(false); setPhase(''); setProgress({}); } }
   }
   async function convert(retryId?: string) {
     if (running.current) return;
     running.current = true; setBusy(true); setNotice('');
     if (!retryId) clearOutputs();
     const abort = new AbortController(); controller.current = abort;
+    const task = ++generation.current, progressHandler = taskProgress(abort);
     const batch = retryId ? items.filter(i => i.id === retryId) : usable;
     let office: import('../core/docx').OfficeSession | undefined;
     try {
@@ -120,7 +139,7 @@ export default function Workspace({ tool }: { tool: ToolId }) {
               await pdfToImages(item.file, settings, abort.signal, progressHandler, (name, blob) => addOutput(name, blob, abort.signal));
             } else {
               const { OfficeSession, prepareDocx } = await import('../core/docx');
-              progressHandler('正在检查文档结构与外部引用…');
+              progressHandler('正在检查文档结构与外部引用…', undefined, undefined, { phase: 'document-check' });
               const bytes = await prepareDocx(item.file, abort.signal);
               office ??= new OfficeSession(abort.signal, progressHandler);
               addOutput(`${stem(item.file.name)}.pdf`, await office.convert(bytes), abort.signal);
@@ -129,26 +148,34 @@ export default function Workspace({ tool }: { tool: ToolId }) {
           } catch (error) {
             if (abort.signal.aborted) throw error;
             updateItem(item.id, { status: 'error', message: `转换失败：${errorMessage(error)}` });
-            office?.destroy(); office = undefined;
+            if (error instanceof OfficeError && error.stopsBatch) {
+              setNotice(`${errorMessage(error)} 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。`);
+              break;
+            }
           }
         }
       }
     } catch (error) {
-      setNotice(errorMessage(error));
-      batch.forEach(i => updateItem(i.id, { status: abort.signal.aborted ? 'cancelled' : 'error', message: `转换失败：${errorMessage(error)}` }));
-    } finally { office?.destroy(); running.current = false; setBusy(false); setPhase(''); setProgress({}); }
+      if (generation.current === task) {
+        setNotice(errorMessage(error));
+        setItems(current => current.map(i => batch.some(b => b.id === i.id) && i.status !== 'done' && i.status !== 'error' ? { ...i, status: abort.signal.aborted ? 'cancelled' : 'error', message: errorMessage(error) } : i));
+      }
+    } finally { office?.destroy(); if (generation.current === task) { controller.current = null; running.current = false; setBusy(false); setPhase(''); setProgress({}); } }
   }
   async function downloadZip() {
     if (running.current) return;
+    const download = (url: string) => { const a = document.createElement('a'); a.href = url; a.download = 'StarShift-转换结果.zip'; document.body.appendChild(a); a.click(); a.remove(); };
+    if (zipRef.current) { download(zipRef.current); return; }
     const abort = new AbortController(); controller.current = abort; running.current = true; setBusy(true); setNotice('');
+    const task = ++generation.current, progressHandler = taskProgress(abort);
     try {
       const [result] = await runWorker({ type: 'zip', outputs }, abort.signal, progressHandler);
       checkAbort(abort.signal);
       const url = register(result.blob);
-      const a = document.createElement('a'); a.href = url; a.download = 'StarShift-转换结果.zip'; a.click();
-      setTimeout(() => revoke(url), 30000);
-    } catch (error) { setNotice(errorMessage(error)); }
-    finally { running.current = false; setBusy(false); setPhase(''); }
+      zipRef.current = url; setZipUrl(url);
+      download(url);
+    } catch (error) { if (generation.current === task) setNotice(errorMessage(error)); }
+    finally { if (generation.current === task) { controller.current = null; running.current = false; setBusy(false); setPhase(''); setProgress({}); } }
   }
   function move<T extends { id: string }>(list: T[], id: string, offset: number) {
     const index = list.findIndex(i => i.id === id); const next = [...list];
@@ -197,10 +224,11 @@ export default function Workspace({ tool }: { tool: ToolId }) {
         <div className="convert-actions">{busy ? <button className="button cancel" onClick={() => controller.current?.abort()}><Square size={14} />取消任务</button> : <button className="button primary" disabled={!usable.length || (organize && !selected.length) || (tool === 'docx-pdf' && !crossOriginIsolated)} onClick={() => void convert()}>{outputs.length ? '重新转换' : organize ? '导出选中页面' : '开始转换'}<ArrowRight size={17} /></button>}<small><ShieldCheck size={13} />本地处理 · 不上传文件</small></div>
       </aside>
     </div>
-    {busy && <div className="progress-panel" role="status" aria-live="polite"><LoaderCircle className="spin" size={18} /><span>{phase || '正在准备…'}</span>{progress.total && <><span>{progress.completed} / {progress.total}</span><progress max={progress.total} value={progress.completed} /></>}</div>}
+    {busy && <div className="progress-panel" role="status" aria-live="polite" data-phase={progress.detail?.phase}><LoaderCircle className="spin" size={18} /><span>{phase || '正在准备…'}</span>{!!progress.total && <><span>{progress.completed} / {progress.total}</span><progress max={progress.total} value={progress.completed} /></>}{progress.detail?.loadedBytes !== undefined && <span>已读取 {bytesLabel(progress.detail.loadedBytes)}{progress.detail.totalBytes ? ` / ${bytesLabel(progress.detail.totalBytes)}` : ''}</span>}</div>}
     {notice && <div className="notice" role="alert">{notice}<button className="icon-button" aria-label="关闭提示" onClick={() => setNotice('')}><X size={15} /></button></div>}
-    {outputs.length > 0 && <section className="results-panel panel"><div className="panel-heading"><h2><span className="success-dot"><Check size={14} /></span>转换结果 <span className="counter">{outputs.length}</span></h2><button className="button secondary small" disabled={busy} onClick={() => void downloadZip()}><FolderDown size={16} />全部打包下载</button></div><ul className="result-list">{outputs.map(o => <li key={o.id}><div className="result-icon"><File size={21} /></div><div className="file-info"><strong title={o.name}>{o.name}</strong><span>{bytesLabel(o.blob.size)} · {o.blob.type === 'application/pdf' ? 'PDF' : o.blob.type.split('/')[1].toUpperCase()}</span></div><button className="button ghost small" onClick={() => setPreview(o)}><Eye size={16} /><span>预览</span></button><a className="button secondary small" href={o.url} download={o.name}><Download size={16} /><span>下载</span></a></li>)}</ul><p className="result-note">结果仅保存在当前页面。下载后可清空任务，关闭或刷新页面会释放文件。</p></section>}
+    {outputs.length > 0 && <section className="results-panel panel"><div className="panel-heading"><h2><span className="success-dot"><Check size={14} /></span>转换结果 <span className="counter">{outputs.length}</span></h2><button className="button secondary small" disabled={busy} onClick={() => void downloadZip()}><FolderDown size={16} />全部打包下载</button></div><ul className="result-list">{outputs.map(o => <li key={o.id}><div className="result-icon"><File size={21} /></div><div className="file-info"><strong title={o.name}>{o.name}</strong><span>{bytesLabel(o.blob.size)} · {o.blob.type === 'application/pdf' ? 'PDF' : o.blob.type.split('/')[1].toUpperCase()}</span></div><button className="button ghost small" aria-label="预览" onClick={() => setPreview(o)}><Eye size={16} /><span>预览</span></button><a className="button secondary small" aria-label="下载" href={o.url} download={o.name}><Download size={16} /><span>下载</span></a></li>)}</ul><p className="result-note">结果仅保存在当前页面。下载后可清空任务，关闭或刷新页面会释放文件。</p></section>}
     <p className="memory-note">为保护浏览器内存：单文件最大 100 MB，单批输入与输出各 300 MB，PDF 最多 500 页，单张图片最多 3200 万像素。这些是技术保护，无使用次数限制。</p>
+    {zipUrl && <p className="zip-ready"><a className="button secondary small" href={zipUrl} download="StarShift-转换结果.zip"><Download size={16} />下载已准备的 ZIP</a><span>如果浏览器没有开始下载，请点击此链接。</span></p>}
     {preview && <Suspense fallback={<p role="status">正在打开预览…</p>}><Preview key={preview.id} output={preview} onClose={() => setPreview(undefined)} /></Suspense>}
   </>;
 }

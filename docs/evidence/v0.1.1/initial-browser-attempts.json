@@ -1,0 +1,317 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\software\\xingyi\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.matrix.config.ts",
+      "--project",
+      "firefox",
+      "--project",
+      "webkit",
+      "--grep",
+      "actual DOCX engine attempt"
+    ],
+    "configFile": "D:\\software\\xingyi\\playwright.matrix.config.ts",
+    "rootDir": "D:/software/xingyi/tests/matrix",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/software/xingyi/.cache/compatibility-attempts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/software/xingyi/tests/matrix",
+        "testIgnore": [
+          "other-tools.spec.ts",
+          "mobile.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      },
+      {
+        "outputDir": "D:/software/xingyi/.cache/compatibility-attempts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/software/xingyi/tests/matrix",
+        "testIgnore": [
+          "mobile.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      },
+      {
+        "outputDir": "D:/software/xingyi/.cache/compatibility-attempts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/software/xingyi/tests/matrix",
+        "testIgnore": [
+          "mobile.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      },
+      {
+        "outputDir": "D:/software/xingyi/.cache/compatibility-attempts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "android-simulation",
+        "name": "android-simulation",
+        "testDir": "D:/software/xingyi/tests/matrix",
+        "testIgnore": [],
+        "testMatch": [
+          "mobile.spec.ts"
+        ],
+        "timeout": 300000
+      },
+      {
+        "outputDir": "D:/software/xingyi/.cache/compatibility-attempts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "iphone-simulation",
+        "name": "iphone-simulation",
+        "testDir": "D:/software/xingyi/tests/matrix",
+        "testIgnore": [],
+        "testMatch": [
+          "mobile.spec.ts"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": ".cache/compatibility-attempts/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/serve.mjs --port 4187",
+      "url": "http://127.0.0.1:4187/StarShift/",
+      "reuseExistingServer": false,
+      "timeout": 15000
+    }
+  },
+  "suites": [
+    {
+      "title": "compatibility.spec.ts",
+      "file": "compatibility.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 31632,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.notice').last()\nExpected substring: \u001b[32m\"不兼容\"\u001b[39m\nReceived string:    \u001b[31m\"文档引擎初始化失败，请关闭其他大文件后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.notice').last() with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.notice').last()\u001b[22m\n\u001b[2m    43 × locator resolved to <div role=\"alert\" class=\"notice\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"文档引擎初始化失败，请关闭其他大文件后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.notice').last()\nExpected substring: \u001b[32m\"不兼容\"\u001b[39m\nReceived string:    \u001b[31m\"文档引擎初始化失败，请关闭其他大文件后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.notice').last() with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.notice').last()\u001b[22m\n\u001b[2m    43 × locator resolved to <div role=\"alert\" class=\"notice\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"文档引擎初始化失败，请关闭其他大文件后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[22m\n\n    at D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts:20:50",
+                    "location": {
+                      "file": "D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts",
+                      "column": 50,
+                      "line": 20
+                    },
+                    "snippet": "  18 |   } else {\n  19 |     expect(info.project.name).toMatch(/^(firefox|webkit)$/);\n> 20 |     await expect(page.locator('.notice').last()).toContainText('不兼容');\n     |                                                  ^\n  21 |     await expect(page.locator('.status-error')).toHaveCount(1);\n  22 |     await expect(page.locator('.status-ready')).toHaveCount(1);\n  23 |     result = 'DOCX incompatible; conversion did not pass';"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts",
+                        "column": 50,
+                        "line": 20
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.notice').last()\nExpected substring: \u001b[32m\"不兼容\"\u001b[39m\nReceived string:    \u001b[31m\"文档引擎初始化失败，请关闭其他大文件后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.notice').last() with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.notice').last()\u001b[22m\n\u001b[2m    43 × locator resolved to <div role=\"alert\" class=\"notice\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"文档引擎初始化失败，请关闭其他大文件后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[22m\n\n\n  18 |   } else {\n  19 |     expect(info.project.name).toMatch(/^(firefox|webkit)$/);\n> 20 |     await expect(page.locator('.notice').last()).toContainText('不兼容');\n     |                                                  ^\n  21 |     await expect(page.locator('.status-error')).toHaveCount(1);\n  22 |     await expect(page.locator('.status-ready')).toHaveCount(1);\n  23 |     result = 'DOCX incompatible; conversion did not pass';\n    at D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts:20:50"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-12T05:00:53.041Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "engine-attempt.json",
+                      "contentType": "application/json",
+                      "path": "D:\\software\\xingyi\\.cache\\compatibility-attempts\\compatibility-actual-DOCX--dfae9-atibility-then-another-tool-firefox\\attachments\\engine-attempt-json-055360969b7ff96a83f1dca1f4e873a733d61aad.json"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\software\\xingyi\\.cache\\compatibility-attempts\\compatibility-actual-DOCX--dfae9-atibility-then-another-tool-firefox\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\software\\xingyi\\.cache\\compatibility-attempts\\compatibility-actual-DOCX--dfae9-atibility-then-another-tool-firefox\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts",
+                    "column": 50,
+                    "line": 20
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b0b409d468a60194358f-970f7c5a084c0f37e687",
+          "file": "compatibility.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 262670,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.notice').last()\nExpected substring: \u001b[32m\"不兼容\"\u001b[39m\nReceived string:    \u001b[31m\"文档处理超时，请减少文档大小后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.notice').last() with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.notice').last()\u001b[22m\n\u001b[2m    42 × locator resolved to <div role=\"alert\" class=\"notice\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"文档处理超时，请减少文档大小后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.notice').last()\nExpected substring: \u001b[32m\"不兼容\"\u001b[39m\nReceived string:    \u001b[31m\"文档处理超时，请减少文档大小后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.notice').last() with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.notice').last()\u001b[22m\n\u001b[2m    42 × locator resolved to <div role=\"alert\" class=\"notice\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"文档处理超时，请减少文档大小后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[22m\n\n    at D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts:20:50",
+                    "location": {
+                      "file": "D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts",
+                      "column": 50,
+                      "line": 20
+                    },
+                    "snippet": "  18 |     } });\n  19 |   });\n> 20 |   try {\n     |        ^\n  21 |   await open(page, 'docx-pdf');\n  22 |   await select(page, ['中文表格分页.docx', 'font-substitution.docx']);\n  23 |   await convert(page);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts",
+                        "column": 50,
+                        "line": 20
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.notice').last()\nExpected substring: \u001b[32m\"不兼容\"\u001b[39m\nReceived string:    \u001b[31m\"文档处理超时，请减少文档大小后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.notice').last() with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.notice').last()\u001b[22m\n\u001b[2m    42 × locator resolved to <div role=\"alert\" class=\"notice\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"文档处理超时，请减少文档大小后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[22m\n\n\n  18 |     } });\n  19 |   });\n> 20 |   try {\n     |        ^\n  21 |   await open(page, 'docx-pdf');\n  22 |   await select(page, ['中文表格分页.docx', 'font-substitution.docx']);\n  23 |   await convert(page);\n    at D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts:20:50"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-12T05:01:27.138Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "engine-attempt.json",
+                      "contentType": "application/json",
+                      "path": "D:\\software\\xingyi\\.cache\\compatibility-attempts\\compatibility-actual-DOCX--dfae9-atibility-then-another-tool-webkit\\attachments\\engine-attempt-json-2e87250cb009b107e97ba022b796bdfccbc30aec.json"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\software\\xingyi\\.cache\\compatibility-attempts\\compatibility-actual-DOCX--dfae9-atibility-then-another-tool-webkit\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\software\\xingyi\\.cache\\compatibility-attempts\\compatibility-actual-DOCX--dfae9-atibility-then-another-tool-webkit\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\software\\xingyi\\tests\\matrix\\compatibility.spec.ts",
+                    "column": 50,
+                    "line": 20
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b0b409d468a60194358f-bbe8cfc48b8fd071b87c",
+          "file": "compatibility.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-12T05:00:51.613Z",
+    "duration": 300655.20800000004,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

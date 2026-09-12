@@ -1,0 +1,20 @@
+{
+  "time": "2026-09-12T08:16:02.442Z",
+  "baseline": ".cache/performance/baseline-local-1789185918613/verify",
+  "revised": ".cache\\performance\\revised-local-final-1789198070404\\verify",
+  "scope": "Same repository synthetic two-page fixture, same independent PyMuPDF renderer. No claim for arbitrary documents.",
+  "samples": [
+    {
+      "page": 1,
+      "baselineSha256": "b90f7f81f5cef112bd1327c46ed807988d1b0574da266386c219c6f7ff286e58",
+      "revisedSha256": "b90f7f81f5cef112bd1327c46ed807988d1b0574da266386c219c6f7ff286e58",
+      "identical": true
+    },
+    {
+      "page": 2,
+      "baselineSha256": "491c49088f810153cbcabf5e7b83aa8e6e285a30d6fe4bf7604af2d5876f43fe",
+      "revisedSha256": "491c49088f810153cbcabf5e7b83aa8e6e285a30d6fe4bf7604af2d5876f43fe",
+      "identical": true
+    }
+  ]
+}

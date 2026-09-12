@@ -18,6 +18,8 @@ export default function App() {
   useEffect(() => {
     const change = () => { setActive(route()); window.scrollTo({ top: 0 }); };
     window.addEventListener('hashchange', change);
+    // A hash change can precede this passive effect after the first paint.
+    change();
     return () => window.removeEventListener('hashchange', change);
   }, []);
   const tool = tools.find(t => t.id === active);

@@ -1,0 +1,122 @@
+{
+  "captured": "2026-09-12T06:39:38.204Z",
+  "source": "test-results/matrix-preview-final/report.json",
+  "stats": {
+    "startTime": "2026-09-12T06:37:32.020Z",
+    "duration": 88356.38,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3259,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 39823,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\helpers.ts",
+                "column": 71,
+                "line": 5
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('header')\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('header') with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('header')\u001b[22m\n\u001b[2m    - waiting for \"http://127.0.0.1:4187/StarShift/\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"http://127.0.0.1:4187/StarShift/#image-pdf\"\u001b[22m\n\n\n   at helpers.ts:5\n\n  3 | import { execFileSync } from 'node:child_process';\n  4 | export async function open(page: Page, tool: string) {\n> 5 |   await page.goto(`./#${tool}`); await expect(page.locator('header')).toBeVisible();\n    |                                                                       ^\n  6 | }\n  7 | export async function select(page: Page, files: string[]) {\n  8 |   const titles: Record<string, string> = { 'docx-pdf': 'DOCX 转 PDF', 'image-pdf': '图片转 PDF', 'image-convert': '图片格式互转', 'pdf-image': 'PDF 转图片', 'pdf-organize': 'PDF 页面整理' };\n    at open (D:\\software\\xingyi\\tests\\matrix\\helpers.ts:5:71)\n    at D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts:80:3"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4844,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "android-simulation",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4122,
+          "errors": [],
+          "evidence": {
+            "simulation.json": {
+              "simulated": true,
+              "actualPhone": false,
+              "project": "android-simulation",
+              "version": "153.0.8010.12",
+              "fileChooser": "automated; no real OS picker or photo library tested",
+              "downloads": "actual saved PDF reopened with pdf-lib"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "iphone-simulation",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 26161,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\mobile.spec.ts",
+                "column": 49,
+                "line": 20
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.preview-footer')\nExpected: in viewport\nReceived: viewport ratio 0.9930037260055542\nTimeout:  20000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" locator('.preview-footer') with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.preview-footer')\u001b[22m\n\u001b[2m    40 × locator resolved to <div class=\"preview-footer\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0.9930037260055542\"\u001b[22m\n\n\n  18 |   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);\n  19 |   await page.getByRole('button', { name: '下一页' }).tap(); await expect(page.locator('dialog img')).toHaveAttribute('alt', /第 2 页/);\n> 20 |   await expect(page.locator('.preview-footer')).toBeInViewport({ ratio: 1 });\n     |                                                 ^\n  21 |   await page.screenshot({ path: info.outputPath('portrait.png'), fullPage: true });\n  22 |   const viewport = page.viewportSize()!; await page.setViewportSize({ width: viewport.height, height: viewport.width });\n  23 |   await expect(page.locator('.preview-footer')).toBeInViewport({ ratio: 1 });\n    at D:\\software\\xingyi\\tests\\matrix\\mobile.spec.ts:20:49"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

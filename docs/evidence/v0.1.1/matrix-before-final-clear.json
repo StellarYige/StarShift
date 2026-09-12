@@ -1,0 +1,2431 @@
+{
+  "time": "2026-09-12T06:40:32.473Z",
+  "method": "Latest result per project/file/title from the complete matrix and targeted reruns. Earlier failures remain in source reports. This is not presented as a single clean run.",
+  "sources": [
+    {
+      "path": "docs/evidence/v0.1.1/matrix-revised-attempt.json",
+      "stats": {
+        "startTime": "2026-09-12T06:03:16.307Z",
+        "duration": 551199.411,
+        "expected": 79,
+        "skipped": 18,
+        "unexpected": 2,
+        "flaky": 0
+      }
+    },
+    {
+      "path": "docs/evidence/v0.1.1/matrix-route-recheck.json",
+      "stats": {
+        "startTime": "2026-09-12T06:16:59.271Z",
+        "duration": 503041.333,
+        "expected": 9,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "path": "docs/evidence/v0.1.1/matrix-preview-first.json",
+      "stats": {
+        "startTime": "2026-09-12T06:37:32.020Z",
+        "duration": 88356.38,
+        "expected": 3,
+        "skipped": 0,
+        "unexpected": 2,
+        "flaky": 0
+      }
+    },
+    {
+      "path": "docs/evidence/v0.1.1/matrix-preview-recheck.json",
+      "stats": {
+        "startTime": "2026-09-12T06:39:40.647Z",
+        "duration": 24677.601,
+        "expected": 3,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  ],
+  "stats": {
+    "passed": 81,
+    "skipped": 18,
+    "failed": 0
+  },
+  "tests": [
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 23071,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "chromium",
+              "version": "153.0.8010.12",
+              "result": "DOCX conversion passed",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "chromium",
+              "version": "153.0.8010.12",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-route-recheck.json"
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 32021,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "firefox",
+              "version": "155.0",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "firefox",
+              "version": "155.0",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-route-recheck.json"
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 20906,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-route-recheck.json"
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 18435,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "chrome-installed",
+              "version": "152.0.7977.84",
+              "result": "DOCX conversion passed",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "chrome-installed",
+              "version": "152.0.7977.84",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "actual DOCX engine attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 20102,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "edge-installed",
+              "version": "152.0.4191.66",
+              "result": "DOCX conversion passed",
+              "simulated": false
+            },
+            "engine-attempt.json": {
+              "browser": "edge-installed",
+              "version": "152.0.4191.66",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 11202,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "download",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "script-download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9826,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "script-download",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "initialize failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13345,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "initialize",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "timeout failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9943,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "timeout",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2325,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-route-recheck.json"
+    },
+    {
+      "title": "one damaged DOCX between good files does not restart the shared engine",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8719,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3259,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-preview-first.json"
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1048,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "resource-load",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2966,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "initialize",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7539,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "import",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7429,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "export",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1013,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel DOM canvas encoding then ignore the late result in another tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1110,
+          "errors": [],
+          "evidence": {
+            "canvas-cancellation.json": {
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 482,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "script-download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 385,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "initialize failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 422,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "timeout failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 398,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7628,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-route-recheck.json"
+    },
+    {
+      "title": "one damaged DOCX between good files does not restart the shared engine",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Exact engine-reuse assertion on the supported reference engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 61,
+            "column": 8
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 427,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7470,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-preview-recheck.json"
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 420,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 1445,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 458,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 384,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1718,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel DOM canvas encoding then ignore the late result in another tool",
+      "file": "faults.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1720,
+          "errors": [],
+          "evidence": {
+            "canvas-cancellation.json": {
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 424,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "script-download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 397,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "initialize failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 391,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "timeout failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 6,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 465,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10335,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-route-recheck.json"
+    },
+    {
+      "title": "one damaged DOCX between good files does not restart the shared engine",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Exact engine-reuse assertion on the supported reference engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 61,
+            "column": 8
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 649,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4844,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-preview-first.json"
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 513,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 534,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 498,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "skipped",
+      "status": "skipped",
+      "annotations": [
+        {
+          "type": "skip",
+          "description": "Stage cancellation requires the supported reference DOCX engine.",
+          "location": {
+            "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+            "line": 97,
+            "column": 10
+          }
+        }
+      ],
+      "results": [
+        {
+          "status": "skipped",
+          "durationMs": 444,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2958,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "cancel DOM canvas encoding then ignore the late result in another tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3308,
+          "errors": [],
+          "evidence": {
+            "canvas-cancellation.json": {
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1193,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1014,
+          "errors": [],
+          "evidence": {
+            "zip-lifecycle.json": {
+              "before": {
+                "workers": 0,
+                "urls": 2,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ],
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 3,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 185127,
+          "errors": [],
+          "evidence": {
+            "lifecycle.json": {
+              "rounds": 10,
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 7,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 14,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 21,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 28,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 35,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 42,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 49,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 56,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 63,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 70,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-route-recheck.json"
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2152,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2013,
+          "errors": [],
+          "evidence": {
+            "zip-lifecycle.json": {
+              "before": {
+                "workers": 0,
+                "urls": 2,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ],
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 3,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 88573,
+          "errors": [],
+          "evidence": {
+            "lifecycle.json": {
+              "rounds": 3,
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 6,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 12,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 18,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-route-recheck.json"
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2946,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2356,
+          "errors": [],
+          "evidence": {
+            "zip-lifecycle.json": {
+              "before": {
+                "workers": 0,
+                "urls": 2,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 1,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 1,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 1,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ],
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 88188,
+          "errors": [],
+          "evidence": {
+            "lifecycle.json": {
+              "rounds": 3,
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 6,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 0,
+                  "created": 9,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-route-recheck.json"
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2045,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2628,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3316,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2290,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3979,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2966,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4226,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3466,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3301,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2722,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2253,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2081,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2700,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2691,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2738,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4301,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3547,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7858,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4820,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2112,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2288,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2705,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1652,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2186,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2223,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2103,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3290,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2065,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3498,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2622,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1661,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1627,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "chrome-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2288,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2291,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2703,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2305,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2236,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3408,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2072,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4072,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2855,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1939,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2385,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "edge-installed",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3354,
+          "errors": [],
+          "evidence": {}
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-revised-attempt.json"
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "android-simulation",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4155,
+          "errors": [],
+          "evidence": {
+            "simulation.json": {
+              "simulated": true,
+              "actualPhone": false,
+              "project": "android-simulation",
+              "version": "153.0.8010.12",
+              "fileChooser": "automated; no real OS picker or photo library tested",
+              "downloads": "actual saved PDF reopened with pdf-lib"
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-preview-recheck.json"
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "iphone-simulation",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6936,
+          "errors": [],
+          "evidence": {
+            "simulation.json": {
+              "simulated": true,
+              "actualPhone": false,
+              "project": "iphone-simulation",
+              "version": "26.6",
+              "fileChooser": "automated; no real OS picker or photo library tested",
+              "downloads": "actual saved PDF reopened with pdf-lib"
+            }
+          }
+        }
+      ],
+      "evidenceSource": "docs/evidence/v0.1.1/matrix-preview-recheck.json"
+    }
+  ]
+}

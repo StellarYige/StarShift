@@ -1,0 +1,71 @@
+{
+  "time": "2026-09-12T04:01:43.904Z",
+  "repository": "StellarYige/StarShift",
+  "release": {
+    "id": 387410280,
+    "tag": "v0.1.0",
+    "body": "只是转个文件，不必开个会员。\n\n[在线使用星易 StarShift](https://stellaryige.github.io/StarShift/) · [实际测试记录](https://github.com/StellarYige/StarShift/blob/main/docs/TEST_REPORT.md)\n\n免费、无需登录、无水印，文件、文件名和转换结果均留在浏览器内。支持 DOCX 转 PDF、图片转 PDF、PDF 转图片、PDF 页面整理，以及 JPG / PNG / WebP 批量互转。DOCX 使用真实 LibreOffice / ZetaOffice WASM 排版；PDF 整理保留文字与矢量内容。\n\n下载 `StarShift-0.1.0-static.zip`，校验相邻 `.sha256` 文件后解压到静态服务器的 `StarShift/` 目录。通过 HTTPS 或 localhost 访问 `/StarShift/`，无需后端；在线版与静态包功能一致。不要双击 HTML 使用。部署指南、MIT LICENSE、第三方引擎和字体声明均在包内。\n\n验证：类型检查、构建、7 项单元测试和 14 项浏览器转换测试通过；GitHub Actions 检查与 Pages 部署成功；真实 Pages 网址再次通过全部 14 项测试。独立解压静态包后另测透明图片和双文件中文 DOCX 转换通过。验证涉及中文、表格几何、图片、分页、EXIF 方向、透明像素、矢量页序、毫米边距和 ZIP 内容，并审计请求没有外发文件数据。\n\n限制：文档引擎与中文字体解压后约 266 MiB，首次加载取决于网络；建议使用桌面 Chrome / Edge。复杂 Word 排版不保证像素一致，缺失字体会替代，外链图片不加载。真实移动设备、Safari / Firefox 尚未验证。内存保护上限和其他格式限制详见 README。\n",
+    "assets": [
+      {
+        "id": 558362781,
+        "name": "StarShift-0.1.0-static.zip",
+        "size": 101188033
+      },
+      {
+        "id": 558364704,
+        "name": "StarShift-0.1.0-static.zip.sha256",
+        "size": 93
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "id": 10288143822,
+      "name": "StarShift-static",
+      "run": {
+        "id": 34664246823,
+        "repository_id": 1366785882,
+        "head_repository_id": 1366785882,
+        "head_branch": "main",
+        "head_sha": "628daa9ebc1a733954f7824a046cf13ab0e5af4f"
+      },
+      "expired": false
+    },
+    {
+      "id": 10287997385,
+      "name": "StarShift-static",
+      "run": {
+        "id": 34663271350,
+        "repository_id": 1366785882,
+        "head_repository_id": 1366785882,
+        "head_branch": "main",
+        "head_sha": "110ab0ad7a56ee29cd953c06910b4942f453d460"
+      },
+      "expired": false
+    },
+    {
+      "id": 10287898214,
+      "name": "StarShift-static",
+      "run": {
+        "id": 34663649501,
+        "repository_id": 1366785882,
+        "head_repository_id": 1366785882,
+        "head_branch": "main",
+        "head_sha": "d579068f452d4f9a130457baf7821f14b0511366"
+      },
+      "expired": false
+    },
+    {
+      "id": 10287769516,
+      "name": "StarShift-static",
+      "run": {
+        "id": 34664041410,
+        "repository_id": 1366785882,
+        "head_repository_id": 1366785882,
+        "head_branch": "main",
+        "head_sha": "4e485a156f9adf3bacd7dea7ce1308637b18f6b7"
+      },
+      "expired": false
+    }
+  ]
+}
