@@ -157,7 +157,14 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
     if (running.current || invalidSettings) return;
     running.current = true; setBusy(true); setNotice('');
     const batch = merged || mode === 'all' ? usable : retryId ? usable.filter(i => i.id === retryId) : unfinished;
-    if (merged || mode === 'all') clearOutputs();
+    if (merged || mode === 'all') {
+      clearOutputs();
+      const replaced = new Set(batch.map(item => item.id));
+      // Once results are replaced, an unprocessed source is pending again.
+      // Otherwise an early failure/cancel leaves "done" files with no output,
+      // and the unfinished-only action can never pick them up.
+      setItems(current => current.map(item => replaced.has(item.id) && item.status === 'done' ? { ...item, status: 'ready', message: undefined } : item));
+    }
     const abort = new AbortController(); controller.current = abort;
     const task = ++generation.current, progressHandler = taskProgress(abort);
     let office: import('../core/docx').OfficeSession | undefined;

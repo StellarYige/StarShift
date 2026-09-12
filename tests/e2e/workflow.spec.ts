@@ -80,3 +80,50 @@ test('image PDF does not silently omit broken inputs and supports moving to a qu
   await page.getByRole('button', { name: '重试 valid.png', exact: true }).click();
   await expect(page.locator('.result-list li')).toHaveCount(1);
 });
+
+test('a failed whole PDF retry can continue after removing the unreadable source', async ({ page }) => {
+  await page.goto('./#pdf-organize');
+  await page.getByTestId('file-input').setInputFiles('tests/fixtures/vector-three-pages.pdf');
+  await expect(page.getByRole('button', { name: '取消任务' })).toBeHidden();
+  await page.getByRole('button', { name: '旋转页面 1', exact: true }).click();
+  const ids = await page.locator('.page-card').evaluateAll(cards => cards.map(card => card.getAttribute('data-page-id')));
+  await page.getByRole('button', { name: '导出选中页面' }).click();
+  await expect(page.locator('.result-list li')).toHaveCount(1);
+  await page.getByTestId('file-input').setInputFiles('tests/fixtures/broken.pdf');
+  await expect(page.getByRole('button', { name: '取消任务' })).toBeHidden();
+  await page.getByRole('button', { name: '全部重新转换', exact: true }).click();
+  await expect(page.getByRole('button', { name: '取消任务' })).toBeHidden();
+  await expect(page.locator('.result-list li')).toHaveCount(0);
+  await page.getByRole('button', { name: '移除 broken.pdf' }).click();
+  await expect(page.getByRole('button', { name: '导出选中页面' })).toBeEnabled({ timeout: 1000 });
+  expect(await page.locator('.page-card').evaluateAll(cards => cards.map(card => card.getAttribute('data-page-id')))).toEqual(ids);
+  await page.getByRole('button', { name: '导出选中页面' }).click();
+  await expect(page.locator('.result-list li')).toHaveCount(1);
+});
+
+test('cancelling full reconversion keeps every unfinished source eligible to resume', async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'OffscreenCanvas', { value: undefined, configurable: true });
+    Object.defineProperty(window, 'createImageBitmap', { value: undefined, configurable: true });
+  });
+  await page.goto('./#image-convert');
+  const buffer = await readFile('tests/fixtures/transparent.png');
+  await page.getByTestId('file-input').setInputFiles(['one.png', 'two.png'].map(name => ({ name, buffer, mimeType: 'image/png' })));
+  await expect(page.getByRole('button', { name: '取消任务' })).toBeHidden();
+  await page.getByRole('button', { name: '开始转换', exact: true }).click();
+  await expect(page.locator('.result-list li')).toHaveCount(2);
+  await page.evaluate(() => {
+    const native = HTMLCanvasElement.prototype.toBlob;
+    HTMLCanvasElement.prototype.toBlob = function (callback, type, quality) {
+      HTMLCanvasElement.prototype.toBlob = native;
+      native.call(this, value => setTimeout(() => callback(value), 1000), type, quality);
+    };
+  });
+  await page.getByRole('button', { name: '全部重新转换', exact: true }).click();
+  await page.getByRole('button', { name: '取消任务', exact: true }).click();
+  await expect(page.getByRole('button', { name: '取消任务' })).toBeHidden();
+  await expect(page.locator('.status-cancelled')).toHaveCount(2, { timeout: 1000 });
+  await page.getByRole('button', { name: '开始转换', exact: true }).click();
+  await expect(page.locator('.result-list li')).toHaveCount(2);
+  expect(await page.locator('.result-list a[download]').evaluateAll(links => links.map(link => link.getAttribute('download')))).toEqual(['one.png', 'two.png']);
+});
