@@ -28,13 +28,19 @@ test('clear preserves settings and releases selected File and output Blob refere
     // Allow React's unmount effects to complete before the explicit GC check.
     await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
     if (cdp) await cdp.send('HeapProfiler.collectGarbage');
-    const references = await page.evaluate(() => {
+    const inspectReferences = () => page.evaluate(() => {
       const refs = (window as Window & { __releaseRefs?: WeakRef<object>[] }).__releaseRefs!;
       return { observed: refs.length, live: refs.filter(ref => ref.deref()).length };
     });
+    const immediate = await inspectReferences(), cleanupStarted = Date.now();
+    // A cancelled thumbnail may still be unwinding an asynchronous PDF open.
+    // Preserve the immediate count, then require zero after cleanup, bounded
+    // by the same assertion deadline; two animation frames are not completion.
+    if (cdp) await expect.poll(async () => { await cdp.send('HeapProfiler.collectGarbage'); return (await inspectReferences()).live; }).toBe(0);
+    const references = await inspectReferences();
     expect(references.observed).toBeGreaterThan(0);
     if (cdp) expect(references.live).toBe(0);
-    samples.push({ tool, forcedPageGc: !!cdp, references });
+    samples.push({ tool, forcedPageGc: !!cdp, immediate, cleanupMs: Date.now() - cleanupStarted, references });
   }
   await cdp?.detach();
   await evidence(info, 'clear-references.json', { samples, limitation: 'Firefox/WebKit have no forced GC in this test; live weak references there are not a leak assertion.' });
@@ -77,7 +83,7 @@ test('conversion, clear, retry and tool switching lifecycle rounds', async ({ pa
     await expect(page.getByRole('heading', { name: 'PDF 页面整理', exact: true })).toBeVisible();
     await page.evaluate(() => {
       const observer = new MutationObserver(() => {
-        if (document.querySelector('.progress-panel')?.textContent?.includes('缩略图')) {
+        if (document.querySelector('.progress-panel')?.textContent?.includes('正在检查文件')) {
           observer.disconnect(); (document.querySelector('.convert-actions .cancel') as HTMLButtonElement | null)?.click();
         }
       }); observer.observe(document.body, { childList: true, subtree: true, characterData: true });

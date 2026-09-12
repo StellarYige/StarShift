@@ -9,6 +9,8 @@
 .startup-wait{flex-basis:100%;line-height:1.8;color:#89633d}
 .workspace-grid .icon-button,.preview-dialog .icon-button{min-width:44px;min-height:44px}
 .workspace-grid .text-button,.button,.check-label,.page-card label{min-height:44px}
+.workspace-grid .text-button{min-width:44px;justify-content:center}
+.button{min-width:44px}.button.small,.steps .step,.steps .step b{font-size:12px}
 .workspace-grid :is(small,.hint,.input-caption,.subtle,.counter,.field-label,.field-value,.text-button),.file-info>span,.settings-fields>label,.settings-fields input::placeholder,.result-note,.memory-note,.empty-note,.drop-zone small,.pager,.page-card strong,.convert-actions>small,.notice{font-size:12px}
 .hint,.file-info>span,.file-info small,.result-note,.memory-note,.page-card small,.input-caption,.empty-note,.convert-actions>small{color:#69765e}
 .icon-button,.text-button,.page-card strong,.settings-fields>label{color:#526845}
@@ -49,4 +51,5 @@ input[aria-invalid=true]{border-color:#b35943!important}
   .page-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
   .page-card{padding:4px}.page-actions{gap:0}.page-actions .icon-button{padding:4px}
   .page-batch input,.queue-position input{font-size:16px}
+  .preview-controls :is(input,select){font-size:16px}
 }

@@ -29,7 +29,7 @@ export async function evidence(info: TestInfo, name: string, value: unknown) {
 }
 export async function trackResources(page: Page) {
   await page.addInitScript(() => {
-    const owner = top as Window & { __resources?: { workers: number; urls: Set<string>; created: number; ports: number; timers: Set<number> } };
+    const owner = top as Window & { __resources?: { workers: number; urls: Set<string>; created: number; ports: number; timers: Set<number> }; __officeStages?: unknown[] };
     owner.__resources ??= { workers: 0, urls: new Set(), created: 0, ports: 0, timers: new Set() };
     const state = owner.__resources;
     const Original = Worker;
@@ -43,7 +43,17 @@ export async function trackResources(page: Page) {
     URL.revokeObjectURL = url => { state.urls.delete(url); revoke(url); };
     const Channel = MessageChannel;
     window.MessageChannel = class extends Channel {
-      constructor() { super(); for (const port of [this.port1, this.port2]) { state.ports++; let closed = false; const close = port.close.bind(port); port.close = () => { if (!closed) { closed = true; state.ports--; } close(); }; } }
+      constructor() {
+        super();
+        this.port1.addEventListener('message', ({ data }) => {
+          if (!data?.detail?.startup) return;
+          const stage = data.detail.startup;
+          const records = owner.__officeStages ??= [];
+          records.push({ ms: performance.now(), stage: stage.stage, resourcesComplete: stage.resourcesComplete, runtimeInitialized: stage.runtimeInitialized, workersCreated: stage.workersCreated, workersLoaded: stage.workersLoaded, runDependencies: stage.runDependencies, downloadSequence: stage.downloadSequence });
+          if (records.length > 128) records.shift();
+        });
+        for (const port of [this.port1, this.port2]) { state.ports++; let closed = false; const close = port.close.bind(port); port.close = () => { if (!closed) { closed = true; state.ports--; } close(); }; }
+      }
     };
     if (window === top) {
       const start = window.setTimeout.bind(window), stop = window.clearTimeout.bind(window);

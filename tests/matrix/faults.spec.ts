@@ -1,6 +1,12 @@
 import { test, expect } from '@playwright/test';
 import { open, select, convert, trackResources, resources, verifyDocx, evidence } from './helpers';
 
+test.afterEach(async ({ page }, info) => {
+  if (info.status === 'skipped' || page.isClosed()) return;
+  const stages = await page.evaluate(() => (window as Window & { __officeStages?: unknown[] }).__officeStages || []).catch(() => []);
+  await evidence(info, 'stage-diagnostic.json', { method: 'Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.', stages });
+});
+
 type StartupFaultHost = Window & {
   __startupFault?: string; __pauseDownload?: boolean; __startupClockOffset?: number;
   __expireStartup?: () => void; __startupTimeoutMs?: number;
@@ -111,7 +117,12 @@ for (const { stage, finish } of [
       expect(frames).toBe(1);
     }
     if (finish === 'cancel') {
+      const cancelledAt = Date.now();
       await page.getByRole('button', { name: '取消任务', exact: true }).click();
+      await expect.poll(async () => { const r = await resources(page); return [r.workers, r.frames]; }, { intervals: [20, 50, 100] }).toEqual([0, 0]);
+      const releasedAfterMs = Date.now() - cancelledAt;
+      await evidence(info, 'cancel-response.json', { releasedAfterMs, phase: stage });
+      expect(releasedAfterMs).toBeLessThan(1000);
       await expect(page.locator('.notice').last()).toContainText('输入和设置已保留');
       await expect(page.locator('.status-cancelled')).toHaveCount(2);
     } else {
@@ -258,16 +269,17 @@ for (const stage of ['resource-load', 'initialize', 'import', 'export']) {
 }
 
 test('cancel thumbnail generation then immediately use another tool', async ({ page }) => {
-  await trackResources(page); await open(page, 'pdf-organize');
-  await page.evaluate(() => {
-    const observer = new MutationObserver(() => {
-      if (document.querySelector('.progress-panel')?.textContent?.includes('缩略图')) {
-        observer.disconnect(); (document.querySelector('.convert-actions .cancel') as HTMLButtonElement | null)?.click();
-      }
-    }); observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+  await trackResources(page);
+  await page.addInitScript(() => {
+    const encode = HTMLCanvasElement.prototype.toBlob;
+    HTMLCanvasElement.prototype.toBlob = function(callback, ...args) { return encode.call(this, blob => setTimeout(() => callback(blob), 400), ...args); };
   });
+  await open(page, 'pdf-organize');
   await select(page, ['vector-three-pages.pdf']);
-  await expect(page.locator('.status-cancelled')).toHaveCount(1);
+  await expect(page.locator('.page-card[data-thumbnail-state="loading"]').first()).toBeVisible();
+  // Thumbnails are independent background work now. Clear cancels them while
+  // keeping conversion settings; it does not cancel an already-ready input.
+  await page.getByRole('button', { name: '清空任务' }).click();
   await expect.poll(async () => (await resources(page)).workers).toBe(0);
   await page.evaluate(() => { location.hash = 'image-convert'; });
   await select(page, ['transparent.png']); await convert(page);

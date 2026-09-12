@@ -112,3 +112,37 @@ test('500 page boundary checks total before thumbnails and tool switch cancels b
   await expect(page.getByRole('heading', { name: '图片格式互转', exact: true })).toBeVisible();
   await expect.poll(async () => { const r = await resources(page); return [r.workers, r.urls, r.timers]; }).toEqual([0, 0, 0]);
 });
+
+test('late thumbnails preserve selection and rotation after moving; closing a loading preview cannot overwrite the next result', async ({ page }) => {
+  await trackResources(page);
+  await page.addInitScript(() => {
+    const original = HTMLCanvasElement.prototype.toBlob;
+    HTMLCanvasElement.prototype.toBlob = function (callback, type, quality) { original.call(this, value => setTimeout(() => callback(value), 500), type, quality); };
+  });
+  await page.goto('./#pdf-organize');
+  await page.getByTestId('file-input').setInputFiles('tests/fixtures/vector-three-pages.pdf');
+  await expect(page.getByRole('button', { name: '取消任务' })).toBeHidden();
+  const loading = page.locator('.page-card[data-thumbnail-state="loading"]').first();
+  await expect(loading).toBeVisible();
+  const id = await loading.getAttribute('data-page-id');
+  const card = page.locator(`[data-page-id="${id}"]`);
+  await card.locator('input').uncheck();
+  await card.getByRole('button', { name: /^旋转页面/ }).click();
+  await card.locator('.page-actions button:not(:disabled)').first().click();
+  await expect(card.locator('img')).toBeVisible();
+  await expect(card.locator('img')).toHaveAttribute('style', /rotate\(90deg\)/);
+  await expect(card.locator('input')).not.toBeChecked();
+  await page.getByLabel('输出方式').selectOption('split');
+  await page.getByRole('button', { name: '导出选中页面' }).click();
+  await expect(page.locator('.result-list li')).toHaveCount(2);
+  await page.getByRole('button', { name: '预览', exact: true }).first().click();
+  await expect(page.locator('dialog')).toBeVisible();
+  await page.getByRole('button', { name: '关闭预览' }).click();
+  await page.getByRole('button', { name: '预览', exact: true }).nth(1).click();
+  await expect(page.locator('dialog img')).toHaveAttribute('alt', '页面-002.pdf 第 1 页');
+  await page.waitForTimeout(600);
+  await expect(page.locator('dialog img')).toHaveAttribute('alt', '页面-002.pdf 第 1 页');
+  await page.getByRole('button', { name: '关闭预览' }).click();
+  await page.getByRole('button', { name: '清空任务' }).click();
+  await expect.poll(async () => { const r = await resources(page); return [r.workers, r.urls]; }).toEqual([0, 0]);
+});
