@@ -1,4 +1,6 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+import { PDFDocument } from 'pdf-lib';
+import { assemblePdf, loadPdfSources } from '../../src/core/pdf-edit';
 import { moveToPosition, settingsErrors } from '../../src/core/queue';
 import { DEFAULT_SETTINGS } from '../../src/types';
 
@@ -16,5 +18,15 @@ describe('queue position and local parameter validation', () => {
     for (const pages of ['', '999', '3,1-2，3']) expect(settingsErrors('pdf-image', { ...DEFAULT_SETTINGS, pages })).toEqual({});
     expect(settingsErrors('image-pdf', { ...DEFAULT_SETTINGS, margin: NaN }).margin).toBeTruthy();
     expect(settingsErrors('image-pdf', { ...DEFAULT_SETTINGS, margin: 0.5 })).toEqual({});
+  });
+  it('loads only selected source PDFs once and reuses them for split outputs', async () => {
+    const source = await PDFDocument.create(); source.addPage(); source.addPage();
+    const bytes = await source.save(), load = vi.spyOn(PDFDocument, 'load');
+    try {
+      const pages = [{ sourceId: 'a', page: 2, rotation: 90 }, { sourceId: 'b', page: 1, rotation: 0 }, { sourceId: 'a', page: 1, rotation: 0 }];
+      const docs = await loadPdfSources([{ id: 'a', bytes }, { id: 'b', bytes }, { id: 'unused', bytes: new Uint8Array() }], pages);
+      for (const page of pages) expect((await assemblePdf(docs, [page])).size).toBeGreaterThan(0);
+      expect(load).toHaveBeenCalledTimes(2);
+    } finally { load.mockRestore(); }
   });
 });
