@@ -1,0 +1,65 @@
+{
+  "captured": "2026-09-12T16:45:14.257Z",
+  "source": "test-results/e2e-report.json",
+  "stats": {
+    "startTime": "2026-09-12T16:44:10.574Z",
+    "duration": 8831.221000000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "a failed whole PDF retry can continue after removing the unreadable source",
+      "file": "workflow.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 3072,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\workflow.spec.ts",
+                "column": 62,
+                "line": 98
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: '导出选中页面' })\nExpected: enabled\nReceived: disabled\nTimeout:  1000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" getByRole('button', { name: '导出选中页面' }) with timeout 1000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: '导出选中页面' })\u001b[22m\n\u001b[2m    11 × locator resolved to <button disabled class=\"button primary\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"disabled\"\u001b[22m\n\n\n   96 |   await expect(page.locator('.result-list li')).toHaveCount(0);\n   97 |   await page.getByRole('button', { name: '移除 broken.pdf' }).click();\n>  98 |   await expect(page.getByRole('button', { name: '导出选中页面' })).toBeEnabled({ timeout: 1000 });\n      |                                                              ^\n   99 |   expect(await page.locator('.page-card').evaluateAll(cards => cards.map(card => card.getAttribute('data-page-id')))).toEqual(ids);\n  100 |   await page.getByRole('button', { name: '导出选中页面' }).click();\n  101 |   await expect(page.locator('.result-list li')).toHaveCount(1);\n    at D:\\software\\xingyi\\tests\\e2e\\workflow.spec.ts:98:62"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancelling full reconversion keeps every unfinished source eligible to resume",
+      "file": "workflow.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 2000,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\e2e\\workflow.spec.ts",
+                "column": 51,
+                "line": 125
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.status-cancelled')\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  1000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.status-cancelled') with timeout 1000ms\u001b[22m\n\u001b[2m  - waiting for locator('.status-cancelled')\u001b[22m\n\u001b[2m    11 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  123 |   await page.getByRole('button', { name: '取消任务', exact: true }).click();\n  124 |   await expect(page.getByRole('button', { name: '取消任务' })).toBeHidden();\n> 125 |   await expect(page.locator('.status-cancelled')).toHaveCount(2, { timeout: 1000 });\n      |                                                   ^\n  126 |   await page.getByRole('button', { name: '开始转换', exact: true }).click();\n  127 |   await expect(page.locator('.result-list li')).toHaveCount(2);\n  128 |   expect(await page.locator('.result-list a[download]').evaluateAll(links => links.map(link => link.getAttribute('download')))).toEqual(['one.png', 'two.png']);\n    at D:\\software\\xingyi\\tests\\e2e\\workflow.spec.ts:125:51"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

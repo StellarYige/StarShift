@@ -1,0 +1,10 @@
+{
+  "method": "Synthetic image-convert, image-pdf, pdf-image, pdf-organize in one Chromium page. WeakRef observations after clear and explicit page GC; repeated independently of the matrix. Heap snapshot kept in the ignored local .cache directory.",
+  "beforeSynchronousClearCleanup": {
+    "firstThreeTools": { "liveInputFiles": 0, "liveOutputBlobs": 0 },
+    "pdfOrganizeImmediateThreeObservations": [1, 1, 1],
+    "pdfOrganizeAfterTwoSecondsAndPageGc": { "liveInputFiles": 0, "liveOutputBlobs": 0 }
+  },
+  "interpretation": "Transient input reference while cancelled background PDF work unwinds, not evidence of persistent accumulation. Tests now preserve immediate counts and assert zero after asynchronous cleanup within a bounded poll.",
+  "limits": "Page GC/WeakRef observations do not prove all native memory was returned to the OS. No production diagnostics record document contents or filenames."
+}

@@ -1,0 +1,255 @@
+{
+  "captured": "2026-09-12T16:58:25.668Z",
+  "source": "test-results/e2e-report.json",
+  "stats": {
+    "startTime": "2026-09-12T16:51:10.911Z",
+    "duration": 40907.705,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "partial PDF output retry replaces only its own pages, and full conversion replaces the batch",
+      "file": "workflow.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2886,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "selection reasons survive conversion, settings errors block start, unfinished batch preserves successes",
+      "file": "workflow.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 919,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "image PDF does not silently omit broken inputs and supports moving to a queue position",
+      "file": "workflow.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1035,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "a failed whole PDF retry can continue after removing the unreadable source",
+      "file": "workflow.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2102,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancelling full reconversion keeps every unfinished source eligible to resume",
+      "file": "workflow.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1014,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "partial PDF output retry replaces only its own pages, and full conversion replaces the batch",
+      "file": "workflow.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5788,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "selection reasons survive conversion, settings errors block start, unfinished batch preserves successes",
+      "file": "workflow.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1512,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "image PDF does not silently omit broken inputs and supports moving to a queue position",
+      "file": "workflow.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1862,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "a failed whole PDF retry can continue after removing the unreadable source",
+      "file": "workflow.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2348,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancelling full reconversion keeps every unfinished source eligible to resume",
+      "file": "workflow.spec.ts",
+      "project": "firefox",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1443,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "partial PDF output retry replaces only its own pages, and full conversion replaces the batch",
+      "file": "workflow.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5276,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "selection reasons survive conversion, settings errors block start, unfinished batch preserves successes",
+      "file": "workflow.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1915,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "image PDF does not silently omit broken inputs and supports moving to a queue position",
+      "file": "workflow.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2452,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "a failed whole PDF retry can continue after removing the unreadable source",
+      "file": "workflow.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3100,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancelling full reconversion keeps every unfinished source eligible to resume",
+      "file": "workflow.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2125,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

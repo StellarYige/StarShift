@@ -1,0 +1,3690 @@
+{
+  "captured": "2026-09-12T16:29:38.881Z",
+  "source": "test-results/chrome-reference-final/report.json",
+  "stats": {
+    "startTime": "2026-09-12T16:20:15.229Z",
+    "duration": 459030.718,
+    "expected": 23,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "DOCX conversion attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 11330,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "chromium",
+              "version": "152.0.7977.84",
+              "result": "DOCX conversion passed",
+              "simulated": false,
+              "engineRequests": [
+                "/engine/soffice.js",
+                "/engine/soffice.wasm",
+                "/engine/soffice.data",
+                "/engine/soffice.js",
+                "/engine/soffice.js"
+              ],
+              "rejectedBeforeEngineAllocation": false
+            },
+            "engine-attempt.json": {
+              "browser": "chromium",
+              "version": "152.0.7977.84",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup resources observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 12625,
+          "errors": [],
+          "evidence": {
+            "cancel-response.json": {
+              "releasedAfterMs": 33,
+              "phase": "resources"
+            },
+            "startup-observation.json": {
+              "stage": "resources",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在加载中文字体…已读取 25 KB已 30 秒未收到新的资源加载进度；部分下载无法持续报告进度。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "resumingDownloadClearsAdvisory": true,
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 427.5450000166893,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 828.9950000047684,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 5
+                },
+                {
+                  "ms": 1147.6599999666214,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 9
+                },
+                {
+                  "ms": 19468.959999978542,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 13
+                },
+                {
+                  "ms": 37790.014999985695,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 17
+                },
+                {
+                  "ms": 56110.310000002384,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 21
+                },
+                {
+                  "ms": 62432.339999973774,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 25
+                },
+                {
+                  "ms": 94632.31000000238,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 26
+                },
+                {
+                  "ms": 94781.26999998093,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 94943.92000001669,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 94944.49500000477,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 94987.12999999523,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 96165.18000000715,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 96166.56999999285,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 96175.95999997854,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 96460.35500001907,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 96712.2649999857,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 96833.83999997377,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 96835.27499997616,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 96835.31999999285,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 96924.38499999046,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 97403.61500000954,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 97478.11500000954,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 100794.56499999762,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup wasm observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13729,
+          "errors": [],
+          "evidence": {
+            "cancel-response.json": {
+              "releasedAfterMs": 37,
+              "phase": "wasm"
+            },
+            "startup-observation.json": {
+              "stage": "wasm",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在初始化文档排版引擎…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 411.5600000023842,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 574.9899999499321,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 576.339999973774,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 619.7699999809265,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1772.074999988079,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1772.989999949932,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 2,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1776.6049999594688,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 2057.9699999690056,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2353.25,
+                  "stage": "wasm",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 35994.44499999285,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 36220.964999973774,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 36221.639999985695,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 36249.594999969006,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 37438.47499996424,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 37439.24500000477,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 37447.90499997139,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 37711.5,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 38030.3599999547,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1903,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 38031.45999997854,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 38031.50999999046,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 38031.53499996662,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 38107.094999969006,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 38563.939999997616,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 38634.964999973774,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 42019.72499996424,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup worker observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 16158,
+          "errors": [],
+          "evidence": {
+            "cancel-response.json": {
+              "releasedAfterMs": 39,
+              "phase": "worker"
+            },
+            "startup-observation.json": {
+              "stage": "worker",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在启动文档工作线程…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "repeatedDependencyStateDoesNotResetWait": true,
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 6,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 425.77999997138977,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 580.3600000143051,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 581.2649999856949,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 621.3999999761581,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1739.1150000095367,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1740.5149999856949,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1748.7749999761581,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 2026.8849999904633,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2365.9700000286102,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1903,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2366.725000023842,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2366.814999997616,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2366.839999973774,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2446.725000023842,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2907.410000026226,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2987.064999997616,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 39029.09500002861,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 39189.92000001669,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 39190.57999998331,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 39210.37000000477,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 40054.05500000715,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 40162.839999973774,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 40418.76999998093,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 40770.25999999046,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40771.014999985695,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40771.06999999285,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40771.09500002861,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40859.435000002384,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 41258.160000026226,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 41361.37000000477,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 44287.25,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup uno observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 15427,
+          "errors": [],
+          "evidence": {
+            "cancel-response.json": {
+              "releasedAfterMs": 38,
+              "phase": "uno"
+            },
+            "startup-observation.json": {
+              "stage": "uno",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在等待文档服务就绪…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 6,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 410.1299999952316,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 574.2300000190735,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 575.25,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 614.9700000286102,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1781.175000011921,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1782.1550000309944,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1791.4399999976158,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 2083.264999985695,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2334.5799999833107,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2505.2450000047684,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 2506.1650000214577,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 2506.2099999785423,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 2589.3799999952316,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 3071.6299999952316,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 3149.1050000190735,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 6349.030000030994,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 38560.05000001192,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 38713.32999998331,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 38714.00499999523,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 38733.625,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 39591.810000002384,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 39710.45499998331,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 39964.87999999523,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 40284.435000002384,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1903,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40285.87000000477,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40285.94999998808,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40285.97000002861,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40361.37999999523,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40731.57999998331,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40831.75499999523,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 43613.42500001192,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup worker observation, timeout and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 15616,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "worker",
+              "finish": "timeout",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在启动文档工作线程…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 6,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 383.5149999856949,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 540.6149999499321,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 541.4899999499321,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 585.414999961853,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1677.5799999833107,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1678.875,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1686.7049999833107,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 1962.5099999904633,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2302.6449999809265,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1903,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2303.7999999523163,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2303.889999985695,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2303.9199999570847,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2382.364999949932,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2846.685000002384,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2919.764999985695,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 38939.544999957085,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 39097.964999973774,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 39098.549999952316,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 39122.82999998331,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 39922.389999985695,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 40058.47999995947,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 40310.064999997616,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 40611.01999998093,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1903,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40611.72499996424,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40611.77999997139,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40611.799999952316,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 40724.514999985695,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 41059.435000002384,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 41141.549999952316,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 43973.469999969006,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup resources observation, timeout and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10680,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "resources",
+              "finish": "timeout",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在加载中文字体…已读取 25 KB最近仍收到下载数据…",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 405.2549999952316,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 806.7399999499321,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 5
+                },
+                {
+                  "ms": 1125.1049999594688,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 9
+                },
+                {
+                  "ms": 19446.509999990463,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 13
+                },
+                {
+                  "ms": 37765.57999998331,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 17
+                },
+                {
+                  "ms": 56088.719999969006,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 21
+                },
+                {
+                  "ms": 62409.794999957085,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 25
+                },
+                {
+                  "ms": 62563.84999996424,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 62714.82499998808,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 62715.47499996424,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 62753.82999998331,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 63762.174999952316,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 63763.060000002384,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 63771.00999999046,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 64043.22999995947,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 64360.185000002384,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1903,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 64363.77499997616,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 64363.86499994993,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 64363.89999997616,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 64441.83499997854,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 64853.65999996662,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 64919.310000002384,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 67957.36499994993,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9759,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "download",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 406.89000004529953,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 524.6299999952316,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 695.1400000452995,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 695.8799999952316,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 736.3650000095367,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1878.9300000071526,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1879.9550000429153,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1889.4650000333786,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 2167.7300000190735,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2496.135000050068,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1903,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2496.9900000095367,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2497.0750000476837,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2497.100000023842,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2579.9800000190735,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 3014.725000023842,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 3079.7450000047684,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 6294.560000002384,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "script-download failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10493,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "script-download",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 408.35000002384186,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 574,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 260
+                },
+                {
+                  "ms": 576.535000026226,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 260
+                },
+                {
+                  "ms": 763.285000026226,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 909.2200000286102,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 909.8799999952316,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 949.5500000119209,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 2018.5649999976158,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 2019.4850000143051,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 2028.550000011921,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 2295.100000023842,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2624.635000050068,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1903,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2625.275000035763,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2625.3199999928474,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2625.3400000333786,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2696.210000038147,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 3235.0900000333786,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 3328.7650000452995,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 7115.135000050068,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "initialize failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 12054,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "initialize",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 360.90499997138977,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 532.3649999499321,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 533.2349999547005,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 573.7049999833107,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1654.0999999642372,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1655.0600000023842,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1671.0699999928474,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 1946.4449999928474,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2250.979999959469,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1148,
+                  "downloadSequence": 263
+                },
+                {
+                  "ms": 2251.739999949932,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 263
+                },
+                {
+                  "ms": 2856.9449999928474,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 3004.449999988079,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 3005.0049999952316,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 3031.914999961853,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 3913.899999976158,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 4011.114999949932,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 4269.8599999547005,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 4521.044999957085,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 4632.2349999547005,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 4634.875,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 4634.995000004768,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 4720.185000002384,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 5191.014999985695,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 5256.1449999809265,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                },
+                {
+                  "ms": 8448.20499998331,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 265
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "timeout failure stops the batch, preserves inputs, explicit retry recovers",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9865,
+          "errors": [],
+          "evidence": {
+            "fault.json": {
+              "fault": "timeout",
+              "frames": 2,
+              "after": {
+                "workers": 0,
+                "urls": 1,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "retry": "actual conversion passed"
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 421.4399999976158,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 579.9950000047684,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 581.2650000452995,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 761.7800000309944,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 917.7000000476837,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 918.4250000119209,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 960.7400000095367,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 2047.9399999976158,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 2049.135000050068,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 2056.2800000309944,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 2336.6400000452995,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2645.520000040531,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1903,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2646.1800000071526,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2646.225000023842,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2646.2450000047684,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2719.75,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 3145.850000023842,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 3209.2549999952316,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 6200.865000009537,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1894,
+          "errors": [],
+          "evidence": {
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "one damaged DOCX between good files does not restart the shared engine",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8464,
+          "errors": [],
+          "evidence": {
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2118,
+          "errors": [],
+          "evidence": {
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX resource-load cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1034,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "resource-load",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX initialize cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3465,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "initialize",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 3,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 370.72000002861023,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 526.8299999833107,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 528.8349999785423,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 564.2250000238419,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1641.3050000071526,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1644.1399999856949,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1652.9049999713898,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 1922.125,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2227.4449999928474,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1146,
+                  "downloadSequence": 263
+                },
+                {
+                  "ms": 2229.225000023842,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 263
+                },
+                {
+                  "ms": 2229.3299999833107,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 263
+                },
+                {
+                  "ms": 2229.360000014305,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 263
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX import cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7155,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "import",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 365.8600000143051,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 523,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 524.0450000166893,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 559.4049999713898,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1624.3100000023842,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1625.0450000166893,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1635.5799999833107,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 1899.8199999928474,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2216.8449999690056,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1903,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2217.6349999904633,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2217.7099999785423,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2217.724999964237,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2290.2400000095367,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2711.664999961853,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2783.2950000166893,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 5749.689999997616,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel during actual DOCX export cannot write into the next tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7588,
+          "errors": [],
+          "evidence": {
+            "cancellation.json": {
+              "stage": "export",
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": [
+                {
+                  "ms": 386.44499999284744,
+                  "stage": "resources",
+                  "resourcesComplete": 0,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 0
+                },
+                {
+                  "ms": 534.7749999761581,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 535.7099999785423,
+                  "stage": "resources",
+                  "resourcesComplete": 1,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 580.4099999666214,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1640.8499999642372,
+                  "stage": "resources",
+                  "resourcesComplete": 2,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1641.8549999594688,
+                  "stage": "resources",
+                  "resourcesComplete": 3,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1,
+                  "downloadSequence": 251
+                },
+                {
+                  "ms": 1652.089999973774,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 253
+                },
+                {
+                  "ms": 1928.0199999809265,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1904,
+                  "downloadSequence": 259
+                },
+                {
+                  "ms": 2238.4199999570847,
+                  "stage": "resources",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": false,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 1584,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2239.185000002384,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 0,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2239.2599999904633,
+                  "stage": "worker",
+                  "resourcesComplete": 4,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2239.2799999713898,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 0,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2313.214999973774,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 1,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2739.4099999666214,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 1,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 2801.889999985695,
+                  "stage": "worker",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                },
+                {
+                  "ms": 5751.274999976158,
+                  "stage": "uno",
+                  "resourcesComplete": 5,
+                  "runtimeInitialized": true,
+                  "workersCreated": 2,
+                  "workersLoaded": 2,
+                  "runDependencies": 0,
+                  "downloadSequence": 264
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1363,
+          "errors": [],
+          "evidence": {
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel DOM canvas encoding then ignore the late result in another tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1131,
+          "errors": [],
+          "evidence": {
+            "canvas-cancellation.json": {
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "clear preserves settings and releases selected File and output Blob references",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2233,
+          "errors": [],
+          "evidence": {
+            "clear-references.json": {
+              "samples": [
+                {
+                  "tool": "image-convert",
+                  "forcedPageGc": true,
+                  "immediate": {
+                    "observed": 3,
+                    "live": 0
+                  },
+                  "cleanupMs": 12,
+                  "references": {
+                    "observed": 3,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "image-pdf",
+                  "forcedPageGc": true,
+                  "immediate": {
+                    "observed": 6,
+                    "live": 0
+                  },
+                  "cleanupMs": 10,
+                  "references": {
+                    "observed": 6,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "pdf-image",
+                  "forcedPageGc": true,
+                  "immediate": {
+                    "observed": 10,
+                    "live": 0
+                  },
+                  "cleanupMs": 13,
+                  "references": {
+                    "observed": 10,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "pdf-organize",
+                  "forcedPageGc": true,
+                  "immediate": {
+                    "observed": 12,
+                    "live": 2
+                  },
+                  "cleanupMs": 136,
+                  "references": {
+                    "observed": 12,
+                    "live": 0
+                  }
+                }
+              ],
+              "limitation": "Firefox/WebKit have no forced GC in this test; live weak references there are not a leak assertion."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1357,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1053,
+          "errors": [],
+          "evidence": {
+            "zip-lifecycle.json": {
+              "before": {
+                "workers": 0,
+                "urls": 2,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 3,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ],
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 3,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "conversion, clear, retry and tool switching lifecycle rounds",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 279235,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\lifecycle.spec.ts",
+                "column": 36,
+                "line": 109
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"chromium\"\u001b[39m\n\n  107 |     await select(page, ['中文表格分页.docx']); await convert(page);\n  108 |     if (await page.locator('.result-list li').count()) await verifyDocx(page, info, `round-${i + 1}.pdf`);\n> 109 |     else { expect(browserName).not.toBe('chromium'); await expect(page.locator('.notice').last()).toContainText('不兼容'); }\n      |                                    ^\n  110 |     await page.getByRole('button', { name: '清空任务' }).click();\n  111 |     await expect.poll(async () => (await resources(page)).workers).toBe(0);\n  112 |     await expect.poll(async () => (await resources(page)).urls).toBe(0);\n    at D:\\software\\xingyi\\tests\\matrix\\lifecycle.spec.ts:109:36"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

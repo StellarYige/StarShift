@@ -1,0 +1,210 @@
+[
+  {
+    "version": "baseline",
+    "events": [
+      {
+        "kind": "worker",
+        "ms": 575.414999961853
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1284.789999961853,
+        "width": 1042,
+        "height": 1474
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1310.6099999547005
+      },
+      {
+        "kind": "worker-terminated",
+        "ms": 1315.7949999570847
+      },
+      {
+        "kind": "image-loaded",
+        "ms": 1323.9599999785423,
+        "width": 1042,
+        "height": 1474
+      }
+    ]
+  },
+  {
+    "version": "revised",
+    "events": [
+      {
+        "kind": "encode-done",
+        "ms": 32.20999997854233
+      },
+      {
+        "kind": "encode-start",
+        "ms": 151.1599999666214,
+        "width": 163,
+        "height": 231
+      },
+      {
+        "kind": "resize",
+        "ms": 155.0600000023842,
+        "width": 859
+      },
+      {
+        "kind": "worker",
+        "ms": 302.05000001192093
+      },
+      {
+        "kind": "encode-done",
+        "ms": 435.00999999046326
+      },
+      {
+        "kind": "encode-start",
+        "ms": 567.5600000023842,
+        "width": 163,
+        "height": 231
+      },
+      {
+        "kind": "encode-done",
+        "ms": 587.4250000119209
+      },
+      {
+        "kind": "encode-start",
+        "ms": 739.0749999880791,
+        "width": 163,
+        "height": 231
+      },
+      {
+        "kind": "encode-done",
+        "ms": 754.8299999833107
+      },
+      {
+        "kind": "encode-start",
+        "ms": 909.3949999809265,
+        "width": 180,
+        "height": 128
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1095.7349999547005,
+        "width": 859,
+        "height": 1215
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1121.8849999904633
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1150.414999961853,
+        "width": 163,
+        "height": 231
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1173.0149999856949
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1180.4749999642372
+      },
+      {
+        "kind": "image-loaded",
+        "ms": 1182.125,
+        "width": 859,
+        "height": 1215
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1273.3949999809265,
+        "width": 163,
+        "height": 231
+      },
+      {
+        "kind": "resize",
+        "ms": 1274.3650000095367,
+        "width": 859
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1325.5249999761581
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1433.6099999547005,
+        "width": 180,
+        "height": 128
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1440.089999973774
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1549.9799999594688,
+        "width": 163,
+        "height": 231
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1562.324999988079
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1673.8650000095367,
+        "width": 163,
+        "height": 231
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1684.2099999785423
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1776.6099999547005,
+        "width": 180,
+        "height": 128
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1785.7599999904633
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1815.5199999809265,
+        "width": 163,
+        "height": 231
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1822.3999999761581
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1849.8700000047684,
+        "width": 163,
+        "height": 231
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1857.8149999976158
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1883.3449999690056,
+        "width": 180,
+        "height": 128
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1889.3799999952316
+      },
+      {
+        "kind": "encode-start",
+        "ms": 1915.1599999666214,
+        "width": 163,
+        "height": 231
+      },
+      {
+        "kind": "encode-done",
+        "ms": 1920.6399999856949
+      }
+    ]
+  }
+]

@@ -1,0 +1,522 @@
+{
+  "captured": "2026-09-12T15:33:30.645Z",
+  "source": "test-results/webkit-fixed/report.json",
+  "stats": {
+    "startTime": "2026-09-12T15:31:12.848Z",
+    "duration": 89665.847,
+    "expected": 21,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "DOCX conversion attempt, output or explicit incompatibility, then another tool",
+      "file": "compatibility.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [
+        {
+          "type": "DOCX incompatible",
+          "description": "DOCX incompatible; conversion did not pass"
+        }
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2890,
+          "errors": [],
+          "evidence": {
+            "compatibility.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "result": "DOCX incompatible; conversion did not pass",
+              "simulated": false,
+              "engineRequests": [],
+              "rejectedBeforeEngineAllocation": true
+            },
+            "engine-attempt.json": {
+              "browser": "webkit",
+              "version": "26.6",
+              "errors": [],
+              "isolated": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "isolation unavailable explains DOCX and all other tools still convert",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6398,
+          "errors": [],
+          "evidence": {
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "preview error clears on next page and closing during rendering cannot restore old state",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5485,
+          "errors": [],
+          "evidence": {
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5104,
+          "errors": [],
+          "evidence": {
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "cancel DOM canvas encoding then ignore the late result in another tool",
+      "file": "faults.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3536,
+          "errors": [],
+          "evidence": {
+            "canvas-cancellation.json": {
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            },
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "clear preserves settings and releases selected File and output Blob references",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7031,
+          "errors": [],
+          "evidence": {
+            "clear-references.json": {
+              "samples": [
+                {
+                  "tool": "image-convert",
+                  "forcedPageGc": false,
+                  "immediate": {
+                    "observed": 3,
+                    "live": 3
+                  },
+                  "cleanupMs": 7,
+                  "references": {
+                    "observed": 3,
+                    "live": 3
+                  }
+                },
+                {
+                  "tool": "image-pdf",
+                  "forcedPageGc": false,
+                  "immediate": {
+                    "observed": 6,
+                    "live": 6
+                  },
+                  "cleanupMs": 7,
+                  "references": {
+                    "observed": 6,
+                    "live": 6
+                  }
+                },
+                {
+                  "tool": "pdf-image",
+                  "forcedPageGc": false,
+                  "immediate": {
+                    "observed": 10,
+                    "live": 4
+                  },
+                  "cleanupMs": 6,
+                  "references": {
+                    "observed": 10,
+                    "live": 4
+                  }
+                },
+                {
+                  "tool": "pdf-organize",
+                  "forcedPageGc": false,
+                  "immediate": {
+                    "observed": 12,
+                    "live": 6
+                  },
+                  "cleanupMs": 4,
+                  "references": {
+                    "observed": 12,
+                    "live": 6
+                  }
+                }
+              ],
+              "limitation": "Firefox/WebKit have no forced GC in this test; live weak references there are not a leak assertion."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "failed PDF releases its Worker and allows a good retry",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3938,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "repeated ZIP download reuses one URL and clear releases timers and outputs",
+      "file": "lifecycle.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3251,
+          "errors": [],
+          "evidence": {
+            "zip-lifecycle.json": {
+              "before": {
+                "workers": 0,
+                "urls": 2,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "samples": [
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 1,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 1,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                },
+                {
+                  "workers": 0,
+                  "urls": 3,
+                  "created": 1,
+                  "ports": 2,
+                  "timers": 0,
+                  "frames": 0
+                }
+              ],
+              "after": {
+                "workers": 0,
+                "urls": 0,
+                "created": 1,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2410,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3597,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3018,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2351,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3773,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2869,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4819,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4477,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1758,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2430,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "../e2e/conversions.spec.ts",
+      "project": "webkit",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2334,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "android-simulation",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3708,
+          "errors": [],
+          "evidence": {
+            "simulation.json": {
+              "simulated": true,
+              "actualPhone": false,
+              "project": "android-simulation",
+              "version": "153.0.8010.12",
+              "fileChooser": "automated; no real OS picker or photo library tested",
+              "downloads": "actual saved PDF reopened with pdf-lib"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "simulated touch file selection, multiple files, preview, rotation and download",
+      "file": "mobile.spec.ts",
+      "project": "iphone-simulation",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8149,
+          "errors": [],
+          "evidence": {
+            "simulation.json": {
+              "simulated": true,
+              "actualPhone": false,
+              "project": "iphone-simulation",
+              "version": "26.6",
+              "fileChooser": "automated; no real OS picker or photo library tested",
+              "downloads": "actual saved PDF reopened with pdf-lib"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

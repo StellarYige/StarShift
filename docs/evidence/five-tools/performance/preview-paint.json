@@ -1,0 +1,452 @@
+{
+  "time": "2026-09-12T16:14:06.695Z",
+  "baseline": "19a49db",
+  "revised": "f14197aeca1bb0314418e322e09aeff79023c53e",
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12500H",
+  "ram": 16851132416,
+  "os": "10.0.26200",
+  "method": "Five alternating production pairs; fresh browser/context each. Bring preview trigger into view and wait for background thumbnails to finish before timing. Browser capture-phase click to image load plus requestAnimationFrame, not automation polling or physical screen scanout. No fault injection, forced GC or OS sampler.",
+  "samples": [
+    {
+      "pair": 1,
+      "version": "baseline",
+      "status": "passed",
+      "events": [
+        {
+          "kind": "open",
+          "ms": 981.2350000143051,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 566.0199999809265,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 580.7599999904633,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 560.7350000143051,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 488.55500000715256,
+          "width": 1100,
+          "height": 778
+        },
+        {
+          "kind": "turn",
+          "ms": 562.2400000095367,
+          "width": 1042,
+          "height": 1474
+        }
+      ],
+      "createdDuringPreview": 6
+    },
+    {
+      "pair": 1,
+      "version": "revised",
+      "status": "passed",
+      "events": [
+        {
+          "kind": "open",
+          "ms": 1002.2350000143051,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 241.75499999523163,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 256.03500002622604,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 562.5749999880791,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 309.3400000333786,
+          "width": 1100,
+          "height": 778
+        },
+        {
+          "kind": "turn",
+          "ms": 235.86500000953674,
+          "width": 1042,
+          "height": 1474
+        }
+      ],
+      "createdDuringPreview": 1
+    },
+    {
+      "pair": 2,
+      "version": "revised",
+      "status": "passed",
+      "events": [
+        {
+          "kind": "open",
+          "ms": 984.6949999928474,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 218.03999996185303,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 344.97000002861023,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 317.5049999952316,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 330.3649999499321,
+          "width": 1100,
+          "height": 778
+        },
+        {
+          "kind": "turn",
+          "ms": 249.38999998569489,
+          "width": 1042,
+          "height": 1474
+        }
+      ],
+      "createdDuringPreview": 1
+    },
+    {
+      "pair": 2,
+      "version": "baseline",
+      "status": "passed",
+      "events": [
+        {
+          "kind": "open",
+          "ms": 1034.1500000357628,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 493.9350000023842,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 541.0149999856949,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 580.1499999761581,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 509.51500004529953,
+          "width": 1100,
+          "height": 778
+        },
+        {
+          "kind": "turn",
+          "ms": 549.5249999761581,
+          "width": 1042,
+          "height": 1474
+        }
+      ],
+      "createdDuringPreview": 6
+    },
+    {
+      "pair": 3,
+      "version": "baseline",
+      "status": "passed",
+      "events": [
+        {
+          "kind": "open",
+          "ms": 1037.4750000238419,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 466.94499999284744,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 479.5250000357628,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 495.60999995470047,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 611.4650000333786,
+          "width": 1100,
+          "height": 778
+        },
+        {
+          "kind": "turn",
+          "ms": 515.6800000071526,
+          "width": 1042,
+          "height": 1474
+        }
+      ],
+      "createdDuringPreview": 6
+    },
+    {
+      "pair": 3,
+      "version": "revised",
+      "status": "passed",
+      "events": [
+        {
+          "kind": "open",
+          "ms": 887.7950000166893,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 252.27999997138977,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 394.2649999856949,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 397.6599999666214,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 233.49500000476837,
+          "width": 1100,
+          "height": 778
+        },
+        {
+          "kind": "turn",
+          "ms": 217.2950000166893,
+          "width": 1042,
+          "height": 1474
+        }
+      ],
+      "createdDuringPreview": 1
+    },
+    {
+      "pair": 4,
+      "version": "revised",
+      "status": "passed",
+      "events": [
+        {
+          "kind": "open",
+          "ms": 964.6899999976158,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 213.73500001430511,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 457.1700000166893,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 225.4099999666214,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 449.63499999046326,
+          "width": 1100,
+          "height": 778
+        },
+        {
+          "kind": "turn",
+          "ms": 253.02000004053116,
+          "width": 1042,
+          "height": 1474
+        }
+      ],
+      "createdDuringPreview": 1
+    },
+    {
+      "pair": 4,
+      "version": "baseline",
+      "status": "passed",
+      "events": [
+        {
+          "kind": "open",
+          "ms": 936.9750000238419,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 651.8899999856949,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 583.9250000119209,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 481.8899999856949,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 522.8849999904633,
+          "width": 1100,
+          "height": 778
+        },
+        {
+          "kind": "turn",
+          "ms": 560.3650000095367,
+          "width": 1042,
+          "height": 1474
+        }
+      ],
+      "createdDuringPreview": 6
+    },
+    {
+      "pair": 5,
+      "version": "baseline",
+      "status": "passed",
+      "events": [
+        {
+          "kind": "open",
+          "ms": 902.3100000023842,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 569.5849999785423,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 541.1150000095367,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 521.785000026226,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 579.5749999880791,
+          "width": 1100,
+          "height": 778
+        },
+        {
+          "kind": "turn",
+          "ms": 552.9800000190735,
+          "width": 1042,
+          "height": 1474
+        }
+      ],
+      "createdDuringPreview": 6
+    },
+    {
+      "pair": 5,
+      "version": "revised",
+      "status": "passed",
+      "events": [
+        {
+          "kind": "open",
+          "ms": 1018.9699999690056,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 223.58999997377396,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 442.14500004053116,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 215.14999997615814,
+          "width": 1042,
+          "height": 1474
+        },
+        {
+          "kind": "turn",
+          "ms": 187.9399999976158,
+          "width": 1100,
+          "height": 778
+        },
+        {
+          "kind": "turn",
+          "ms": 240.7699999809265,
+          "width": 1042,
+          "height": 1474
+        }
+      ],
+      "createdDuringPreview": 1
+    }
+  ],
+  "browser": "153.0.8010.12"
+}

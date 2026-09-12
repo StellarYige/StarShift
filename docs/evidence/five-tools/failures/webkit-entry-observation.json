@@ -1,0 +1,26 @@
+{
+  "method": "Synthetic fixture; prepend execution counter to Worker entry in a diagnostic route only. Not a timing measurement.",
+  "records": [
+    {
+      "version": "before",
+      "browser": "26.6",
+      "entryCounts": [
+        1,
+        2
+      ],
+      "outputs": 0,
+      "error": [
+        "图片队列顺序失效，请重新转换。"
+      ]
+    },
+    {
+      "version": "after",
+      "browser": "26.6",
+      "entryCounts": [
+        1
+      ],
+      "outputs": 1,
+      "error": []
+    }
+  ]
+}

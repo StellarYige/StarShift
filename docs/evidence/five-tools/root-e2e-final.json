@@ -1,0 +1,447 @@
+{
+  "captured": "2026-09-12T16:51:09.532Z",
+  "source": "test-results/e2e-report.json",
+  "stats": {
+    "startTime": "2026-09-12T16:49:04.508Z",
+    "duration": 68717.81,
+    "expected": 27,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 928,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1490,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1025,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 991,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2169,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1210,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2707,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2061,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 805,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1025,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "conversions.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1147,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "DOCX to PDF: Chinese, image, table, pagination, local-only network and preview",
+      "file": "docx.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10786,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "DOCX rejects malformed and macro packages before loading engine",
+      "file": "docx.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 629,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "DOCX engine loading can be cancelled and releases the frame",
+      "file": "docx.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 705,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "PDF preview parses once, supports rapid navigation, zoom, render retry, and restores focus",
+      "file": "pages-preview.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3662,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "100 PDF pages are usable before thumbnails; viewport cache evicts and rebuilds without changing IDs",
+      "file": "pages-preview.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7184,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "queue range, bulk rotation and move preserve source page order in multi-source split outputs",
+      "file": "pages-preview.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3498,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "500 page boundary checks total before thumbnails and tool switch cancels background rendering",
+      "file": "pages-preview.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2604,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "late thumbnails preserve selection and rotation after moving; closing a loading preview cannot overwrite the next result",
+      "file": "pages-preview.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4916,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "DOM image PDF fallback sends the next image only after embedding acknowledgement",
+      "file": "pipeline.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1701,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "image thumbnails do not load PDF or ZIP modules and cancellation rejects late DOM image work",
+      "file": "pipeline.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2679,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "single thumbnail failure keeps the source page exportable",
+      "file": "pipeline.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1883,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "partial PDF output retry replaces only its own pages, and full conversion replaces the batch",
+      "file": "workflow.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3700,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "selection reasons survive conversion, settings errors block start, unfinished batch preserves successes",
+      "file": "workflow.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1132,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "image PDF does not silently omit broken inputs and supports moving to a queue position",
+      "file": "workflow.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1344,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "a failed whole PDF retry can continue after removing the unreadable source",
+      "file": "workflow.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2652,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "cancelling full reconversion keeps every unfinished source eligible to resume",
+      "file": "workflow.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1150,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

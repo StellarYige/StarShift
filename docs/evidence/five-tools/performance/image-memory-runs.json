@@ -1,0 +1,65 @@
+{
+  "method": "Five alternating pairs; existing private-bytes/working-set/page-GC/WeakRef sampler. Separate from timing runs.",
+  "runs": [
+    {
+      "pair": 1,
+      "version": "baseline",
+      "output": "docs/evidence/five-tools/performance/image-memory-baseline-1.json",
+      "code": 0
+    },
+    {
+      "pair": 1,
+      "version": "revised",
+      "output": "docs/evidence/five-tools/performance/image-memory-revised-1.json",
+      "code": 0
+    },
+    {
+      "pair": 2,
+      "version": "revised",
+      "output": "docs/evidence/five-tools/performance/image-memory-revised-2.json",
+      "code": 0
+    },
+    {
+      "pair": 2,
+      "version": "baseline",
+      "output": "docs/evidence/five-tools/performance/image-memory-baseline-2.json",
+      "code": 0
+    },
+    {
+      "pair": 3,
+      "version": "baseline",
+      "output": "docs/evidence/five-tools/performance/image-memory-baseline-3.json",
+      "code": 0
+    },
+    {
+      "pair": 3,
+      "version": "revised",
+      "output": "docs/evidence/five-tools/performance/image-memory-revised-3.json",
+      "code": 0
+    },
+    {
+      "pair": 4,
+      "version": "revised",
+      "output": "docs/evidence/five-tools/performance/image-memory-revised-4.json",
+      "code": 0
+    },
+    {
+      "pair": 4,
+      "version": "baseline",
+      "output": "docs/evidence/five-tools/performance/image-memory-baseline-4.json",
+      "code": 0
+    },
+    {
+      "pair": 5,
+      "version": "baseline",
+      "output": "docs/evidence/five-tools/performance/image-memory-baseline-5.json",
+      "code": 0
+    },
+    {
+      "pair": 5,
+      "version": "revised",
+      "output": "docs/evidence/five-tools/performance/image-memory-revised-5.json",
+      "code": 0
+    }
+  ]
+}

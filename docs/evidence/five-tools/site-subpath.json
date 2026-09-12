@@ -1,0 +1,1495 @@
+{
+  "time": "2026-09-12T17:00:26.524Z",
+  "base": "http://127.0.0.1:4187/StarShift/",
+  "version": "0.1.1",
+  "buildPathSource": "dist",
+  "buildIdentity": null,
+  "requests": [
+    {
+      "path": "",
+      "status": 200,
+      "mime": "text/html; charset=utf-8",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/StarShift/assets/index-DhBZIKQh.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/StarShift/assets/jsx-runtime-B9LTfqsM.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/StarShift/assets/common-DB-CGTp2.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/StarShift/assets/preload-helper-BUT8I85H.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/StarShift/assets/office-compatibility-22ChKjmo.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "/StarShift/assets/index-f5S5RzIm.css",
+      "status": 200,
+      "mime": "text/css",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "http://127.0.0.1:4187/StarShift/office/frame.html",
+      "status": 200,
+      "mime": "text/html; charset=utf-8",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "http://127.0.0.1:4187/StarShift/office/frame.js?v=0.1.1-startup.1",
+      "status": 200,
+      "mime": "text/javascript",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "http://127.0.0.1:4187/StarShift/office/thread.js?v=0.1.1",
+      "status": 200,
+      "mime": "text/javascript",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "coi-serviceworker.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "asset-manifest.json",
+      "status": 200,
+      "mime": "application/json",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "engine/soffice.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "engine/soffice.data.js.metadata",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "engine/soffice.wasm",
+      "status": 200,
+      "mime": "application/wasm",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "engine/soffice.data",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "fonts/NotoSansCJKsc-Regular.otf",
+      "status": 200,
+      "mime": "font/otf",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "licenses/dependencies.json",
+      "status": 200,
+      "mime": "application/json",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "licenses/Noto-CJK-OFL.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "cacheControl": "no-cache"
+    },
+    {
+      "path": "licenses/BUNDLED-FONT-NOTICES.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "cacheControl": "no-cache"
+    }
+  ],
+  "resourcePaths": [
+    {
+      "path": "asset-manifest.json",
+      "status": 200,
+      "mime": "application/json"
+    },
+    {
+      "path": "assets/browser-BvGt_LFQ.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/common-DB-CGTp2.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/docx-1l78Tkco.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/images-Dym6ENr6.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/index-DhBZIKQh.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/index-f5S5RzIm.css",
+      "status": 200,
+      "mime": "text/css"
+    },
+    {
+      "path": "assets/jsx-runtime-B9LTfqsM.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/office-compatibility-22ChKjmo.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/pdf-edit-Dm1M6cwW.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/pdf-render-D8IE6NM0.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/pdf.worker.min-Dswkl-cV.mjs",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/preload-helper-BUT8I85H.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/Preview-5Y7sntWM.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "assets/task-worker-ucvabrfd.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "coi-serviceworker.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "engine/soffice.data",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "engine/soffice.data.js.metadata",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "engine/soffice.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "engine/soffice.wasm",
+      "status": 200,
+      "mime": "application/wasm"
+    },
+    {
+      "path": "engine/zeta.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "engine/zetaHelper.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "fonts/NotoSansCJKsc-Regular.otf",
+      "status": 200,
+      "mime": "font/otf"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "licenses/@img-colour-LICENSE.md",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/@img-sharp-win32-x64-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/@napi-rs-canvas-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/@pdf-lib-standard-fonts-LICENSE.md",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/@pdf-lib-upng-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/BUNDLED-FONT-NOTICES.txt",
+      "status": 200,
+      "mime": "text/plain"
+    },
+    {
+      "path": "licenses/coi-serviceworker-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/core-util-is-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/dependencies.json",
+      "status": 200,
+      "mime": "application/json"
+    },
+    {
+      "path": "licenses/detect-libc-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/Emscripten-LICENSE.txt",
+      "status": 200,
+      "mime": "text/plain"
+    },
+    {
+      "path": "licenses/fflate-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/immediate-LICENSE.txt",
+      "status": 200,
+      "mime": "text/plain"
+    },
+    {
+      "path": "licenses/inherits-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/jszip-LICENSE.markdown",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/LibreOffice-COPYING",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/LibreOffice-COPYING.LGPL",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/LibreOffice-COPYING.MPL",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/LibreOffice-license.xml",
+      "status": 200,
+      "mime": "application/xml"
+    },
+    {
+      "path": "licenses/lie-license.md",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/lucide-react-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/Noto-CJK-OFL.txt",
+      "status": 200,
+      "mime": "text/plain"
+    },
+    {
+      "path": "licenses/pako-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/pdf-lib-LICENSE.md",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/pdfjs-dist-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/process-nextick-args-license.md",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/Qt-GPL-3.0.txt",
+      "status": 200,
+      "mime": "text/plain"
+    },
+    {
+      "path": "licenses/Qt-LGPL-3.0.txt",
+      "status": 200,
+      "mime": "text/plain"
+    },
+    {
+      "path": "licenses/Qt-LICENSE-FDL.txt",
+      "status": 200,
+      "mime": "text/plain"
+    },
+    {
+      "path": "licenses/react-dom-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/react-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/readable-stream-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/safe-buffer-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/scheduler-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/semver-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/setimmediate-LICENSE.txt",
+      "status": 200,
+      "mime": "text/plain"
+    },
+    {
+      "path": "licenses/sharp-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/string_decoder-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/tslib-LICENSE.txt",
+      "status": 200,
+      "mime": "text/plain"
+    },
+    {
+      "path": "licenses/util-deprecate-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/zetajs-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "licenses/zod-LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "office/frame.html",
+      "status": 200,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "office/frame.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "office/thread.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "pdfjs/cmaps/78-EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/78-EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/78-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/78-RKSJ-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/78-RKSJ-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/78-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/78ms-RKSJ-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/78ms-RKSJ-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/83pv-RKSJ-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/90ms-RKSJ-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/90ms-RKSJ-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/90msp-RKSJ-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/90msp-RKSJ-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/90pv-RKSJ-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/90pv-RKSJ-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Add-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Add-RKSJ-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Add-RKSJ-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Add-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-CNS1-0.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-CNS1-1.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-CNS1-2.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-CNS1-3.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-CNS1-4.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-CNS1-5.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-CNS1-6.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-CNS1-UCS2.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-GB1-0.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-GB1-1.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-GB1-2.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-GB1-3.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-GB1-4.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-GB1-5.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-GB1-UCS2.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Japan1-0.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Japan1-1.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Japan1-2.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Japan1-3.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Japan1-4.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Japan1-5.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Japan1-6.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Japan1-UCS2.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Korea1-0.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Korea1-1.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Korea1-2.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Adobe-Korea1-UCS2.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/B5-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/B5-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/B5pc-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/B5pc-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/CNS-EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/CNS-EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/CNS1-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/CNS1-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/CNS2-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/CNS2-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/ETen-B5-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/ETen-B5-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/ETenms-B5-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/ETenms-B5-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/ETHK-B5-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/ETHK-B5-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Ext-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Ext-RKSJ-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Ext-RKSJ-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Ext-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GB-EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GB-EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GB-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GB-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBK-EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBK-EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBK2K-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBK2K-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBKp-EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBKp-EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBpc-EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBpc-EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBT-EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBT-EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBT-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBT-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBTpc-EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/GBTpc-EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Hankaku.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Hiragana.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKdla-B5-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKdla-B5-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKdlb-B5-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKdlb-B5-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKgccs-B5-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKgccs-B5-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKm314-B5-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKm314-B5-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKm471-B5-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKm471-B5-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKscs-B5-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/HKscs-B5-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Katakana.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSC-EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSC-EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSC-Johab-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSC-Johab-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSCms-UHC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSCms-UHC-HW-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSCms-UHC-HW-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSCms-UHC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSCpc-EUC-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/KSCpc-EUC-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/NWP-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/NWP-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/RKSJ-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/RKSJ-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/Roman.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniCNS-UCS2-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniCNS-UCS2-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniCNS-UTF16-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniCNS-UTF16-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniCNS-UTF32-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniCNS-UTF32-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniCNS-UTF8-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniCNS-UTF8-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniGB-UCS2-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniGB-UCS2-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniGB-UTF16-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniGB-UTF16-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniGB-UTF32-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniGB-UTF32-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniGB-UTF8-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniGB-UTF8-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS-UCS2-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS-UCS2-HW-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS-UCS2-HW-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS-UCS2-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS-UTF16-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS-UTF16-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS-UTF32-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS-UTF32-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS-UTF8-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS-UTF8-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS2004-UTF16-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS2004-UTF16-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS2004-UTF32-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS2004-UTF32-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS2004-UTF8-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJIS2004-UTF8-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJISPro-UCS2-HW-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJISPro-UCS2-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJISPro-UTF8-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJISX0213-UTF32-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJISX0213-UTF32-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJISX02132004-UTF32-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniJISX02132004-UTF32-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniKS-UCS2-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniKS-UCS2-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniKS-UTF16-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniKS-UTF16-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniKS-UTF32-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniKS-UTF32-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniKS-UTF8-H.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/UniKS-UTF8-V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/V.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/cmaps/WP-Symbol.bcmap",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/FoxitDingbats.pfb",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/FoxitFixed.pfb",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/FoxitFixedBold.pfb",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/FoxitFixedBoldItalic.pfb",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/FoxitFixedItalic.pfb",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/FoxitSerif.pfb",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/FoxitSerifBold.pfb",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/FoxitSerifBoldItalic.pfb",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/FoxitSerifItalic.pfb",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/FoxitSymbol.pfb",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/LiberationSans-Bold.ttf",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/LiberationSans-BoldItalic.ttf",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/LiberationSans-Italic.ttf",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/LiberationSans-Regular.ttf",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/LICENSE_FOXIT",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/standard_fonts/LICENSE_LIBERATION",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/wasm/jbig2_nowasm_fallback.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "pdfjs/wasm/jbig2.wasm",
+      "status": 200,
+      "mime": "application/wasm"
+    },
+    {
+      "path": "pdfjs/wasm/LICENSE_JBIG2",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/wasm/LICENSE_OPENJPEG",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/wasm/LICENSE_PDFJS_JBIG2",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/wasm/LICENSE_PDFJS_OPENJPEG",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/wasm/LICENSE_PDFJS_QCMS",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/wasm/LICENSE_QCMS",
+      "status": 200,
+      "mime": "application/octet-stream"
+    },
+    {
+      "path": "pdfjs/wasm/openjpeg_nowasm_fallback.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "pdfjs/wasm/openjpeg.wasm",
+      "status": 200,
+      "mime": "application/wasm"
+    },
+    {
+      "path": "pdfjs/wasm/qcms_bg.wasm",
+      "status": 200,
+      "mime": "application/wasm"
+    },
+    {
+      "path": "pdfjs/wasm/quickjs-eval.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "path": "pdfjs/wasm/quickjs-eval.wasm",
+      "status": 200,
+      "mime": "application/wasm"
+    }
+  ],
+  "assets": [
+    {
+      "path": "engine/soffice.js",
+      "sha256": "5143e5354f470b87f86ba272bcfef857bd13e6f07b59666e48a7ccb89643cd77",
+      "decodedBytes": 858124
+    },
+    {
+      "path": "engine/soffice.data.js.metadata",
+      "sha256": "5d9d909d0b9b38443c0f19704032d0fc12d654f6c9c24c2c3b237739c4848ae3",
+      "decodedBytes": 215180
+    },
+    {
+      "path": "engine/soffice.wasm",
+      "sha256": "9ebd9a487e849a24b9c69f843ebdb451709c27b7722c010e36846433474a5bd4",
+      "decodedBytes": 161667499
+    },
+    {
+      "path": "engine/soffice.data",
+      "sha256": "3dab0a5448e599dccc1b1e69f4f86ea9eb30777c3f1ed7b9c386a5f4163e361c",
+      "decodedBytes": 99520604
+    },
+    {
+      "path": "fonts/NotoSansCJKsc-Regular.otf",
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "decodedBytes": 16437364
+    }
+  ],
+  "licenseEntries": 25,
+  "warning": "Decoded bytes and HEAD checks used only for integrity and deployment, never substituted for performance transfer measurements."
+}

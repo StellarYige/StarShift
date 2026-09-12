@@ -1,0 +1,110 @@
+{
+  "captured": "2026-09-12T15:23:56.049Z",
+  "source": "test-results/fixed-lifecycle/report.json",
+  "stats": {
+    "startTime": "2026-09-12T15:22:20.700Z",
+    "duration": 18011.650999999998,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "cancel thumbnail generation then immediately use another tool",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3694,
+          "errors": [],
+          "evidence": {
+            "stage-diagnostic.json": {
+              "method": "Existing stage/count observations; fault cases may shift the observer clock. No document content or filenames.",
+              "stages": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "clear preserves settings and releases selected File and output Blob references",
+      "file": "lifecycle.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7393,
+          "errors": [],
+          "evidence": {
+            "clear-references.json": {
+              "samples": [
+                {
+                  "tool": "image-convert",
+                  "forcedPageGc": true,
+                  "immediate": {
+                    "observed": 3,
+                    "live": 0
+                  },
+                  "cleanupMs": 46,
+                  "references": {
+                    "observed": 3,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "image-pdf",
+                  "forcedPageGc": true,
+                  "immediate": {
+                    "observed": 6,
+                    "live": 0
+                  },
+                  "cleanupMs": 33,
+                  "references": {
+                    "observed": 6,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "pdf-image",
+                  "forcedPageGc": true,
+                  "immediate": {
+                    "observed": 10,
+                    "live": 0
+                  },
+                  "cleanupMs": 46,
+                  "references": {
+                    "observed": 10,
+                    "live": 0
+                  }
+                },
+                {
+                  "tool": "pdf-organize",
+                  "forcedPageGc": true,
+                  "immediate": {
+                    "observed": 12,
+                    "live": 2
+                  },
+                  "cleanupMs": 476,
+                  "references": {
+                    "observed": 12,
+                    "live": 0
+                  }
+                }
+              ],
+              "limitation": "Firefox/WebKit have no forced GC in this test; live weak references there are not a leak assertion."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

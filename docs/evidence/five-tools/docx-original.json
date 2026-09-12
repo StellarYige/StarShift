@@ -1,0 +1,63 @@
+{
+  "captured": "2026-09-12T15:06:23.577Z",
+  "source": "test-results/e2e-report.json",
+  "stats": {
+    "startTime": "2026-09-12T14:54:29.947Z",
+    "duration": 47740.475,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "DOCX to PDF: Chinese, image, table, pagination, local-only network and preview",
+      "file": "docx.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 38141,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "DOCX rejects malformed and macro packages before loading engine",
+      "file": "docx.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2061,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "DOCX engine loading can be cancelled and releases the frame",
+      "file": "docx.spec.ts",
+      "project": "",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1873,
+          "errors": [],
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

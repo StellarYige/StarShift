@@ -1,0 +1,859 @@
+{
+  "metrics": {
+    "pdfReady100Ms": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": 2423.5450000166893,
+          "revised": 430.7950000166893,
+          "improvement": 0.8222459248688501
+        },
+        {
+          "pair": 2,
+          "baseline": 2429.6949999928474,
+          "revised": 406.78500002622604,
+          "improvement": 0.8325777515171973
+        },
+        {
+          "pair": 3,
+          "baseline": 2430.1349999904633,
+          "revised": 481.7950000166893,
+          "improvement": 0.8017414670301938
+        },
+        {
+          "pair": 4,
+          "baseline": 2423.5499999523163,
+          "revised": 452.88499999046326,
+          "improvement": 0.8131315632029982
+        },
+        {
+          "pair": 5,
+          "baseline": 2439.6949999928474,
+          "revised": 453.74000000953674,
+          "improvement": 0.8140177358190811
+        }
+      ],
+      "baseline": {
+        "samples": [
+          2423.5450000166893,
+          2429.6949999928474,
+          2430.1349999904633,
+          2423.5499999523163,
+          2439.6949999928474
+        ],
+        "median": 2429.6949999928474,
+        "min": 2423.5450000166893,
+        "max": 2439.6949999928474
+      },
+      "revised": {
+        "samples": [
+          430.7950000166893,
+          406.78500002622604,
+          481.7950000166893,
+          452.88499999046326,
+          453.74000000953674
+        ],
+        "median": 452.88499999046326,
+        "min": 406.78500002622604,
+        "max": 481.7950000166893
+      },
+      "improvedPairs": 5,
+      "medianImprovement": 0.8136041766592941,
+      "meetsPerformanceThreshold": true
+    },
+    "previewOpen100Ms": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": 1470.2800000309944,
+          "revised": 1232.625,
+          "improvement": 0.1616392796106758
+        },
+        {
+          "pair": 2,
+          "baseline": 1260.6400000452995,
+          "revised": 1394.7150000333786,
+          "improvement": -0.10635470870610275
+        },
+        {
+          "pair": 3,
+          "baseline": 1345.0300000309944,
+          "revised": 1390.375,
+          "improvement": -0.03371300266013444
+        },
+        {
+          "pair": 4,
+          "baseline": 1262.339999973774,
+          "revised": 1417.3500000238419,
+          "improvement": -0.12279576029697892
+        },
+        {
+          "pair": 5,
+          "baseline": 1260.5949999690056,
+          "revised": 1393.1599999666214,
+          "improvement": -0.10516065826127763
+        }
+      ],
+      "baseline": {
+        "samples": [
+          1470.2800000309944,
+          1260.6400000452995,
+          1345.0300000309944,
+          1262.339999973774,
+          1260.5949999690056
+        ],
+        "median": 1262.339999973774,
+        "min": 1260.5949999690056,
+        "max": 1470.2800000309944
+      },
+      "revised": {
+        "samples": [
+          1232.625,
+          1394.7150000333786,
+          1390.375,
+          1417.3500000238419,
+          1393.1599999666214
+        ],
+        "median": 1393.1599999666214,
+        "min": 1232.625,
+        "max": 1417.3500000238419
+      },
+      "improvedPairs": 1,
+      "medianImprovement": -0.10363293565565956,
+      "meetsPerformanceThreshold": false
+    },
+    "previewFiveTurnsMs": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": 4316.825000047684,
+          "revised": 2262.9950000047684,
+          "improvement": 0.4757732824518549
+        },
+        {
+          "pair": 2,
+          "baseline": 5256.329999983311,
+          "revised": 2328.060000002384,
+          "improvement": 0.5570940180677819
+        },
+        {
+          "pair": 3,
+          "baseline": 5540.804999947548,
+          "revised": 2912.9050000309944,
+          "improvement": 0.47428126417396577
+        },
+        {
+          "pair": 4,
+          "baseline": 4714.800000011921,
+          "revised": 3015.185000002384,
+          "improvement": 0.36048506829669114
+        },
+        {
+          "pair": 5,
+          "baseline": 5122.425000011921,
+          "revised": 3131.8449999690056,
+          "improvement": 0.38860110202458464
+        }
+      ],
+      "baseline": {
+        "samples": [
+          4316.825000047684,
+          5256.329999983311,
+          5540.804999947548,
+          4714.800000011921,
+          5122.425000011921
+        ],
+        "median": 5122.425000011921,
+        "min": 4316.825000047684,
+        "max": 5540.804999947548
+      },
+      "revised": {
+        "samples": [
+          2262.9950000047684,
+          2328.060000002384,
+          2912.9050000309944,
+          3015.185000002384,
+          3131.8449999690056
+        ],
+        "median": 2912.9050000309944,
+        "min": 2262.9950000047684,
+        "max": 3131.8449999690056
+      },
+      "improvedPairs": 5,
+      "medianImprovement": 0.4313425769973761,
+      "meetsPerformanceThreshold": true
+    },
+    "split100Ms": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": 2525.539999961853,
+          "revised": 930.0100000500679,
+          "improvement": 0.6317579606483701
+        },
+        {
+          "pair": 2,
+          "baseline": 2537.7199999690056,
+          "revised": 967.5649999976158,
+          "improvement": 0.6187266522668249
+        },
+        {
+          "pair": 3,
+          "baseline": 2524.8050000071526,
+          "revised": 955,
+          "improvement": 0.621752967061894
+        },
+        {
+          "pair": 4,
+          "baseline": 3004.324999988079,
+          "revised": 957.8249999880791,
+          "improvement": 0.6811846255009429
+        },
+        {
+          "pair": 5,
+          "baseline": 2512.8050000071526,
+          "revised": 941.5299999713898,
+          "improvement": 0.6253071766536958
+        }
+      ],
+      "baseline": {
+        "samples": [
+          2525.539999961853,
+          2537.7199999690056,
+          2524.8050000071526,
+          3004.324999988079,
+          2512.8050000071526
+        ],
+        "median": 2525.539999961853,
+        "min": 2512.8050000071526,
+        "max": 3004.324999988079
+      },
+      "revised": {
+        "samples": [
+          930.0100000500679,
+          967.5649999976158,
+          955,
+          957.8249999880791,
+          941.5299999713898
+        ],
+        "median": 955,
+        "min": 930.0100000500679,
+        "max": 967.5649999976158
+      },
+      "improvedPairs": 5,
+      "medianImprovement": 0.6218630471050053,
+      "meetsPerformanceThreshold": true
+    }
+  },
+  "feedback": {
+    "baseline": {
+      "selection": {
+        "samples": [
+          2.199999988079071,
+          2.2649999856948853,
+          3.7649999856948853,
+          8.969999969005585,
+          10.120000004768372,
+          12.90499997138977,
+          13.3299999833107,
+          14.229999959468842,
+          15.819999992847443,
+          19.80000001192093
+        ],
+        "median": 11.512499988079071,
+        "min": 2.199999988079071,
+        "max": 19.80000001192093,
+        "p95": 19.80000001192093,
+        "meets200ms": true
+      },
+      "page-sort": {
+        "samples": [
+          14.555000007152557,
+          15.099999964237213,
+          21.24500000476837,
+          23.25499999523163,
+          23.82499998807907,
+          25.514999985694885,
+          26.855000019073486,
+          28.235000014305115,
+          28.6599999666214,
+          28.94999998807907,
+          28.94999998807907,
+          29.19999998807907,
+          29.3299999833107,
+          29.459999978542328,
+          29.62999999523163,
+          29.6700000166893,
+          29.730000019073486,
+          29.75499999523163,
+          29.90499997138977,
+          29.939999997615814,
+          30.125,
+          30.150000035762787,
+          30.165000021457672,
+          30.19999998807907,
+          30.224999964237213,
+          30.235000014305115,
+          30.285000026226044,
+          30.314999997615814,
+          30.514999985694885,
+          30.730000019073486,
+          30.87999999523163,
+          30.944999992847443,
+          31.09500002861023,
+          31.09500002861023,
+          31.19999998807907,
+          31.240000009536743,
+          31.8299999833107,
+          32.435000002384186,
+          32.65000003576279,
+          32.74500000476837
+        ],
+        "median": 30.032499998807907,
+        "min": 14.555000007152557,
+        "max": 32.74500000476837,
+        "p95": 32.435000002384186,
+        "meets200ms": true
+      },
+      "start": {
+        "samples": [
+          45.82499998807907,
+          56.9650000333786,
+          74.87000000476837,
+          84.08999997377396,
+          85.27499997615814
+        ],
+        "median": 74.87000000476837,
+        "min": 45.82499998807907,
+        "max": 85.27499997615814,
+        "p95": 85.27499997615814,
+        "meets200ms": true
+      }
+    },
+    "revised": {
+      "selection": {
+        "samples": [
+          2.740000009536743,
+          3.465000033378601,
+          4.324999988079071,
+          4.944999992847443,
+          6.2299999594688416,
+          8.930000007152557,
+          12.415000021457672,
+          12.560000002384186,
+          12.694999992847443,
+          12.905000030994415
+        ],
+        "median": 7.5799999833106995,
+        "min": 2.740000009536743,
+        "max": 12.905000030994415,
+        "p95": 12.905000030994415,
+        "meets200ms": true
+      },
+      "page-sort": {
+        "samples": [
+          10.560000002384186,
+          11.360000014305115,
+          13.210000038146973,
+          19.689999997615814,
+          22.7950000166893,
+          22.820000052452087,
+          27.30000001192093,
+          27.375,
+          27.844999969005585,
+          28.040000021457672,
+          28.49500000476837,
+          28.7049999833107,
+          28.959999978542328,
+          29.084999978542328,
+          29.225000023841858,
+          29.69999998807907,
+          29.94999998807907,
+          29.97000002861023,
+          30.024999976158142,
+          30.064999997615814,
+          30.14500004053116,
+          30.439999997615814,
+          30.694999992847443,
+          30.7049999833107,
+          30.814999997615814,
+          30.89500004053116,
+          30.915000021457672,
+          31.069999992847443,
+          31.19999998807907,
+          31.224999964237213,
+          31.37999999523163,
+          31.490000009536743,
+          31.605000019073486,
+          31.685000002384186,
+          31.805000007152557,
+          32.044999957084656,
+          32.37000000476837,
+          32.42500001192093,
+          32.58499997854233,
+          32.62000000476837
+        ],
+        "median": 30.105000019073486,
+        "min": 10.560000002384186,
+        "max": 32.62000000476837,
+        "p95": 32.42500001192093,
+        "meets200ms": true
+      },
+      "start": {
+        "samples": [
+          48.39999997615814,
+          50.75499999523163,
+          53.64999997615814,
+          53.875,
+          82.19999998807907
+        ],
+        "median": 53.64999997615814,
+        "min": 48.39999997615814,
+        "max": 82.19999998807907,
+        "p95": 82.19999998807907,
+        "meets200ms": true
+      }
+    }
+  },
+  "quality": [
+    {
+      "pair": 1,
+      "version": "baseline",
+      "pdf": true,
+      "images": null
+    },
+    {
+      "pair": 1,
+      "version": "revised",
+      "pdf": true,
+      "images": null
+    },
+    {
+      "pair": 2,
+      "version": "revised",
+      "pdf": true,
+      "images": null
+    },
+    {
+      "pair": 2,
+      "version": "baseline",
+      "pdf": true,
+      "images": null
+    },
+    {
+      "pair": 3,
+      "version": "baseline",
+      "pdf": true,
+      "images": null
+    },
+    {
+      "pair": 3,
+      "version": "revised",
+      "pdf": true,
+      "images": null
+    },
+    {
+      "pair": 4,
+      "version": "revised",
+      "pdf": true,
+      "images": null
+    },
+    {
+      "pair": 4,
+      "version": "baseline",
+      "pdf": true,
+      "images": null
+    },
+    {
+      "pair": 5,
+      "version": "baseline",
+      "pdf": true,
+      "images": null
+    },
+    {
+      "pair": 5,
+      "version": "revised",
+      "pdf": true,
+      "images": null
+    }
+  ],
+  "memory": {
+    "samples": [
+      {
+        "pair": 1,
+        "version": "baseline",
+        "output": "docs/evidence/five-tools/performance/image-memory-baseline-1.json",
+        "code": 0,
+        "peakPrivateBytes": 546365440,
+        "afterClearPrivateBytes": 204455936,
+        "references": {
+          "input": {
+            "observed": 10,
+            "live": 0
+          },
+          "blob": {
+            "observed": 11,
+            "live": 0
+          }
+        }
+      },
+      {
+        "pair": 1,
+        "version": "revised",
+        "output": "docs/evidence/five-tools/performance/image-memory-revised-1.json",
+        "code": 0,
+        "peakPrivateBytes": 463380480,
+        "afterClearPrivateBytes": 188039168,
+        "references": {
+          "input": {
+            "observed": 10,
+            "live": 0
+          },
+          "blob": {
+            "observed": 11,
+            "live": 0
+          }
+        }
+      },
+      {
+        "pair": 2,
+        "version": "revised",
+        "output": "docs/evidence/five-tools/performance/image-memory-revised-2.json",
+        "code": 0,
+        "peakPrivateBytes": 466538496,
+        "afterClearPrivateBytes": 189014016,
+        "references": {
+          "input": {
+            "observed": 10,
+            "live": 0
+          },
+          "blob": {
+            "observed": 11,
+            "live": 0
+          }
+        }
+      },
+      {
+        "pair": 2,
+        "version": "baseline",
+        "output": "docs/evidence/five-tools/performance/image-memory-baseline-2.json",
+        "code": 0,
+        "peakPrivateBytes": 547930112,
+        "afterClearPrivateBytes": 207396864,
+        "references": {
+          "input": {
+            "observed": 10,
+            "live": 0
+          },
+          "blob": {
+            "observed": 11,
+            "live": 0
+          }
+        }
+      },
+      {
+        "pair": 3,
+        "version": "baseline",
+        "output": "docs/evidence/five-tools/performance/image-memory-baseline-3.json",
+        "code": 0,
+        "peakPrivateBytes": 551190528,
+        "afterClearPrivateBytes": 207003648,
+        "references": {
+          "input": {
+            "observed": 10,
+            "live": 0
+          },
+          "blob": {
+            "observed": 11,
+            "live": 0
+          }
+        }
+      },
+      {
+        "pair": 3,
+        "version": "revised",
+        "output": "docs/evidence/five-tools/performance/image-memory-revised-3.json",
+        "code": 0,
+        "peakPrivateBytes": 536002560,
+        "afterClearPrivateBytes": 193994752,
+        "references": {
+          "input": {
+            "observed": 10,
+            "live": 0
+          },
+          "blob": {
+            "observed": 11,
+            "live": 0
+          }
+        }
+      },
+      {
+        "pair": 4,
+        "version": "revised",
+        "output": "docs/evidence/five-tools/performance/image-memory-revised-4.json",
+        "code": 0,
+        "peakPrivateBytes": 467857408,
+        "afterClearPrivateBytes": 192307200,
+        "references": {
+          "input": {
+            "observed": 10,
+            "live": 0
+          },
+          "blob": {
+            "observed": 11,
+            "live": 0
+          }
+        }
+      },
+      {
+        "pair": 4,
+        "version": "baseline",
+        "output": "docs/evidence/five-tools/performance/image-memory-baseline-4.json",
+        "code": 0,
+        "peakPrivateBytes": 549019648,
+        "afterClearPrivateBytes": 206155776,
+        "references": {
+          "input": {
+            "observed": 10,
+            "live": 0
+          },
+          "blob": {
+            "observed": 11,
+            "live": 0
+          }
+        }
+      },
+      {
+        "pair": 5,
+        "version": "baseline",
+        "output": "docs/evidence/five-tools/performance/image-memory-baseline-5.json",
+        "code": 0,
+        "peakPrivateBytes": 541073408,
+        "afterClearPrivateBytes": 201527296,
+        "references": {
+          "input": {
+            "observed": 10,
+            "live": 0
+          },
+          "blob": {
+            "observed": 11,
+            "live": 0
+          }
+        }
+      },
+      {
+        "pair": 5,
+        "version": "revised",
+        "output": "docs/evidence/five-tools/performance/image-memory-revised-5.json",
+        "code": 0,
+        "peakPrivateBytes": 382984192,
+        "afterClearPrivateBytes": 190291968,
+        "references": {
+          "input": {
+            "observed": 10,
+            "live": 0
+          },
+          "blob": {
+            "observed": 11,
+            "live": 0
+          }
+        }
+      }
+    ],
+    "baseline": {
+      "samples": [
+        546365440,
+        547930112,
+        551190528,
+        549019648,
+        541073408
+      ],
+      "median": 547930112,
+      "min": 541073408,
+      "max": 551190528
+    },
+    "revised": {
+      "samples": [
+        463380480,
+        466538496,
+        536002560,
+        467857408,
+        382984192
+      ],
+      "median": 466538496,
+      "min": 382984192,
+      "max": 536002560
+    },
+    "improvedPairs": 5,
+    "medianImprovement": 0.14854379092784742,
+    "meetsPerformanceThreshold": true
+  },
+  "previewPaint": {
+    "failures": [],
+    "metrics": {
+      "open": {
+        "values": [
+          {
+            "pair": 1,
+            "version": "baseline",
+            "ms": 981.2350000143051
+          },
+          {
+            "pair": 1,
+            "version": "revised",
+            "ms": 1002.2350000143051
+          },
+          {
+            "pair": 2,
+            "version": "revised",
+            "ms": 984.6949999928474
+          },
+          {
+            "pair": 2,
+            "version": "baseline",
+            "ms": 1034.1500000357628
+          },
+          {
+            "pair": 3,
+            "version": "baseline",
+            "ms": 1037.4750000238419
+          },
+          {
+            "pair": 3,
+            "version": "revised",
+            "ms": 887.7950000166893
+          },
+          {
+            "pair": 4,
+            "version": "revised",
+            "ms": 964.6899999976158
+          },
+          {
+            "pair": 4,
+            "version": "baseline",
+            "ms": 936.9750000238419
+          },
+          {
+            "pair": 5,
+            "version": "baseline",
+            "ms": 902.3100000023842
+          },
+          {
+            "pair": 5,
+            "version": "revised",
+            "ms": 1018.9699999690056
+          }
+        ],
+        "baseline": {
+          "samples": [
+            981.2350000143051,
+            1034.1500000357628,
+            1037.4750000238419,
+            936.9750000238419,
+            902.3100000023842
+          ],
+          "median": 981.2350000143051,
+          "min": 902.3100000023842,
+          "max": 1037.4750000238419
+        },
+        "revised": {
+          "samples": [
+            1002.2350000143051,
+            984.6949999928474,
+            887.7950000166893,
+            964.6899999976158,
+            1018.9699999690056
+          ],
+          "median": 984.6949999928474,
+          "min": 887.7950000166893,
+          "max": 1018.9699999690056
+        },
+        "improvedPairs": 2,
+        "medianImprovement": -0.0035261685309755375,
+        "meetsPerformanceThreshold": false
+      },
+      "turn": {
+        "values": [
+          {
+            "pair": 1,
+            "version": "baseline",
+            "ms": 2758.310000002384
+          },
+          {
+            "pair": 1,
+            "version": "revised",
+            "ms": 1605.570000052452
+          },
+          {
+            "pair": 2,
+            "version": "revised",
+            "ms": 1460.2699999213219
+          },
+          {
+            "pair": 2,
+            "version": "baseline",
+            "ms": 2674.139999985695
+          },
+          {
+            "pair": 3,
+            "version": "baseline",
+            "ms": 2569.225000023842
+          },
+          {
+            "pair": 3,
+            "version": "revised",
+            "ms": 1494.9949999451637
+          },
+          {
+            "pair": 4,
+            "version": "revised",
+            "ms": 1598.9700000286102
+          },
+          {
+            "pair": 4,
+            "version": "baseline",
+            "ms": 2800.9549999833107
+          },
+          {
+            "pair": 5,
+            "version": "baseline",
+            "ms": 2765.0400000214577
+          },
+          {
+            "pair": 5,
+            "version": "revised",
+            "ms": 1309.5949999690056
+          }
+        ],
+        "baseline": {
+          "samples": [
+            2758.310000002384,
+            2674.139999985695,
+            2569.225000023842,
+            2800.9549999833107,
+            2765.0400000214577
+          ],
+          "median": 2758.310000002384,
+          "min": 2569.225000023842,
+          "max": 2800.9549999833107
+        },
+        "revised": {
+          "samples": [
+            1605.570000052452,
+            1460.2699999213219,
+            1494.9949999451637,
+            1598.9700000286102,
+            1309.5949999690056
+          ],
+          "median": 1494.9949999451637,
+          "min": 1309.5949999690056,
+          "max": 1605.570000052452
+        },
+        "improvedPairs": 5,
+        "medianImprovement": 0.45800327013864595,
+        "meetsPerformanceThreshold": true
+      }
+    }
+  },
+  "failures": []
+}

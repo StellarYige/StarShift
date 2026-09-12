@@ -1,0 +1,52 @@
+[
+  {
+    "stage": "results",
+    "viewport": [
+      390,
+      844
+    ],
+    "bar": {
+      "x": 0,
+      "y": 707,
+      "width": 390,
+      "height": 137,
+      "top": 707,
+      "right": 390,
+      "bottom": 844,
+      "left": 0
+    },
+    "resultsButton": {
+      "x": 14,
+      "y": 790,
+      "width": 362,
+      "height": 44,
+      "top": 790,
+      "right": 376,
+      "bottom": 834,
+      "left": 14
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "documentWidth": 390,
+    "smallButtons": []
+  },
+  {
+    "tool": "#docx-pdf",
+    "smallText": [],
+    "smallControls": []
+  },
+  {
+    "tool": "#image-convert",
+    "smallText": [],
+    "smallControls": []
+  },
+  {
+    "tool": "#pdf-image",
+    "smallText": [],
+    "smallControls": []
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "observed": "WebKit image-PDF streaming rejected the first image with an invalid queue order. The same DOM handshake test passed in Chromium.",
+  "builtPdfModule": "dist/assets/pdf-edit-DwjMBfJR.js",
+  "builtPdfModuleImport": "import{t as e}from\"./task-worker-B5qMvfEv.js\";",
+  "workerEntryExport": "export{r as t};",
+  "sharedFunction": "asBlob",
+  "diagnosis": "A lazy PDF module imported the side-effectful Worker entry. Re-entering that module resets its stream state; avoiding that circular dependency is necessary regardless of engine module caching behavior.",
+  "change": "Specialize PDF Blob creation inside the PDF module to keep its dependency graph independent of the Worker entry. The bytes and MIME remain unchanged."
+}
