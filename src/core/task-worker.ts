@@ -1,5 +1,5 @@
 import { renderImage } from './images';
-import { asBlob, errorMessage, uniqueName } from './common';
+import { asBlob, errorMessage, MAX_TOTAL_BYTES, uniqueName } from './common';
 import type { PageItem, Progress, Settings } from '../types';
 
 export type WorkerJob =
@@ -48,10 +48,14 @@ self.onmessage = async ({ data: job }: MessageEvent<WorkerJob | ImageChunk>) => 
       const docs = await loadPdfSources(job.sources, job.pages);
       job.sources = [];
       const groups = job.split ? job.pages.map(p => [p]) : [job.pages];
+      let outputBytes = 0;
       try {
         for (let i = 0; i < groups.length; i++) {
           progress('正在导出整理后的页面…', i, groups.length, { phase: 'assemble', unit: 'file' });
-          results.push({ blob: await assemblePdf(docs, groups[i], job.split ? undefined : progress), name: job.split ? `页面-${String(i + 1).padStart(3, '0')}.pdf` : '整理后的文件.pdf' });
+          const blob = await assemblePdf(docs, groups[i], job.split ? undefined : progress);
+          outputBytes += blob.size;
+          if (outputBytes > MAX_TOTAL_BYTES) throw new Error('本批输出超过 300 MB，请减少选中内容后重试。');
+          results.push({ blob, name: job.split ? `页面-${String(i + 1).padStart(3, '0')}.pdf` : '整理后的文件.pdf' });
           progress('已导出整理后的页面', i + 1, groups.length, { phase: 'export', unit: 'file' });
         }
       } finally { docs.clear(); }

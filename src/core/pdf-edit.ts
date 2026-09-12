@@ -1,6 +1,9 @@
 import { PDFDocument, PDFName, degrees, PageSizes } from 'pdf-lib';
 import type { PageItem, Progress, Settings } from '../types';
-import { asBlob } from './common';
+// Keep this lazy module independent of the Worker entry. Sharing asBlob with
+// that entry made the bundler emit a circular import that restarted WebKit's
+// entry module and lost the image stream's acknowledgement state.
+function pdfBlob(data: Uint8Array) { return new Blob([new Uint8Array(data)], { type: 'application/pdf' }); }
 
 export async function loadPdfSources(sources: { id: string; bytes: Uint8Array }[], pages: Pick<PageItem, 'sourceId'>[]) {
   const needed = new Set(pages.map(p => p.sourceId));
@@ -26,7 +29,7 @@ export async function assemblePdf(sources: { id: string; bytes: Uint8Array }[] |
     output.addPage(page);
     progress?.('正在整理页面…', i + 1, pages.length);
   }
-  return asBlob(await output.save(), 'application/pdf');
+  return pdfBlob(await output.save());
 }
 
 export async function createImagePdf(settings: Settings) {
@@ -46,6 +49,6 @@ export async function createImagePdf(settings: Settings) {
     // Do this before decoding the next image, not only at final save.
     await image.embed();
     },
-    async save() { return asBlob(await doc.save(), 'application/pdf'); },
+    async save() { return pdfBlob(await doc.save()); },
   };
 }
