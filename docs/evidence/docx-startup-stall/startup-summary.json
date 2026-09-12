@@ -1,0 +1,359 @@
+{
+  "source": "docs/evidence/docx-startup-stall/startup-observation.json",
+  "browser": "153.0.8010.12",
+  "os": "Windows_NT 10.0.26200",
+  "node": "v24.18.0",
+  "samples": [
+    {
+      "scenario": "cold",
+      "batch": 1,
+      "status": "passed",
+      "elapsedMs": 12209,
+      "stages": {
+        "resources": {
+          "ms": 207.46999996900558,
+          "resourcesComplete": 0,
+          "runtimeInitialized": false,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "downloadSequence": 0,
+          "stage": "resources"
+        },
+        "worker": {
+          "ms": 3467.6299999952316,
+          "resourcesComplete": 4,
+          "runtimeInitialized": true,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "runDependencies": 0,
+          "downloadSequence": 270,
+          "stage": "worker"
+        },
+        "uno": {
+          "ms": 10333.230000019073,
+          "resourcesComplete": 5,
+          "runtimeInitialized": true,
+          "workersCreated": 2,
+          "workersLoaded": 2,
+          "runDependencies": 0,
+          "downloadSequence": 270,
+          "stage": "uno"
+        }
+      },
+      "lastStartup": {
+        "resourcesComplete": 5,
+        "runtimeInitialized": true,
+        "workersCreated": 2,
+        "workersLoaded": 2,
+        "runDependencies": 0,
+        "downloadSequence": 270,
+        "stage": "uno"
+      },
+      "readyMs": 10661.370000004768,
+      "layout": true,
+      "frames": 0,
+      "isolated": true
+    },
+    {
+      "scenario": "revisit",
+      "batch": 1,
+      "status": "passed",
+      "elapsedMs": 10252,
+      "stages": {
+        "resources": {
+          "ms": 113.95000004768372,
+          "resourcesComplete": 0,
+          "runtimeInitialized": false,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "downloadSequence": 0,
+          "stage": "resources"
+        },
+        "worker": {
+          "ms": 3546.064999997616,
+          "resourcesComplete": 4,
+          "runtimeInitialized": true,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "runDependencies": 0,
+          "downloadSequence": 274,
+          "stage": "worker"
+        },
+        "uno": {
+          "ms": 8464.590000033379,
+          "resourcesComplete": 5,
+          "runtimeInitialized": true,
+          "workersCreated": 2,
+          "workersLoaded": 2,
+          "runDependencies": 0,
+          "downloadSequence": 274,
+          "stage": "uno"
+        }
+      },
+      "lastStartup": {
+        "resourcesComplete": 5,
+        "runtimeInitialized": true,
+        "workersCreated": 2,
+        "workersLoaded": 2,
+        "runDependencies": 0,
+        "downloadSequence": 274,
+        "stage": "uno"
+      },
+      "readyMs": 8742,
+      "layout": true,
+      "frames": 0,
+      "isolated": true
+    },
+    {
+      "scenario": "continuous",
+      "batch": 1,
+      "status": "passed",
+      "elapsedMs": 8685,
+      "stages": {
+        "resources": {
+          "ms": 71.91500002145767,
+          "resourcesComplete": 0,
+          "runtimeInitialized": false,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "downloadSequence": 0,
+          "stage": "resources"
+        },
+        "worker": {
+          "ms": 3360.610000014305,
+          "resourcesComplete": 4,
+          "runtimeInitialized": true,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "runDependencies": 0,
+          "downloadSequence": 270,
+          "stage": "worker"
+        },
+        "uno": {
+          "ms": 7766.175000011921,
+          "resourcesComplete": 5,
+          "runtimeInitialized": true,
+          "workersCreated": 2,
+          "workersLoaded": 2,
+          "runDependencies": 0,
+          "downloadSequence": 270,
+          "stage": "uno"
+        }
+      },
+      "lastStartup": {
+        "resourcesComplete": 5,
+        "runtimeInitialized": true,
+        "workersCreated": 2,
+        "workersLoaded": 2,
+        "runDependencies": 0,
+        "downloadSequence": 270,
+        "stage": "uno"
+      },
+      "readyMs": 7956.139999985695,
+      "layout": true,
+      "frames": 0,
+      "isolated": true
+    },
+    {
+      "scenario": "continuous",
+      "batch": 2,
+      "status": "passed",
+      "elapsedMs": 9122,
+      "stages": {
+        "resources": {
+          "ms": 76.20500004291534,
+          "resourcesComplete": 0,
+          "runtimeInitialized": false,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "downloadSequence": 0,
+          "stage": "resources"
+        },
+        "worker": {
+          "ms": 2829.4550000429153,
+          "resourcesComplete": 4,
+          "runtimeInitialized": true,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "runDependencies": 0,
+          "downloadSequence": 269,
+          "stage": "worker"
+        },
+        "uno": {
+          "ms": 8084.985000014305,
+          "resourcesComplete": 5,
+          "runtimeInitialized": true,
+          "workersCreated": 2,
+          "workersLoaded": 2,
+          "runDependencies": 0,
+          "downloadSequence": 269,
+          "stage": "uno"
+        }
+      },
+      "lastStartup": {
+        "resourcesComplete": 5,
+        "runtimeInitialized": true,
+        "workersCreated": 2,
+        "workersLoaded": 2,
+        "runDependencies": 0,
+        "downloadSequence": 269,
+        "stage": "uno"
+      },
+      "readyMs": 8336.400000035763,
+      "layout": true,
+      "frames": 0,
+      "isolated": true
+    },
+    {
+      "scenario": "continuous",
+      "batch": 3,
+      "status": "passed",
+      "elapsedMs": 11234,
+      "stages": {
+        "resources": {
+          "ms": 92.49500000476837,
+          "resourcesComplete": 0,
+          "runtimeInitialized": false,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "downloadSequence": 0,
+          "stage": "resources"
+        },
+        "worker": {
+          "ms": 3519.6650000214577,
+          "resourcesComplete": 4,
+          "runtimeInitialized": true,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "runDependencies": 0,
+          "downloadSequence": 273,
+          "stage": "worker"
+        },
+        "uno": {
+          "ms": 10159.055000007153,
+          "resourcesComplete": 5,
+          "runtimeInitialized": true,
+          "workersCreated": 2,
+          "workersLoaded": 2,
+          "runDependencies": 0,
+          "downloadSequence": 273,
+          "stage": "uno"
+        }
+      },
+      "lastStartup": {
+        "resourcesComplete": 5,
+        "runtimeInitialized": true,
+        "workersCreated": 2,
+        "workersLoaded": 2,
+        "runDependencies": 0,
+        "downloadSequence": 273,
+        "stage": "uno"
+      },
+      "readyMs": 10403.125,
+      "layout": true,
+      "frames": 0,
+      "isolated": true
+    },
+    {
+      "scenario": "continuous",
+      "batch": 4,
+      "status": "passed",
+      "elapsedMs": 10216,
+      "stages": {
+        "resources": {
+          "ms": 92.68000000715256,
+          "resourcesComplete": 0,
+          "runtimeInitialized": false,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "downloadSequence": 0,
+          "stage": "resources"
+        },
+        "worker": {
+          "ms": 3400.1400000452995,
+          "resourcesComplete": 4,
+          "runtimeInitialized": true,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "runDependencies": 0,
+          "downloadSequence": 271,
+          "stage": "worker"
+        },
+        "uno": {
+          "ms": 9012.050000011921,
+          "resourcesComplete": 5,
+          "runtimeInitialized": true,
+          "workersCreated": 2,
+          "workersLoaded": 2,
+          "runDependencies": 0,
+          "downloadSequence": 271,
+          "stage": "uno"
+        }
+      },
+      "lastStartup": {
+        "resourcesComplete": 5,
+        "runtimeInitialized": true,
+        "workersCreated": 2,
+        "workersLoaded": 2,
+        "runDependencies": 0,
+        "downloadSequence": 271,
+        "stage": "uno"
+      },
+      "readyMs": 9237.290000021458,
+      "layout": true,
+      "frames": 0,
+      "isolated": true
+    },
+    {
+      "scenario": "continuous",
+      "batch": 5,
+      "status": "passed",
+      "elapsedMs": 10116,
+      "stages": {
+        "resources": {
+          "ms": 79.74000000953674,
+          "resourcesComplete": 0,
+          "runtimeInitialized": false,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "downloadSequence": 0,
+          "stage": "resources"
+        },
+        "worker": {
+          "ms": 3441.839999973774,
+          "resourcesComplete": 4,
+          "runtimeInitialized": true,
+          "workersCreated": 0,
+          "workersLoaded": 0,
+          "runDependencies": 0,
+          "downloadSequence": 271,
+          "stage": "worker"
+        },
+        "uno": {
+          "ms": 8699.144999980927,
+          "resourcesComplete": 5,
+          "runtimeInitialized": true,
+          "workersCreated": 2,
+          "workersLoaded": 2,
+          "runDependencies": 0,
+          "downloadSequence": 271,
+          "stage": "uno"
+        }
+      },
+      "lastStartup": {
+        "resourcesComplete": 5,
+        "runtimeInitialized": true,
+        "workersCreated": 2,
+        "workersLoaded": 2,
+        "runDependencies": 0,
+        "downloadSequence": 271,
+        "stage": "uno"
+      },
+      "readyMs": 8977.405000030994,
+      "layout": true,
+      "frames": 0,
+      "isolated": true
+    }
+  ],
+  "notes": "One real cold/revisit/five-batch observation without fault injection. Stage notifications can overlap or be delivered close together; not an acceleration comparison or proof of a fixed hang."
+}

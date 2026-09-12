@@ -1,0 +1,774 @@
+{
+  "time": "2026-09-12T13:44:46.606Z",
+  "sources": [
+    {
+      "file": "docs/evidence/v0.1.1/performance/revised-local-final.json",
+      "sha256": "ac9cfef304af52bec6d550fc7c14a401efbf3895f04fb414582a09a72110b96f"
+    },
+    {
+      "file": "docs/evidence/v0.1.1/chromium-timeout-diagnostic.json",
+      "sha256": "f2d6072bd5b937e64bb87d5b03f25394ad0e4447def9e79cd7a0abae0cee13d5"
+    },
+    {
+      "file": "public/engine/soffice.js",
+      "sha256": "5143e5354f470b87f86ba272bcfef857bd13e6f07b59666e48a7ccb89643cd77"
+    },
+    {
+      "file": "public/engine/zetaHelper.js",
+      "sha256": "c07abdbc0d210ac803823d002520fac20d34ff18f20cbd5a78d203b5c9901a96"
+    }
+  ],
+  "failures": [
+    {
+      "keys": [
+        "round",
+        "scenario",
+        "batch",
+        "started",
+        "status",
+        "failure",
+        "elapsedMs",
+        "network",
+        "events",
+        "stages"
+      ],
+      "round": 5,
+      "scenario": "revisit",
+      "elapsedMs": 270103,
+      "events": [
+        {
+          "type": "check",
+          "ms": 54.60000002384186
+        },
+        {
+          "type": "progress",
+          "ms": 156.86500000953674,
+          "phase": "resource-load"
+        },
+        {
+          "type": "progress",
+          "ms": 205.75499999523163,
+          "phase": "resource-load"
+        },
+        {
+          "type": "progress",
+          "ms": 306.125,
+          "phase": "resource-load"
+        },
+        {
+          "type": "progress",
+          "ms": 512.6850000023842,
+          "phase": "resource-load"
+        },
+        {
+          "type": "progress",
+          "ms": 608.2300000190735,
+          "phase": "resource-load"
+        },
+        {
+          "type": "progress",
+          "ms": 3487.25,
+          "phase": "initialize"
+        },
+        {
+          "type": "progress",
+          "ms": 3872.9050000309944,
+          "phase": "initialize"
+        },
+        {
+          "type": "progress",
+          "ms": 6148.930000007153,
+          "phase": "initialize"
+        }
+      ],
+      "incomplete": [
+        {
+          "target": "worker",
+          "resource": "zetaHelper.js"
+        }
+      ]
+    }
+  ],
+  "snapshots": [
+    {
+      "time": "2026-09-12T05:50:27.160Z",
+      "round": 1,
+      "phase": "resource-load",
+      "outputs": 0,
+      "engine": {
+        "runtime": false,
+        "dependencies": 1,
+        "workers": 0,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:50:32.167Z",
+      "round": 1,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:50:37.171Z",
+      "round": 1,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:50:42.170Z",
+      "round": 2,
+      "phase": null,
+      "outputs": 0,
+      "engine": null
+    },
+    {
+      "time": "2026-09-12T05:50:47.173Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": false,
+        "dependencies": 1904,
+        "workers": 0,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:50:52.176Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:50:57.192Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:02.198Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:07.216Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:12.231Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:17.228Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:22.231Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:27.246Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:32.260Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:37.268Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:42.276Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:47.288Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:52.296Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:51:57.304Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:02.318Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:07.329Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:12.342Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:17.353Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:22.363Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:27.368Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:32.379Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:37.389Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:42.398Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:47.403Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:52.408Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:52:57.409Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:02.422Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:07.425Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:12.431Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:17.443Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:22.445Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:27.456Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:32.460Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:37.463Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:42.471Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:47.483Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:52.485Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:53:57.490Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:54:02.503Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:54:07.519Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:54:12.531Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:54:17.543Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:54:22.557Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:54:27.561Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:54:32.561Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:54:37.572Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "time": "2026-09-12T05:54:42.585Z",
+      "round": 2,
+      "phase": "initialize",
+      "outputs": 0,
+      "engine": {
+        "runtime": true,
+        "dependencies": 0,
+        "workers": 2,
+        "unusedWorkers": 0,
+        "aborted": false
+      }
+    },
+    {
+      "engine": null
+    }
+  ],
+  "engineCallbackEvidence": {
+    "Module[\"onRuntimeInitialized\"]?.()": "Dependencies>0){return}function doRun(){if(calledRun)return;calledRun=true;Module[\"calledRun\"]=true;if(ABORT)return;initRuntime();preMain();Module[\"onRuntimeInitialized\"]?.();if(shouldRunNow)callMain(args);postRun()}if(Module[\"setStatus\"]){Module[\"setStatus\"](\"Running...\");setTimeout(function(){setTimeout(function(){Module[\"setStatus\"](\"\")},1);doRun()},1)}el",
+    "cmd:\"loaded\"": "===\"load\"){workerID=msgData[\"workerID\"];let messageQueue=[];self.onmessage=e=>messageQueue.push(e);self.startWorker=instance=>{postMessage({cmd:\"loaded\"});for(let msg of messageQueue){handleMessage(msg)}self.onmessage=handleMessage};for(const handler of msgData[\"handlers\"]){if(!Module[handler]||Module[handler].proxy){Module[handler]=(...args)=>{postMessage({",
+    "data.cmd": "unUnoScriptUrl(url){importScripts(UTF16ToString(url))}function setupMainChannel(){const orig=self.onmessage;self.onmessage=function(e){if(e.data.cmd===\"LOWA-channel\"){self.onmessage=orig;Module.uno_mainPort=e.ports[0];Module.uno_init$resolve()}else if(orig){orig(e)}}}function jsGetExportedSymbol(name){const val=Module[\"_\"+UTF8ArrayToString(HEAPU8,name)];retu",
+    "monitorRunDependencies": "var orig=id;while(1){if(!runDependencyTracking[id])return id;id=orig+Math.random()}}function addRunDependency(id){runDependencies++;Module[\"monitorRunDependencies\"]?.(runDependencies);if(id){assert(!runDependencyTracking[id]);runDependencyTracking[id]=1;if(runDependencyWatcher===null&&typeof setInterval!=\"undefined\"){runDependencyWatcher=setInterval(()=>{if("
+  },
+  "notes": "Read existing synthetic failures only. Resource completion and runtime initialization are distinct from Worker/helper handshakes and final ready. Missing CDP completion is not proof of network failure. No new natural reproduction asserted."
+}

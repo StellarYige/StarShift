@@ -6,3 +6,4 @@
 .preview-header,.preview-footer{flex-shrink:0}
 .preview-body{flex:1 1 auto;min-height:0}
 .preview-body img{flex-shrink:0}
+.startup-wait{flex-basis:100%;line-height:1.8;color:#89633d}

@@ -1,6 +1,143 @@
 import { test, expect } from '@playwright/test';
 import { open, select, convert, trackResources, resources, verifyDocx, evidence } from './helpers';
 
+type StartupFaultHost = Window & {
+  __startupFault?: string; __pauseDownload?: boolean; __startupClockOffset?: number;
+  __expireStartup?: () => void; __startupTimeoutMs?: number;
+  __startupHeld?: string;
+};
+for (const { stage, finish } of [
+  { stage: 'resources', finish: 'cancel' }, { stage: 'wasm', finish: 'cancel' },
+  { stage: 'worker', finish: 'cancel' }, { stage: 'uno', finish: 'cancel' },
+  { stage: 'worker', finish: 'timeout' }, { stage: 'resources', finish: 'timeout' },
+] as const) {
+  test(`DOCX startup ${stage} observation, ${finish} and explicit reinitialization`, async ({ page, browserName }, info) => {
+    test.skip(browserName !== 'chromium', 'Targeted startup injection on the supported engine; not a device compatibility claim.');
+    await trackResources(page);
+    await page.addInitScript(kind => {
+      const host = top as StartupFaultHost;
+      if (window === top) {
+        host.__startupFault = kind; host.__startupClockOffset = 0;
+        const now = performance.now.bind(performance);
+        // Advance only the parent observer's clock. Engine clocks and native
+        // deadlines keep real time; this is fault injection, not performance data.
+        performance.now = () => now() + (host.__startupClockOffset || 0);
+        const schedule = window.setTimeout.bind(window);
+        window.setTimeout = ((callback: TimerHandler, delay?: number, ...args: unknown[]) => {
+          if (delay === 240000 && typeof callback === 'function') {
+            host.__startupTimeoutMs = delay;
+            host.__expireStartup = () => callback.apply(window, args);
+          }
+          return schedule(callback, delay, ...args);
+        }) as typeof window.setTimeout;
+      } else if (location.pathname.endsWith('/office/frame.html')) {
+        const fetchResource = window.fetch;
+        window.fetch = (input, options) => {
+          if (host.__startupFault !== 'resources' || !String(input).includes('/fonts/')) return fetchResource(input, options);
+          return Promise.resolve(new Response(new ReadableStream({
+            start(controller) {
+              const timer = setInterval(() => { if (!host.__pauseDownload) controller.enqueue(new Uint8Array(1024)); }, 80);
+              options?.signal?.addEventListener('abort', () => { clearInterval(timer); controller.error(new DOMException('Cancelled', 'AbortError')); }, { once: true });
+            },
+          })));
+        };
+        const append = Node.prototype.appendChild;
+        Node.prototype.appendChild = function<T extends Node>(node: T): T {
+          if (host.__startupFault === 'wasm' && node instanceof HTMLScriptElement && node.src.endsWith('/soffice.js')) {
+            const module = (window as Window & { Module?: { preRun: (() => void)[]; addRunDependency: (id: string) => void } }).Module!;
+            module.preRun.push(() => { module.addRunDependency('synthetic-startup-hold'); host.__startupHeld = 'wasm'; });
+          }
+          return append.call(this, node) as T;
+        };
+        const message = Object.getOwnPropertyDescriptor(MessagePort.prototype, 'onmessage')!;
+        Object.defineProperty(MessagePort.prototype, 'onmessage', {
+          ...message,
+          set(callback) {
+            message.set!.call(this, typeof callback === 'function' ? function(this: MessagePort, event: MessageEvent) {
+              if (host.__startupFault === 'worker' && event.data?.cmd === 'ZetaHelper::thr_started') { host.__startupHeld = 'worker'; return; }
+              if (host.__startupFault === 'uno' && event.data?.type === 'ready') { host.__startupHeld = 'uno'; return; }
+              return callback.call(this, event);
+            } : callback);
+          },
+        });
+      }
+    }, stage);
+    await open(page, 'docx-pdf');
+    await select(page, ['中文表格分页.docx', 'font-substitution.docx']);
+    const baseline = await resources(page);
+    let frames = 0; page.on('frameattached', () => { frames++; });
+    await page.getByRole('button', { name: '开始转换', exact: true }).click();
+    const panel = page.locator('.progress-panel');
+    await expect(panel).toHaveAttribute('data-startup-stage', stage, { timeout: 90000 });
+    if (stage !== 'resources') await page.waitForFunction(expected => (window as StartupFaultHost).__startupHeld === expected, stage, { timeout: 90000 });
+    if (stage === 'resources') {
+      await expect(panel).toContainText('最近仍收到下载数据');
+      await page.evaluate(async () => {
+        const host = window as StartupFaultHost;
+        for (let n = 0; n < 10; n++) { host.__startupClockOffset! += 6000; await new Promise(resolve => setTimeout(resolve, 100)); }
+      });
+      // Require a new body observation after the clock adjustment, not stale UI
+      // from just before its final jump, before testing a still-active download.
+      const bytes = panel.locator('span').filter({ hasText: /^已读取 / });
+      const previousBytes = await bytes.textContent();
+      await expect(bytes).not.toHaveText(previousBytes!);
+      await expect(panel.locator('.startup-wait')).toHaveCount(0);
+    }
+    if (!(finish === 'timeout' && stage === 'resources')) {
+      if (stage === 'worker' && finish === 'cancel') {
+        await page.frames().find(frame => frame.url().includes('/office/frame.html'))!.evaluate(() => {
+          const module = (window as Window & { Module?: { monitorRunDependencies: (count: number) => void } }).Module!;
+          setInterval(() => module.monitorRunDependencies(0), 100);
+        });
+      }
+      await page.evaluate(() => { (window as StartupFaultHost).__pauseDownload = true; });
+      await page.waitForTimeout(700); // Let the last real body progress observation settle.
+      await page.evaluate(() => { (window as StartupFaultHost).__startupClockOffset! += 31000; });
+      await expect(panel.locator('.startup-wait')).toContainText(stage === 'resources' ? '部分下载无法持续报告进度' : '未收到新的初始化进展');
+      await expect(panel.locator('.startup-wait')).toContainText('取消后重新初始化');
+      await expect(page.locator('.status-working')).toHaveCount(1);
+      await expect(page.locator('.status-ready')).toHaveCount(1);
+      expect(frames).toBe(1); // Advisory never starts an automatic retry.
+    }
+    expect(await page.evaluate(() => (window as StartupFaultHost).__startupTimeoutMs)).toBe(240000);
+    const observedMessage = await panel.textContent();
+    if (stage === 'resources' && finish === 'cancel') {
+      await page.setViewportSize({ width: 390, height: 844 });
+      await panel.screenshot({ path: info.outputPath('startup-wait.png') });
+      await page.setViewportSize({ width: 1365, height: 1000 });
+      await page.evaluate(() => { (window as StartupFaultHost).__pauseDownload = false; });
+      await expect(panel.locator('.startup-wait')).toHaveCount(0);
+      await expect(panel).toContainText('最近仍收到下载数据');
+      expect(frames).toBe(1);
+    }
+    if (finish === 'cancel') {
+      await page.getByRole('button', { name: '取消任务', exact: true }).click();
+      await expect(page.locator('.notice').last()).toContainText('输入和设置已保留');
+      await expect(page.locator('.status-cancelled')).toHaveCount(2);
+    } else {
+      await page.evaluate(() => (window as StartupFaultHost).__expireStartup?.());
+      await expect(page.locator('.notice').last()).toContainText(`启动超时（${stage === 'resources' ? '资源加载' : '工作线程启动'}）`);
+      if (stage === 'resources') await expect(page.locator('.notice').last()).toContainText('仍收到下载进度');
+      await expect(page.locator('.notice').last()).not.toContainText('减少文档大小');
+      await expect(page.locator('.status-error')).toHaveCount(1);
+      await expect(page.locator('.status-ready')).toHaveCount(1);
+    }
+    await expect(page.locator('.file-row')).toHaveCount(2);
+    await expect.poll(async () => ({ ...(await resources(page)), created: 0 })).toEqual({ ...baseline, created: 0 });
+    const released = await resources(page);
+    await page.evaluate(() => { const host = window as StartupFaultHost; host.__startupFault = ''; host.__expireStartup = undefined; });
+    await convert(page); await expect(page.locator('.result-list li')).toHaveCount(2);
+    await verifyDocx(page, info); expect(frames).toBe(2);
+    await expect(page.locator('.startup-wait, iframe')).toHaveCount(0);
+    await page.evaluate(() => { location.hash = 'image-convert'; });
+    await select(page, ['transparent.png']); await convert(page);
+    await expect(page.locator('.result-list li')).toHaveCount(1);
+    await page.getByRole('button', { name: '清空任务' }).click();
+    await expect.poll(async () => ({ ...(await resources(page)), created: 0 })).toEqual({ ...baseline, created: 0 });
+    await evidence(info, 'startup-observation.json', { stage, finish, method: 'Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.', observedMessage, resumingDownloadClearsAdvisory: stage === 'resources' && finish === 'cancel' ? true : undefined, repeatedDependencyStateDoesNotResetWait: stage === 'worker' && finish === 'cancel' ? true : undefined, nativeInitializationTimeoutMs: 240000, frames, released, afterToolSwitch: await resources(page), actualRetry: 'two DOCX outputs; first output independently verified' });
+  });
+}
+
 for (const fault of ['download', 'script-download', 'initialize', 'timeout'] as const) {
   test(`${fault} failure stops the batch, preserves inputs, explicit retry recovers`, async ({ page, browserName }, info) => {
     test.skip(browserName !== 'chromium', 'Chromium fault injection; other engines have separate actual compatibility and lifecycle runs.');

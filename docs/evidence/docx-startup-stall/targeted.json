@@ -1,0 +1,267 @@
+{
+  "captured": "2026-09-12T13:34:39.573Z",
+  "source": "test-results/matrix/report.json",
+  "stats": {
+    "startTime": "2026-09-12T13:32:14.311Z",
+    "duration": 98653.106,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "DOCX startup resources observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13492,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "resources",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在加载中文字体…已读取 25 KB已 30 秒未收到新的资源加载进度；部分下载无法持续报告进度。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup wasm observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13854,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "wasm",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在初始化文档排版引擎…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup worker observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 15810,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "worker",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在启动文档工作线程…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 6,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup uno observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 17163,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "uno",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在等待文档服务就绪…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 6,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup worker observation, timeout and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 21357,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "worker",
+              "finish": "timeout",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在启动文档工作线程…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 6,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup resources observation, timeout and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13615,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "resources",
+              "finish": "timeout",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在加载中文字体…已读取 19 KB最近仍收到下载数据…",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

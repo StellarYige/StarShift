@@ -1,0 +1,233 @@
+{
+  "captured": "2026-09-12T13:32:12.391Z",
+  "source": "test-results/matrix/report.json",
+  "stats": {
+    "startTime": "2026-09-12T13:28:26.038Z",
+    "duration": 138164.917,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "DOCX startup resources observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 23140,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "resources",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在加载中文字体…已读取 15 KB已 30 秒未收到新的资源加载进度；部分下载无法持续报告进度。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup wasm observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 21666,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "wasm",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在初始化文档排版引擎…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 0,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 4,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup worker observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 24288,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+                "column": 52,
+                "line": 83
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.progress-panel').locator('.startup-wait')\nExpected substring: \u001b[32m\"未收到新的初始化进展\"\u001b[39m\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.progress-panel').locator('.startup-wait') with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.progress-panel').locator('.startup-wait')\u001b[22m\n\n\n  81 |       await page.waitForTimeout(700); // Let the last real body progress observation settle.\n  82 |       await page.evaluate(() => { (window as StartupFaultHost).__startupClockOffset! += 31000; });\n> 83 |       await expect(panel.locator('.startup-wait')).toContainText(stage === 'resources' ? '部分下载无法持续报告进度' : '未收到新的初始化进展');\n     |                                                    ^\n  84 |       await expect(panel.locator('.startup-wait')).toContainText('取消后重新初始化');\n  85 |       await expect(page.locator('.status-working')).toHaveCount(1);\n  86 |       await expect(page.locator('.status-ready')).toHaveCount(1);\n    at D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts:83:52"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup uno observation, cancel and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 21892,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "uno",
+              "finish": "cancel",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在等待文档服务就绪…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 6,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup worker observation, timeout and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 17892,
+          "errors": [],
+          "evidence": {
+            "startup-observation.json": {
+              "stage": "worker",
+              "finish": "timeout",
+              "method": "Deterministic stage hold and parent observer clock offset; not a natural hang or speed measurement.",
+              "observedMessage": "正在启动文档工作线程…已 30 秒未收到新的初始化进展。可继续等待，或取消后重新初始化；输入和设置会保留。",
+              "nativeInitializationTimeoutMs": 240000,
+              "frames": 2,
+              "released": {
+                "workers": 0,
+                "urls": 0,
+                "created": 2,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "afterToolSwitch": {
+                "workers": 0,
+                "urls": 0,
+                "created": 6,
+                "ports": 2,
+                "timers": 0,
+                "frames": 0
+              },
+              "actualRetry": "two DOCX outputs; first output independently verified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "DOCX startup resources observation, timeout and explicit reinitialization",
+      "file": "faults.spec.ts",
+      "project": "chromium",
+      "expectedStatus": "passed",
+      "status": "unexpected",
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 22850,
+          "errors": [
+            {
+              "location": {
+                "file": "D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts",
+                "column": 79,
+                "line": 98
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.notice').last()\nExpected substring: \u001b[32m\"仍收到下载进度\"\u001b[39m\nReceived string:    \u001b[31m\"文档引擎启动超时（资源加载）。输入和设置已保留，可重新初始化后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.notice').last() with timeout 20000ms\u001b[22m\n\u001b[2m  - waiting for locator('.notice').last()\u001b[22m\n\u001b[2m    43 × locator resolved to <div role=\"alert\" class=\"notice\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"文档引擎启动超时（资源加载）。输入和设置已保留，可重新初始化后重试。 已停止本批文档引擎，未处理文件和设置已保留，请显式重试。\"\u001b[22m\n\n\n   96 |       await page.evaluate(() => (window as StartupFaultHost).__expireStartup?.());\n   97 |       await expect(page.locator('.notice').last()).toContainText(`启动超时（${stage === 'resources' ? '资源加载' : '工作线程启动'}）`);\n>  98 |       if (stage === 'resources') await expect(page.locator('.notice').last()).toContainText('仍收到下载进度');\n      |                                                                               ^\n   99 |       await expect(page.locator('.notice').last()).not.toContainText('减少文档大小');\n  100 |       await expect(page.locator('.status-error')).toHaveCount(1);\n  101 |       await expect(page.locator('.status-ready')).toHaveCount(1);\n    at D:\\software\\xingyi\\tests\\matrix\\faults.spec.ts:98:79"
+            }
+          ],
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

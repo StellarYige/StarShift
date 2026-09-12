@@ -35,7 +35,7 @@ async function launch(profile) {
     const Native=window.MessageChannel;
     window.MessageChannel=class extends Native {
       constructor(){super();this.port1.addEventListener('message',({data})=>{
-        if(['progress','ready','done','error'].includes(data?.type))record({type:data.type,id:data.id,phase:data.detail?.phase,message:data.type==='progress'?data.message:undefined});
+        if(['progress','ready','done','error'].includes(data?.type))record({type:data.type,id:data.id,phase:data.detail?.phase,message:data.type==='progress'?data.message:undefined,startup:data.detail?.startup});
       });this.port1.start();const post=this.port1.postMessage.bind(this.port1);this.port1.postMessage=(data,...rest)=>{if(data?.type==='convert')record({type:'convert',id:data.id});return post(data,...rest);};}
     };
     let previous='';new MutationObserver(()=>{const value=document.querySelector('.progress-panel')?.textContent||'';if(value!==previous){previous=value;if(value.includes('检查文档'))record({type:'check'});}}).observe(document,{childList:true,subtree:true,characterData:true});

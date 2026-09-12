@@ -52,6 +52,11 @@ export async function trackResources(page: Page) {
         if (delay && delay >= 30000) state.timers.add(id); return id;
       }) as typeof window.setTimeout;
       window.clearTimeout = id => { if (typeof id === 'number') state.timers.delete(id); stop(id); };
+      const repeat = window.setInterval.bind(window), stopRepeat = window.clearInterval.bind(window);
+      window.setInterval = ((fn: TimerHandler, delay?: number, ...args: unknown[]) => {
+        const id = repeat(fn, delay, ...args); state.timers.add(id); return id;
+      }) as typeof window.setInterval;
+      window.clearInterval = id => { if (typeof id === 'number') state.timers.delete(id); stopRepeat(id); };
     }
   });
 }

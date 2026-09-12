@@ -39,12 +39,25 @@ export interface Settings {
   split: boolean;
 }
 export type ProgressPhase = 'document-check' | 'resource-load' | 'initialize' | 'import' | 'export';
+export interface OfficeStartupProgress {
+  stage: 'resources' | 'wasm' | 'worker' | 'uno';
+  resourcesComplete: number;
+  runtimeInitialized: boolean;
+  workersCreated: number;
+  workersLoaded: number;
+  runDependencies?: number;
+  // Counts advancing body reads/progress events, not transferred bytes.
+  downloadSequence: number;
+}
 export interface ProgressDetail {
   phase: ProgressPhase;
   resource?: 'font' | 'engine';
   loadedBytes?: number;
   totalBytes?: number;
   byteKind?: 'decoded';
+  startup?: OfficeStartupProgress;
+  quietForMs?: number;
+  downloadActive?: boolean;
 }
 // The first three arguments retain the existing file/page progress semantics.
 export type Progress = (message: string, completed?: number, total?: number, detail?: ProgressDetail) => void;
