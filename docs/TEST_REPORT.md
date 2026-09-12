@@ -24,6 +24,7 @@
 | GitHub Actions / Ubuntu | 首发提交的 7 项单元测试、14 项浏览器测试、构建、静态打包与 Pages 部署全部通过；浏览器测试约 30.7 秒 |
 | 静态 ZIP 自部署复测 | ZIP 全部 CRC 校验通过；独立解压后用 `python -m http.server` 提供服务，透明 PNG→JPG 与双文件中文 DOCX→PDF 两项通过，共约 16.0 秒 |
 | 真实 GitHub Pages | 相同 14 项浏览器测试全部通过，81.7 秒；不是只检查 HTTP 状态或构建结果 |
+| Windows 开发启动 | `npm.cmd run dev -- --strictPort` 成功；开发服务器的首页/移动视口与透明 PNG→JPG 两项测试通过，共 16.5 秒。另在保留转换结果时运行资源准备脚本，确认服务器存活、没有刷新、结果保留 |
 
 ## 实际验证内容
 
@@ -51,6 +52,8 @@
 3. PDF.js 6 的销毁入口为 `document.loadingTask.destroy()`，已按实际 API 调整；未使用已删除的 `isEvalSupported` 参数。
 4. 图片和 ZIP 重名去重，导出格式检查实际 MIME；JPEG 颜色断言使用有损编码容差。
 5. 超大文件测试最初触及 Playwright 的 50 MB buffer 限制，改用临时实际文件路径；产品的 100 MB 检查通过。
+6. Windows 开发服务器曾在监听第三方字体文件时遇到 `EBUSY`。排除 vendor、大型生成资源和测试缓存的监听；另关闭 Vite 的浏览器日志转发。开发复测与生成资源更新检查通过。
+7. 初次开发环境复测时，同时执行构建触发生成资源的热刷新，文件队列被清空，导致用例等待转换按钮超时。补充排除生成清单和 Service Worker 的监听；重新复测通过。生产构建没有 HMR。
 
 ## 证据与复现
 
@@ -82,4 +85,4 @@ npm.cmd run test:e2e
 - DOCX 流程记录 58 个请求，全部为本站静态 GET、无请求正文、无外部关系目标或测试私密文件名；图片转换与 ZIP 的网络用例也通过。
 - 线上测试覆盖五项工具、透明背景、EXIF/手动方向、矢量页序、毫米边距、批量 ZIP、错误重试、取消、hash 刷新和移动视口。
 
-机器可读的线上摘要见 [online-validation.json](online-validation.json)，也随静态包提供。完整线上文件与截图在本地 `test-results/`；GitHub Actions artifact 提供 CI 环境的完整测试证据。本文后续提交补充交付记录和打包记录，首发功能代码不变。
+机器可读的线上摘要见 [online-validation.json](online-validation.json)，也随静态包提供。完整线上文件与截图在本地 `test-results/`；GitHub Actions artifact 提供 CI 环境的完整测试证据。后续文档、打包记录与开发服务器配置修复没有改变首发生产转换代码，开发回归检查见上表。

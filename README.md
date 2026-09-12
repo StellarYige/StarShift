@@ -31,6 +31,8 @@ npm.cmd run dev
 
 打开终端实际显示的 `/StarShift/` 地址。引擎和字体已压缩保存在 `vendor/`，`predev` / `prebuild` 校验 SHA-256 后解压到 `public/`；该步骤不访问网络。`npm ci` 只下载开发依赖，不接触用户文件。
 
+开发服务器不监听第三方大资源或测试缓存，也不向服务器转发浏览器日志。替换 `vendor/` 引擎或字体后，请重新运行 `npm.cmd run dev`。
+
 ```powershell
 npm.cmd run typecheck
 npm.cmd test
