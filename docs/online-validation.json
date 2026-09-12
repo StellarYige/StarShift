@@ -1,0 +1,204 @@
+{
+  "url": "https://stellaryige.github.io/StarShift/",
+  "testedCodeCommit": "110ab0ad7a56ee29cd953c06910b4942f453d460",
+  "deploymentWorkflow": "https://github.com/StellarYige/StarShift/actions/runs/34663271350",
+  "deploymentConclusion": "success",
+  "environment": {
+    "os": "Windows",
+    "browser": "Chromium 153.0.8010.12",
+    "playwright": "1.63.0",
+    "physicalMobileDevice": false
+  },
+  "stats": {
+    "startTime": "2026-09-12T00:59:19.767Z",
+    "duration": 81665.42199999999,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "homepage, mobile, hash refresh and no eager engine download",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2188
+        }
+      ]
+    },
+    {
+      "title": "PNG transparency to JPG white fill, correct MIME, dimensions and download",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3686
+        }
+      ]
+    },
+    {
+      "title": "PNG / WebP batch preserves alpha and duplicate names in ZIP",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2930
+        }
+      ]
+    },
+    {
+      "title": "JPEG EXIF orientation then user rotation applied once",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2794
+        }
+      ]
+    },
+    {
+      "title": "images to PDF: order, EXIF, rotation, margins, paper and preview",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4958
+        }
+      ]
+    },
+    {
+      "title": "PDF to images: selected pages, DPI and rotated page geometry",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3436
+        }
+      ]
+    },
+    {
+      "title": "PDF organization: merge, delete, select, reorder, rotate, split and vectors",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4253
+        }
+      ]
+    },
+    {
+      "title": "broken PDF, invalid range, retry and cancellation are explicit",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3590
+        }
+      ]
+    },
+    {
+      "title": "local-only network audit while converting user-named files",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2043
+        }
+      ]
+    },
+    {
+      "title": "encrypted PDF and oversized files receive explicit errors",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2330
+        }
+      ]
+    },
+    {
+      "title": "A4 landscape and millimetre margins produce the requested paper size",
+      "file": "conversions.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3019
+        }
+      ]
+    },
+    {
+      "title": "DOCX to PDF: Chinese, image, table, pagination, local-only network and preview",
+      "file": "docx.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 40334
+        }
+      ]
+    },
+    {
+      "title": "DOCX rejects malformed and macro packages before loading engine",
+      "file": "docx.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2250
+        }
+      ]
+    },
+    {
+      "title": "DOCX engine loading can be cancelled and releases the frame",
+      "file": "docx.spec.ts",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1778
+        }
+      ]
+    }
+  ],
+  "docx": {
+    "batchConversionMs": 35790,
+    "inputDocuments": 2,
+    "outputPagesPerDocument": 2,
+    "requestCount": 58,
+    "allGetWithoutBody": true,
+    "httpOrigins": [
+      "https://stellaryige.github.io"
+    ],
+    "noDocumentNamesOrExternalReference": true,
+    "independentVerifier": "scripts/assert-docx-output.py"
+  },
+  "extractedStaticRelease": {
+    "server": "python -m http.server 4190",
+    "basePath": "/StarShift/",
+    "stats": {
+      "startTime": "2026-09-12T00:58:40.238Z",
+      "duration": 15960.848,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "limitations": [
+    "Chromium mobile viewport simulation only; no physical mobile, Safari or Firefox validation.",
+    "Synthetic documents; no claim of compatibility with every DOCX layout."
+  ]
+}

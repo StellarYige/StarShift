@@ -21,6 +21,9 @@
 | `npm.cmd run check` | 类型、单元、生产构建与 14 项浏览器测试完整串联通过 |
 | `npm.cmd audit --omit=dev` | npm 未报告生产依赖漏洞；不代表对 WASM 或所有潜在漏洞的审计 |
 | 额外输出语义复核 | 针对方向像素、页序文字、向量路径和毫米边距强化断言后单独重跑 5 项，全部通过 |
+| GitHub Actions / Ubuntu | 首发提交的 7 项单元测试、14 项浏览器测试、构建、静态打包与 Pages 部署全部通过；浏览器测试约 30.7 秒 |
+| 静态 ZIP 自部署复测 | ZIP 全部 CRC 校验通过；独立解压后用 `python -m http.server` 提供服务，透明 PNG→JPG 与双文件中文 DOCX→PDF 两项通过，共约 16.0 秒 |
+| 真实 GitHub Pages | 相同 14 项浏览器测试全部通过，81.7 秒；不是只检查 HTTP 状态或构建结果 |
 
 ## 实际验证内容
 
@@ -64,4 +67,19 @@
 
 ## GitHub Pages 实际状态
 
-本地检查已通过。首发代码推送后由 Actions 部署；真实线上 URL、工作流结果和线上转换检查会在完成后回填本节。此时的构建成功不代表线上已部署。
+已通过 GitHub API 将现有仓库的 Pages 发布源配置为 GitHub Actions。首发代码提交为 [`110ab0ad7a56ee29cd953c06910b4942f453d460`](https://github.com/StellarYige/StarShift/commit/110ab0ad7a56ee29cd953c06910b4942f453d460)，[首次工作流](https://github.com/StellarYige/StarShift/actions/runs/34663271350) 的检查和部署均成功。
+
+2026-09-12 08:59（北京时间）开始对真实网址 **https://stellaryige.github.io/StarShift/** 执行同一套 14 项浏览器测试，14 项通过、0 项跳过或失败，总耗时 81.7 秒。命令：
+
+```powershell
+$env:TEST_BASE_URL = 'https://stellaryige.github.io/StarShift/'
+npm.cmd run test:e2e
+```
+
+- 首页、iframe、Service Worker 和 WASM 均返回 200；WASM MIME 为 `application/wasm`。线上引擎/字体校验清单与本地一致。
+- 真正从 Pages 加载大引擎；点击转换到两份 PDF 输出共 35.8 秒（含首次字体/引擎加载），整个 DOCX 用例 40.3 秒。这是该次网络与设备结果，不是性能保证。
+- 两份 PDF 均通过中文、表格几何、图片、分页的独立 PyMuPDF 断言；线上预览截图另经人工查看。
+- DOCX 流程记录 58 个请求，全部为本站静态 GET、无请求正文、无外部关系目标或测试私密文件名；图片转换与 ZIP 的网络用例也通过。
+- 线上测试覆盖五项工具、透明背景、EXIF/手动方向、矢量页序、毫米边距、批量 ZIP、错误重试、取消、hash 刷新和移动视口。
+
+机器可读的线上摘要见 [online-validation.json](online-validation.json)，也随静态包提供。完整线上文件与截图在本地 `test-results/`；GitHub Actions artifact 提供 CI 环境的完整测试证据。本文后续提交补充交付记录和打包记录，首发功能代码不变。
