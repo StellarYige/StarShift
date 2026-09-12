@@ -35,6 +35,6 @@ export default function ToolSettings({ tool, settings, set, disabled }: { tool: 
       <p className="hint">勾选需要的页面，通过箭头排序和旋转。原文字和矢量内容保留。</p>
       <p className="hint">首版不保留书签、交互表单、批注、链接与数字签名；请保留原文件。</p>
     </>}
-    {tool === 'docx-pdf' && <div className="docx-notes"><span className="local-tag">LibreOffice 本地排版</span><p>保留中文、内嵌图片、表格与基本分页，PDF 文字可选择。</p><p>首次使用按需加载约 266 MiB 引擎与中文字体，可能需要数分钟。建议使用桌面 Chrome / Edge。</p><p className="hint">使用 Noto 中文替代字体，特殊字体与复杂版式可能变化，请先预览。外部图片与链接不会加载。</p></div>}
+    {tool === 'docx-pdf' && <div className="docx-notes"><span className="local-tag">LibreOffice 本地排版</span><p>保留中文、内嵌图片、表格与基本分页，PDF 文字可选择。</p><p>引擎与中文字体解压后资源体积约 266 MiB；实际下载量取决于压缩与浏览器缓存。首次加载和初始化可能需要数分钟，建议使用桌面 Chrome / Edge。</p><p className="hint">使用 Noto 中文替代字体，特殊字体与复杂版式可能变化，请预览核对。外部图片与链接不会加载。</p></div>}
   </fieldset>;
 }

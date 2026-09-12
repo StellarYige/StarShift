@@ -69,7 +69,7 @@ async function measure(session,round,scenario,batch=1) {
   const sample={round,scenario,batch,started:new Date().toISOString()};
   const start=Date.now();
   try {
-    await page.getByRole('button',{name:/^(开始转换|重新转换)$/}).click();
+    await page.getByRole('button',{name:/^(开始转换|重新转换|全部重新转换)$/}).click();
     await expect(page.locator('.result-list li')).toHaveCount(2,{timeout:270000});
     await expect(page.getByRole('button',{name:'取消任务',exact:true})).toBeHidden();
     sample.elapsedMs=Date.now()-start;

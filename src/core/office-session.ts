@@ -1,6 +1,7 @@
 import type { Progress, ProgressDetail, OfficeStartupProgress } from '../types';
 import { asBlob, checkAbort } from './common';
 import { OfficeError, type OfficeErrorCode } from './office-error';
+import { checkOfficeCompatibility } from './office-compatibility';
 
 /** One serial batch owns one runtime. No idle engine or persistent document cache. */
 export class OfficeSession {
@@ -47,7 +48,7 @@ export class OfficeSession {
   private timeoutError() {
     if (this.initialized) return new OfficeError('timeout');
     const labels: Record<OfficeStartupProgress['stage'], string> = {
-      resources: '资源加载', wasm: 'WASM 运行时初始化', worker: '工作线程启动', uno: '文档服务就绪',
+      resources: '资源加载', wasm: '排版引擎初始化', worker: '工作线程启动', uno: '文档服务就绪',
     };
     const state = this.startup;
     const stage = state?.detail.startup?.stage ?? 'resources';
@@ -68,15 +69,7 @@ export class OfficeSession {
     checkAbort(this.signal);
     if (this.fatal) throw this.fatal;
     if (this.initialized) return;
-    if (!crossOriginIsolated || typeof SharedArrayBuffer === 'undefined') throw new OfficeError('incompatible', 'DOCX 转 PDF 需要安全隔离环境。请通过 HTTPS 或 localhost 访问并刷新；其他四项工具仍可使用。');
-    // These are startup requirements of the pinned engine, confirmed by actual
-    // Firefox/WebKit attempts. Check before allocating its large WASM runtime.
-    if (typeof OffscreenCanvas === 'undefined') throw new OfficeError('incompatible');
-    if (navigator.permissions?.query) {
-      try { await navigator.permissions.query({ name: 'clipboard-read' as PermissionName }); }
-      catch (error) { if (error instanceof TypeError) throw new OfficeError('incompatible'); }
-      checkAbort(this.signal);
-    }
+    await checkOfficeCompatibility(this.signal);
     this.startupProgress('正在准备本地文档引擎…', { phase: 'resource-load', resource: 'engine', startup: { stage: 'resources', resourcesComplete: 0, runtimeInitialized: false, workersCreated: 0, workersLoaded: 0, downloadSequence: 0 } });
     const channel = new MessageChannel();
     this.port = channel.port1; this.connectPort = channel.port2;

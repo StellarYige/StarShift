@@ -6,6 +6,7 @@ import { bytesLabel, checkAbort, errorMessage, MAX_FILE_BYTES, MAX_PAGES, MAX_TO
 import { moveToPosition, settingsErrors } from '../core/queue';
 import { runWorker } from '../core/worker-client';
 import { OfficeError } from '../core/office-error';
+import { checkOfficeCompatibility } from '../core/office-compatibility';
 import ToolSettings from './ToolSettings';
 import { usePageThumbnails } from './usePageThumbnails';
 
@@ -32,6 +33,7 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
   const [progress, setProgress] = useState<{ completed?: number; total?: number; detail?: ProgressDetail }>({});
   const [notice, setNotice] = useState('');
   const [selectionNotice, setSelectionNotice] = useState('');
+  const [compatibilityNotice, setCompatibilityNotice] = useState('');
   const [range, setRange] = useState('');
   const [pagePosition, setPagePosition] = useState('1');
   const [pageActionError, setPageActionError] = useState('');
@@ -58,6 +60,12 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
   const errors = settingsErrors(tool, settings);
   const invalidSettings = Object.keys(errors).length > 0;
   const unfinished = usable.filter(i => i.status !== 'done');
+  useEffect(() => {
+    if (tool !== 'docx-pdf') return;
+    const abort = new AbortController();
+    void checkOfficeCompatibility(abort.signal).catch(error => { if (!abort.signal.aborted) setCompatibilityNotice(errorMessage(error)); });
+    return () => abort.abort();
+  }, [tool]);
   const taskProgress = (abort: AbortController): Progress => (message, completed, total, detail) => {
     if (controller.current !== abort || abort.signal.aborted) return;
     setPhase(message); setProgress({ completed, total, detail });
@@ -160,7 +168,7 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
         batch.forEach(i => updateItem(i.id, { status: 'working', message: undefined }));
         const results = tool === 'image-pdf'
           ? await runWorker({ type: 'image-pdf', images: batch.map(i => ({ file: i.file, rotation: i.rotation })), settings }, abort.signal, progressHandler)
-          : await runWorker({ type: 'organize', sources: await Promise.all(batch.map(async i => ({ id: i.id, bytes: new Uint8Array(await i.file.arrayBuffer()) }))), pages: selected, split: settings.split }, abort.signal, progressHandler);
+          : await runWorker({ type: 'organize', sources: await Promise.all(batch.filter(i => selected.some(p => p.sourceId === i.id)).map(async i => ({ id: i.id, bytes: new Uint8Array(await i.file.arrayBuffer()) }))), pages: selected, split: settings.split }, abort.signal, progressHandler);
         if (results.reduce((n, r) => n + r.blob.size, 0) > MAX_TOTAL_BYTES) throw new Error('本批输出超过 300 MB，请减少选中内容后重试。');
         results.forEach(result => addOutput(result.name || '图片合辑.pdf', result.blob, abort.signal, batch.map(i => i.id)));
         batch.forEach(i => updateItem(i.id, { status: 'done' }));
@@ -287,7 +295,7 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
         </article>)}</div></div>}
       </section>
       <aside className="settings-panel panel"><div className="panel-heading"><h2>转换设置</h2><span className="subtle">OPTIONS</span></div><ToolSettings tool={tool} settings={settings} set={value => setSettings(current => ({ ...current, ...value }))} disabled={busy} />
-        {tool === 'docx-pdf' && !crossOriginIsolated && <p className="notice" role="alert">当前浏览器未启用安全隔离，DOCX 转换不可用。请通过 HTTPS 或 localhost 访问，并尝试刷新。</p>}
+        {compatibilityNotice && <p className="notice" role="alert">{compatibilityNotice}</p>}
         <div className="convert-actions">{busy ? <button className="button cancel" onClick={() => controller.current?.abort()}><Square size={14} />取消任务</button> : <><button className="button primary" disabled={!unfinished.length || invalidSettings || (organize && !selected.length) || (tool === 'docx-pdf' && !crossOriginIsolated)} onClick={() => void convert()}>{outputs.length ? '转换未完成项' : organize ? '导出选中页面' : '开始转换'}<ArrowRight size={17} /></button>{outputs.length > 0 && <button className="button secondary" disabled={invalidSettings || !usable.length || (organize && !selected.length)} onClick={() => void convert('all')}>全部重新转换</button>}</>}<small><ShieldCheck size={13} />{outputs.length ? '全部重新转换会替换当前结果' : '本地处理 · 不上传文件'}</small>{outputs.length > 0 && <button className="text-button results-jump" onClick={() => { const section = document.getElementById('conversion-results'); section?.scrollIntoView({ behavior: 'smooth', block: 'start' }); section?.focus({ preventScroll: true }); }}>查看结果（{outputs.length}）</button>}</div>
       </aside>
     </div>
