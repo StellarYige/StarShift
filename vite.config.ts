@@ -4,6 +4,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   base: process.env.BASE_PATH || '/StarShift/',
   plugins: [react()],
+  // Discover worker-only imports before users select a file, avoiding a cold-start reload.
+  optimizeDeps: { include: ['pdf-lib', 'fflate', 'pdfjs-dist'] },
   worker: { format: 'es' },
   server: {
     host: '127.0.0.1',
