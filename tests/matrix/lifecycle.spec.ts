@@ -73,11 +73,14 @@ test('repeated ZIP download reuses one URL and clear releases timers and outputs
   await evidence(info, 'zip-lifecycle.json', { before, samples, after: await resources(page) });
 });
 
-test('conversion, clear, retry and tool switching lifecycle rounds', async ({ page, browserName }, info) => {
+test('conversion, clear, retry and tool switching lifecycle rounds', async ({ page, browserName, browser }, info) => {
   test.setTimeout(600000);
   await trackResources(page); await open(page, 'pdf-image');
-  const samples = [];
+  const samples: Awaited<ReturnType<typeof resources>>[] = [];
+  const conversionFailures: { round: number; timeout: boolean; startup: unknown }[] = [];
   const rounds = browserName === 'chromium' ? 10 : 3;
+  const save = () => evidence(info, 'lifecycle.json', { rounds, completedRounds: samples.length, samples, conversionFailures, browserVersion: browser.version(), channel: info.project.use.channel || 'bundled' });
+  try {
   for (let i = 0; i < rounds; i++) {
     await page.evaluate(() => { location.hash = 'pdf-organize'; });
     await expect(page.getByRole('heading', { name: 'PDF 页面整理', exact: true })).toBeVisible();
@@ -105,14 +108,29 @@ test('conversion, clear, retry and tool switching lifecycle rounds', async ({ pa
     await page.getByRole('button', { name: '清空任务' }).click();
     await page.evaluate(() => { location.hash = 'docx-pdf'; });
     await select(page, ['中文表格分页.docx']); await convert(page);
+    let docxFailed = false;
     if (await page.locator('.result-list li').count()) await verifyDocx(page, info, `round-${i + 1}.pdf`);
-    else { expect(browserName).not.toBe('chromium'); await expect(page.locator('.notice').last()).toContainText('不兼容'); }
+    else if (browserName === 'chromium') {
+      docxFailed = true;
+      conversionFailures.push({ round: i + 1, timeout: (await page.locator('.notice').last().textContent())?.includes('超时') || false, startup: await page.evaluate(() => (window as Window & { __officeStages?: unknown[] }).__officeStages?.at(-1)) });
+      await expect(page.locator('.file-row')).toHaveCount(1);
+    } else { await expect(page.locator('.notice').last()).toContainText('不兼容'); }
     await page.getByRole('button', { name: '清空任务' }).click();
+    if (docxFailed) {
+      // Complete the cleanup/next-tool observation even after an engine stall.
+      // Preserve the original conversion acceptance as a failing final assertion.
+      await page.evaluate(() => { location.hash = 'image-convert'; });
+      await select(page, ['transparent.png']); await convert(page);
+      await expect(page.locator('.result-list li')).toHaveCount(1);
+      await page.getByRole('button', { name: '清空任务' }).click();
+    }
     await expect.poll(async () => (await resources(page)).workers).toBe(0);
     await expect.poll(async () => (await resources(page)).urls).toBe(0);
     samples.push(await resources(page));
+    await save();
   }
   expect(samples.every(r => r.workers === 0 && r.urls === 0 && r.frames === 0 && r.timers === 0)).toBe(true);
   expect(samples.at(-1)!.ports).toBe(samples[0].ports);
-  await evidence(info, 'lifecycle.json', { rounds, samples });
+  expect(conversionFailures, 'DOCX conversion failures are retained; resource cleanup does not turn them into successful conversions').toEqual([]);
+  } finally { await save(); }
 });

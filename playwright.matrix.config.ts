@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 const baseURL = process.env.TEST_BASE_URL || 'http://127.0.0.1:4187/StarShift/';
+const referenceChannel = process.env.REFERENCE_CHROMIUM_CHANNEL;
+if (referenceChannel && !['chrome', 'msedge'].includes(referenceChannel)) throw new Error('REFERENCE_CHROMIUM_CHANNEL must be chrome or msedge');
 export default defineConfig({
   testDir: './tests/matrix', timeout: 300000, expect: { timeout: 20000 },
   workers: 1, fullyParallel: false,
@@ -10,7 +12,7 @@ export default defineConfig({
   use: { baseURL, actionTimeout: 20000, screenshot: 'only-on-failure', trace: 'off', viewport: { width: 1365, height: 1000 } },
   webServer: process.env.TEST_BASE_URL ? undefined : { command: 'node scripts/serve.mjs --port 4187', url: baseURL, reuseExistingServer: false, timeout: 15000 },
   projects: [
-    { name: 'chromium', use: { browserName: 'chromium', launchOptions: process.env.DEBUG_BROWSER ? { args: ['--remote-debugging-port=9228'] } : {} }, testIgnore: ['other-tools.spec.ts', 'mobile.spec.ts'] },
+    { name: 'chromium', use: { browserName: 'chromium', channel: referenceChannel, launchOptions: process.env.DEBUG_BROWSER ? { args: ['--remote-debugging-port=9228'] } : {} }, testIgnore: ['other-tools.spec.ts', 'mobile.spec.ts'] },
     { name: 'firefox', use: { browserName: 'firefox' }, testIgnore: 'mobile.spec.ts' },
     { name: 'webkit', use: { browserName: 'webkit' }, testIgnore: 'mobile.spec.ts' },
     { name: 'android-simulation', use: { ...devices['Pixel 7'], browserName: 'chromium' }, testMatch: 'mobile.spec.ts' },

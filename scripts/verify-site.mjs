@@ -16,9 +16,20 @@ const html=await(await get('')).text();
 if(!html.includes('name="application-version" content="0.1.1"'))throw Error('Wrong site version');
 const assetPaths=[...html.matchAll(/(?:src|href)="([^"#]+)"/g)].map(m=>m[1]).filter(p=>p.includes('/assets/'));
 for(const p of assetPaths)await get(p);
-const frame=await(await get('office/frame.html?v=0.1.1')).text();
-if(!frame.includes('frame.js?v=0.1.1'))throw Error('Missing adapter version');
-await get('office/frame.js?v=0.1.1');await get('office/thread.js?v=0.1.1');await get('coi-serviceworker.js');
+const frameUrl=new URL('office/frame.html',base);
+const frame=await(await get(frameUrl.href)).text();
+// Follow the script URL actually referenced by the built adapter HTML, keeping
+// its entire cache identifier rather than guessing from the product version.
+const adapters=[...frame.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)].map(m=>new URL(m[1],frameUrl));
+if(!adapters.length)throw Error('Missing adapter script');
+for(const url of adapters) {
+  if(url.origin!==new URL(base).origin||!url.searchParams.get('v'))throw Error('Invalid adapter URL');
+  const script=await(await get(url.href)).text();
+  const thread=script.match(/(?:\.\/)?thread\.js\?[^"'`\s)]+/);
+  if(!thread)throw Error('Missing actual thread URL');
+  await get(new URL(thread[0],url).href);
+}
+await get('coi-serviceworker.js');
 const manifest=await(await get('asset-manifest.json')).json();
 if(JSON.stringify(manifest)!==JSON.stringify(expected))throw Error('Engine/font manifest changed');
 const assets=[];
@@ -55,6 +66,6 @@ await Promise.all(Array.from({length:4},async()=>{
   }
 }));
 resourcePaths.sort((a,b)=>a.path.localeCompare(b.path));
-await mkdir('docs/evidence/v0.1.1',{recursive:true});
+await mkdir(path.dirname(output),{recursive:true});
 const report={time:new Date().toISOString(),base,version:'0.1.1',buildPathSource:build,buildIdentity:index?{sha:index.sha,run:index.run,logSha256:index.logSha256}:null,requests,resourcePaths,assets,licenseEntries:licenses.length,warning:'Decoded bytes and HEAD checks used only for integrity and deployment, never substituted for performance transfer measurements.'};
 await writeFile(output,JSON.stringify(report,null,2));console.log(JSON.stringify({base,version:report.version,resources:resourcePaths.length,assets:assets.length,licenses:licenses.length}));

@@ -3,10 +3,15 @@ import { chromium, firefox, webkit, expect } from '@playwright/test';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { mkdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
 const args=process.argv.slice(2), option=(n,d)=>args.includes(n)?args[args.indexOf(n)+1]:d;
 const name=option('--browser','chromium'), rounds=Number(option('--rounds',name==='chromium'?'10':'3'));
 const base=option('--url','http://127.0.0.1:4187/StarShift/');
 const output=option('--output',`docs/evidence/v0.1.1/memory-${name}.json`);
+const tool=option('--tool','docx-pdf');
+if(!['docx-pdf','image-pdf'].includes(tool))throw Error('Unsupported measurement tool');
+const inputs=tool==='docx-pdf'?['tests/fixtures/中文表格分页.docx']:Array.from({length:10},(_,i)=>`.cache/five-tools-fixtures/image-${String(i+1).padStart(2,'0')}.jpg`);
+await mkdir(path.dirname(output),{recursive:true});
 const server=await ({chromium,firefox,webkit}[name]).launchServer({headless:true});
 const browser=await ({chromium,firefox,webkit}[name]).connect(server.wsEndpoint());
 const context=await browser.newContext(), page=await context.newPage();
@@ -42,13 +47,17 @@ async function memory(phase,round) {
   const sample={round,phase,time:new Date().toISOString(),osMemory,jsHeap,weakReferences,frames:await page.locator('iframe').count()};report.samples.push(sample);return sample;
 }
 try {
-  await page.goto(base+'#docx-pdf');await expect(page.locator('header')).toBeVisible({timeout:30000});
+  report.tool=tool;
+  await page.goto(base+'#'+tool);await expect(page.locator('header')).toBeVisible({timeout:30000});
   await memory('baseline',0);
   for(let round=1;round<=rounds;round++) {
-    await page.getByTestId('file-input').setInputFiles('tests/fixtures/中文表格分页.docx');
+    await page.getByTestId('file-input').setInputFiles(inputs);
+    await expect(page.getByRole('button',{name:'取消任务',exact:true})).toBeHidden();
+    await memory('inputs-ready',round);
     await page.getByRole('button',{name:'开始转换',exact:true}).click();
     while(await page.getByRole('button',{name:'取消任务',exact:true}).isVisible())await memory('processing',round);
     let count=await page.locator('.result-list li').count();
+    if(!count&&tool==='image-pdf')throw Error('Image PDF conversion failed');
     if(!count&&name==='chromium') {
       const timeout=await page.locator('.notice').last().textContent();
       const failure={round,type:timeout?.includes('超时')?'timeout':'other',retryRecovered:false};
@@ -69,7 +78,7 @@ try {
       const message=await page.locator('.notice').last().textContent();
       if(!message?.includes('不兼容'))throw Error('Unexpected DOCX failure');
       report.docx='incompatible';
-    } else report.docx='converted';
+    } else { report.outcome='converted'; if(tool==='docx-pdf')report.docx='converted'; }
     await memory('batch-finished',round);
     await page.getByRole('button',{name:'清空任务'}).click();
     await expect(page.locator('.file-row, .result-list li, iframe')).toHaveCount(0);
@@ -77,11 +86,11 @@ try {
     if(cdp){
       await cdp.send('HeapProfiler.collectGarbage');
       const after=await memory('cleared-after-page-gc',round);
-      if(after.weakReferences?.input.observed !== round || after.weakReferences?.blob.observed !== round)throw Error('File/Blob reference instrumentation missed an input or output');
+      if(after.weakReferences?.input.observed !== inputs.length*round || after.weakReferences?.blob.observed !== (tool==='docx-pdf'?1:11)*round)throw Error('File/Blob reference instrumentation missed an input or output');
       if(after.weakReferences?.input.live || after.weakReferences?.blob.live)throw Error('Selected File or output Blob remains reachable after clear and page GC');
     }
     await mkdir('docs/evidence/v0.1.1',{recursive:true});await writeFile(output,JSON.stringify(report,null,2));
-    console.log(JSON.stringify({browser:name,round,docx:report.docx,after:report.samples.at(-1)}));
+    console.log(JSON.stringify({browser:name,tool,round,outcome:report.outcome,docx:report.docx,after:report.samples.at(-1)}));
   }
 }catch(e){report.failure=e.message;process.exitCode=1;}
 finally{await writeFile(output,JSON.stringify(report,null,2));await browser.close();await server.close();}
