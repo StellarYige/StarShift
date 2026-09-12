@@ -48,7 +48,9 @@ export default function Preview({ output, onClose }: { output: OutputItem; onClo
       const p = await doc.getPage(page);
       checkAbort(controller.signal);
       const view = p.getViewport({ scale: 1 });
-      const scale = zoom === 'fit' ? width / view.width : Number(zoom) * 96 / 72;
+      // Fit changes the displayed width, while retaining the existing preview
+      // raster detail on smaller screens. Downloads keep their original data.
+      const scale = zoom === 'fit' ? Math.max(width / view.width, Math.min(1100 / view.width, 1.75)) : Number(zoom) * 96 / 72;
       const blob = await renderPdfPage(doc, page, scale, 'png', 1, controller.signal);
       checkAbort(controller.signal);
       url = URL.createObjectURL(blob); setImageWidth(view.width * scale); setImage(url);

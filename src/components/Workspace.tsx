@@ -27,7 +27,8 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
   const [pages, setPages] = useState<PageItem[]>([]);
   const [outputs, setOutputs] = useState<OutputItem[]>([]);
   const [busy, setBusy] = useState(false);
-  const thumbnails = usePageThumbnails(pages, items, busy, setPages);
+  const [preview, setPreview] = useState<OutputItem>();
+  const thumbnails = usePageThumbnails(pages, items, busy || !!preview, setPages);
   const [drag, setDrag] = useState(false);
   const [phase, setPhase] = useState('');
   const [progress, setProgress] = useState<{ completed?: number; total?: number; detail?: ProgressDetail }>({});
@@ -39,7 +40,6 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
   const [pageActionError, setPageActionError] = useState('');
   const [moveId, setMoveId] = useState('');
   const [itemPosition, setItemPosition] = useState('1');
-  const [preview, setPreview] = useState<OutputItem>();
   const [zipUrl, setZipUrl] = useState('');
   const zipRef = useRef('');
   const generation = useRef(0);

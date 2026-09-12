@@ -73,6 +73,14 @@ test('100 PDF pages are usable before thumbnails; viewport cache evicts and rebu
   expect((await resources(page)).urls).toBeLessThanOrEqual(60);
   await page.getByRole('button', { name: '导出选中页面', exact: true }).click();
   await expect(page.locator('.result-list li')).toHaveCount(1);
+  await page.getByRole('button', { name: '预览', exact: true }).click();
+  await expect(page.locator('dialog img')).toBeVisible();
+  await expect.poll(async () => (await resources(page)).workers).toBe(1);
+  const thumbnails = await page.locator('.page-card img').count();
+  await page.getByLabel('预览页码').fill('100'); await page.getByRole('button', { name: '跳转', exact: true }).click();
+  await expect(page.locator('dialog img')).toHaveAttribute('alt', /第 100 页/);
+  expect(await page.locator('.page-card img').count()).toBe(thumbnails);
+  await page.getByRole('button', { name: '关闭预览' }).click();
   await page.getByRole('button', { name: '清空任务' }).click();
   await expect.poll(async () => { const r = await resources(page); return [r.workers, r.urls, r.timers]; }).toEqual([0, 0, 0]);
 });
