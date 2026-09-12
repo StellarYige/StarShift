@@ -72,10 +72,10 @@ export async function pdfThumbnails(file: File, id: string, signal: AbortSignal,
       const page = await doc.getPage(i);
       const view = page.getViewport({ scale: 1 });
       const blob = await renderPdfPage(doc, i, Math.min(180 / view.width, 230 / view.height), 'png', 1, signal);
-      pages.push({ id: crypto.randomUUID(), sourceId: id, sourceName: file.name, page: i, rotation: 0, selected: true, thumbnail: URL.createObjectURL(blob) });
+      pages.push({ id: crypto.randomUUID(), sourceId: id, sourceName: file.name, page: i, rotation: 0, selected: true, thumbnail: URL.createObjectURL(blob), thumbnailStatus: 'ready' });
     }
     return pages;
-  } catch (err) { pages.forEach(p => URL.revokeObjectURL(p.thumbnail)); throw err; }
+  } catch (err) { pages.forEach(p => { if (p.thumbnail) URL.revokeObjectURL(p.thumbnail); }); throw err; }
   finally { await doc.loadingTask.destroy(); }
 }
 export async function pdfToImages(file: File, settings: Settings, signal: AbortSignal, progress: Progress, output: (name: string, blob: Blob) => void) {
@@ -83,9 +83,10 @@ export async function pdfToImages(file: File, settings: Settings, signal: AbortS
   try {
     const pages = parsePages(settings.pages, doc.numPages);
     for (let i = 0; i < pages.length; i++) {
-      progress('正在渲染 PDF 页面…', i + 1, pages.length);
+      progress(`正在渲染第 ${pages[i]} 页…`, i, pages.length, { phase: 'render', unit: 'page', currentPage: pages[i] });
       const blob = await renderPdfPage(doc, pages[i], settings.dpi / 72, settings.format === 'jpg' ? 'jpg' : 'png', settings.quality, signal);
       output(`${stem(file.name)}-第${String(pages[i]).padStart(3, '0')}页.${settings.format === 'jpg' ? 'jpg' : 'png'}`, blob);
+      progress(`第 ${pages[i]} 页已完成`, i + 1, pages.length, { phase: 'render', unit: 'page', currentPage: pages[i] });
     }
   } finally { await doc.loadingTask.destroy(); }
 }

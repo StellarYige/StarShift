@@ -1,11 +1,15 @@
 export type ToolId = 'docx-pdf' | 'image-pdf' | 'pdf-image' | 'pdf-organize' | 'image-convert';
 export type ImageFormat = 'png' | 'jpg' | 'webp';
 export type TaskStatus = 'ready' | 'working' | 'done' | 'error' | 'cancelled';
+export type PreparationStatus = 'checking' | 'ready' | 'error' | 'cancelled';
+export type ThumbnailStatus = 'waiting' | 'loading' | 'ready' | 'error';
 export interface InputItem {
   id: string;
   file: File;
   rotation: number;
   status: TaskStatus;
+  preparation: PreparationStatus;
+  thumbnailStatus?: ThumbnailStatus;
   message?: string;
   thumbnail?: string;
 }
@@ -16,13 +20,15 @@ export interface PageItem {
   page: number;
   rotation: number;
   selected: boolean;
-  thumbnail: string;
+  thumbnail?: string;
+  thumbnailStatus: ThumbnailStatus;
 }
 export interface OutputItem {
   id: string;
   name: string;
   blob: Blob;
   url: string;
+  sourceIds: string[];
 }
 export interface Settings {
   format: ImageFormat;
@@ -38,7 +44,7 @@ export interface Settings {
   dpi: number;
   split: boolean;
 }
-export type ProgressPhase = 'document-check' | 'resource-load' | 'initialize' | 'import' | 'export';
+export type ProgressPhase = 'document-check' | 'resource-load' | 'initialize' | 'import' | 'export' | 'prepare' | 'render' | 'assemble' | 'zip';
 export interface OfficeStartupProgress {
   stage: 'resources' | 'wasm' | 'worker' | 'uno';
   resourcesComplete: number;
@@ -51,6 +57,10 @@ export interface OfficeStartupProgress {
 }
 export interface ProgressDetail {
   phase: ProgressPhase;
+  unit?: 'file' | 'page' | 'image';
+  fileIndex?: number;
+  fileTotal?: number;
+  currentPage?: number;
   resource?: 'font' | 'engine';
   loadedBytes?: number;
   totalBytes?: number;

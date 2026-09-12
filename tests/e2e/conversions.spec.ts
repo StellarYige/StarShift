@@ -91,7 +91,7 @@ test('JPEG EXIF orientation then user rotation applied once', async ({ page }, i
   const firstPixel = (await sharp(first).removeAlpha().raw().toBuffer()).subarray(0, 3);
   expect(firstPixel[0]).toBeGreaterThan(200); expect(firstPixel[1]).toBeGreaterThan(175); expect(firstPixel[2]).toBeLessThan(100);
   await page.getByRole('button', { name: '旋转 orientation-6.jpg', exact: true }).click();
-  await page.getByRole('button', { name: '重新转换', exact: true }).click();
+  await page.getByRole('button', { name: '全部重新转换', exact: true }).click();
   await expect(page.getByRole('button', { name: '取消任务' })).toBeHidden();
   const second = await download(page, info, 'rotated.png');
   expect((await sharp(second).metadata()).width).toBe(120); expect((await sharp(second).metadata()).height).toBe(80);
@@ -152,7 +152,7 @@ test('PDF organization: merge, delete, select, reorder, rotate, split and vector
   expect(vectorCheck.text).toEqual(['VECTOR PAGE 2', 'VECTOR PAGE 1', 'VECTOR PAGE 1', 'VECTOR PAGE 3']);
   expect(vectorCheck.paths.every((n: number) => n > 0)).toBe(true); expect(vectorCheck.images).toEqual([0, 0, 0, 0]);
   await page.getByLabel('输出方式').selectOption('split');
-  await page.getByRole('button', { name: '重新转换' }).click();
+  await page.getByRole('button', { name: '全部重新转换' }).click();
   await expect(page.getByRole('button', { name: '取消任务' })).toBeHidden();
   const entries = await zip(page, info);
   expect(Object.keys(entries)).toHaveLength(4);
@@ -170,7 +170,7 @@ test('broken PDF, invalid range, retry and cancellation are explicit', async ({ 
   await page.getByLabel('选择页码').fill('1');
   await page.getByRole('button', { name: '重试 vector-three-pages.pdf' }).click();
   await expect(page.locator('.result-list li')).toHaveCount(1);
-  await page.getByRole('button', { name: '重新转换' }).click();
+  await page.getByRole('button', { name: '全部重新转换' }).click();
   const cancel = page.getByRole('button', { name: '取消任务' });
   if (await cancel.isVisible()) { await cancel.click(); await expect(cancel).toBeHidden(); }
   await expect(page.getByRole('button', { name: '清空任务' })).toBeEnabled();

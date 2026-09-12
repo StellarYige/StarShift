@@ -12,7 +12,7 @@ export async function select(page: Page, files: string[]) {
   await expect(page.getByRole('button', { name: '取消任务', exact: true })).toBeHidden();
 }
 export async function convert(page: Page) {
-  await page.getByRole('button', { name: /^(开始转换|重新转换|导出选中页面)$/ }).click();
+  await page.getByRole('button', { name: /^(开始转换|全部重新转换|导出选中页面)$/ }).click();
   await expect(page.getByRole('button', { name: '取消任务', exact: true })).toBeHidden({ timeout: 270000 });
 }
 export async function download(page: Page, info: TestInfo, filename: string) {
