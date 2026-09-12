@@ -57,7 +57,11 @@ export default function Preview({ output, onClose }: { output: OutputItem; onClo
     }).catch(e => { if (!controller.signal.aborted) setError(errorMessage(e)); }).finally(() => { if (!controller.signal.aborted) setLoading(false); });
     return () => { controller.abort(); if (url) URL.revokeObjectURL(url); };
   }, [doc, page, zoom, width, retry, isPdf]);
-  function go(n: number) { setPage(n); setJump(String(n)); setJumpError(''); }
+  function go(n: number) {
+    // Do not briefly relabel the old image with the newly requested page.
+    if (n !== page) { setLoading(true); setImage(''); }
+    setPage(n); setJump(String(n)); setJumpError('');
+  }
   function jumpToPage() {
     const n = Number(jump);
     if (!Number.isInteger(n) || n < 1 || n > count) { setJumpError(`请输入 1–${count} 之间的页码。`); return; }
