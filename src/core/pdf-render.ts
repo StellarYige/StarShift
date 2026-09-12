@@ -62,21 +62,12 @@ export async function renderPdfPage(doc: PDFDocumentProxy, pageNumber: number, s
     return blob;
   } finally { signal.removeEventListener('abort', abort); canvas.width = canvas.height = 1; page.cleanup(); }
 }
-export async function pdfThumbnails(file: File, id: string, signal: AbortSignal, progress: Progress) {
+export async function pdfPages(file: File, id: string, remaining: number, signal: AbortSignal) {
   const doc = await openPdf(file, signal);
-  const pages: PageItem[] = [];
   try {
-    for (let i = 1; i <= doc.numPages; i++) {
-      checkAbort(signal);
-      progress('正在生成页面缩略图…', i, doc.numPages);
-      const page = await doc.getPage(i);
-      const view = page.getViewport({ scale: 1 });
-      const blob = await renderPdfPage(doc, i, Math.min(180 / view.width, 230 / view.height), 'png', 1, signal);
-      pages.push({ id: crypto.randomUUID(), sourceId: id, sourceName: file.name, page: i, rotation: 0, selected: true, thumbnail: URL.createObjectURL(blob), thumbnailStatus: 'ready' });
-    }
-    return pages;
-  } catch (err) { pages.forEach(p => { if (p.thumbnail) URL.revokeObjectURL(p.thumbnail); }); throw err; }
-  finally { await doc.loadingTask.destroy(); }
+    if (doc.numPages > remaining) throw new Error(`本批页面超过 ${MAX_PAGES} 页，请减少文件数量。`);
+    return Array.from({ length: doc.numPages }, (_, i): PageItem => ({ id: crypto.randomUUID(), sourceId: id, sourceName: file.name, page: i + 1, rotation: 0, selected: true, thumbnailStatus: 'waiting' }));
+  } finally { await doc.loadingTask.destroy(); }
 }
 export async function pdfToImages(file: File, settings: Settings, signal: AbortSignal, progress: Progress, output: (name: string, blob: Blob) => void) {
   const doc = await openPdf(file, signal);

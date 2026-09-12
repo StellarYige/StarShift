@@ -7,6 +7,7 @@ import { moveToPosition, settingsErrors } from '../core/queue';
 import { runWorker } from '../core/worker-client';
 import { OfficeError } from '../core/office-error';
 import ToolSettings from './ToolSettings';
+import { usePageThumbnails } from './usePageThumbnails';
 
 const Preview = lazy(() => import('./Preview'));
 const labels = { ready: '等待转换', working: '正在处理', done: '已完成', error: '处理失败', cancelled: '已取消' };
@@ -25,6 +26,7 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
   const [pages, setPages] = useState<PageItem[]>([]);
   const [outputs, setOutputs] = useState<OutputItem[]>([]);
   const [busy, setBusy] = useState(false);
+  const thumbnails = usePageThumbnails(pages, items, busy, setPages);
   const [drag, setDrag] = useState(false);
   const [phase, setPhase] = useState('');
   const [progress, setProgress] = useState<{ completed?: number; total?: number; detail?: ProgressDetail }>({});
@@ -113,6 +115,7 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
       skipped.batchLimit && `超过本批 300 MB 上限的文件 ${skipped.batchLimit} 个`,
     ].filter(Boolean).join('；'));
     try {
+      await thumbnails.stop();
       for (const item of accepted) {
         checkAbort(abort.signal);
         progressHandler('正在检查文件…', undefined, undefined, { phase: 'prepare', unit: 'file' });
@@ -127,14 +130,11 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
             checkAbort(abort.signal);
             updateItem(item.id, { thumbnail: register(result.blob), thumbnailStatus: 'ready' });
           } else if (organize) {
-            const { pdfThumbnails } = await import('../core/pdf-render');
-            const thumbnails = await pdfThumbnails(item.file, item.id, abort.signal, progressHandler);
-            if (pageTotal + thumbnails.length > MAX_PAGES) { thumbnails.forEach(p => revoke(p.thumbnail)); throw new Error(`本批页面超过 ${MAX_PAGES} 页，请减少文件数量。`); }
-            pageTotal += thumbnails.length;
-            if (abort.signal.aborted) { thumbnails.forEach(p => revoke(p.thumbnail)); checkAbort(abort.signal); }
-            thumbnails.forEach(p => { if (p.thumbnail) urls.current.add(p.thumbnail); });
-            setPages(current => [...current, ...thumbnails]);
-            updateItem(item.id, { preparation: 'ready', message: `${thumbnails.length} 页` });
+            const { pdfPages } = await import('../core/pdf-render');
+            const additions = await pdfPages(item.file, item.id, MAX_PAGES - pageTotal, abort.signal);
+            checkAbort(abort.signal); pageTotal += additions.length;
+            setPages(current => [...current, ...additions]);
+            updateItem(item.id, { preparation: 'ready', message: `${additions.length} 页` });
           } else { updateItem(item.id, { preparation: 'ready' }); }
         } catch (error) {
           if (abort.signal.aborted) throw error;
@@ -153,6 +153,7 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
     const task = ++generation.current, progressHandler = taskProgress(abort);
     let office: import('../core/docx').OfficeSession | undefined;
     try {
+      await thumbnails.stop(); checkAbort(abort.signal);
       if (!batch.length || (organize && !selected.length)) throw new Error('请先添加有效文件，并至少选择一页。');
       if (tool === 'image-pdf' || organize) {
         if (organize && batch.some(i => i.preparation !== 'ready')) throw new Error('有文件尚未成功读取。请先重试读取或移除该文件，再整体导出；不会自动跳过。');
@@ -234,11 +235,10 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
       const task = ++generation.current;
       updateItem(item.id, { preparation: 'checking', message: undefined });
       try {
-        const { pdfThumbnails } = await import('../core/pdf-render');
-        const additions = await pdfThumbnails(item.file, item.id, abort.signal, taskProgress(abort));
-        if (pages.length + additions.length > MAX_PAGES) { additions.forEach(p => revoke(p.thumbnail)); throw new Error(`本批页面超过 ${MAX_PAGES} 页，请减少文件数量。`); }
+        await thumbnails.stop();
+        const { pdfPages } = await import('../core/pdf-render');
+        const additions = await pdfPages(item.file, item.id, MAX_PAGES - pages.length, abort.signal);
         checkAbort(abort.signal);
-        additions.forEach(p => { if (p.thumbnail) urls.current.add(p.thumbnail); });
         setPages(current => [...current, ...additions]);
         updateItem(item.id, { preparation: 'ready', status: 'ready', message: `${additions.length} 页` });
       } catch (error) {
@@ -281,7 +281,7 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
         {moveId && <form className="queue-position" onSubmit={e => { e.preventDefault(); const n = Number(itemPosition); if (Number.isInteger(n) && n >= 1 && n <= items.length) { setItems(current => moveToPosition(current, new Set([moveId]), n)); setMoveId(''); } }}><label>移到第 N 位<input aria-label="文件目标位置" type="number" min="1" max={items.length} required value={itemPosition} onChange={e => setItemPosition(e.target.value)} /></label><button className="button secondary" disabled={busy}>移动文件</button><button className="text-button" type="button" onClick={() => setMoveId('')}>关闭</button></form>}
         {organize && pages.length > 0 && <div className="page-editor"><div className="page-toolbar"><strong>已选 {selected.length} / {pages.length} 页</strong><button className="text-button" disabled={busy} onClick={() => setPages(current => current.map(p => ({ ...p, selected: true })))}>全选</button><button className="text-button" disabled={busy} onClick={() => setPages(current => current.map(p => ({ ...p, selected: !p.selected })))}>反选</button><button className="text-button muted" disabled={busy || !selected.length} onClick={() => { selected.forEach(p => revoke(p.thumbnail)); setPages(current => current.filter(p => !p.selected)); }}>删除选中</button></div>
           <fieldset className="page-batch" disabled={busy}><div><label>按队列位置选择<input aria-label="队列位置范围" placeholder="全部，例如 1-3,5" value={range} onChange={e => setRange(e.target.value)} /></label><button className="button secondary" onClick={selectRange}>应用选择范围</button></div><div><button className="button secondary" disabled={!selected.length} onClick={() => setPages(current => current.map(p => p.selected ? { ...p, rotation: (p.rotation + 90) % 360 } : p))}>旋转选中页</button><label>移动到第 N 位<input aria-label="选中页目标位置" type="number" min="1" max={pages.length - selected.length + 1} value={pagePosition} onChange={e => setPagePosition(e.target.value)} /></label><button className="button secondary" disabled={!selected.length} onClick={movePages}>移动选中页</button></div><p className="hint">范围只改变勾选状态，导出顺序取当前队列。移动位置按移走选中页后的队列计算，选中页内部顺序保留。</p>{pageActionError && <p className="field-error" role="alert">{pageActionError}</p>}</fieldset>
-          <div className="page-grid">{pages.map((p, index) => <article key={p.id} className={`page-card ${p.selected ? 'selected' : ''}`}>
+          <div className="page-grid">{pages.map((p, index) => <article key={p.id} data-page-id={p.id} data-source-page={p.page} className={`page-card ${p.selected ? 'selected' : ''}`}>
           <label><input aria-label={`选择 ${p.sourceName} 第 ${p.page} 页`} type="checkbox" checked={p.selected} disabled={busy} onChange={e => setPages(current => current.map(x => x.id === p.id ? { ...x, selected: e.target.checked } : x))} /><span className="page-image">{p.thumbnail ? <img src={p.thumbnail} alt={`${p.sourceName} 第 ${p.page} 页缩略图`} style={{ transform: `rotate(${p.rotation}deg)` }} /> : <span>{p.thumbnailStatus === 'error' ? '缩略图失败，可尝试导出' : '缩略图待生成'}</span>}</span><strong>位置 {index + 1} · 原第 {p.page} 页</strong><small title={p.sourceName}>{p.sourceName}</small></label>
           <div className="page-actions"><button className="icon-button" aria-label={`前移页面 ${index + 1}`} disabled={busy || index === 0} onClick={() => setPages(current => move(current, p.id, -1))}><ArrowUp size={15} /></button><button className="icon-button" aria-label={`后移页面 ${index + 1}`} disabled={busy || index === pages.length - 1} onClick={() => setPages(current => move(current, p.id, 1))}><ArrowDown size={15} /></button><button className="icon-button" aria-label={`旋转页面 ${index + 1}`} disabled={busy} onClick={() => setPages(current => current.map(x => x.id === p.id ? { ...x, rotation: (x.rotation + 90) % 360 } : x))}><RotateCw size={15} /></button></div>
         </article>)}</div></div>}
