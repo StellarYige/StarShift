@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<!-- Embind in this pinned engine needs eval; only this engine frame permits it. No document HTML is inserted here. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-eval' blob: data:; worker-src 'self' blob:; connect-src 'self' blob:; style-src 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' blob: data:; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<title>StarShift 本地文档引擎</title></head>
+<body><canvas id="qtcanvas" width="500" height="500" style="width:500px;height:500px;position:absolute;left:-10000px" aria-hidden="true"></canvas><script type="module" src="./frame.js"></script></body></html>

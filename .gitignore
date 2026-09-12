@@ -1,0 +1,14 @@
+node_modules/
+dist/
+release/
+test-results/
+playwright-report/
+.cache/
+public/engine/
+public/pdfjs/
+public/fonts/
+public/licenses/
+public/coi-serviceworker.js
+*.log
+.env*
+!.env.example

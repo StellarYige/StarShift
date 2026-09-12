@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.docx binary
+*.pdf binary
+*.gz binary
+# Preserve upstream license text verbatim, including its whitespace.
+vendor/licenses/** -whitespace
+vendor/fonts/OFL.txt -whitespace
