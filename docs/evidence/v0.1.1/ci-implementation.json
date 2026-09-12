@@ -1,0 +1,205 @@
+{
+  "captured": "2026-09-12T09:01:10.383Z",
+  "run": {
+    "id": 34684429166,
+    "sha": "4003bea93be55f0386c97b756cf0b309037a6053",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/StellarYige/StarShift/actions/runs/34684429166"
+  },
+  "jobs": [
+    {
+      "id": 103528814521,
+      "name": "check",
+      "conclusion": "success",
+      "url": "https://github.com/StellarYige/StarShift/actions/runs/34684429166/job/103528814521",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-12T08:53:36Z",
+          "completed_at": "2026-09-12T08:53:37Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-12T08:53:37Z",
+          "completed_at": "2026-09-12T08:53:39Z"
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-12T08:53:39Z",
+          "completed_at": "2026-09-12T08:53:39Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-12T08:53:39Z",
+          "completed_at": "2026-09-12T08:53:45Z"
+        },
+        {
+          "name": "Run npm run typecheck",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-09-12T08:53:45Z",
+          "completed_at": "2026-09-12T08:53:46Z"
+        },
+        {
+          "name": "Run npm test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-09-12T08:53:46Z",
+          "completed_at": "2026-09-12T08:53:47Z"
+        },
+        {
+          "name": "Run npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-09-12T08:53:47Z",
+          "completed_at": "2026-09-12T08:53:50Z"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium firefox webkit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-09-12T08:53:50Z",
+          "completed_at": "2026-09-12T08:54:28Z"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-test.txt",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-09-12T08:54:28Z",
+          "completed_at": "2026-09-12T08:54:30Z"
+        },
+        {
+          "name": "Run npm run test:e2e",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-09-12T08:54:30Z",
+          "completed_at": "2026-09-12T08:55:01Z"
+        },
+        {
+          "name": "Run npm run test:matrix",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-09-12T08:55:01Z",
+          "completed_at": "2026-09-12T08:59:29Z"
+        },
+        {
+          "name": "Save test evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-09-12T08:59:29Z",
+          "completed_at": "2026-09-12T08:59:30Z"
+        },
+        {
+          "name": "Upload Pages artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-09-12T08:59:30Z",
+          "completed_at": "2026-09-12T08:59:38Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-09-12T08:59:38Z",
+          "completed_at": "2026-09-12T08:59:40Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26,
+          "started_at": "2026-09-12T08:59:40Z",
+          "completed_at": "2026-09-12T08:59:40Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-09-12T08:59:40Z",
+          "completed_at": "2026-09-12T08:59:40Z"
+        }
+      ],
+      "log": "docs/evidence/v0.1.1/ci/implementation-check.txt",
+      "logSha256": "0e66c1c6be24c5ccd7d01b9d84f9c1bccbb0f9ce698169777f8d7668469aa141",
+      "logLines": 1967,
+      "warnings": [
+        "2026-09-12T08:53:37.2592218Z hint: to use in all of your new repositories, which will suppress this warning,"
+      ],
+      "runtimeWarnings": [],
+      "annotations": []
+    },
+    {
+      "id": 103529468925,
+      "name": "deploy",
+      "conclusion": "success",
+      "url": "https://github.com/StellarYige/StarShift/actions/runs/34684429166/job/103529468925",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-12T08:59:46Z",
+          "completed_at": "2026-09-12T08:59:47Z"
+        },
+        {
+          "name": "Configure Pages",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-12T08:59:47Z",
+          "completed_at": "2026-09-12T08:59:48Z"
+        },
+        {
+          "name": "Deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-12T08:59:48Z",
+          "completed_at": "2026-09-12T09:00:02Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-12T09:00:02Z",
+          "completed_at": "2026-09-12T09:00:02Z"
+        }
+      ],
+      "log": "docs/evidence/v0.1.1/ci/implementation-deploy.txt",
+      "logSha256": "499cc05a3ebc2283564273ca30d70318550a2e73cb836c16cf4bcdcbd28dd6dd",
+      "logLines": 67,
+      "warnings": [
+        "2026-09-12T08:59:48.3693960Z (node:2060) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.",
+        "2026-09-12T08:59:48.3696636Z (Use `node --trace-deprecation ...` to show where the warning was created)"
+      ],
+      "runtimeWarnings": [],
+      "annotations": []
+    }
+  ]
+}

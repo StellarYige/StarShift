@@ -43,7 +43,9 @@ async function files(directory,prefix='') {
   }
   return result;
 }
-const paths=await files(build),resourcePaths=[];let next=0;
+const index=build.endsWith('.json')?JSON.parse(await readFile(build,'utf8')):null;
+const paths=index?index.paths:await files(build),resourcePaths=[];let next=0;
+if(!Array.isArray(paths)||!paths.length||paths.some(p=>typeof p!=='string'||!p||p.includes('\\')||p.startsWith('/')||p.split('/').includes('..'))||new Set(paths).size!==paths.length)throw Error('Invalid build path listing');
 await Promise.all(Array.from({length:4},async()=>{
   while(next<paths.length) {
     const relative=paths[next++];
@@ -54,5 +56,5 @@ await Promise.all(Array.from({length:4},async()=>{
 }));
 resourcePaths.sort((a,b)=>a.path.localeCompare(b.path));
 await mkdir('docs/evidence/v0.1.1',{recursive:true});
-const report={time:new Date().toISOString(),base,version:'0.1.1',requests,resourcePaths,assets,licenseEntries:licenses.length,warning:'Decoded bytes and HEAD checks used only for integrity and deployment, never substituted for performance transfer measurements.'};
+const report={time:new Date().toISOString(),base,version:'0.1.1',buildPathSource:build,buildIdentity:index?{sha:index.sha,run:index.run,logSha256:index.logSha256}:null,requests,resourcePaths,assets,licenseEntries:licenses.length,warning:'Decoded bytes and HEAD checks used only for integrity and deployment, never substituted for performance transfer measurements.'};
 await writeFile(output,JSON.stringify(report,null,2));console.log(JSON.stringify({base,version:report.version,resources:resourcePaths.length,assets:assets.length,licenses:licenses.length}));

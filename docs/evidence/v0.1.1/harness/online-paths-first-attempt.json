@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "scripts/verify-site.mjs",
+      "https://stellaryige.github.io/StarShift/",
+      "docs/evidence/v0.1.1/site-online.json"
+    ],
+    "started": "2026-09-12T09:01:15.217Z",
+    "finished": "2026-09-12T09:01:55.861Z",
+    "code": 1
+  }
+]

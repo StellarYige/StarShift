@@ -8,3 +8,5 @@
 # Preserve upstream license text verbatim, including its whitespace.
 vendor/licenses/** -whitespace
 vendor/fonts/OFL.txt -whitespace
+# Keep audited CI logs byte-for-byte so their recorded SHA256 stays reproducible.
+docs/evidence/**/ci/*.txt -text -whitespace

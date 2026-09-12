@@ -1,0 +1,14 @@
+{
+  "source": "docs/evidence/v0.1.1/performance/revised-online.json",
+  "profile": ".cache\\performance\\revised-online-1789204171769\\1",
+  "lastBatchCompleted": "2026-09-12T09:11:27.603Z",
+  "cacheControl": [
+    "max-age=600"
+  ],
+  "maximumObservedLifetimeMs": 600000,
+  "expiryMeasurementLaunched": "2026-09-12T09:21:44.074Z",
+  "elapsedSinceLastBatchMs": 616471,
+  "method": "Reuse the original on-disk profile after real elapsed time. No clock change, cache override, header rewrite or intervening deployment.",
+  "finished": "2026-09-12T09:22:14.375Z",
+  "exitCode": 0
+}

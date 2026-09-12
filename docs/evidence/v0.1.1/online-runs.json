@@ -1,0 +1,55 @@
+[
+  {
+    "args": [
+      "scripts/verify-site.mjs",
+      "https://stellaryige.github.io/StarShift/",
+      "docs/evidence/v0.1.1/site-online.json",
+      "docs/evidence/v0.1.1/deployed-build-paths.json"
+    ],
+    "started": "2026-09-12T09:06:28.697Z",
+    "finished": "2026-09-12T09:07:35.960Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+      "run",
+      "test:e2e"
+    ],
+    "started": "2026-09-12T09:07:35.964Z",
+    "finished": "2026-09-12T09:09:31.032Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/collect-validation.mjs",
+      "test-results/e2e-report.json",
+      "docs/evidence/v0.1.1/e2e-online.json"
+    ],
+    "started": "2026-09-12T09:09:31.034Z",
+    "finished": "2026-09-12T09:09:31.182Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/measure-docx.mjs",
+      "--url",
+      "https://stellaryige.github.io/StarShift/",
+      "--label",
+      "revised-online",
+      "--rounds",
+      "3"
+    ],
+    "started": "2026-09-12T09:09:31.184Z",
+    "finished": "2026-09-12T09:15:07.822Z",
+    "code": 0
+  },
+  {
+    "args": [
+      "scripts/summarize-measurements.mjs"
+    ],
+    "started": "2026-09-12T09:15:07.823Z",
+    "finished": "2026-09-12T09:15:08.191Z",
+    "code": 0
+  }
+]
