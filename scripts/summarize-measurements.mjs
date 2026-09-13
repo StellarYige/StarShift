@@ -1,6 +1,7 @@
+import { docxDirectory } from './measurement-paths.mjs';
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { networkTotals, uniqueRequests } from './network-totals.mjs';
-const root='docs/evidence/v0.1.1/performance';
+const root=docxDirectory;
 const statistics=values=>{
   const v=values.filter(Number.isFinite).sort((a,b)=>a-b);
   return v.length?{n:v.length,median:v.length%2?v[(v.length-1)/2]:(v[v.length/2-1]+v[v.length/2])/2,min:v[0],max:v.at(-1)}:null;

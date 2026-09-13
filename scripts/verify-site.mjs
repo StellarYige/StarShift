@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import path from 'node:path';
 const base=process.argv[2]||'http://127.0.0.1:4187/StarShift/';
-const output=process.argv[3]||'docs/evidence/v0.1.1/site-local.json';
+const output=process.argv[3]||'test-results/site-local.json';
 const build=process.argv[4]||'dist';
 const expected=JSON.parse(await readFile('public/asset-manifest.json','utf8'));
 const requests=[];

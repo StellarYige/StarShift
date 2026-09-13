@@ -4,7 +4,7 @@
 
 免费、开源、无需登录的浏览器本地文件转换工具。文件、文件名和转换结果不上传；没有广告、追踪、水印、会员或使用次数限制。
 
-[在线使用](https://stellaryige.github.io/StarShift/) · [从源码自行部署](#自行部署) · [测试记录](docs/TEST_REPORT.md) · [引擎选型与限制](docs/ENGINE_EVALUATION.md)
+[在线使用](https://stellaryige.github.io/StarShift/) · [从源码自行部署](#自行部署) · [验证记录](docs/FIVE_TOOLS_REPORT.md) · [引擎选型与限制](docs/ENGINE_EVALUATION.md)
 
 ## 功能
 
@@ -49,7 +49,9 @@ npm.cmd run test:e2e
 npm.cmd run test:matrix
 ```
 
-测试使用仓库自制样例，结果和截图位于 `test-results/`。`npm.cmd run fixtures` 可重建大部分样例；加密 PDF 的创建方法见测试记录。**请不要把个人文档提交到仓库。**
+测试使用仓库自制样例，回归与兼容矩阵的结果分别位于 `test-results/e2e/`、`test-results/matrix/`，可通过 `E2E_OUTPUT`、`MATRIX_OUTPUT` 分开保存多轮结果。`npm.cmd run fixtures` 可重建大部分样例；加密 PDF 的创建方法见[首版测试记录](docs/TEST_REPORT.md)。**请不要把个人文档提交到仓库。**
+
+测量脚本默认输出到 `test-results/measurements/` 下的 `docx/`、`five-tools/`、`memory/` 或 `layout/`，`MEASUREMENT_DIR` 可指定另一根目录；已有 `--output` 参数继续有效。截图和站点核验默认也写入 `test-results/`。这些可重新生成的输出不入库；需要保留的成功、失败及故障现场经核对后另存 `docs/evidence/`，不覆盖历史记录。统一采集命令为 `node scripts/collect-test-evidence.mjs <report.json> <目标.json>`，支持文件及内嵌 JSON 附件。
 
 ## 自行部署
 
@@ -117,13 +119,17 @@ WASM 的 MIME 应为 `application/wasm`，`.js` / `.mjs` 应为 JavaScript MIME�
 ## 代码结构
 
 ```text
-src/components/       文件队列、设置、页面整理、预览
-src/core/             DOCX 验证、图片处理、PDF 操作、Worker 调度
+src/components/       工作区、文件队列、页面编辑、设置与预览
+src/core/             转换、队列操作、资源生命周期、Worker 入口与通信类型
+src/styles/           工作区样式；src/style.css 保留站点通用样式
 public/office/        固定 ZetaOffice 的 iframe / UNO Worker 适配
 vendor/               固定引擎与字体压缩包、校验值、许可证
 scripts/              离线资源准备、测试样例、性能测量、独立 PDF 检查
 tests/                单元与浏览器端到端测试、自制样例
+docs/evidence/        已核验的历史记录与故障证据
 .github/workflows/    自动检查与 GitHub Pages 部署
 ```
+
+`Workspace` 持有批次状态和资源释放入口，`InputQueue`、`PageEditor` 只处理各自的列表界面与编辑表单。`worker-protocol.ts` 仅定义通信类型；共享模块不导入 `task-worker.ts` 入口。PDF、ZIP、Office 与预览保留原按需加载边界。
 
 自有代码采用 [MIT](LICENSE)。第三方库、LibreOffice/ZetaOffice、Qt 与字体分别遵循原许可，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 和构建输出 `dist/licenses/`。引擎源码获取与重构建入口也列于该文件。

@@ -1,3 +1,4 @@
+import { memoryDirectory } from './measurement-paths.mjs';
 // Separate from timing measurements: OS sampling and forced GC perturb timing.
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import { execFile } from 'node:child_process';
@@ -7,7 +8,7 @@ import path from 'node:path';
 const args=process.argv.slice(2), option=(n,d)=>args.includes(n)?args[args.indexOf(n)+1]:d;
 const name=option('--browser','chromium'), rounds=Number(option('--rounds',name==='chromium'?'10':'3'));
 const base=option('--url','http://127.0.0.1:4187/StarShift/');
-const output=option('--output',`docs/evidence/v0.1.1/memory-${name}.json`);
+const output=option('--output',`${memoryDirectory}/memory-${name}.json`);
 const tool=option('--tool','docx-pdf');
 if(!['docx-pdf','image-pdf'].includes(tool))throw Error('Unsupported measurement tool');
 const inputs=tool==='docx-pdf'?['tests/fixtures/中文表格分页.docx']:Array.from({length:10},(_,i)=>`.cache/five-tools-fixtures/image-${String(i+1).padStart(2,'0')}.jpg`);
@@ -89,7 +90,7 @@ try {
       if(after.weakReferences?.input.observed !== inputs.length*round || after.weakReferences?.blob.observed !== (tool==='docx-pdf'?1:11)*round)throw Error('File/Blob reference instrumentation missed an input or output');
       if(after.weakReferences?.input.live || after.weakReferences?.blob.live)throw Error('Selected File or output Blob remains reachable after clear and page GC');
     }
-    await mkdir('docs/evidence/v0.1.1',{recursive:true});await writeFile(output,JSON.stringify(report,null,2));
+    await mkdir(path.dirname(output),{recursive:true});await writeFile(output,JSON.stringify(report,null,2));
     console.log(JSON.stringify({browser:name,tool,round,outcome:report.outcome,docx:report.docx,after:report.samples.at(-1)}));
   }
 }catch(e){report.failure=e.message;process.exitCode=1;}

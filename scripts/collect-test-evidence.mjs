@@ -11,7 +11,7 @@ async function visit(suite) {
     const results = [];
     for (const result of test.results) {
       const evidence = {};
-      for (const attachment of result.attachments || []) if (attachment.name.endsWith('.json')) {
+      for (const attachment of result.attachments || []) if (attachment.contentType === 'application/json' || attachment.name.endsWith('.json')) {
         const content = attachment.body ? Buffer.from(attachment.body, 'base64').toString('utf8') : await readFile(attachment.path, 'utf8');
         evidence[attachment.name] = JSON.parse(content);
       }

@@ -1,12 +1,12 @@
 import { chromium, expect } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
 
-const directory = 'docs/evidence/five-tools/screenshots';
+const [directory = 'test-results/screenshots', base = 'http://127.0.0.1:4187/StarShift/'] = process.argv.slice(2);
 await mkdir(directory, { recursive: true });
 const browser = await chromium.launch(), page = await browser.newPage({ viewport: { width: 1365, height: 1000 } });
 const audit = [];
 try {
-  await page.goto('http://127.0.0.1:4187/StarShift/#image-pdf');
+  await page.goto(`${base}#image-pdf`);
   await page.getByTestId('file-input').setInputFiles(['tests/fixtures/transparent.png', 'tests/fixtures/orientation-6.jpg']);
   await expect(page.getByRole('button', { name: '取消任务' })).toBeHidden();
   await page.screenshot({ path: `${directory}/desktop-queue.png`, fullPage: true });

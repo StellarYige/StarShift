@@ -1,5 +1,6 @@
+import { docxDirectory } from './measurement-paths.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
-const root = 'docs/evidence/v0.1.1/performance';
+const root = docxDirectory;
 const median = values => {
   const sorted = values.filter(Number.isFinite).sort((a, b) => a - b);
   return sorted.length ? sorted.length % 2 ? sorted[(sorted.length - 1) / 2] : (sorted[sorted.length / 2 - 1] + sorted[sorted.length / 2]) / 2 : null;

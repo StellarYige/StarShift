@@ -1,12 +1,13 @@
+import { fiveToolsDirectory } from './measurement-paths.mjs';
 // Resolve the first-open discrepancy separately from Playwright polling time.
 // Record actual input events to decoded image + animation frame in the page.
 import { chromium, expect } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import os from 'node:os';
-const destination = 'docs/evidence/five-tools/performance/preview-paint.json';
+const destination = `${fiveToolsDirectory}/preview-paint.json`;
 const report = { time: new Date().toISOString(), baseline: '19a49db', revised: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), cpu: os.cpus()[0].model, ram: os.totalmem(), os: os.release(), method: 'Five alternating production pairs; fresh browser/context each. Bring preview trigger into view and wait for background thumbnails to finish before timing. Browser capture-phase click to image load plus requestAnimationFrame, not automation polling or physical screen scanout. No fault injection, forced GC or OS sampler.', samples: [] };
-await mkdir('docs/evidence/five-tools/performance', { recursive: true });
+await mkdir(fiveToolsDirectory, { recursive: true });
 for (let pair = 1; pair <= 5; pair++) for (const version of pair % 2 ? ['baseline', 'revised'] : ['revised', 'baseline']) {
   const browser = await chromium.launch(); report.browser = browser.version();
   const page = await browser.newPage({ viewport: { width: 1365, height: 1000 } });

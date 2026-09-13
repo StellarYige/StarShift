@@ -1,7 +1,9 @@
-import { readFile, writeFile, copyFile } from 'node:fs/promises';
+import { measurementRoot } from './measurement-paths.mjs';
+import { mkdir, readFile, writeFile, copyFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-const [baseline, revised, directory = 'docs/evidence/v0.1.1'] = process.argv.slice(2);
+const [baseline, revised, directory = `${measurementRoot}/layout`] = process.argv.slice(2);
 if (!baseline || !revised) throw Error('Usage: compare-layout.mjs baseline-pdf-stem revised-pdf-stem [evidence-directory]');
+await mkdir(directory, { recursive: true });
 const samples = [];
 for (const page of [1, 2]) {
   const before = await readFile(`${baseline}-page-${page}.png`);

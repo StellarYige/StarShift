@@ -1,3 +1,4 @@
+import { docxDirectory } from './measurement-paths.mjs';
 // Repeatable diagnostic harness, never included in the product. No request interception.
 import { chromium, expect } from '@playwright/test';
 import { spawn, execFileSync } from 'node:child_process';
@@ -10,7 +11,7 @@ const base=option('--url','http://127.0.0.1:4188/StarShift/');
 const label=option('--label','baseline-local');
 const rounds=Number(option('--rounds','5'));
 const batches=Number(option('--batches','5'));
-const directory=path.resolve(option('--output','docs/evidence/v0.1.1/performance'));
+const directory=path.resolve(option('--output',docxDirectory));
 const profileRoot=path.resolve('.cache/performance',label+'-'+Date.now());
 await mkdir(directory,{recursive:true});await mkdir(profileRoot,{recursive:true});
 const report={label,base,time:new Date().toISOString(),node:process.version,os:os.type()+' '+os.release(),cpu:os.cpus()[0].model,ram:os.totalmem(),profiles:[],method:'CDP all-target Network; no Fetch/route/cache override or debugger pause. Encoded received bytes include protocol-reported headers; decoded body counts from dataReceived, no manifest substitution. Duplicate sessions and SW wrappers excluded. Cold new profile; revisit new process with same disk profile; five batches in one page.',samples:[]};

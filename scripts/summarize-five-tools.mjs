@@ -1,5 +1,6 @@
+import { fiveToolsDirectory } from './measurement-paths.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
-const directory = 'docs/evidence/five-tools/performance';
+const directory = fiveToolsDirectory;
 const pdfOnly = process.argv.includes('--pdf-only');
 const data = JSON.parse(await readFile(`${directory}/${pdfOnly ? 'paired-pdf-final' : 'paired'}.json`, 'utf8'));
 const median = values => { const sorted = [...values].sort((a, b) => a - b); return sorted.length % 2 ? sorted[(sorted.length - 1) / 2] : (sorted[sorted.length / 2 - 1] + sorted[sorted.length / 2]) / 2; };

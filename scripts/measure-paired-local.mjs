@@ -1,6 +1,8 @@
+import { docxDirectory } from './measurement-paths.mjs';
 import { spawn } from 'node:child_process';
-import { writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 const runs = [];
+await mkdir(docxDirectory, { recursive: true });
 for (let pair = 1; pair <= 5; pair++) {
   // Alternate order to reduce a simple time/order bias. Each run has a new
   // cold profile followed by a browser restart using that disk profile.
@@ -12,7 +14,7 @@ for (let pair = 1; pair <= 5; pair++) {
       child.on('error', reject); child.on('exit', resolve);
     });
     runs.push({ pair, version, label, code });
-    await writeFile('docs/evidence/v0.1.1/performance/paired-runs.json', JSON.stringify({ time: new Date().toISOString(), method: 'Additional contemporaneous alternating-order pairs after the planned five-round runs; unchanged timing and browser method; no intentional engine performance optimization.', runs }, null, 2));
+    await writeFile(`${docxDirectory}/paired-runs.json`, JSON.stringify({ time: new Date().toISOString(), method: 'Additional contemporaneous alternating-order pairs after the planned five-round runs; unchanged timing and browser method; no intentional engine performance optimization.', runs }, null, 2));
   }
 }
 if (runs.some(r => r.code !== 0)) process.exitCode = 1;

@@ -1,14 +1,21 @@
+# Dependencies and reproducible build/test output.
 node_modules/
 dist/
 release/
 test-results/
 playwright-report/
 .cache/
+# Expanded by scripts/prepare-assets.mjs from vendor/ and installed packages.
 public/engine/
 public/pdfjs/
 public/fonts/
 public/licenses/
 public/coi-serviceworker.js
+public/asset-manifest.json
+# Keep curated docs/evidence/ and source fixtures tracked.
+__pycache__/
+*.py[cod]
+*.tsbuildinfo
 *.log
 .env*
 !.env.example

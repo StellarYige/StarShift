@@ -1,5 +1,6 @@
+import { memoryDirectory } from './measurement-paths.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
-const root = 'docs/evidence/v0.1.1';
+const root = memoryDirectory;
 const summaries = {};
 for (const name of ['chromium', 'firefox', 'webkit']) {
   const report = JSON.parse(await readFile(`${root}/memory-${name}.json`, 'utf8'));

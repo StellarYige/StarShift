@@ -1,3 +1,4 @@
+import { fiveToolsDirectory } from './measurement-paths.mjs';
 // Alternating production A/B runs. No fault injection, OS sampling, or forced
 // GC in timing runs. Keep failures and individual samples, including feedback.
 import { chromium, expect } from '@playwright/test';
@@ -5,7 +6,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import os from 'node:os';
 
-const output = 'docs/evidence/five-tools/performance';
+const output = fiveToolsDirectory;
 const pdfOnly = process.argv.includes('--pdf-only');
 const outputName = pdfOnly ? 'paired-pdf-final' : 'paired';
 await mkdir(output, { recursive: true });

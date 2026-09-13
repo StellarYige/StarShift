@@ -1,7 +1,8 @@
+import { fiveToolsDirectory } from './measurement-paths.mjs';
 // Separate resource measurements using the existing browser/process sampler.
 import { spawn } from 'node:child_process';
 import { mkdir, writeFile } from 'node:fs/promises';
-const directory = 'docs/evidence/five-tools/performance';
+const directory = fiveToolsDirectory;
 await mkdir(directory, { recursive: true });
 const runs = [];
 for (let pair = 1; pair <= 5; pair++) for (const version of pair % 2 ? ['baseline', 'revised'] : ['revised', 'baseline']) {
