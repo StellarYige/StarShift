@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Braces, FileText, CodeXml as Githu
 import type { ToolId } from './types';
 import Workspace from './components/Workspace';
 
-export const tools = [
+const tools = [
   { id: 'docx-pdf', title: 'DOCX 转 PDF', subtitle: '文档排版，妥善保留', description: '将 Word 文档转换为 PDF，保留中文、图片、表格与基本分页。', icon: FileText, color: 'blue', types: 'DOCX → PDF', note: '首次按需加载引擎' },
   { id: 'image-pdf', title: '图片转 PDF', subtitle: '散落的图片，整理成册', description: '把多张图片合成一个 PDF，自由排序、旋转，调整纸张与边距。', icon: Images, color: 'peach', types: 'JPG / PNG / WEBP → PDF' },
   { id: 'pdf-image', title: 'PDF 转图片', subtitle: '每一页，都能单独分享', description: '选择需要的页面与清晰度，导出 PNG 或 JPG，一键打包下载。', icon: Image, color: 'purple', types: 'PDF → PNG / JPG' },

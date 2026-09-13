@@ -1,17 +1,18 @@
 import { lazy, Suspense, useEffect, useRef, useState, type Dispatch, type SetStateAction } from 'react';
-import { Upload, Plus, X, ArrowUp, ArrowDown, RotateCw, Download, Eye, Check, LoaderCircle, File, Trash2, ArrowRight, Square, RotateCcw, ShieldCheck, FolderDown } from 'lucide-react';
+import { Upload, Plus, X, Download, Eye, Check, LoaderCircle, File, Trash2, ArrowRight, Square, ShieldCheck, FolderDown } from 'lucide-react';
 import type { InputItem, OutputItem, PageItem, Progress, ProgressDetail, Settings, ToolId } from '../types';
 import { DEFAULT_SETTINGS } from '../types';
-import { bytesLabel, checkAbort, errorMessage, MAX_FILE_BYTES, MAX_PAGES, MAX_TOTAL_BYTES, parsePages, stem, uniqueName } from '../core/common';
-import { moveToPosition, settingsErrors } from '../core/queue';
+import { bytesLabel, checkAbort, errorMessage, MAX_FILE_BYTES, MAX_PAGES, MAX_TOTAL_BYTES, stem, uniqueName } from '../core/common';
+import { settingsErrors } from '../core/queue';
 import { runWorker } from '../core/worker-client';
 import { OfficeError } from '../core/office-error';
 import { checkOfficeCompatibility } from '../core/office-compatibility';
 import ToolSettings from './ToolSettings';
+import InputQueue from './InputQueue';
+import PageEditor from './PageEditor';
 import { usePageThumbnails } from './usePageThumbnails';
 
 const Preview = lazy(() => import('./Preview'));
-const labels = { ready: '等待转换', working: '正在处理', done: '已完成', error: '处理失败', cancelled: '已取消' };
 const acceptMap: Record<ToolId, string> = { 'docx-pdf': '.docx', 'image-pdf': '.jpg,.jpeg,.png,.webp', 'image-convert': '.jpg,.jpeg,.png,.webp', 'pdf-image': '.pdf', 'pdf-organize': '.pdf' };
 
 export default function Workspace({ tool }: { tool: ToolId }) {
@@ -35,11 +36,6 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
   const [notice, setNotice] = useState('');
   const [selectionNotice, setSelectionNotice] = useState('');
   const [compatibilityNotice, setCompatibilityNotice] = useState('');
-  const [range, setRange] = useState('');
-  const [pagePosition, setPagePosition] = useState('1');
-  const [pageActionError, setPageActionError] = useState('');
-  const [moveId, setMoveId] = useState('');
-  const [itemPosition, setItemPosition] = useState('1');
   const [zipUrl, setZipUrl] = useState('');
   const zipRef = useRef('');
   const generation = useRef(0);
@@ -234,12 +230,6 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
     } catch (error) { if (generation.current === task) setNotice(errorMessage(error)); }
     finally { if (generation.current === task) { controller.current = null; running.current = false; setBusy(false); setPhase(''); setProgress({}); } }
   }
-  function move<T extends { id: string }>(list: T[], id: string, offset: number) {
-    const index = list.findIndex(i => i.id === id); const next = [...list];
-    if (index + offset < 0 || index + offset >= list.length) return list;
-    [next[index], next[index + offset]] = [next[index + offset], next[index]];
-    return next;
-  }
   function removeItem(item: InputItem) {
     revoke(item.thumbnail); pages.filter(p => p.sourceId === item.id).forEach(p => revoke(p.thumbnail));
     setPages(current => current.filter(p => p.sourceId !== item.id)); setItems(current => current.filter(i => i.id !== item.id));
@@ -262,18 +252,6 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
       } finally { if (generation.current === task) { controller.current = null; running.current = false; setBusy(false); setPhase(''); setProgress({}); } }
     } else await convert('unfinished', merged ? undefined : item.id);
   }
-  function selectRange() {
-    try {
-      const positions = new Set(parsePages(range, pages.length));
-      setPages(current => current.map((p, index) => ({ ...p, selected: positions.has(index + 1) })));
-      setPageActionError('');
-    } catch (error) { setPageActionError(errorMessage(error)); }
-  }
-  function movePages() {
-    const position = Number(pagePosition), maximum = pages.length - selected.length + 1;
-    if (!selected.length || !Number.isInteger(position) || position < 1 || position > maximum) { setPageActionError(`目标位置须在 1–${maximum} 之间，按移走选中页后的队列计算。`); return; }
-    setPages(current => moveToPosition(current, new Set(selected.map(p => p.id)), position)); setPageActionError('');
-  }
   return <>
     <div className="steps"><span className="step active"><b>1</b>选择文件</span><span className="step-line" /><span className={`step ${items.length ? 'active' : ''}`}><b>2</b>调整设置</span><span className="step-line" /><span className={`step ${outputs.length ? 'active' : ''}`}><b>3</b>转换与下载</span></div>
     <div className="workspace-grid">
@@ -286,21 +264,8 @@ function WorkspaceBatch({ tool, settings, setSettings, onClear }: { tool: ToolId
           {!items.length && <><span>或点击选择文件</span><small>{acceptMap[tool].replaceAll('.', '').replaceAll(',', ' / ').toUpperCase()} <i>·</i> 支持批量选择</small></>}
         </button>
         {!items.length && <div className="empty-note"><ShieldCheck size={15} /><span>文件只留在你的浏览器中</span><span className="dot">·</span><span>无需注册</span></div>}
-        {!!items.length && <ul className="file-list">{items.map((item, index) => <li key={item.id} className={`file-row status-${item.status}`}>
-          <div className="file-thumb">{item.thumbnail ? <img src={item.thumbnail} alt="" style={{ transform: `rotate(${item.rotation}deg)` }} /> : <File size={23} strokeWidth={1.5} />}</div>
-          <div className="file-info"><strong title={item.file.name}>{item.file.name}</strong><span>{bytesLabel(item.file.size)}<i>·</i>{(item.status === 'working' || item.preparation === 'checking') && <LoaderCircle size={12} className="spin" />}{item.status === 'done' && <Check size={12} />}{item.preparation === 'checking' ? '正在检查文件' : labels[item.status]}{item.rotation > 0 && ` · ${item.rotation}°`}</span>{item.thumbnailStatus === 'loading' && <small>缩略图生成中…</small>}{item.message && <small role={item.status === 'error' ? 'alert' : undefined}>{item.message}</small>}</div>
-          <div className="file-actions">{imageTool && <><button className="icon-button" title="向前移动" aria-label={`向前移动 ${item.file.name}`} disabled={busy || index === 0} onClick={() => setItems(current => move(current, item.id, -1))}><ArrowUp size={15} /></button><button className="icon-button" title="向后移动" aria-label={`向后移动 ${item.file.name}`} disabled={busy || index === items.length - 1} onClick={() => setItems(current => move(current, item.id, 1))}><ArrowDown size={15} /></button><button className="icon-button" title="顺时针旋转" aria-label={`旋转 ${item.file.name}`} disabled={busy} onClick={() => updateItem(item.id, { rotation: (item.rotation + 90) % 360 })}><RotateCw size={15} /></button></>}
-            {tool === 'image-pdf' && <button className="text-button" aria-label={`移到指定位置 ${item.file.name}`} disabled={busy} onClick={() => { setMoveId(item.id); setItemPosition(String(index + 1)); }}>移到…</button>}
-            {(item.status === 'error' || item.status === 'cancelled') && <button className="icon-button" title={merged ? '整体重试；读取失败时先重试读取' : '重试此文件'} aria-label={`重试 ${item.file.name}`} disabled={busy || invalidSettings} onClick={() => void retry(item)}><RotateCcw size={15} /></button>}
-            <button className="icon-button" aria-label={`移除 ${item.file.name}`} title="移除文件" disabled={busy} onClick={() => removeItem(item)}><X size={16} /></button></div>
-        </li>)}</ul>}
-        {moveId && <form className="queue-position" onSubmit={e => { e.preventDefault(); const n = Number(itemPosition); if (Number.isInteger(n) && n >= 1 && n <= items.length) { setItems(current => moveToPosition(current, new Set([moveId]), n)); setMoveId(''); } }}><label>移到第 N 位<input aria-label="文件目标位置" type="number" min="1" max={items.length} required value={itemPosition} onChange={e => setItemPosition(e.target.value)} /></label><button className="button secondary" disabled={busy}>移动文件</button><button className="text-button" type="button" onClick={() => setMoveId('')}>关闭</button></form>}
-        {organize && pages.length > 0 && <div className="page-editor"><div className="page-toolbar"><strong>已选 {selected.length} / {pages.length} 页</strong><button className="text-button" disabled={busy} onClick={() => setPages(current => current.map(p => ({ ...p, selected: true })))}>全选</button><button className="text-button" disabled={busy} onClick={() => setPages(current => current.map(p => ({ ...p, selected: !p.selected })))}>反选</button><button className="text-button muted" disabled={busy || !selected.length} onClick={() => { selected.forEach(p => revoke(p.thumbnail)); setPages(current => current.filter(p => !p.selected)); }}>删除选中</button></div>
-          <fieldset className="page-batch" disabled={busy}><div><label>按队列位置选择<input aria-label="队列位置范围" placeholder="全部，例如 1-3,5" value={range} onChange={e => setRange(e.target.value)} /></label><button className="button secondary" onClick={selectRange}>应用选择范围</button></div><div><button className="button secondary" disabled={!selected.length} onClick={() => setPages(current => current.map(p => p.selected ? { ...p, rotation: (p.rotation + 90) % 360 } : p))}>旋转选中页</button><label>移动到第 N 位<input aria-label="选中页目标位置" type="number" min="1" max={pages.length - selected.length + 1} value={pagePosition} onChange={e => setPagePosition(e.target.value)} /></label><button className="button secondary" disabled={!selected.length} onClick={movePages}>移动选中页</button></div><p className="hint">范围只改变勾选状态，导出顺序取当前队列。移动位置按移走选中页后的队列计算，选中页内部顺序保留。</p>{pageActionError && <p className="field-error" role="alert">{pageActionError}</p>}</fieldset>
-          <div className="page-grid">{pages.map((p, index) => <article key={p.id} data-page-id={p.id} data-source-page={p.page} data-thumbnail-state={p.thumbnailStatus} className={`page-card ${p.selected ? 'selected' : ''}`}>
-          <label><input aria-label={`选择 ${p.sourceName} 第 ${p.page} 页`} type="checkbox" checked={p.selected} disabled={busy} onChange={e => setPages(current => current.map(x => x.id === p.id ? { ...x, selected: e.target.checked } : x))} /><span className="page-image">{p.thumbnail ? <img src={p.thumbnail} alt={`${p.sourceName} 第 ${p.page} 页缩略图`} style={{ transform: `rotate(${p.rotation}deg)` }} /> : <span>{p.thumbnailStatus === 'error' ? '缩略图失败，可尝试导出' : p.thumbnailStatus === 'loading' ? '正在生成缩略图…' : '缩略图待生成'}</span>}</span><strong>位置 {index + 1} · 原第 {p.page} 页</strong><small title={p.sourceName}>{p.sourceName}</small></label>
-          <div className="page-actions"><button className="icon-button" aria-label={`前移页面 ${index + 1}`} disabled={busy || index === 0} onClick={() => setPages(current => move(current, p.id, -1))}><ArrowUp size={15} /></button><button className="icon-button" aria-label={`后移页面 ${index + 1}`} disabled={busy || index === pages.length - 1} onClick={() => setPages(current => move(current, p.id, 1))}><ArrowDown size={15} /></button><button className="icon-button" aria-label={`旋转页面 ${index + 1}`} disabled={busy} onClick={() => setPages(current => current.map(x => x.id === p.id ? { ...x, rotation: (x.rotation + 90) % 360 } : x))}><RotateCw size={15} /></button></div>
-        </article>)}</div></div>}
+        <InputQueue tool={tool} items={items} busy={busy} invalidSettings={invalidSettings} setItems={setItems} updateItem={updateItem} retry={retry} removeItem={removeItem} />
+        {organize && <PageEditor pages={pages} busy={busy} setPages={setPages} revoke={revoke} />}
       </section>
       <aside className="settings-panel panel"><div className="panel-heading"><h2>转换设置</h2><span className="subtle">OPTIONS</span></div><ToolSettings tool={tool} settings={settings} set={value => setSettings(current => ({ ...current, ...value }))} disabled={busy} />
         {compatibilityNotice && <p className="notice" role="alert">{compatibilityNotice}</p>}

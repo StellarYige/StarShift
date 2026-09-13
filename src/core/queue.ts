@@ -1,5 +1,12 @@
 import type { Settings, ToolId } from '../types';
 
+export function moveByOffset<T extends { id: string }>(list: T[], id: string, offset: number) {
+  const index = list.findIndex(i => i.id === id); const next = [...list];
+  if (index + offset < 0 || index + offset >= list.length) return list;
+  [next[index], next[index + offset]] = [next[index + offset], next[index]];
+  return next;
+}
+
 // Position is one-based, after removing the moving entries. Their relative
 // order always comes from the current queue, never the range input order.
 export function moveToPosition<T extends { id: string }>(queue: T[], ids: Set<string>, position: number): T[] {

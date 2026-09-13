@@ -1,12 +1,12 @@
 import type { Progress } from '../types';
-import type { WorkerJob, WorkerResult } from './task-worker';
+import type { WorkerJob, WorkerResult } from './worker-protocol';
 import { checkAbort } from './common';
 
 export function runWorker(job: WorkerJob, signal: AbortSignal, progress?: Progress): Promise<WorkerResult[]> {
   checkAbort(signal);
   const needsDom = typeof OffscreenCanvas === 'undefined' || typeof createImageBitmap === 'undefined';
   if (job.type === 'image' && needsDom) {
-    return renderOnPage(job, signal, progress);
+    return renderOnPage(job, signal);
   }
   const worker = new Worker(new URL('./task-worker.ts', import.meta.url), { type: 'module' });
   return new Promise((resolve, reject) => {
@@ -47,7 +47,7 @@ export function runWorker(job: WorkerJob, signal: AbortSignal, progress?: Progre
 
 // WebKit ports without worker canvas support can still use their local DOM
 // decoder and canvas. PDF assembly remains in a cancellable Worker.
-async function renderOnPage(job: Extract<WorkerJob, { type: 'image' }>, signal: AbortSignal, _progress?: Progress): Promise<WorkerResult[]> {
+async function renderOnPage(job: Extract<WorkerJob, { type: 'image' }>, signal: AbortSignal): Promise<WorkerResult[]> {
   const { renderImage } = await import('./images');
   checkAbort(signal);
   return [await renderImage(job.file, job.settings, job.rotation, signal)];
